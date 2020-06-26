@@ -1,0 +1,13 @@
+
+
+#jobDe{padding: 4% 0;}
+#jobDe table{font-family: GraphikRegular;width: 100%;}
+#jobDe table td{text-align: center;padding: .5%;border: 1px solid #bbb;font-family: GraphikRegular;color:#000;font-size: 15px;line-height: 33px;}
+#jobDe table th{color: #000;text-align: center;padding: 1.5%;border: 1px solid #bbb;font-family: GraphikRegular;background: #f9f9f9;letter-spacing: 1px;font-size: 15px;}
+
+ul.courseList {list-style: none;padding: 0;}
+ul.courseList li.active {background: #f9f9f9;border-left: 1px solid #bbb;}
+ul.courseList li.active a{color: #fff;}
+ul.courseList li:hover {background: #f9f9f9;border-left: 1px solid #bbb;}
+ul.courseList li {color: #000;border: 1px solid #030f29;border-top-width: 1px;border-left-width: 1px;border-top-style: solid;border-left-style: solid;border-top-color: rgb(211, 211, 211);border-left-color: rgb(211, 211, 211);border-top: 0;cursor: pointer;}
+ul.courseList a {text-transform: uppercase;color: #000;font-size: 16px;text-align: center;}

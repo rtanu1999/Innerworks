@@ -1,0 +1,66 @@
+.validate-input {
+    position: relative;
+}
+.wrap-input100 {
+    position: relative;
+    width: 40%;
+    z-index: 1;
+}
+input {
+    outline: none;
+    border: none;
+}
+button, input {
+    overflow: visible;
+}
+
+.choice{
+    background: linear-gradient(#FFBA00,#E9BF50) !important;
+    font-size: 25px;
+    font-family: 'Raleway';
+    font-weight: bold;
+    line-height: 1.5;
+    color: black;
+    width: 40%;
+    height: 50px;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    transition: all .4s;
+    position: relative;
+    z-index: 1;
+}
+.choice:hover {
+    background: linear-gradient(black,darkslategray) !important;
+    font-size: 25px;
+    font-family: 'Raleway';
+    font-weight: bold;
+    line-height: 1.5;
+    color: yellow;
+    width: 45%;
+    height: 50px;
+    border-radius: 25px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    transition: all .4s;
+    position: relative;
+    z-index: 1;
+}
+button {
+    outline: none!important;
+    border: 1px solid black;
+}
+button:hover {
+    outline: none!important;
+    border: 1px solid yellow;
+}

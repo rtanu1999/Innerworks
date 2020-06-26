@@ -1,0 +1,17 @@
+#addBlogs{padding:2% 0;}
+#addBlogs label{}
+#addBlogs input[type=text]{margin-bottom:1%;}
+#addBlogs input[type=text]:focus{box-shadow:none;}
+#addBlogs textarea{}
+#addBlogs textarea:focus{box-shadow:none;}
+#addBlogs input[type=submit]{font-family: Calibri;width: 15%;letter-spacing: 2px;border: 0;background: #151a5a;color: #fff;}
+#addBlogs input[type=submit]:focus{box-shadow:none;}
+#addBlogs input[type=submit]:hover{background: #000;}
+#addBlogs select{margin-bottom:7%;}
+#addBlogs select:focus{box-shadow:none;}
+
+#selectedImg{}
+#selectedImg img{width:50px;height:50px;border: 2px solid #d3d3d3;}
+
+a.addNewLink{display: block;background: #151a5a;color: #fff;border-radius: 5px;text-align: center;padding: 2%;width: 55%;float: right;margin-bottom: 1%;}
+a.addNewLink:hover{background: #000;}

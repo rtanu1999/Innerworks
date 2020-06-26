@@ -1,0 +1,10 @@
+a#allUsersPage span{color:#3240f9;}
+a#allUsersPage img{color:#000;margin-right:3%;}
+
+#users{padding:3% 0;}
+table.tbl{width:100%;}
+table.tbl tr{}
+table.tbl tr th{font-family:robotoLight;border:1px solid #d3d3d3;background:#151a5a;color:#fff;text-align:center;padding:.5%;font-size: 12px;}
+table.tbl tr td{font-family:robotoLight;border:1px solid #d3d3d3;text-align:center;padding:.5%;font-size: 12px;}
+table.tbl tr td button{border: 0;background: #151a5a;color: #fff;padding: 0%;width: 21%;border-radius: 4px;font-size: 13px;}
+table.tbl tr td button:hover{background:#000;}

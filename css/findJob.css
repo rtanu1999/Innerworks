@@ -1,0 +1,18 @@
+a#findJobPageLink{color: #018fc9;font-weight:bold;}
+
+#findJob{padding-bottom:4%;}
+
+.searchBx{margin-bottom:3%;}
+.searchBx input[type=text]{font-family: GraphikRegular;}
+.searchBx input[type=text]:focus{box-shadow:none;}
+.searchBx button{font-family: GraphikRegular;border: 1px solid #018fc9;background: #018fc9;color: #fff;text-align: center;border-radius: 4px;letter-spacing: 1px;transition: ease all .7s;}
+.searchBx button:hover{border: 1px solid #018fc9;background: none;color: #018fc9;}
+.searchBx button:focus{box-shadow:none;}
+
+.posts{}
+.postBx{border: 1px solid #ededed;padding: 2%;margin-bottom:2%;}
+.posts a h2{color:#018fc9;margin-top: 0;}
+.posts a h2:hover{color: #ec8948;}
+.posts a.readMoreBtn{border: 1px solid #018fc9;padding:.5%;display: block;width:15%;background: #018fc9;color: #fff;text-align: center;border-radius: 4px;letter-spacing: 1px;margin-top: 3%;transition: ease all .7s;}
+.posts a.readMoreBtn:hover{border: 1px solid #018fc9;background: none;color: #018fc9;}
+.posts a.readMoreBtn:focus{}

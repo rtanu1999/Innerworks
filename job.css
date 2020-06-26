@@ -1,0 +1,17 @@
+.btn-primary{
+    background-image: linear-gradient(#F5AF00,#F5AF81);
+    color: black;
+}
+.btn-primary:hover{
+    background-image: none;
+    background-color: black;
+    color: #F5AF00;
+}
+.btn-primary:active{
+    background-image: none;
+    background-color: black;
+    color: #F5AF00;
+}
+#internp{
+    display: none;
+}

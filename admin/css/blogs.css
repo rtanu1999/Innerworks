@@ -1,0 +1,13 @@
+
+#blogs{padding:2% 0;}
+#blogs table{width:100%;}
+#blogs table tr{}
+#blogs table tr th{font-family: calibri;background: #151a5a;color: #fff;padding: .4% 0;border: 1px solid #d3d3d3;text-align:center;}
+#blogs table tr td{font-family:calibri;padding: .4%;border: 1px solid #d3d3d3;text-align:center;}
+#blogs table tr td img{width: 70px;height: 70px;}
+#blogs table tr td button{font-family: calibri;border: 0; background: #151a5a;color: #fff;border-radius: 3px;font-size: 13px;padding: 2% 13%;}
+#blogs table tr td button:hover{background:#000;}
+#blogs table tr td button:focus{box-shadow:none;}
+
+a.addNewLink{display: block;background: #151a5a;color: #fff;border-radius: 5px;text-align: center;padding: 2%;width: 55%;float: right;margin-bottom: 1%;}
+a.addNewLink:hover{background: #000;}

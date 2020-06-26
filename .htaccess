@@ -1,0 +1,6 @@
+RewriteCond %{HTTP_HOST} ^www\.bootestech\.in$
+RewriteRule ^/?$ "http\:\/\/bootestech\.in\/" [R=301,L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

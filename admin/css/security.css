@@ -1,0 +1,13 @@
+a#securityPage span{color:#3240f9;}
+a#securityPage img{color:#000;margin-right:3%;}
+
+.bxx{border: 1px dotted #d3d3d3;padding: 3%;box-shadow: 0 5px 8px #d3d3d3;}
+#security{padding:4% 0;}
+#security label{font-family:GraphikRegular;letter-spacing: 1px;font-size: 13px;}
+#security input[type=password]{border:1px solid #d3d3d3;margin-bottom:2%;}
+#security input[type=email]{border:1px solid #d3d3d3;margin-bottom:2%;}
+#security input[type=email]:focus{box-shadow:none;}
+#security input[type=password]:focus{box-shadow:none;}
+#security input[type=submit]{font-family: GraphikRegular;width: 30%;background: #151a5a;color: #fff;border: 0;letter-spacing:2px;}
+#security input[type=submit]:focus{box-shadow:none;}
+#security input[type=submit]:hover{background: #000;}

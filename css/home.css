@@ -1,0 +1,112 @@
+a#homePageLink{color: #ffc114;font-weight:bold;}
+
+#slider .carousel-caption{left: 11%;  width: 77%;  top: 30%;}
+#slider .carousel-caption h3{font-size: 70px;  font-weight: bold;text-align: center;}
+#slider .carousel-caption p{font-size: 13px;  text-transform: full-width;line-height: 0%;text-align: center;}
+.service ul{list-style-type: none;padding-left: .5%;}
+.service ul li{float: left;  padding-right: 3%;font-family:"GraphikRegular"}
+.service ul li  i{border: 1px solid;  color: #e63029;  margin-right: 2px;  }
+.service ul li  span{line-height: 14px;}
+
+#services{padding: 4% 0;}
+a.Box{color: #000;}
+.Box {border: 1px dotted #a5a2a2;padding:5%;transition:ease all 1s;margin-bottom:2%;}
+.Box h2{font-size: 30px;font-weight: bold;}
+.Box h2 span{margin-left: 12%;transition:ease all 1s;color:#000;font-size:27px;}
+.Box h2 img{width: 10%;filter: grayscale(100%);opacity: .4;position: absolute;transition:ease all 1s;}
+.Box p{font-size: 14px;color: #575757;}
+.Box:hover{box-shadow: 0 5px 8px #676767;}
+.Box:hover img{width:24%;opacity: .1;}
+.Box:hover h2 span{margin-left: 0;}
+
+#aboutUs{padding-top:4%;padding-bottom:8%;}
+#aboutUs h4{font-size: 23px;color: #ffc114;margin-bottom: 0;}
+#aboutUs h2{font-size: 36px;color: #000;font-weight: bold;line-height: 40px;margin-top: 0;}
+#aboutUs p{font-size: 17px;color: #413f3f;font-weight: bold;letter-spacing: 1px;padding: 3% 0;text-align: justify;}
+#aboutUs a{border: 1px solid #ffc114;background: #ffc114;color: #fff;display: block;width: 35%;padding: 1.5%;text-align: center;margin-top: 6%;transition: ease all .7s;border-radius:4px;}
+#aboutUs a:hover{border: 1px solid #ffc114;background:none;color: #ffc114;}
+.aboutCompany{left: 40px;bottom: 0;right: 0;top: 62px;background-image:-moz-linear-gradient(90deg, #ffc114 0%, #ea4428 100%););background-image: -ms-linear-gradient(90deg, #6d74ea 0%, #f4a79a 100%);text-align: right;padding-right: 140px;padding-bottom: 40px;display: inline-block;float: right;position: relative;}
+.aboutCompany img{width: 100%;margin-top: -19%;margin-left: -7%;position: relative;display: block;}
+img.about_style{max-width: 100%;position: absolute;left: -188px;top:-45px;z-index: -1;animation: round 20s infinite;}
+@keyframes round{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#tagline{padding: 4% 0;text-align: center;background: #f9f9f9;}
+#tagline span{font-size: 18px;color: #7a7878;}
+#tagline h2{font-size: 42px;color: #000;letter-spacing: 1px;}
+#tagline p{font-size: 17px;font-weight: bold;color: #7b7a7a;}
+#tagline i{border: 1px solid #ededed;padding: 1%;width: 25px;border-radius: 50%;height: 25px;  background-color: #efe9e9;}
+#tagline a{border: 3px solid #ffc114;padding: 1%;display: block;width: 20%;margin-left: auto;margin-right: auto;background: #fff;font-size: 22px;color: #000;transition: ease all 1s;letter-spacing: 1px;}
+#tagline a:hover{border: 3px solid #eeb618;background-color: #eeb618;color: #fff;}
+a.hireUsBtn::before{content: "";background-color: #e0e0e0;height: 150px;top: -154px;width: 2px;}
+.hireUsBtn::after{background-color: #e0e0e0;content: "";color: #e0e0e0;font-size: 50px;height: 50px;line-height: 50px;top: -194px;width: 50px;-webkit-border-radius: 50%;border-radius: 50%;}
+
+#corporateCounter{background-image:url("../img/icons/corporateImg.jpg");background-attachment: fixed;padding: 4% 0;}
+#corporateCounter p{margin-top: 5%;color: #fff;font-size: 20px;font-weight: bold;text-align: center;}
+#corporateCounter span.vision{font-size: 20px;font-family: Open Sans Semibold;text-transform: uppercase;}
+#corporateCounter a{border: 1px solid #ffc114;display: block;width: 16%;padding: 1%;background: #ffc114;color: #fff;text-align: center;margin-left: auto;margin-right: auto;margin-top: 4%;transition: ease all .7s;letter-spacing: 1px;border-radius:4px;}
+#corporateCounter a:hover{border: 1px solid #ffc114;background:none;color: #ffc114;}
+.successData{text-align: center;padding: 2% 0;}
+.successData img{width: 45%;filter: grayscale(100%);opacity: .4;position: relative;transition:ease all 1s;}
+.successData h2{font-size: 23px;color: #fff;margin-top: -26%;}
+.successData span{font-size: 40px;color: #fff;font-weight: bold;}
+
+#testimonials{background-image: url("../img/testimonials.png");width: 100%;background-attachment: fixed;padding: 3% 0;}
+#testimonials h2{text-align: center;color: #fff;font-size: 42px;}
+.testimonilsData{padding: 2% 0;}
+.testimonilsData p{color: #fff;font-size: 18px;font-weight: bold;text-align: center;border: 2px solid #fff;padding: 4%;}
+.carousel-control{width: 0%;text-align: center;text-shadow: 0 }
+
+#clients{padding:4% 0;}
+#clients img{width:100%; border: 1px dotted #d3d3d3;padding: 6%;}
+#clients img:hover{box-shadow: 6px 4px 1px -2px #6c6c6c;}
+
+/************* Responsive ******************/
+@media (max-width: 480px) {
+    #slider .carousel-caption p {display: none;}
+    #slider .carousel-caption h3 {font-size:23px; margin-top: -11%;}
+    #aboutUs h2 {font-size: 24px;line-height: 31px;}
+    #aboutUs p {font-size: 14px;padding: 1% 0;}
+    #aboutUs a {width: 52%;padding: 2%;}
+    .aboutCompany {display: none;}
+    .successData img {width: 26%;}
+    .successData h2 {font-size: 24px;margin-top: -22%;}
+    .successData span {font-size: 35px;}
+    #corporateCounter p { margin-top: 1%;font-size: 14px}
+    #corporateCounter a {width: 44%;}
+    .testimonilsData p {font-size: 14px;}
+    #tagline a{width:50%;}
+    #slider h1{font-size: 22px;}
+    #slider h3{font-size: 17px;}
+    #slider a{width: 50%;}
+    .findd{margin-top: 4%;}
+    .findd h4 {font-size: 16px;}
+    .findd input[type="text"] {font-size: 15px;}
+    .findd input[type="submit"]{width: 45%;}
+}
+@media (max-width: 768px) {
+    #slider .carousel-caption p {display: none;}
+    #slider .carousel-caption h3 {font-size:23px; margin-top: -11%;}
+    #aboutUs h2 {font-size: 24px;line-height: 31px;}
+    #aboutUs p {font-size: 14px;padding: 1% 0;}
+    #aboutUs a {width: 52%;padding: 2%;}
+    .aboutCompany {display: none;}
+    .successData img {width: 26%;}
+    .successData h2 {font-size: 24px;margin-top: -22%;}
+    .successData span {font-size: 35px;}
+    #corporateCounter p { margin-top: 1%;font-size: 14px}
+    #corporateCounter a {width: 44%;}
+    .testimonilsData p {font-size: 14px;}
+    #tagline a{width:50%;}
+}
+@media (max-width: 900px) {
+
+}
+@media (max-width: 1200px) {
+
+}
