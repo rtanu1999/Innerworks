@@ -802,7 +802,11 @@ function fillinterst(Value) {
                                         </div></div>
                                      <div class="row form-group">  
                                     
-                            <div id="fieldsByService"><div id="myDIV" class="col-md-6">
+<!--                             <div id="fieldsByService">
+		    <div id="myDIV" class="col-md-6">-->
+				<div class="row form-group">  
+					 <div id="myDIV" class="col-md-12">
+                           
                                 <label for="skill" style="color:#000;">Skills</label>
                                 <input type="text" name="skill" class="form-control" id="myInput" onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
 								 <span onclick="newElement()" class="addBtn">Add</span>
