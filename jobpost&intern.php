@@ -485,7 +485,8 @@ function showinterestResult(str) {
       document.getElementById("liveisearch").style.border="1px solid #A5ACB2";
     }
   }
-  xmlhttp.open("GET","getInterestsearch.php?q="+str,true);
+		  
+  xmlhttp.open("GET","getsearch.php?q="+str,true);
   xmlhttp.send();
 }
 </script>
@@ -929,6 +930,19 @@ function fillinterst(Value) {
                                     </div>
                                  
                                     </div>
+				    <!-- CODE start -->
+				    <div class="row form-group">
+                        	    <div class="col-md-12">
+                                	<label for="mobno" style="color:#000;">Skills</label>
+                                            <input type="text" name="interest" class="form-control" id="uInput" onkeyup="showinterestResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
+                                 <span onclick="newElement1()" class="uBtn">Add</span> 
+                                 <div id="liveisearch"></div>
+                                  <input type="hidden" name="hinterest" class="form-control" id="hinterest" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
+                            </div>
+                        </div>
+                        <ul id="uUL">
+                        </ul>
+			<!-- CODE END-->
 <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
                 
                     
