@@ -204,13 +204,13 @@ $utils = new WebUtils();
 											</div>
 										</div>
 
-										<div id="no-of-positions" style="transform:translate(0,-15%);">
+										<div id="no-of-positions" style="">
 											<h3><?php echo $type;?> Description:</h3>
 								
 											<p style="text-align: justify;-moz-text-align-last: justify;text-align-last: justify;"><?php echo $jdesccc;?></p>
 
 										</div>
-										<div id="no-of-positions" style="transform:translate(0,-8%);">
+										<div id="no-of-positions" style="">
 											<h3>Education Requirements</h3>
 											<p><?php echo $jedu;?></p>
 
