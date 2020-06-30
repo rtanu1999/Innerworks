@@ -40,7 +40,9 @@ $utils = new WebUtils();
 			$about_comp=$row['about_comp'];
 			$type=$row['type'];
 			$skills=$row['skills'];
-		
+		    $email=$row['email'];
+		    $name=$row['cpname'];
+		    $cno=$row['cpnum'];
 		}
         
         }
@@ -196,8 +198,9 @@ $utils = new WebUtils();
 														<p><?php echo $jtitle; ?></p>
 														<p><?php echo $jlocattion; ?></p>
 														<?php echo $about_comp; ?>
-													
-												
+														<p><?php echo $name ?> :</p>
+													    <p><b><?php echo $cno ?></b></p>
+													    <p style="color:blue"><b><?php echo $email ?></b></p>
 											</div>
 										</div>
 
