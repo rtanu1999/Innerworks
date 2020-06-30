@@ -632,8 +632,10 @@ if(isset($_POST['submit'])) {
 						 <div class="row form-group">
                             <div id="myDIV" class="col-md-6 col-sm-12">
                                 <label for="skill" style="color:#000;">Skills</label>
-                                <input type="text" name="skill" class="form-control" id="myInput" onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
-								 <span onclick="newElement()" class="addBtn">Add</span>
+					     <input type="text" name="skill" class="form-control" id="myInput" onclick="newElement()" onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:100%;  padding: 10px;float: left;font-size: 16px;">
+				    <!--<input type="text" name="skill" class="form-control" id="myInput"  onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;"> -->
+				    <!-- <span onclick="newElement()" class="addBtn">Add</span> -->
+				    
 								 <div id="livesearch"></div>
 								 
 								 <input type="hidden" name="hiskill" class="form-control" id="hskill" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
@@ -642,8 +644,9 @@ if(isset($_POST['submit'])) {
 						</ul></div>
                             <div id="uDIV" class="col-md-6 col-sm-12" >
                                 <label for="skill" style="color:#000;">Interest</label>
-                                <input type="text" name="interest" class="form-control" id="uInput" onkeyup="showinterestResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
-								 <span onclick="newElement1()" class="uBtn">Add</span> 
+				    <input type="text" name="interest" class="form-control" onclick="newElement1()" id="uInput" onkeyup="showinterestResult(this.value)" style="margin:0;border:none;border-radius:0;width:100%;  padding: 10px;float: left;font-size: 16px;">
+<!--                                 <input type="text" name="interest" class="form-control" id="uInput" onkeyup="showinterestResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
+								 <span onclick="newElement1()" class="uBtn">Add</span>  -->
 								 <div id="liveisearch"></div>
 								  <input type="hidden" name="hinterest" class="form-control" id="hinterest" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
                             
