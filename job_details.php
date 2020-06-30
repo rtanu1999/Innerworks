@@ -232,7 +232,7 @@ $utils = new WebUtils();
 
 
 										<div id="application-deadline">
-											<h3>Salary | Stipend</h3>
+											<h3><?php if($type=="Job"){echo "SALARY";}else{echo "STIPEND";} ?></h3>
 											
 												<p>Rs. <?php echo $jmaxsal; ?></b></p>
 											
