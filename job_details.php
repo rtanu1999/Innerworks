@@ -207,7 +207,7 @@ $utils = new WebUtils();
 										<div id="no-of-positions" style="transform:translate(0,-15%);">
 											<h3><?php echo $type;?> Description:</h3>
 								
-											<p><?php echo $jdesccc;?></p>
+											<p style="text-align: justify;-moz-text-align-last: justify;text-align-last: justify;"><?php echo $jdesccc;?></p>
 
 										</div>
 										<div id="no-of-positions" style="transform:translate(0,-8%);">
