@@ -14,10 +14,10 @@
     
     <link href = "css/jquery-ui.css" rel = "stylesheet">
     <link rel="stylesheet" href="css/openings.css">
-	<!-- <link href="css/stylesearch.css" rel="stylesheet">
+	 <link href="css/stylesearch.css" rel="stylesheet">
 	 <link href="css/opening.css"  rel="stylesheet">
 	 <link href="css/common.css"  rel="stylesheet">
-	 <link href="css/style1.css"  rel="stylesheet">-->
+	<!-- <link href="css/style1.css"  rel="stylesheet">-->
 </head>
 <body>
 
