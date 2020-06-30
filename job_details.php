@@ -234,7 +234,7 @@ $utils = new WebUtils();
 										<div id="application-deadline">
 											<h3><?php if($type=="Job"){echo "SALARY";}else{echo "STIPEND";} ?></h3>
 											
-												<p>Rs. <?php echo $jmaxsal; ?></b></p>
+												<p> <?php if($jmaxsal=="Unpaid"){echo $jmaxsal;}else{ echo "Rs.".$jmaxsal;} ?></b></p>
 											
 
 										</div>
