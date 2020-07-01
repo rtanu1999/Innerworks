@@ -626,7 +626,7 @@ function fillinterst(Value) {
                                 <li><a href="jobpost&intern" id="jobPostPageLink">Job Post|Internship</a></li>
                                 <li><a href="employer" id="employerPageLink">Employer</a></li>
                                 <li><a href="collegeport" id="collagePageLink">College</a></li>
-                                <li><a href="referalJob" id="referralPageLink">Referral Job</a></li>
+                                
                                 <li><a href="intern" id="internPageLink">Internship</a></li>
                                 <li><a href="openings" id="internPageLink">Openings</a></li>
                             </ul>
