@@ -16,10 +16,12 @@ ul.accordian li{background: #e8e8e8;padding: 1% 2%;margin-top: 1%;border-radius:
 .details a:hover{background: #00f;}
 .details a:focus{}
 
-  @media only screen and (max-width: 521px){
-#le {display: none !important;}
-#mi{display:block;}
+@media only screen and (max-width: 521px){
+#le {display: none;}
+#mi{display:block;
+flex: 100% !important; width:150% !important;}
+#ch{padding:10px !important;}
 .internships-tabs{width:inherit;}
 .btn{width:50%;}
-.col-12{width:143%;}
+.col-12{width:138%;}
 }

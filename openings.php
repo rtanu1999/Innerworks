@@ -11,11 +11,13 @@
     font-weight: normal !important;
 }
 @media only screen and (max-width: 521px){
-#le {display: none !important;}
-#mi{display:block;}
-.internships-tabs{width:inherit;}
-.btn{width:50%;}
-.col-12{width:143%;}
+  #le {display: none;}
+  #mi{display:block;
+  flex: 100% !important; width:150% !important;}
+  #ch{padding:10px !important;}
+  .internships-tabs{width:inherit;}
+  .btn{width:50%;}
+  .col-12{width:138%;}
 }
 </style>
     <meta charset="UTF-8">
@@ -56,7 +58,7 @@
 
 
    </div>
-        <div class="row" style="padding: 40px;">
+        <div class="row" id="ch" style="padding: 40px;">
   <div class="column" id = "le" style = "flex: 25%;max-width: 25%;padding: 0 4px;font-weight:normal;">
 
      	<div id="filtersection" style="display:block;padding: 10px 20px 20px 20px;
