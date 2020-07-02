@@ -116,7 +116,7 @@
   </div>
   </div>
   
-  <div class="column" id='mi'style = "flex: 50%;max-width:50%;padding: 0 4px;overflow-y: scroll;max-height: 810px;">
+  <div class="column" id='mi'style = "flex: 50%;max-width:50%;padding: 0 4px;overflow-y: scroll;max-height: 910px;">
     <div class="list-group" style="display:block;box-sizing:border-box;">
 					 <div class="filter_data">
  
