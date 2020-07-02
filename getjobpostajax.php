@@ -95,7 +95,7 @@ if(isset($_POST["action"]))
 
 
                  <div class="job-apply-button" >
-                    <a href="job_details.php?id='. $row['id'] .'"  class="btn btn-primary" title="Apply Now" style="font-size:18px;width:100%;height:100%;background-color:#ffc114;border: 0px;">Apply Now</a>
+                    <a href="job_details.php?id='. $row['id'] .'"  class="btn btn-primary" title="Apply Now" style="font-size:18px;width:90%;height:100%;background-color:#ffc114;border: 0px;">Apply Now</a>
                 
                 </div>
                
