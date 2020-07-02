@@ -64,7 +64,7 @@ $utils = new WebUtils();
     <link rel="stylesheet" href="css/bootstrap-social.css">
     <link rel="stylesheet" href="css/openings.css">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/style1.css">
+<!--     <link rel="stylesheet" href="css/style1.css"> -->
  <meta property="og:url"           content="https://innerworkindia.com/job_details.php?id?type=<?php echo $jid; echo $type; ?>" />
   <meta property="og:type"          content="website" />
   <meta property="og:title"         content="Innerwork India" />
@@ -192,10 +192,12 @@ $utils = new WebUtils();
 									<div class="internship-info-section">
 										<div id="internship-details">
 											<h3>Details</h3>
-											<div class="details-section fixht">
+<!-- 											<div class="details-section fixht">
+ -->
+											<div class="details-section ">
 
 														<h4>About Company:</h4>
-														<p><?php echo $jtitle; ?></p>
+														<p><?php echo $jcompany; ?></p>
 														<p><?php echo $jlocattion; ?></p>
 														<?php echo $about_comp; ?>
 														<p><?php echo $name ?> :</p>
