@@ -82,7 +82,7 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
+ /* padding: 12px 8px 12px 40px; */
   
   font-size: 14px;
   transition: 0.2s;
@@ -782,7 +782,7 @@ if(isset($_POST['submit'])) {
                                  <input type="hidden" name="hiskill" class="form-control" id="hskill" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
                             </div>
                         </div>
-                     <ul id="myUL">
+                     <ul id="myUL" style="padding: 12px 8px 12px 40px;">
                         </ul>
                          <div class="row form-group">
                             <div class="col-md-12">
@@ -793,7 +793,7 @@ if(isset($_POST['submit'])) {
                                   <input type="hidden" name="hinterest" class="form-control" id="hinterest" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
                             </div>
                         </div>
-                        <ul id="uUL">
+                        <ul id="uUL" style="padding: 12px 8px 12px 40px;">
                         </ul>
             
 						 
