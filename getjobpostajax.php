@@ -73,7 +73,7 @@ if(isset($_POST["action"]))
                 <div class="row job-info no-margin-left no-margin-right">
 
         <ul class="list-group" style="paddding-left:6% !important;">
-          <li class="list-group-item"><i class="fa fa-briefcase"></i>' .$row['type'] .'
+          <li class="list-group-item"><i class="fa fa-briefcase"></i>&nbsp;' .$row['type'] .'
            </li>
           <li class="list-group-item">
         <i class="fa fa-inr" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation"></i>' .$row['maxSalary'] .'
