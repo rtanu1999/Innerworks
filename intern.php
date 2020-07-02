@@ -9,7 +9,7 @@
     font-size: 14px;
 }
 #drag_upload_file {
-  width:100%;
+  width:15%;
   margin:0 auto;
 }
 #drag_upload_file p {
