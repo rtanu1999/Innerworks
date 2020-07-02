@@ -1,8 +1,8 @@
 <style>
 #drop_file_zone {
-    background-color: #EEE; 
+    background-color: #EEE;
     border: #999 5px dashed;
-    width: 100%; 
+    width: 100%;
     height: auto;
     padding: 8px;
     font-size: 14px;
@@ -32,11 +32,11 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
-  
+/*  padding: 12px 8px 12px 40px; */
+
   font-size: 14px;
   transition: 0.2s;
-  
+
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -45,12 +45,12 @@ ul li {
   user-select: none;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) 
+/* Set all odd list items to a different color (zebra-stripes)
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }*/
 
-/* Darker background-color on hover 
+/* Darker background-color on hover
 ul li:hover {
   background: #ddd;
 }*/
@@ -135,7 +135,7 @@ ul li.checked::before {
     fileobj = e.dataTransfer.files[0];
     ajax_file_upload(fileobj);
   }
- 
+
   function file_explorer() {
     document.getElementById('selectfile').click();
     document.getElementById('selectfile').onchange = function() {
@@ -143,10 +143,10 @@ ul li.checked::before {
       ajax_file_upload(fileobj);
     };
   }
- 
+
   function ajax_file_upload(file_obj) {
     if(file_obj != undefined) {
-        var form_data = new FormData();                  
+        var form_data = new FormData();
         form_data.append('file', file_obj);
       $.ajax({
         type: 'POST',
@@ -163,7 +163,7 @@ ul li.checked::before {
       });
     }
   }
-  
+
   // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -199,7 +199,7 @@ function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
-  li.appendChild(t); 
+  li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
@@ -209,8 +209,8 @@ function newElement() {
   document.getElementById("livesearch").style.display = "none";
     var elem = document.getElementById('hskill');
     var old  = elem.value;
-    old = old + ',' + inputValue; 
-   
+    old = old + ',' + inputValue;
+
    document.getElementById("hskill").value = old;
 
   var span = document.createElement("SPAN");
@@ -240,8 +240,8 @@ function newElement1() {
   document.getElementById("liveisearch").style.display = "none";
 var elemm = document.getElementById('hinterest');
     var oldd  = elemm.value;
-    oldd = oldd + ',' + inputValue; 
-   
+    oldd = oldd + ',' + inputValue;
+
    document.getElementById("hinterest").value = oldd;
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -298,13 +298,13 @@ function fill(Value) {
    //Assigning value to "search" div in "search.php" file.
    $('#myInput').val(Value);
    //Hiding "display" div in "search.php" file.
-   
+
 }
 function fillinterst(Value) {
    //Assigning value to "search" div in "search.php" file.
    $('#uInput').val(Value);
    //Hiding "display" div in "search.php" file.
-   
+
 }
 </script>
 <?php
@@ -333,27 +333,27 @@ if(isset($_POST['submit'])) {
                             if ($_POST['dept'] != null && !empty($_POST['dept'])) {
                                 if ($_POST['numofstudent'] != null && !empty($_POST['numofstudent'])) {
                                      if ($_POST['writeuscollege'] != null && !empty($_POST['writeuscollege'])) {
-        
-                                
-                            
+
+
+
                             try {
                                // $uploadFolder = "Resume";
                                     // $folder_name = $uploadFolder."/".$fname.$fathername.$dob;
-                                    
-                                    
+
+
                                     // $photopath = mkdir($folder_name);
                                    // foreach ($_FILES['attach1']['tmp_name'] as $key => $image) {
                                    //         $imageTmpName = $_FILES['attach1']['tmp_name'][$key];
                                     //        $imageName = $_FILES['attach1']['name'][$key];
                                     //        $final_path = $uploadFolder."/".$imageName;
                                     //        $result = move_uploaded_file($imageTmpName,$final_path);
-                                            
+
                                    // }
-                                    
+
                                 // $file = "Resume/".$_FILE['file']['name'];
                                 // move_uploaded_file($_FILE['file']['tmp_name'],"../Resume/".$_FILE['file']['name']);
-		                    		
-                            
+
+
                                 $collegename = $_POST['collegename'];
                                 $university = $_POST['university'];
                                 $city = $_POST['city'];
@@ -364,7 +364,7 @@ if(isset($_POST['submit'])) {
                                 $numofstudent = $_POST['numofstudent'];
                                 $aboutcollege = $_POST['aboutcollege'];
                                 $writeuscollege= $_POST['writeuscollege'];
-								
+
                                 // $adminEmail = 'info@innerworkindia.com';
                                 $adminEmail = 'hr@innerworkindia.com';
 
@@ -386,7 +386,7 @@ if(isset($_POST['submit'])) {
                                         $stmt->bindParam(8, $numofstudent);
                                         $stmt->bindParam(9, $writeuscollege);
                                         $stmt->bindParam(10, $aboutcollege);
-                                       
+
                                         $stmt->execute();
 
                                         $result = "<div class='alert alert-success alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Success!</strong> Thanks applying for Job, will get you back soon.</div>";
@@ -398,7 +398,7 @@ if(isset($_POST['submit'])) {
                                 echo '{"error":{"text":' . $e->getMessage() . '}}';
                             }
 
-                        } 
+                        }
                         else {
             $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please select your experience</div>";
                                }
@@ -435,9 +435,9 @@ if(isset($_POST['submit'])) {
             }
         } else {
             $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Sweet Name.</div>";
-        }  
-        
-    } 
+        }
+
+    }
 
 ?>
 <!doctype html>
@@ -448,7 +448,7 @@ if(isset($_POST['submit'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<link rel="shortcut icon" type="image/x-icon" href="img/shortcut.png">-->
-    
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -591,7 +591,7 @@ if(isset($_POST['submit'])) {
                                 </div>
                                 <div class="col-md-6">
                                 <label for="website" style="color:#000;">Website</label>
-                                <input type="text" name="website" class="form-control" required="required" id="field"> 
+                                <input type="text" name="website" class="form-control" required="required" id="field">
                             </div>
                                 </div>
                                 <div class="row form-group">
@@ -639,7 +639,7 @@ if(isset($_POST['submit'])) {
                                             <option>Animation</option>
                                             <option>Polytechnic</option>
                                             </select>
-                                        </div>  
+                                        </div>
                                     <div class="col-md-6">
                                         <label for="numofstudent" style="color:#000;">Number of students</label>
                                         <input type="text" name="numofstudent" id="field" class="form-control" required="required">
@@ -655,9 +655,9 @@ if(isset($_POST['submit'])) {
                                     </div>
             </div>
 <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-             <center><input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;"></center>
+             <center style="align:center;""><input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;"></center>
         </form>
-            </div></div>
+      </div></div>
         <div class="row">
             <div class="col-md-6">
                 <img src="img/freelancerHr.jpg" alt="">
@@ -702,7 +702,7 @@ if(isset($_POST['submit'])) {
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<link rel="shortcut icon" type="image/x-icon" href="img/shortcut.png">-->
-    
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -824,4 +824,3 @@ if(isset($_POST['submit'])) {
 <!--End of Tawk.to Script-->
 </body>
 </html>
-    

@@ -5,18 +5,26 @@
 <html lang="en">
     <?php include_once 'Header.php'; ?>
 <head>
+  <style>
+  label {
+
+    font-weight: normal !important;
+}
+</style>
     <meta charset="UTF-8">
     <title>Openings</title>
     <?php include "CommonFiles.php"?>
 	<script src="js/jquery-1.10.2.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    
+
     <link href = "css/jquery-ui.css" rel = "stylesheet">
     <link rel="stylesheet" href="css/openings.css">
 	 <link href="css/stylesearch.css" rel="stylesheet">
 	 <link href="css/opening.css"  rel="stylesheet">
 	 <link href="css/common.css"  rel="stylesheet">
+   <link href="css/demo.css"  rel="stylesheet">
+
 	<!-- <link href="css/style1.css"  rel="stylesheet">-->
 </head>
 <body>
@@ -34,21 +42,22 @@
 
 
 <section id="opening">
-     <div class="row" style="padding: 10px 40px;"> 
-        
+     <div class="row" style="padding: 10px 40px;">
+
              <input type="search" id="searchtitle" class="searchboox" placeholder="Search Jobs|Internships.." style="width:70%;"/>
-					
-					
-        
+
+
+
    </div>
-        <div class="row" style="padding: 40px;"> 
-  <div class="column" id = "le" style = "flex: 25%;max-width: 25%;padding: 0 4px;">
+        <div class="row" style="padding: 40px;">
+  <div class="column" id = "le" style = "flex: 25%;max-width: 25%;padding: 0 4px;font-weight:normal;">
 
      	<div id="filtersection" style="display:block;padding: 10px 20px 20px 20px;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 4px;
-    margin: 20px 0px;">
+    margin: 20px 0px;
+    font-weight:normal !important;">
      	    <h3>Search by</h3><hr>
      	    <div class="list-group">
 					<h5 style="font-weight:bold;">Type</h5>
@@ -65,7 +74,7 @@
                     <div class="list-group-item ">
                         <label><input type="checkbox" class="common_selector type" value="<?php echo $row1['type']; ?>" > <?php echo $row1['type']; ?></label>
                     </div>
-                    <?php    
+                    <?php
                     }
 
                     ?>
@@ -76,7 +85,7 @@
                     <div class = "col-12"style="padding-left: 0;padding-right: 0;">
 					<?php
 
-                    $query = "SELECT DISTINCT location FROM jobpost where location IS NOT NULL"; 
+                    $query = "SELECT DISTINCT location FROM jobpost where location IS NOT NULL";
                     $statement = $conn->prepare($query);
                     $statement->execute();
                     $result = $statement->fetchAll();
@@ -92,7 +101,7 @@
                     ?>
                     </div>
                 </div>
-				
+
 				<div class="list-group">
 					<h5 style="font-weight:bold;">Experience</h5>
 						<div class = "col-12"style="padding-left: 0;padding-right: 0;">
@@ -109,33 +118,33 @@
                     </div>
                     <?php
                     }
-                    ?>	
+                    ?>
                 </div>
                 </div>
                 <p id="clearfilter" style="font-weight:bold; color:red;cursor: pointer;"></p>
   </div>
   </div>
-  
-  <div class="column" id='mi'style = "flex: 50%;max-width:50%;padding: 0 4px;overflow-y: scroll;max-height: 810px;">
+
+  <div class="column" id='mi'style = "flex: 50%;max-width:100%;padding: 0 4px;overflow-y: scroll;overflow-x: hidden;max-height: 940px;padding-top:1.5%;">
     <div class="list-group" style="display:block;box-sizing:border-box;">
 					 <div class="filter_data">
- 
-      
-       
-		</div>
-    </div>	
 
-  </div> 
-   
+
+
+		</div>
+    </div>
+
+  </div>
+
 <div class="column ri" style = "flex: 25%;max-width: 25%;padding: 0 4px;">
 
 
   </div>
 
-	
-		
 
-		
+
+
+
     </div>
 </section>
 
@@ -143,12 +152,12 @@
 <style>
 #loading
 {
-	text-align:center; 
-	background: url('loader.gif') no-repeat center; 
+	text-align:center;
+	background: url('loader.gif') no-repeat center;
 	height: 150px;
 }
 .searchboox
- { 
+ {
   width: 130px;
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -156,7 +165,7 @@
   font-size: 16px;
   background-color: white;
   background-image: url('img/searchicon.png');
-  background-position: 10px 10px; 
+  background-position: 10px 10px;
   background-repeat: no-repeat;
   padding: 12px 20px 12px 40px;
   transition: width 0.4s ease-in-out;
@@ -178,7 +187,7 @@ $(document).ready(function(){
     function filter_data()
     {
         $('.filter_data').html('<div id="loading" style="" ></div>');
-						
+
         var action = 'fetch_data';
         var sectitle = $('#searchtitle').val();
        // var maximum_price = $('#hidden_maximum_price').val();
@@ -190,7 +199,7 @@ $(document).ready(function(){
             method:"POST",
             data:{action:action, sectitle:sectitle, loc:loc, type:type, exp:exp},
             success:function(data){
-				
+
                 $('.filter_data').html(data);
             }
         });
@@ -221,7 +230,7 @@ $('#clearfilter').click(function() {
 	$(".exp").prop("checked", false);
 	 $('#clearfilter').html('');
 	 $('#searchtitle').val('');
-	
+
 	filter_data();
 });
 });

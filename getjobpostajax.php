@@ -19,23 +19,23 @@ if(isset($_POST["action"]))
 		$qry .= "
 		  AND location IN('".$loc_filter."')
 		";
-		
+
 	}
 	 if(isset($_POST["type"]))
 	{
 		$type_filter = implode("','", $_POST["type"]);
 		$qry .= "
-		  AND type IN('".$type_filter."') 
+		  AND type IN('".$type_filter."')
 		";
-		
+
 	}
 	 if(isset($_POST["exp"]))
 	{
 		$exp_filter = implode("','", $_POST["exp"]);
 		$qry .= "
-		  AND exp IN('".$exp_filter."') 
+		  AND exp IN('".$exp_filter."')
 		";
-		
+
 	}
         $query = $conn->prepare($qry);
 		 $query->execute();
@@ -45,10 +45,10 @@ if(isset($_POST["action"]))
 
         $data = $query->fetchAll();
 		 $output ='';
-		 
+
         foreach($data as $row) {
-            
-			
+
+
 			$output .= '
 			<div class="jobs" id="main-jobs" >
 			<div class="single-job-card">
@@ -57,10 +57,10 @@ if(isset($_POST["action"]))
 			<div class="col-12">
 			<div class="job-card-description">
 			<div class="internships-tabs">
-			   
+
 			<div class="nav nav-pills" style="width:100%;height:100%;background-color:#ffc114;padding-left: 1%">
 			<div class="job-title">
-            
+
                 <b><h4 class="truncate-normal">'. $row['jobTitle'] .'</h4></b>
                 </div></div>
                 <div class="company-name"><p class="truncate-normal"style = "padding-left: 1%;">' .$row['company'] .'</p></div>
@@ -72,7 +72,7 @@ if(isset($_POST["action"]))
                 </div>
                 <div class="row job-info no-margin-left no-margin-right">
 
-        <ul class="list-group">
+        <ul class="list-group" style="paddding-left:6% !important;">
           <li class="list-group-item"><i class="fa fa-briefcase"></i>' .$row['type'] .'
            </li>
           <li class="list-group-item">
@@ -84,38 +84,38 @@ if(isset($_POST["action"]))
           </ul></div>
          <div class="row no-margin-left no-margin-right job-lowest-section">
           <div class="col-sm-3 col-xs-3 text-right visible-xs">
-            
+
         </div>
 
         <div class="col-sm-12 col-xs-9">
 
-            <div class="text-right">
+            <div class="text-right" style="padding-right:6%;">
 
-               
+
 
 
                  <div class="job-apply-button" >
                     <a href="job_details.php?id='. $row['id'] .'"  class="btn btn-primary" title="Apply Now" style="font-size:18px;width:100%;height:100%;background-color:#ffc114;border: 0px;">Apply Now</a>
-                
+
                 </div>
-               
 
 
-                
+
+
             </div>
 
         </div>
     </div>
 
-    </div>     
-         
-         
-         
-          
+    </div>
+
+
+
+
         </div>
         </div>
-        
-        
+
+
 			';
 		}
 	}

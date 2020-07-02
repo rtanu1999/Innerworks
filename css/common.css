@@ -4,24 +4,15 @@ html
   width:100%;
 }
 
-body
-{
-  font-family:'Lato' ;
-  font-weight:normal;
-}
-
-a, li , ul , div , span, p , button , .btn, .input-group, input  {
-  font-family:'Lato' ;
-}
 
 
-p{
-  font-weight:500;
-}
+
+
+
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
 {
-  font-family: 'Lato' ;
+
   font-weight: normal !important;
   color:#2c2b2b;
 }
@@ -346,7 +337,7 @@ outline:0;
     padding-left: 0;
     padding-right: 0;
     width: 270px;
-    font-family: 'Lato', sans-serif;
+
 }
 
 #searchfield::-webkit-input-placeholder {
@@ -1436,6 +1427,7 @@ button.newsletter_signup:hover, button.newsletter_signup:focus
 .single-job-card .job-info ul.list-group
 {
   margin-bottom:0px;
+  padding-left:6%;
 }
 
 .single-job-card .job-info ul.list-group:after {
