@@ -646,6 +646,12 @@ if(isset($_POST['submit'])) {
                                         <label for="numofstudent" style="color:#000;">Number of students</label>
                                         <input type="text" name="numofstudent" id="field" class="form-control" required="required">
                                     </div></div>
+				<div class="row form-group">
+					<div class="col-md-12">
+						<label for="Contact " style="color:#000;">Contact Number</label>
+						 <input type="text" name="phone" pattern="[0-9]{10}" maxlength="10" id="field" class="form-control" required="required">
+                                    	</div>
+				</div>
                                   <div class="row form-group">
                                       <div class="col-md-6">
                                         <label for="aboutcollege" style="color:#000;">About the college!</label>
@@ -658,12 +664,7 @@ if(isset($_POST['submit'])) {
 					                                      <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
                                              <div>    <center><input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;float:left;"></center></div>
             </div>
-<<<<<<< HEAD
 <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-             <center style="align:center;""><input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;"></center>
-=======
-
->>>>>>> f37582aabeffcab149d98b3d6194c616f16bf08c
         </form>
       </div></div>
         <div class="row">
