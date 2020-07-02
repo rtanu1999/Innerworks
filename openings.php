@@ -124,8 +124,13 @@
                 <p id="clearfilter" style="font-weight:bold; color:red;cursor: pointer;"></p>
   </div>
   </div>
+<<<<<<< HEAD
 
   <div class="column" id='mi'style = "flex: 50%;max-width:100%;padding: 0 4px;overflow-y: scroll;overflow-x: hidden;max-height: 940px;padding-top:1.5%;">
+=======
+  
+  <div class="column" id='mi'style = "flex: 50%;max-width:50%;padding: 0 4px;overflow-y: scroll;max-height: 910px;">
+>>>>>>> f37582aabeffcab149d98b3d6194c616f16bf08c
     <div class="list-group" style="display:block;box-sizing:border-box;">
 					 <div class="filter_data">
 

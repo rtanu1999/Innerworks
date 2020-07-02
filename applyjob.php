@@ -8,7 +8,7 @@
     font-size: 14px;
 }
 #drag_upload_file {
-  width:100%;
+  width:15%;
   margin:0 auto;
 }
 #drag_upload_file p {
@@ -32,7 +32,7 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
+ /* padding: 12px 8px 12px 40px; *?
   
   font-size: 14px;
   transition: 0.2s;
@@ -560,7 +560,7 @@ if(isset($_POST['submit'])) {
 <section id="jobApplication">
     <div class="container" style="background-color:#f9f9f9;margin-top: -39px; width: 100%;">
         <div class="row formDetail">
-            <h2 style="margin-left: 13%;font-size: 15px;font-weight: bold;"><?php echo $jtitle .' - ' .$jcompany;?></h2>
+            <h2><?php echo $jtitle .' - ' .$jcompany;?></h2>
             <div class="col-md-12">
                 <div id="formSubmissionResult">
                 </div>
