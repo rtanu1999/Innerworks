@@ -653,9 +653,10 @@ if(isset($_POST['submit'])) {
                                         <label for="writeuscollege" style="color:#000;">Write Us!</label>
                                         <textarea name="writeuscollege" id="field" class="form-control" required="required" rows="6" cols="50"></textarea>
                                     </div>
+					                                      <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
+                                             <div>    <center><input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;float:left;"></center></div>
             </div>
-<div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-             <center><input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;"></center>
+
         </form>
             </div></div>
         <div class="row">
