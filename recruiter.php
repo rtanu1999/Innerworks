@@ -11,7 +11,7 @@
       <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-154697763-1&amp;l=dataLayer&amp;cx=c"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/releases/ADnAC3ZykfbIOflWgrKNsVVT/recaptcha__en.js"></script><script src="https://incruiter.com/assets/login/jquery-3.2.1.min.js.download" type="text/javascript"></script>
       <script src="https://incruiter.com/js/fabricjs.min.js" type="text/javascript"></script>
       <script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-147476811-1"></script>
-     
+
       <link rel="stylesheet" type="text/css" href="css/recuiterchoicestyle.css">
           <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
@@ -37,10 +37,10 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'UA-154697763-1');
-      </script> 
+      </script>
 </head>
 <body>
-<?php include_once 'Header1.php'; ?>
+<?php include_once 'Header.php'; ?>
 
 <section id="banner">
     <div class="container">
@@ -68,8 +68,8 @@
                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
                        <label class="radio_btns btn btn-primary active" data-id="1" style="cursor: pointer;width:100px;height:50px;background-color:#ffc114;;"><input type="radio" name="type" value="agency" id="option1" autocomplete="off" checked="" class="btn" style="font-family: 'Raleway';font-weight: bold;font-size:30px">Agency</label>
                        <label class="radio_btns btn btn-primary " data-id="2" style="cursor: pointer;background-color:#ffc114;width:100px;height:45px;"><input type="radio" name="type" value="freelancer" id="option2" autocomplete="off" class="btn" style="font-family: 'Raleway';font-weight: bold;font-size:30px;"> Freelancer</label>
-                   </div>  
-               </div>  
+                   </div>
+               </div>
                <div class="company_div col-md-12 validate-input m-b-10">
                    <input class="input100 company_name" type="text" style="font-family: 'Raleway';font-weight: bold;" name="companyname" placeholder="Company Name" required="">
                    <span class="focus-input100"></span>
@@ -133,7 +133,7 @@
                         <option value="Uttar Pradesh">Uttar Pradesh</option>
                         <option value="Uttaranchal">Uttaranchal</option>
                         <option value="West Bengal">West Bengal</option>
-                   </select>   
+                   </select>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100"><i class="fas fa-map-marked-alt"></i></span>
                </div>
@@ -162,8 +162,8 @@
                         <option value="10">10</option>
                         <option value="11">11</option>
                         <option value="12">12</option>
-                       
-                   </select>   
+
+                   </select>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100"><i class="fas fa-map-marked-alt"></i></span>
                </div>
@@ -190,7 +190,7 @@
                </div>
                <br>
                   <div class=" col-md-6 col-xs-12 validate-input m-b-10">
-                
+
                      <span class="focus-input100" id="messages"style="background:white; height: 20px;color: red;padding-left: 20px;" ></span>
                      <span class="symbol-input100"></span>
                </div>
@@ -200,7 +200,7 @@
                      <span class="symbol-input100"></span>
                </div><br>
                   <div class=" col-md-6 col-xs-12 validate-input m-b-10">
-                
+
                      <span class="focus-input100" id="messages1"style="background:white; height: 20px;color: red;padding-left: 20px;" ></span>
                      <span class="symbol-input100"></span>
                </div>
@@ -372,11 +372,11 @@
                      <span class="symbol-input100"><i class="fas fa-briefcase"></i></span>
                </div>
               <div class="image_div col-md-12 validate-input m-b-10">
-                   <div style="font-family: 'Raleway';font-weight: bold;">Upload Image: 
-                
+                   <div style="font-family: 'Raleway';font-weight: bold;">Upload Image:
+
                  <input type="file" id="img" name="file"/ style="font-family: 'Raleway';font-weight: bold;display:inline-block;">
                     </div>
-                     
+
                </div>
 
 
@@ -454,10 +454,10 @@
                             $(".radio_btns").eq(0).addClass('active');
                         }
                         else if(checkbox=='freelancer'){
-                            $(".radio_btns").eq(1).click();      
+                            $(".radio_btns").eq(1).click();
                         }
                   </script>
-               
+
                <div class="container-login100-form-btn p-t-10">
                      <p style="font-family: 'Raleway';font-weight: bold">
                         <input type="checkbox" id="privacy" name="privacy" required="">
@@ -503,7 +503,7 @@
             width: 500,
             textAlign: 'center',
             fontSize: 150,
-            top: 170, 
+            top: 170,
             fontWeight: 'bold',
             fontFamily: 'Raleway',
             });
@@ -526,7 +526,7 @@
             width: 500,
             textAlign: 'center',
             fontSize: 150,
-            top: 170, 
+            top: 170,
             fontWeight: 'bold',
             fontFamily: 'Raleway',
             });
@@ -551,7 +551,7 @@
                 width: 500,
                 textAlign: 'center',
                 fontSize: 150,
-                top: 170, 
+                top: 170,
                 fontWeight: 'bold',
                 fontFamily: 'Raleway',
                 });
@@ -568,7 +568,7 @@
                     if(a==""){
                        document.getElementById("messages").innerHTML="**Please fill password";
 
-                       
+
                         return false;
                     }
                     else
@@ -587,8 +587,8 @@
 
                     }
                     if(a.length>25){
-                       
-                         
+
+
                         document.getElementById("messages").innerHTML="**Password length must be smaller than 25";
                         return false;
                     }
@@ -599,7 +599,7 @@
                     }
                     if(a!=b){
 
-                  
+
                         document.getElementById("messages1").innerHTML="**Password must be same";
                         return false;
                     }
@@ -609,7 +609,7 @@
 
                     }
                 }
-          
+
 
 
 </script>
@@ -668,7 +668,7 @@
     $("#testID p").each(function (i) {
         i++;
         if(i == cutCount) {
-            $(this).append(' <a href="javascript:void(1)" onclick="$(\'#testID p\').show(); $(this).hide()">Read more</b>')   
+            $(this).append(' <a href="javascript:void(1)" onclick="$(\'#testID p\').show(); $(this).hide()">Read more</b>')
         }
         if(i > cutCount) {
            $(this).hide();
@@ -676,11 +676,11 @@
     });
 
 });
-      
+
     function checkunique(){
         var email=$('#email').val();
         $.ajax({
-			
+
             url:"checkforunique.php",
             type:"POST",
             async:false,
@@ -691,7 +691,7 @@
             success:function(data){
                alert(data);
                 if(data=="1"){
-                
+
                     $("#insert").click();
                 }
                 else{
@@ -700,10 +700,10 @@
             }
         });
     }
-        
-        
+
+
     </script>
-<?php include_once 'Footer1.php'; ?>
+<?php include_once 'Footer.php'; ?>
     </body>
 
 </html>

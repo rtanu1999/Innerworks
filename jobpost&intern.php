@@ -604,7 +604,7 @@ function fillinterst(Value) {
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index" title="Innererwork"><img src="img/logo.png" alt="Innerer Work" class="logo"></a>
-                    <h6 id='h_inner' class="inner">Innerwork</h6>
+                    <h6 id='h_inner' class="inner" style="font-family:Monotype Corsiva; font-size:45px;padding-top:10%;"> Innerwork </h6>
                 </div>
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -633,7 +633,7 @@ function fillinterst(Value) {
                         </li>
                         <li><a href="recruiter" id="employerPageLink">Freelance</a></li>
                         <li><a href="blog" id="blogPageLink">Blog</a></li>
-                        <li><a href="Login">Login</a></li>
+                        <li><a href="Login.php">Login</a></li>
                         <li><a href="contact">Contact Us</a></li>
                         <li><div id='paynow' class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F3auqrmv27oE3J/view" data-text="Pay Now" data-color="#528FF0" data-size="small">
                           <script>
