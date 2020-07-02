@@ -1,5 +1,5 @@
 #jobApplication{padding: 3% 0;}
-#jobApplication h2{margin-left: auto;font-size: 34px;font-weight: bold;text-align:center;}
+#jobApplication h2{margin-left: auto;font-size: 34px !important;font-weight: bold;text-align:center !important;}
 
 #jobForm{padding: 2%;}
 .formDetail{padding: 2% 0;}
@@ -149,7 +149,8 @@ ul.courseList a {text-transform: uppercase;color: #404040;font-size: 14px;paddin
 @media only screen and (max-width: 521px){
 #jobApplication h2 {
 
-    font-size: 20px;
+    font-size: 20px !important;
+    text-align: center !important;
     font-weight: bold;
 }
 }
@@ -172,7 +173,8 @@ ul.courseList a {text-transform: uppercase;color: #404040;font-size: 14px;paddin
 @media only screen and (max-width: 767px){
 #jobApplication .h2imp {
     
-    font-size: 26px;
+    font-size: 26px !important;
+    text-align: center !important;
     font-weight: bold;
 }
 }
