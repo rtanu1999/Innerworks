@@ -15,7 +15,7 @@ class WebUtils
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAuth = true;
             $mail->Username = "response@innerworkindia.com";
-            $mail->Password = "123@Response";
+            $mail->Password = "Digital@inner#123";
 
             $mail->From = "response@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";
@@ -57,7 +57,7 @@ class WebUtils
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAuth = true;
             $mail->Username = "response@innerworkindia.com";
-            $mail->Password = "123@Response";
+            $mail->Password = "Digital@inner#123";
 
             $mail->From = "response@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";
@@ -98,7 +98,7 @@ class WebUtils
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAuth = true;
             $mail->Username = "response@innerworkindia.com";
-            $mail->Password = "123@Response";
+            $mail->Password = "Digital@inner#123";
 
             $mail->From = "response@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";
@@ -125,7 +125,7 @@ class WebUtils
             echo '{"error":{"text":'. $e->getMessage() .'}}';
         }
     }
-    
+
     public function adminMailToJobSeeker2($mail, $userName, $contactNumber, $userEmail, $userCity, $education)
     {
         try{
@@ -139,7 +139,7 @@ class WebUtils
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAuth = true;
             $mail->Username = "response@innerworkindia.com";
-            $mail->Password = "123@Response";
+            $mail->Password = "Digital@inner#123";
 
             $mail->From = "response@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";
@@ -167,7 +167,7 @@ class WebUtils
         }
     }
 
-    
+
     public function adminMailToJobSeeker1($mail, $userName, $contactNumber, $userEmail, $userCity, $education)
     {
         try{
@@ -181,7 +181,7 @@ class WebUtils
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAuth = true;
             $mail->Username = "response@innerworkindia.com";
-            $mail->Password = "123@Response";
+            $mail->Password = "Digital@inner#123";
 
             $mail->From = "response@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";
@@ -221,7 +221,7 @@ class WebUtils
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAuth = true;
             $mail->Username = "response@innerworkindia.com";
-            $mail->Password = "123@Response";
+            $mail->Password = "Digital@inner#123";
 
             $mail->From = "response@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";
@@ -261,7 +261,7 @@ class WebUtils
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAuth = true;
             $mail->Username = "response@innerworkindia.com";
-            $mail->Password = "123@Response";
+            $mail->Password = "Digital@inner#123";
 
             $mail->From = "response@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";
@@ -301,7 +301,7 @@ class WebUtils
             $mail->SMTPSecure = 'ssl';
             $mail->SMTPAuth = true;
             $mail->Username = "response@innerworkindia.com";
-            $mail->Password = "123@Response";
+            $mail->Password = "Digital@inner#123";
 
             $mail->From = "response@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";

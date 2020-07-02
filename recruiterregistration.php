@@ -16,7 +16,7 @@ if(isset($_POST["submit"])){
     $_SESSION["val_flag"]=1;
     $_SESSION["fnvalue"]=0;
     setsession();
-    sendotp(); 
+    sendotp();
 }
 
 
@@ -26,7 +26,7 @@ if(isset($_POST["submit"])){
 function registerUser(){
 
     global $conn;
-    
+
     if($_SESSION["fnvalue"]==1){
         $companyname= $_SESSION["cn"];
         $website= $_SESSION["wb"];
@@ -53,9 +53,9 @@ function registerUser(){
         $_FILES['file']['name']=$_SESSION["imgname"];
         $d=$_SESSION["d"];
         $_FILES['file']['tmp_name']=$_SESSION["tmpnm"];
-        
-        
-        
+
+
+
 
            $name=$_FILES['file']['name'];
             $target_dir="upload/";
@@ -66,7 +66,7 @@ function registerUser(){
 
 
                   if($type == "agency"){
-                     $stmt = $conn->prepare('INSERT INTO agency (companyname,website,mobile,address,state,city,postcode,contactperson,email,password,noofstaffs,noofoffices,noofplacements,privacy,terms,comment,sector,experience,keyword,image) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');       
+                     $stmt = $conn->prepare('INSERT INTO agency (companyname,website,mobile,address,state,city,postcode,contactperson,email,password,noofstaffs,noofoffices,noofplacements,privacy,terms,comment,sector,experience,keyword,image) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
                                                     $stmt->bindParam(1, $companyname);
                                                     $stmt->bindParam(2, $website);
                                                     $stmt->bindParam(3, $mobile);
@@ -93,11 +93,11 @@ function registerUser(){
                       sendmail();
                //    header ('location:recruiterlogin.php');
 
-                    }   
+                    }
 
 
                 else{
-                    $stmt=$conn->prepare('INSERT INTO freelancer (companyname,website,mobile,address,state,city,postcode,contactperson,email,password,noofstaffs,noofoffices,noofplacements,privacy,terms,comment,sector,experience,keyword,image) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');       
+                    $stmt=$conn->prepare('INSERT INTO freelancer (companyname,website,mobile,address,state,city,postcode,contactperson,email,password,noofstaffs,noofoffices,noofplacements,privacy,terms,comment,sector,experience,keyword,image) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
                                                     $stmt->bindParam(1, $companyname);
                                                     $stmt->bindParam(2, $website);
                                                     $stmt->bindParam(3, $mobile);
@@ -122,10 +122,10 @@ function registerUser(){
                     $stmt->execute();
                     move_uploaded_file($FILES['file']['tmp_name'],$target_dir.$name);
                     sendmail();
-                    
+
              //       header ('location:recruiterlogin.php');
 
-                    }    
+                    }
     }
     }
     else{
@@ -153,12 +153,12 @@ function registerUser(){
         $d="";
         $sector=$_POST["ssector"];
         $d=implode($sector);
-        
-        
 
-        
+
+
+
     }
- 
+
 }
 
 
@@ -184,7 +184,7 @@ function sendmail(){
            //  $mail->SMTPDebug  = 1;
             $mail->SMTPAuth = true;
             $mail->Username = "response@innerworkindia.com";
-            $mail->Password = "123@Response";
+            $mail->Password = "Digital@inner#123";
 
             $mail->From = "response@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";
@@ -195,7 +195,7 @@ function sendmail(){
             $mail->Subject = "Thanks For submitting your details to Innerwork";
             $mail->Body    = $body;
             $mail->AltBody = "This is the body in plain text for non-HTML mail clients";
-    
+
             if(!$mail->Send()) {
               echo "Error while sending Email.";
               var_dump($mail);
@@ -206,14 +206,14 @@ function sendmail(){
 
 
 
-    
+
 }
 
 function generateotp(){
     $value='';
     $length = 1;
     for($i=0;$i<4;$i++){
-        $val=rand(0,9);  
+        $val=rand(0,9);
         $value.=$val;
         $randomletter = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, $length);
         $value.=$randomletter;
@@ -243,7 +243,7 @@ function sendotp(){
            //  $mail->SMTPDebug  = 1;
             $mail->SMTPAuth = true;
             $mail->Username = "response@innerworkindia.com";
-            $mail->Password = "123@Response";
+            $mail->Password = "Digital@inner#123";
 
             $mail->From = "response@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";
@@ -254,18 +254,18 @@ function sendotp(){
             $mail->Subject = "Account activation";
             $mail->Body    = $body;
          //   $mail->AltBody = "This is the body in plain text for non-HTML mail clients";
-    
+
             if(!$mail->Send()) {
               echo "Error while sending Email.";
               var_dump($mail);
             } else {
-            
+
               echo "<center><br><h2>OTP has been sent to your email !</h2><br><form action ='emailverification.php' type='POST'><input type='text' name='otptxt' placeholder='Enter OTP'><br><br><button name='checkotp' type='submit'> OK </button></form</center>";
-                
- 
+
+
             }
 
- 
+
 }
 
 
@@ -295,7 +295,7 @@ function setsession(){
     $_SESSION["com"]=$_POST['comment'];
     $_SESSION["sec"]=$_POST["ssector"];
     $_SESSION["imgname"]=$_FILES['file']['name'];
-    $d=implode($_SESSION["sec"]); 
+    $d=implode($_SESSION["sec"]);
     $_SESSION["d"]=$d;
     $_SESSION["tmpnm"]=$_FILES['file']['tmp_name'];
 }
@@ -306,9 +306,3 @@ function getsession(){
 }
 
 ?>
-
-
-
-
-
-
