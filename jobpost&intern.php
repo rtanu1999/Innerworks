@@ -486,7 +486,7 @@ function showinterestResult(str) {
     }
   }
 
-  xmlhttp.open("GET","getsearch.php?q="+str,true);
+  xmlhttp.open("GET","getSearch.php?q="+str,true);
   xmlhttp.send();
 }
 </script>
