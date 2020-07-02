@@ -32,13 +32,10 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-<<<<<<< HEAD
-/*  padding: 12px 8px 12px 40px; */
 
-=======
  /* padding: 12px 8px 12px 40px; */
   
->>>>>>> f37582aabeffcab149d98b3d6194c616f16bf08c
+
   font-size: 14px;
   transition: 0.2s;
 

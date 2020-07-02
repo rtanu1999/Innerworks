@@ -17,7 +17,7 @@ ul.accordian li{background: #e8e8e8;padding: 1% 2%;margin-top: 1%;border-radius:
 .details a:focus{}
 
   @media only screen and (max-width: 521px){
-#le {display: none;}
+#le {display: none !important;}
 #mi{display:block;}
 .internships-tabs{width:inherit;}
 .btn{width:50%;}
