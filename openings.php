@@ -10,6 +10,13 @@
 
     font-weight: normal !important;
 }
+@media only screen and (max-width: 521px){
+#le {display: none !important;}
+#mi{display:block;}
+.internships-tabs{width:inherit;}
+.btn{width:50%;}
+.col-12{width:143%;}
+}
 </style>
     <meta charset="UTF-8">
     <title>Openings</title>
@@ -126,7 +133,6 @@
   </div>
 
   <div class="column" id='mi'style = "flex: 50%;max-width:100%;padding: 0 4px;overflow-y: scroll;overflow-x: hidden;max-height: 940px;padding-top:1.5%;">
-
     <div class="list-group" style="display:block;box-sizing:border-box;">
 					 <div class="filter_data">
 
