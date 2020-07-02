@@ -560,7 +560,7 @@ if(isset($_POST['submit'])) {
 <section id="jobApplication">
     <div class="container" style="background-color:#f9f9f9;margin-top: -39px; width: 100%;">
         <div class="row formDetail">
-            <h2 style="margin-left: 30%;font-size: 24px;font-weight: bold;"><?php echo $jtitle .' - ' .$jcompany;?></h2>
+            <h2 style="margin-left: 13%;font-size: 15px;font-weight: bold;"><?php echo $jtitle .' - ' .$jcompany;?></h2>
             <div class="col-md-12">
                 <div id="formSubmissionResult">
                 </div>
