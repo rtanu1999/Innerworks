@@ -308,6 +308,7 @@ function fillinterst(Value) {
 }
 </script>
 <?php
+
 include "DbConnection/DbConnectionHelper.php";
 
 require 'PHPMailer/PHPMailerAutoload.php';
@@ -361,7 +362,7 @@ if(isset($_POST['submit'])) {
                                 $website = $_POST['website'];
                                 $dept = $_POST['dept'];
                                 $numofstudent = $_POST['numofstudent'];
-                                $aboutcollege = $_POST['aboutcollege']
+                                $aboutcollege = $_POST['aboutcollege'];
                                 $writeuscollege= $_POST['writeuscollege'];
 								
                                 // $adminEmail = 'info@innerworkindia.com';
