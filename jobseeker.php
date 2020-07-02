@@ -1,9 +1,9 @@
 <style>
 
 #drop_file_zone {
-    background-color: #EEE; 
+    background-color: #EEE;
     border: #999 5px dashed;
-    width: 100%; 
+    width: 100%;
     height: auto;
     padding: 8px;
     font-size: 14px;
@@ -33,11 +33,11 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
-  
+/*  padding: 12px 8px 12px 40px; */
+
   font-size: 14px;
   transition: 0.2s;
-  
+
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -46,12 +46,12 @@ ul li {
   user-select: none;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) 
+/* Set all odd list items to a different color (zebra-stripes)
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }*/
 
-/* Darker background-color on hover 
+/* Darker background-color on hover
 ul li:hover {
   background: #ddd;
 }*/
@@ -142,7 +142,7 @@ ul li.checked::before {
     fileobj = e.dataTransfer.files[0];
     ajax_file_upload(fileobj);
   }
- 
+
   function file_explorer() {
     document.getElementById('selectfile').click();
     document.getElementById('selectfile').onchange = function() {
@@ -150,10 +150,10 @@ ul li.checked::before {
       ajax_file_upload(fileobj);
     };
   }
- 
+
   function ajax_file_upload(file_obj) {
     if(file_obj != undefined) {
-        var form_data = new FormData();                  
+        var form_data = new FormData();
         form_data.append('file', file_obj);
       $.ajax({
         type: 'POST',
@@ -170,7 +170,7 @@ ul li.checked::before {
       });
     }
   }
-  
+
   // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -206,7 +206,7 @@ function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
-  li.appendChild(t); 
+  li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
@@ -216,8 +216,8 @@ function newElement() {
   document.getElementById("livesearch").style.display = "none";
     var elem = document.getElementById('hskill');
     var old  = elem.value;
-    old = old + ',' + inputValue; 
-   
+    old = old + ',' + inputValue;
+
    document.getElementById("hskill").value = old;
 
   var span = document.createElement("SPAN");
@@ -247,8 +247,8 @@ function newElement1() {
   document.getElementById("liveisearch").style.display = "none";
 var elemm = document.getElementById('hinterest');
     var oldd  = elemm.value;
-    oldd = oldd + ',' + inputValue; 
-   
+    oldd = oldd + ',' + inputValue;
+
    document.getElementById("hinterest").value = oldd;
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -305,13 +305,13 @@ function fill(Value) {
    //Assigning value to "search" div in "search.php" file.
    $('#myInput').val(Value);
    //Hiding "display" div in "search.php" file.
-   
+
 }
 function fillinterst(Value) {
    //Assigning value to "search" div in "search.php" file.
    $('#uInput').val(Value);
    //Hiding "display" div in "search.php" file.
-   
+
 }
 </script>
 <?php
@@ -339,27 +339,27 @@ if(isset($_POST['submit'])) {
                             if ($_POST['hiskill'] != null && !empty($_POST['hiskill'])) {
                                 if ($_POST['hinterest'] != null && !empty($_POST['hinterest'])) {
                                      if ($_POST['exp'] != null && !empty($_POST['exp'])) {
-        
-                                
-                            
+
+
+
                             try {
                                // $uploadFolder = "Resume";
                                     // $folder_name = $uploadFolder."/".$fname.$fathername.$dob;
-                                    
-                                    
+
+
                                     // $photopath = mkdir($folder_name);
                                    // foreach ($_FILES['attach1']['tmp_name'] as $key => $image) {
                                    //         $imageTmpName = $_FILES['attach1']['tmp_name'][$key];
                                     //        $imageName = $_FILES['attach1']['name'][$key];
                                     //        $final_path = $uploadFolder."/".$imageName;
                                     //        $result = move_uploaded_file($imageTmpName,$final_path);
-                                            
+
                                    // }
-                                    
+
                                 // $file = "Resume/".$_FILE['file']['name'];
                                 // move_uploaded_file($_FILE['file']['tmp_name'],"../Resume/".$_FILE['file']['name']);
-		                    		
-                            
+
+
                                 $name = $_POST['name'];
                                 $gender = $_POST['gender'];
                                 $city = $_POST['city'];
@@ -370,7 +370,7 @@ if(isset($_POST['submit'])) {
                                 $interest = $_POST['hinterest'];
                                 $exp = $_POST['exp'];
                                 $imageName = $_POST['fnamee'];
-								
+
                                 // $adminEmail = 'info@innerworkindia.com';
                                 $adminEmail = 'hr@innerworkindia.com';
 
@@ -392,7 +392,7 @@ if(isset($_POST['submit'])) {
                                         $stmt->bindParam(8, $interest);
                                         $stmt->bindParam(9, $exp);
                                         $stmt->bindParam(10, $imageName);
-                                
+
                                         $stmt->execute();
 
                                         $result = "<div class='alert alert-success alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Success!</strong> Thanks applying for Job, will get you back soon.</div>";
@@ -404,7 +404,7 @@ if(isset($_POST['submit'])) {
                                 echo '{"error":{"text":' . $e->getMessage() . '}}';
                             }
 
-                        } 
+                        }
                         else {
             $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please select your experience</div>";
                                }
@@ -441,9 +441,9 @@ if(isset($_POST['submit'])) {
             }
         } else {
             $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Sweet Name.</div>";
-        }  
-        
-    } 
+        }
+
+    }
 
 ?>
 <!doctype html>
@@ -540,9 +540,9 @@ if(isset($_POST['submit'])) {
                             </div>
                             <div class="col-md-6">
                                 <label for="email" style="color:#000;">Enter Your Email Address</label>
-                                <input type="email" name="email" class="form-control" required="required" id="field" > 
+                                <input type="email" name="email" class="form-control" required="required" id="field" >
                             </div>
-                          
+
                         </div>
                         <div class="row form-group">
                               <div class="col-md-6">
@@ -553,8 +553,8 @@ if(isset($_POST['submit'])) {
                                     <option value="Female">Female</option>
                                 </select>
                             </div>
-                        
-                          
+
+
                             <div class="col-md-6">
                                 <label for="city" style="color:#000;">City</label>
                                 <input type="text" name="city" class="form-control" required="required" id="field" >
@@ -569,7 +569,7 @@ if(isset($_POST['submit'])) {
                          <div class="col-md-6">
                                 <label for="education" style="color:#000;">Qualification</label>
                              <!--   <input type="text" name="education" class="form-control" required="required" id="field" >-->
-                             
+
                              <select class="form-control" required="required" id="field" name="education">
                                   <option>ENG-CSE</option>
                                   <option>ENG-ECE</option>
@@ -611,10 +611,10 @@ if(isset($_POST['submit'])) {
                             </div>
                         </div>
                        <hr>
-					   
+
 					   <p><b style="color:red;">*</b> Career Information</p>
-					   <hr> 
-                     
+					   <hr>
+
 						 <div class="row form-group">
 						  <div class="col-md-12">
                                 <label for="experience" style="color:#000;">Total Experience</label>
@@ -635,12 +635,12 @@ if(isset($_POST['submit'])) {
 					     <input type="text" name="skill" class="form-control" id="myInput" onclick="newElement()" onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:100%;  padding: 10px;float: left;font-size: 16px;">
 				    <!--<input type="text" name="skill" class="form-control" id="myInput"  onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;"> -->
 				    <!-- <span onclick="newElement()" class="addBtn">Add</span> -->
-				    
+
 								 <div id="livesearch"></div>
-								 
+
 								 <input type="hidden" name="hiskill" class="form-control" id="hskill" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
-                            
-						<ul id="myUL">
+
+						<ul id="myUL" style="padding: 12px 8px 12px 40px;">
 						</ul></div>
                             <div id="uDIV" class="col-md-6 col-sm-12" >
                                 <label for="skill" style="color:#000;">Interest</label>
@@ -649,13 +649,13 @@ if(isset($_POST['submit'])) {
 								 <span onclick="newElement1()" class="uBtn">Add</span>  -->
 								 <div id="liveisearch"></div>
 								  <input type="hidden" name="hinterest" class="form-control" id="hinterest" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
-                            
-						<ul id="uUL">
+
+						<ul id="uUL" style="padding: 12px 8px 12px 40px;">
 						</ul></div>
 							</div>
 
-                         
-						 
+
+
         <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
   <div id="drag_upload_file">
     <p>Drop file here</p>
@@ -664,14 +664,14 @@ if(isset($_POST['submit'])) {
     <input type="file" id="selectfile">
 	<input type="hidden" id="filename" name="fnamee">
   </div>
-</div>	 
+</div>
 <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-                
-                    
-							 
+
+
+
                         <input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;"/>
                     </form>
-					
+
                 </div>
             </div>
         </div>
@@ -686,7 +686,7 @@ if(isset($_POST['submit'])) {
                 <p>Earning livelihood matters, but balanced career-building happens only when you enjoy doing what you love the most. Innerwork, the goldmine of job opportunities, makes it simple for you to find suitable jobs and build a balanced career. </p>
             </div>
         </div>
-        
+
         <div class="row aboutContent">
             <div class="col-md-12">
                 <h3>What Makes Innerwork Best for Job Seekers </h3>
@@ -705,7 +705,7 @@ if(isset($_POST['submit'])) {
                 <li id="acco1"><b>Corporate Network</b></li>
                 <p>We value the relationship most, so we invest a great amount of time and energy in building a corporate network. The whole idea is to understand the dynamism of changing job profile and accordingly help candidates get the best jobs. </p>
                 <li id="acco1"><b>Resume Booster</b></li>
-                <p>Frankly, your resume is the most important link between you and your dream job. You simply cannot take it lightly.  Your resume speaks on your behalf with the person who is in the process of short-listing hundreds of applications. So, it is of the utmost value to let your resume build your identity effectively in your absence. Our recruitment experts know how to make a resume shine amongst the hundreds of similar resumes. We help you boost your resume so that you could get the interview call and grab the job smoothly.     </p> 
+                <p>Frankly, your resume is the most important link between you and your dream job. You simply cannot take it lightly.  Your resume speaks on your behalf with the person who is in the process of short-listing hundreds of applications. So, it is of the utmost value to let your resume build your identity effectively in your absence. Our recruitment experts know how to make a resume shine amongst the hundreds of similar resumes. We help you boost your resume so that you could get the interview call and grab the job smoothly.     </p>
                 <li id="acco1"><b>Interview Training </b></li>
                 <p>In this digital space, it is now relatively easy to search for jobs of your choice. A little effort could help you boost the chances of resume short-listing, but it is face to face interaction that makes all the difference. Our talent experts can help you prepare better for industry-centric interviews and improve your success rate. The customized interview training remains focused on making you more suitable for a particular job.   </p>
                 <li id="acco1"><b>Save Time & Energy </b></li>

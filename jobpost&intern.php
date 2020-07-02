@@ -27,8 +27,8 @@ if(isset($_POST['submit1'])) {
                                         if ($_POST['j_desc'] != null && !empty($_POST['j_desc'])) {
                                             if ($_POST['exp'] != null && !empty($_POST['exp'])) {
                                                 if ($_POST['education'] != null && !empty($_POST['education'])) {
-                                            
-                                        
+
+
                                         try {
                                             $jobTitle = $_POST['jobTitle'];
                                             $company = $_POST['company'];
@@ -72,11 +72,11 @@ if(isset($_POST['submit1'])) {
                                                     $stmt->bindParam(14, $about_comp);
                                                     $stmt->bindParam(15, $type);
                                                     $stmt->bindParam(16, $skill);
-                                                    
+
                                                     $stmt->execute();
 
                                                     $result = "<div class='alert alert-success alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Success!</strong> Thanks  for posting Job, will get you back soon.</div>";
-                                                    
+
 }
                                             }
 
@@ -133,13 +133,13 @@ if(isset($_POST['submit2'])) {
                                             $about_comp=$_POST['about_comp'];
                                             $maxSalary = $_POST['maxSalary'];
                                             $education = $_POST['education'];
-                                     
+
                                             $status = false;
                                             $type= "Internship";
                                             //Admin Email
                                             //$mailSendToAdminJobPost = $utils->adminMailToJobPost($cpname, $cpnum, $email, $company, $intTitle, $mail, $j_desc, $exp, $education);
                                             $mailSendToAdminJobPost = $utils->adminMailToJobPost2($cpname, $cpnum, $email, $company, $intTitle, $mail, $j_desc, $exp, $education);
-                                    
+
                                             if($mailSendToAdminJobPost)
                                             {
                                                 //User mail
@@ -159,11 +159,11 @@ if(isset($_POST['submit2'])) {
                                                     $stmt->bindParam(10, $education);
                                                     $stmt->bindParam(11,$about_comp);
                                                     $stmt->bindParam(12,$type);
-                                                    
+
                                                     $stmt->execute();
 
                                                     $result = "<div class='alert alert-success alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Success!</strong> Thanks  for posting Job, will get you back soon.</div>";
-                                                    
+
 }
                                             }
 
@@ -171,9 +171,9 @@ if(isset($_POST['submit2'])) {
                                             echo '{"error":{"text":' . $e->getMessage() . '}}';
                                         }
                                     }
-                                        
-                           
-                        
+
+
+
 ?>
 
 <style>
@@ -191,9 +191,9 @@ if(isset($_POST['submit2'])) {
 <style>
 
 #drop_file_zone {
-    background-color: #EEE; 
+    background-color: #EEE;
     border: #999 5px dashed;
-    width: 100%; 
+    width: 100%;
     height: auto;
     padding: 8px;
     font-size: 14px;
@@ -223,11 +223,11 @@ ul {
 ul li {
   cursor: pointer;
   position: relative;
-  padding: 12px 8px 12px 40px;
-  
+/*  padding: 12px 8px 12px 40px; */
+
   font-size: 14px;
   transition: 0.2s;
-  
+
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -236,12 +236,12 @@ ul li {
   user-select: none;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) 
+/* Set all odd list items to a different color (zebra-stripes)
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }*/
 
-/* Darker background-color on hover 
+/* Darker background-color on hover
 ul li:hover {
   background: #ddd;
 }*/
@@ -331,7 +331,7 @@ ul li.checked::before {
     fileobj = e.dataTransfer.files[0];
     ajax_file_upload(fileobj);
   }
- 
+
   function file_explorer() {
     document.getElementById('selectfile').click();
     document.getElementById('selectfile').onchange = function() {
@@ -339,10 +339,10 @@ ul li.checked::before {
       ajax_file_upload(fileobj);
     };
   }
- 
+
   function ajax_file_upload(file_obj) {
     if(file_obj != undefined) {
-        var form_data = new FormData();                  
+        var form_data = new FormData();
         form_data.append('file', file_obj);
       $.ajax({
         type: 'POST',
@@ -359,7 +359,7 @@ ul li.checked::before {
       });
     }
   }
-  
+
   // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -395,7 +395,7 @@ function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
-  li.appendChild(t); 
+  li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
@@ -405,8 +405,8 @@ function newElement() {
   document.getElementById("livesearch").style.display = "none";
     var elem = document.getElementById('hskill');
     var old  = elem.value;
-    old = old + ',' + inputValue; 
-   
+    old = old + ',' + inputValue;
+
    document.getElementById("hskill").value = old;
 
   var span = document.createElement("SPAN");
@@ -436,8 +436,8 @@ function newElement1() {
   document.getElementById("liveisearch").style.display = "none";
 var elemm = document.getElementById('hinterest');
     var oldd  = elemm.value;
-    oldd = oldd + ',' + inputValue; 
-   
+    oldd = oldd + ',' + inputValue;
+
    document.getElementById("hinterest").value = oldd;
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -485,7 +485,7 @@ function showinterestResult(str) {
       document.getElementById("liveisearch").style.border="1px solid #A5ACB2";
     }
   }
-		  
+
   xmlhttp.open("GET","getsearch.php?q="+str,true);
   xmlhttp.send();
 }
@@ -495,13 +495,13 @@ function fill(Value) {
    //Assigning value to "search" div in "search.php" file.
    $('#myInput').val(Value);
    //Hiding "display" div in "search.php" file.
-   
+
 }
 function fillinterst(Value) {
    //Assigning value to "search" div in "search.php" file.
    $('#uInput').val(Value);
    //Hiding "display" div in "search.php" file.
-   
+
 }
 </script>
 <!doctype html>
@@ -512,7 +512,7 @@ function fillinterst(Value) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--<link rel="shortcut icon" type="image/x-icon" href="img/shortcut.png">-->
-    
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -626,7 +626,7 @@ function fillinterst(Value) {
                                 <li><a href="jobpost&intern" id="jobPostPageLink">Job Post|Internship</a></li>
                                 <li><a href="employer" id="employerPageLink">Employer</a></li>
                                 <li><a href="collegeport" id="collagePageLink">College</a></li>
-                                
+
                                 <li><a href="intern" id="internPageLink">Internship</a></li>
                                 <li><a href="openings" id="internPageLink">Openings</a></li>
                             </ul>
@@ -730,9 +730,9 @@ function fillinterst(Value) {
                                         <input type="text" name="cpnum" id="field" class="form-control" required="required" pattern="{0-9}[10]" maxlength="10">
                                     </div></div>
                                      <div class="row form-group">
-                                 
-                                    <div class="col-md-6"  > 
-                                     
+
+                                    <div class="col-md-6"  >
+
                                         <label for="education" style="color:#000;">Education Required</label>
                                         <select class="form-control"  name="education" required="required" id="field">
                                             <option value=""></option>
@@ -778,7 +778,7 @@ function fillinterst(Value) {
                                             <option>Polytechnic</option>
                                         </select>
                                     </div>
-                                      
+
                                     <div class="col-md-6">
                                         <label for="experience" style="color:#000;">Experience</label>
                             <select class="form-control"  name="exp" required="required" id="field">
@@ -791,30 +791,30 @@ function fillinterst(Value) {
                                 <option>Others</option>
                                 </select>
                                    </div> </div>
-                                       <div class="row form-group">  
+                                       <div class="row form-group">
                                     <div class="col-md-6">
                                         <label for="cpname" style="color:#000;">Job Description</label>
                                         <textarea name="j_desc" id="field" class="form-control" required="required" rows="6" cols="50"></textarea>
                                         </div>
-                                    
+
                                 <div class="col-md-6">
                                         <label for="cpname" style="color:#000;">About Company</label>
                                         <textarea name="about_comp" id="field" class="form-control" required="required" rows="6" cols="50"></textarea>
                                         </div></div>
-                                     <div class="row form-group">  
-                                    
+                                     <div class="row form-group">
+
 <!--                             <div id="fieldsByService">
 		    <div id="myDIV" class="col-md-6">-->
-				<div class="row form-group">  
+				<div class="row form-group">
 					 <div id="myDIV" class="col-md-12">
-                           
+
                                 <label for="skill" style="color:#000;">Skills</label>
                                 <input type="text" name="skill" class="form-control" id="myInput" onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
 								 <span onclick="newElement()" class="addBtn">Add</span>
 								 <div id="livesearch"></div>
-								 
+
 								 <input type="hidden" name="hiskill" class="form-control" id="hskill" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
-                                <ul id="myUL">
+                                <ul id="myUL" style="padding: 12px 8px 12px 40px;">
 						</ul>
                                            </div></div></div>
                             <input type="submit" onclick="return submitEmployerForm()" value="Submit" name="submit1" class="form-control" style="margin-top: 3%;"/>
@@ -881,8 +881,8 @@ function fillinterst(Value) {
                                             <option>Polytechnic</option>
                                         </select>
                             </div>
-                            
-                            
+
+
                             <div class="col-md-6">
                             <label for="experience" style="color:#000;">Duration</label>
                             <select class="form-control" name="exp" required="required" id="field">
@@ -896,25 +896,25 @@ function fillinterst(Value) {
                                 </select>
                                 </div></div>
                                 <div class="row form-group">
-                            
+
                             <div class="col-md-6">
                                 <label for="stipend" style="color:#000;">Stipend</label>
-                            
+
                                                 <input type="text" id="field" name="maxSalary" id="maxSalary" placeholder="&nbsp; ₹ Stipend" class="form-control" required="required">
-                                    
-                            
+
+
                             </div>
-                                
+
                                 <div class="col-md-6">
                                 <label for="email" style="color:#000;">Email</label>
-                                <input type="email" name="email" class="form-control" required="required" id="field"> 
+                                <input type="email" name="email" class="form-control" required="required" id="field">
                             </div></div>
                             <div class="row form-group">
-                               
+
                                     <div class="col-md-6">
                                         <label for="cpname" style="color:#000;">Contact Person Name</label>
                                         <input type="text" name="cpname" id="field" class="form-control" required="required">
-                                    </div>  
+                                    </div>
                                       <div class="col-md-6">
                                         <label for="cpnum" style="color:#000;">Contact Person Number</label>
                                         <input type="text" name="cpnum" id="field" class="form-control" required="required" pattern="{0-9}[10]" maxlength="10">
@@ -928,25 +928,25 @@ function fillinterst(Value) {
                                         <label for="idesc" style="color:#000;">Internship Description</label>
                                         <textarea name="j_desc" id="field" class="form-control" required="required" rows="6" cols="50"></textarea>
                                     </div>
-                                 
+
                                     </div>
 				    <!-- CODE start -->
 				    <div class="row form-group">
                         	    <div class="col-md-12">
                                 	<label for="mobno" style="color:#000;">Skills</label>
                                             <input type="text" name="interest" class="form-control" id="uInput" onkeyup="showinterestResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
-                                 <span onclick="newElement1()" class="uBtn">Add</span> 
+                                 <span onclick="newElement1()" class="uBtn">Add</span>
                                  <div id="liveisearch"></div>
                                   <input type="hidden" name="hinterest" class="form-control" id="hinterest" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
                             </div>
                         </div>
-                        <ul id="uUL">
+                        <ul id="uUL" style="padding: 12px 8px 12px 40px;">
                         </ul>
 			<!-- CODE END-->
 <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-                
-                    
-							 
+
+
+
                         <input type="submit" value="Submit" name="submit2" class="form-control" style="margin-top:3%;">
                     </form>
                         </div>
