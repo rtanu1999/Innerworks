@@ -1,6 +1,6 @@
 
       <link rel="stylesheet" type="text/css" href="css/demo.css">
-<section id="headerBtm" style="box-shadow: 0 5px 8px #d3d3d3;padding: 1%;">
+<section id="headerBtm" style="box-shadow: 0 5px 8px #d3d3d3 !important;padding: 1%;">
     <div class="container-fluid">
         <nav class="navbar navbar-inverse" role="navigation"> <!-- navbar-fixed-top -->
             <div class="container-fluid-padNone">
@@ -12,7 +12,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index" title="Innererwork"><img src="img/logo.png" alt="Innerer Work" class="logo"></a>
-                <h6 id='h_inner' class="inner" style="font-family:Monotype Corsiva !important;font-weight: normal !important;font-size:45px;padding-top:10%;"> Innerwork </h6></div>
+                <h6 id='h_inner' class="inner" style="text-transform: none !important;font-family:Monotype Corsiva !important;font-weight: normal !important;font-size:45px;padding-top:10%;"> Innerwork </h6></div>
 
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav navbar-right">

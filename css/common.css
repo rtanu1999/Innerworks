@@ -7,7 +7,7 @@ html
 body
 {
   font-family:'Lato' ;
-  font-weight:500 ;
+  font-weight:normal;
 }
 
 a, li , ul , div , span, p , button , .btn, .input-group, input  {

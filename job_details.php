@@ -30,9 +30,9 @@ $utils = new WebUtils();
 			$jtitle=$row['jobTitle'];
 			$jcompany=$row['company'];
 			$jtype=$row['jobType'];
-			$jmaxsal=$row['maxSalary']; 
+			$jmaxsal=$row['maxSalary'];
 			$jlocattion=$row['location'];
-			$jexp=$row['exp']; 
+			$jexp=$row['exp'];
 			$jedu=$row['education'];
 			$jdtime=$row['dateTime'];
 			$jdesccc=$row['j_desc'];
@@ -44,10 +44,10 @@ $utils = new WebUtils();
 		    $name=$row['cpname'];
 		    $cno=$row['cpnum'];
 		}
-        
+
         }
-        
-               
+
+
         }
         catch(PDOException $e)
         {
@@ -98,7 +98,7 @@ $utils = new WebUtils();
 
 										<div class="card-section-1">
 
-											
+
 
 											<div class="row">
 												<div class="col-sm-8 col-xs-9">
@@ -111,23 +111,23 @@ $utils = new WebUtils();
 													</div>
 
 													<div class="job-locations">
-														<p class="truncate-normal wrap-normal-mobile"><?php echo $jlocation; ?>														</p>
+														<p class="truncate-normal wrap-normal-mobile"><?php echo $jlocattion; ?>														</p>
 													</div>
 												</div>
-												
-												
+
+
 										<div class="card-section-2">
 										    <ul class="list-group" style="float:left;">
-          <li class="list-group-item"><i class="fa fa-briefcase"></i><?php echo $type; ?>	
+          <li class="list-group-item"><i class="fa fa-briefcase"></i><?php echo $type; ?>
            </li>
           <li class="list-group-item">
-        <i class="fa fa-inr" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation"></i><?php echo $jmaxsal; ?>	
+        <i class="fa fa-inr" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation"></i><?php echo $jmaxsal; ?>
           </li>
           <li class="list-group-item">
-            <i class="fa fa-user" title="Start Date" data-etracking="true" data-ecategory="job_card_start_date"></i><?php echo $jedu; ?>	
+            <i class="fa fa-user" title="Start Date" data-etracking="true" data-ecategory="job_card_start_date"></i><?php echo $jedu; ?>
           </li>
           <li class="list-group-item">
-        <i class="fa fa-calendar" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation"></i>Posted on <?php echo $jdtime; ?>	
+        <i class="fa fa-calendar" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation"></i>Posted on <?php echo $jdtime; ?>
           </li>
           </ul>
 										</div>
@@ -136,10 +136,10 @@ $utils = new WebUtils();
 												<div class="col-sm-12">
 													<div class="share-apply-section pull-right">
 
-													
-													    
 
-													
+
+
+
 
 													<div class="job-share">
 													    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#ffc114;"><i class="fa fa-share-alt fa-lg"></i></a>
@@ -152,8 +152,8 @@ $utils = new WebUtils();
     text-align: inherit;
     white-space: nowrap;
     border: 0;">
-          
-         
+
+
          <a class="dropdown-item" style = "background-color: #fff;border-color:#fff;" href="https://twitter.com/intent/tweet?text=<?php echo $jtitle .' - ' .$jcompany; ?> https://innerworkindia.com/job_details.php?id=<?php echo $jid;?>" target= "_blank"><img src="img/we.jpg" style="height :30px"><p style="display: inline;color:black;font-size: 14px;">  Twitter</p></a>
           <a class="dropdown-item"style = "background-color: #fff;border-color:#fff;" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Finnerworkindia.com%2Fjob_details.php%3Fid=<?php echo $jid; ?>&amp;src=sdkpreparse" target= "_blank"><img src="img/fb.jpg" style="height :30px"><p style="display: inline;color:black;font-size: 14px;">  Facebook</p></a>
         <a class="dropdown-item" style = "background-color: #fff;border-color:#fff;" href=" https://wa.me/919887888469" target= "_blank"><img src="img/wp.jpg" style="height :30px"><p style="display: inline;color:black;font-size: 14px;">  Whatsapp</p></a>
@@ -161,7 +161,7 @@ $utils = new WebUtils();
         </div>
 													</div>
 
-													
+
 																		<div class="apply-button pull-right text-center">
 																			<a href="applyjob?id=<?php echo $jid;?>" id="applyjobpageLink" style="border: 0px;display: inline;width: 0%; margin-top: 0%;padding: 0%;">
 																				<BUTTON style="padding: 10px 35px; border-radius: 3px; background: #ffc114; color: #fff; font-size: 1.6rem;
@@ -170,7 +170,7 @@ $utils = new WebUtils();
 																				 <i class="fa fa-spinner fa-spin loader_icon" style="display:none;"></i>
 																			</a>
 																		</div>
-																	
+
 
 													</div>
 
@@ -193,7 +193,7 @@ $utils = new WebUtils();
 										<div id="internship-details">
 											<h3>Details</h3>
 											<div class="details-section fixht">
-												
+
 														<h4>About Company:</h4>
 														<p><?php echo $jtitle; ?></p>
 														<p><?php echo $jlocattion; ?></p>
@@ -206,7 +206,7 @@ $utils = new WebUtils();
 
 										<div id="no-of-positions" style="">
 											<h3><?php echo $type;?> Description:</h3>
-								
+
 											<p style="text-align: justify;-moz-text-align-last: justify;text-align-last: justify;"><?php echo $jdesccc;?></p>
 
 										</div>
@@ -218,31 +218,31 @@ $utils = new WebUtils();
 
 										<div id="skills-required">
 											<h3>Skills Required</h3>
-											
+
 												<ul class="list-inline">
-													
+
 
 														<li>-<?php echo $skills; ?></li>
 
-														
+
 												</ul>
-											
+
 
 										</div>
 
 
 										<div id="application-deadline">
 											<h3><?php if($type=="Job"){echo "SALARY";}else{echo "STIPEND";} ?></h3>
-											
+
 												<p> <?php if($jmaxsal=="Unpaid"){echo $jmaxsal;}else{ echo "Rs.".$jmaxsal;} ?></b></p>
-											
+
 
 										</div>
-										
-										
+
+
 										<div class="text-center">
 
-										
+
 														<div class="apply-button text-center">
 															<a href="applyjob?id=<?php echo $jid;?>" id="applyjobpageLink" style="border: 0px;display: inline;width: 0%; margin-top: 0%;padding: 0%;">
 																				<BUTTON style="padding: 10px 35px; border-radius: 3px; background: #ffc114; color: #fff; font-size: 1.6rem;
@@ -251,7 +251,7 @@ $utils = new WebUtils();
 																 <i class="fa fa-spinner fa-spin loader_icon" style="display:none;"></i>
 															</a>
 														</div>
-													
+
 
 									</div>
 
@@ -263,11 +263,11 @@ $utils = new WebUtils();
 
 						</div>
 
-        
 
 
 
-       
+
+
 
 
 
@@ -280,10 +280,10 @@ $utils = new WebUtils();
                     <p><b>Salary : </b><?php //echo $row['maxSalary']; ?></p>
                     <p>Submit your cv to <strong>info@innerworkindia.com</strong> </p>
                 </div>-->
-           
+
 </div>
         </div>
-            
+
     </div>
 </section>
 
