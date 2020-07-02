@@ -474,7 +474,7 @@ if(isset($_POST['submit'])) {
 </head>
 <body>
 <link rel="stylesheet" type="text/css" href="css/demo.css">
-<section id="headerBtm">
+<section id="headerBtm" style="box-shadow: 0 5px 8px #d3d3d3 !important;padding: 1%;">
     <div class="container-fluid">
         <nav class="navbar navbar-inverse" role="navigation"> <!-- navbar-fixed-top -->
             <div class="container-fluid-padNone">
@@ -486,7 +486,7 @@ if(isset($_POST['submit'])) {
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index" title="Innererwork"><img src="img/logo.png" alt="Innerer Work" class="logo"></a>
-                <h6 id='h_inner' class="inner"><font face = "Monotype Corsiva" size = "10"> Innerwork </font></h6></div>
+                <h6 id='h_inner' class="inner" style="text-transform: none !important;font-family:Monotype Corsiva !important;font-weight: normal !important;font-size:45px;padding-top:10%;"> Innerwork </h6></div>
 
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav navbar-right">
@@ -508,14 +508,14 @@ if(isset($_POST['submit'])) {
                                 <li><a href="jobpost&intern" id="jobPostPageLink">Job Post|Internship</a></li>
                                 <li><a href="employer" id="employerPageLink">Employer</a></li>
                                 <li><a href="college" id="collagePageLink">College</a></li>
-                                <li><a href="referalJob" id="referralPageLink">Referral Job</a></li>
+                          
                                 <li><a href="intern" id="internPageLink">Internship</a></li>
                                 <li><a href="openings" id="internPageLink">Openings</a></li>
                             </ul>
                         </li>
                         <li><a href="recruiter" id="employerPageLink">Freelance Recruiter</a></li>
                         <li><a href="blog" id="blogPageLink">Blog</a></li>
-                        <li><a href="Login">Login</a></li>
+                        <li><a href="Login.php">Login</a></li>
                         <li><a href="contact">Contact Us</a></li>
                         <li><div id='paynow' class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F3auqrmv27oE3J/view" data-text="Pay Now" data-color="#528FF0" data-size="small">
   <script>
