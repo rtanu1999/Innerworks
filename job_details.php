@@ -195,7 +195,7 @@ $utils = new WebUtils();
 											<div class="details-section fixht">
 
 														<h4>About Company:</h4>
-														<p><?php echo $jtitle; ?></p>
+														<p><?php echo $jcompany; ?></p>
 														<p><?php echo $jlocattion; ?></p>
 														<?php echo $about_comp; ?>
 														<p><?php echo $name ?> :</p>
