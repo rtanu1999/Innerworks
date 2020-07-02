@@ -70,7 +70,7 @@ if(isset($_POST["action"]))
                 </div>
                 </div>
                 </div>
-                <div class="row job-info no-margin-left no-margin-right">
+                <div class="row job-info no-margin-left no-margin-right" style="margin-left:1%;">
 
         <ul class="list-group" style="paddding-left:6% !important;">
           <li class="list-group-item"><i class="fa fa-briefcase"></i>&nbsp;' .$row['type'] .'
