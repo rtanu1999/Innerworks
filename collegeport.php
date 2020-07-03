@@ -546,18 +546,18 @@ if(isset($_POST['submit'])) {
         </div>
     </div>
 </section>
-    <section id="about">
-    <div class="container">
+    
+    <section id="jobApplication">
+    <div class="container" style="background-color:#f9f9f9;margin-top: -39px; width: 100%;">
         <div class="row formDetail">
-         <div class="col-md-12">
-         <h3 style="text-align:center;">College Application Form</h3>
-         <p style="text-align:center;">Find right solutions at Innerwork Customer Portal. We would be glad to assist you!</p>
-         </div>
-        <div class="col-md-12">
-             <div id="formSubmissionResult"></div>
+            <h2>College Application Form</h2>
+            <div class="col-md-12">
+                <div id="formSubmissionResult">
+                </div>
                 <div id="oneD">
-        <form action="/intern.php" method="post" id="internp" class="formJob" enctype="multipart/form-data" style="border: 2px solid #999;padding: 2%;width:90%;margin-left: 5%;">
-                            <div id="candidateFormResult"></div>
+                    <?php echo $result; ?>
+                    <form action="/intern.php" method="post" id="internp" class="formJob" enctype="multipart/form-data" style="border: 2px solid #999;padding: 2%;width:90%;margin-left: 5%;">
+                   <div id="candidateFormResult"></div>
                               <p><b style="color:red;">*</b>Details</p>
 						      <hr>
                             <div class="row form-group">
@@ -662,11 +662,36 @@ if(isset($_POST['submit'])) {
                                         <textarea name="writeuscollege" id="field" class="form-control" required="required" rows="6" cols="50"></textarea>
                                     </div>
 					                                      <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-                                             <div>    <center><input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;float:left;"></center></div>
-            </div>
+
+
+
+        <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
+  <div id="drag_upload_file">
+    <p>Drop file here</p>
+    <p>or</p>
+    <p><input type="button" value="Select File" onclick="file_explorer();" style="width: 100%;"></p>
+    <input type="file" id="selectfile">
+	<input type="hidden" id="filename" name="fnamee">
+  </div>
+</div>
 <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-        </form>
-      </div></div>
+                                      
+                                             <div>    <center><input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;float:left;"></center></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="about">
+    <div class="container">
+        <div class="row formDetail">
+         <div class="col-md-12">
+         <h3 style="text-align:center;">College Application Form</h3>
+         <p style="text-align:center;">Find right solutions at Innerwork Customer Portal. We would be glad to assist you!</p>
+         </div>
+
         <div class="row">
             <div class="col-md-6">
                 <img src="img/freelancerHr.jpg" alt="">
