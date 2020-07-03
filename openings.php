@@ -130,6 +130,70 @@
                     ?>
                 </div>
                 </div>
+
+                <div class="list-group">
+              					<h5 style="font-weight:bold;">Salary</h5>
+                                  <div class = "col-12"style="padding-left: 0;padding-right: 0;">
+              					<?php
+
+                                  $query = "SELECT DISTINCT maxSalary FROM jobpost where maxSalary IS NOT NULL";
+                                  $statement = $conn->prepare($query);
+                                  $statement->execute();
+                                  $result = $statement->fetchAll();
+                                  foreach($result as $row)
+                                  {
+                                  ?>
+                                  <div class="list-group-item ">
+                                      <label><input type="checkbox" class="common_selector sal" value="<?php echo $row['maxSalary']; ?>"  > <?php echo $row['maxSalary']; ?></label>
+                                  </div>
+                                  <?php
+                                  }
+
+                                  ?>
+                                  </div>
+                              </div>
+                              <div class="list-group">
+                                      <h5 style="font-weight:bold;">Skills</h5>
+                                                <div class = "col-12"style="padding-left: 0;padding-right: 0;">
+                                      <?php
+
+                                                $query = "SELECT DISTINCT skills FROM jobpost where skills IS NOT NULL";
+                                                $statement = $conn->prepare($query);
+                                                $statement->execute();
+                                                $result = $statement->fetchAll();
+                                                foreach($result as $row)
+                                                {
+                                                ?>
+                                                <div class="list-group-item ">
+                                                    <label><input type="checkbox" class="common_selector skills" value="<?php echo $row['skills']; ?>"  > <?php echo $row['skills']; ?></label>
+                                                </div>
+                                                <?php
+                                                }
+
+                                                ?>
+                                                </div>
+                                            </div>
+                                            <div class="list-group">
+                                          					<h5 style="font-weight:bold;">Education</h5>
+                                                              <div class = "col-12"style="padding-left: 0;padding-right: 0;">
+                                          					<?php
+
+                                                              $query = "SELECT DISTINCT education FROM jobpost where education IS NOT NULL";
+                                                              $statement = $conn->prepare($query);
+                                                              $statement->execute();
+                                                              $result = $statement->fetchAll();
+                                                              foreach($result as $row)
+                                                              {
+                                                              ?>
+                                                              <div class="list-group-item ">
+                                                                  <label><input type="checkbox" class="common_selector edu" value="<?php echo $row['education']; ?>"  > <?php echo $row['education']; ?></label>
+                                                              </div>
+                                                              <?php
+                                                              }
+
+                                                              ?>
+                                                              </div>
+                                                          </div>
                 <p id="clearfilter" style="font-weight:bold; color:red;cursor: pointer;"></p>
   </div>
   </div>
@@ -203,10 +267,13 @@ $(document).ready(function(){
         var loc = get_filter('loc');
         var type = get_filter('type');
         var exp = get_filter('exp');
+        var sal = get_filter('sal');
+        var skills = get_filter('skills');
+        var edu = get_filter('edu');
         $.ajax({
             url:"getjobpostajax.php",
             method:"POST",
-            data:{action:action, sectitle:sectitle, loc:loc, type:type, exp:exp},
+            data:{action:action, sectitle:sectitle, loc:loc, type:type, exp:exp, sal:sal, skills:skills, edu:edu},
             success:function(data){
 
                 $('.filter_data').html(data);
@@ -237,6 +304,9 @@ $('#clearfilter').click(function() {
     $(".type").prop("checked", false);
 	$(".loc").prop("checked", false);
 	$(".exp").prop("checked", false);
+  $(".sal").prop("checked", false);
+  $(".skills").prop("checked", false);
+  $(".edu").prop("checked", false);
 	 $('#clearfilter').html('');
 	 $('#searchtitle').val('');
 

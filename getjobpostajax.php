@@ -37,6 +37,30 @@ if(isset($_POST["action"]))
 		";
 
 	}
+  if(isset($_POST["sal"]))
+ {
+   $sal_filter = implode("','", $_POST["sal"]);
+   $qry .= "
+     AND maxSalary IN('".$sal_filter."')
+   ";
+
+ }
+ if(isset($_POST["skills"]))
+{
+  $skills_filter = implode("','", $_POST["skills"]);
+  $qry .= "
+    AND skills IN('".$skills_filter."')
+  ";
+
+}
+if(isset($_POST["edu"]))
+{
+ $edu_filter = implode("','", $_POST["edu"]);
+ $qry .= "
+   AND education IN('".$edu_filter."')
+ ";
+
+}
         $query = $conn->prepare($qry);
 		 $query->execute();
         if($query->rowCount() > 0)
