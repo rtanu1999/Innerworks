@@ -323,6 +323,16 @@ ul li.checked::before {
 .uBtn:hover {
   background-color: #bbb;
 }
+@media (max-width: 480px) {
+  #myDIV{
+    width:95%;
+    margin-left: 2%;
+
+  }
+  #myDIV #sklabel{
+    margin-left: 3%;
+  }
+  }
 </style>
 <script type="text/javascript">
   var fileobj;
@@ -809,12 +819,12 @@ function fillinterst(Value) {
 				<div class="row form-group">
 					 <div id="myDIV" class="col-md-12">
 
-                                <label for="skill" style="color:#000;">Skills</label>
-                                <input type="text" name="skill" class="form-control" id="myInput" onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
+                                <label id="sklabel" for="skill" style="color:#000;margin-left: 1%;">Skills</label>
+                                <input type="text" name="skill" class="form-control" id="myInput" onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:72%; margin-left: 1%;  padding: 10px;float: left;font-size: 16px;">
 								 <span onclick="newElement()" class="addBtn">Add</span>
 								 <div id="livesearch"></div>
 
-								 <input type="hidden" name="hiskill" class="form-control" id="hskill" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
+								 <input type="hidden" name="hiskill" class="form-control" id="hskill" style="margin:0;border:none;border-radius:0;width:72%;  padding: 10px;float: left;font-size: 16px;">
                                 <ul id="myUL" style="padding: 12px 8px 12px 40px;">
 						</ul>
                                            </div></div></div>
