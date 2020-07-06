@@ -34,7 +34,7 @@ ul li {
   position: relative;
 
  /* padding: 12px 8px 12px 40px; */
-  
+
 
   font-size: 14px;
   transition: 0.2s;
@@ -510,7 +510,7 @@ if(isset($_POST['submit'])) {
                                 <li><a href="jobpost&intern" id="jobPostPageLink">Job Post|Internship</a></li>
                                 <li><a href="employer" id="employerPageLink">Employer</a></li>
                                 <li><a href="college" id="collagePageLink">College</a></li>
-                          
+
                                 <li><a href="intern" id="internPageLink">Internship</a></li>
                                 <li><a href="openings" id="internPageLink">Openings</a></li>
                             </ul>
@@ -546,7 +546,7 @@ if(isset($_POST['submit'])) {
         </div>
     </div>
 </section>
-    
+
     <section id="jobApplication">
     <div class="container" style="background-color:#f9f9f9;margin-top: -39px; width: 100%;">
         <div class="row formDetail">
@@ -665,17 +665,9 @@ if(isset($_POST['submit'])) {
 
 
 
-        <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
-  <div id="drag_upload_file">
-    <p>Drop file here</p>
-    <p>or</p>
-    <p><input type="button" value="Select File" onclick="file_explorer();" style="width: 100%;"></p>
-    <input type="file" id="selectfile">
-	<input type="hidden" id="filename" name="fnamee">
-  </div>
-</div>
-<div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-                                      
+
+
+
                                              <div>    <center><input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;float:left;"></center></div>
                     </form>
 
