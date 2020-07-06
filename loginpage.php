@@ -38,10 +38,9 @@ if(isset($_POST['submit']))
             create_session($row,"f");
             header('location:dashboard.php');
         }
-        else{
+            header('location:recruiterlogin.php?invalid=1');
+           // echo "<br><br><h2 style='text-align:center;'>Invalid email/password</h2>";
 
-          echo 'alert("invalid");';
-            header('location:recruiterlogin.php');
         }
     }
 
