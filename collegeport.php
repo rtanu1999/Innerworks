@@ -647,10 +647,14 @@ if(isset($_POST['submit'])) {
                                         <input type="text" name="numofstudent" id="field" class="form-control" required="required">
                                     </div></div>
 				<div class="row form-group">
-					<div class="col-md-12">
+					<div class="col-md-6">
 						<label for="Contact " style="color:#000;">Contact Number</label>
 						 <input type="text" name="phone" pattern="[0-9]{10}" maxlength="10" id="field" class="form-control" required="required">
                                     	</div>
+					<div class="col-md-6">
+                                    		<label for="Contact Person Name " style="color:#000;">Contact Person Name</label>
+                                    		<input type="text" name="contactperson"  id="field"placeholder="Contact Person Name" class="form-control" required="required">
+                                  	</div>
 				</div>
                                   <div class="row form-group">
                                       <div class="col-md-6">
