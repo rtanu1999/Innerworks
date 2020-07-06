@@ -88,7 +88,7 @@ if(isset($_POST["edu"]))
                 <b><h4 class="truncate-normal">'. $row['jobTitle'] .'</h4></b>
                 </div></div>
                 <div class="company-name"><p class="truncate-normal"style = "padding-left: 1%;">' .$row['company'] .'</p></div>
-                <div class="job-locations"><p class="truncate-normal" style = "padding-left: 1%;">'. $row['location'] .'</p></div>
+                <div class="job-locations"><p class="truncate-normal" style = "padding-left: 1%;"> '. $row['location'] .'</p></div>
                 </div>
                 </div>
                 </div>

@@ -660,7 +660,7 @@ if(isset($_POST['submit'])) {
   <div id="drag_upload_file">
     <p>Drop file here</p>
     <p>or</p>
-    <p><input type="button" value="Select File" onclick="file_explorer();" style="width: 100%;"></p>
+    <p><input type="button" value="Select File" onclick="file_explorer();" style="width: fit-content !important;"></p>
     <input type="file" id="selectfile">
 	<input type="hidden" id="filename" name="fnamee">
   </div>
