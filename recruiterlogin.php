@@ -19,7 +19,11 @@
         <center>
 
         <p style="font-size: 30px"><b>Recruiter Login!</b></p><br>
-
+        <?php
+        if(isset($_GET["invalid"])){
+            echo "<p style='color:red'>Invalid username/password</p>";
+        }
+        ?>
         <form action="loginpage.php" method="post">
               <div class="wrap-input100 validate-input">
              <input id="place" class="enterinfo" type="email" name="email" placeholder="Email" required="" style="padding-left:53px;">

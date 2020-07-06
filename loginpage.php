@@ -39,8 +39,8 @@ if(isset($_POST['submit']))
             header('location:dashboard.php');       
         }
         else{
-            
-            echo "<br><br><h2 style='text-align:center;'>Invalid email/password</h2>";
+            header('location:recruiterlogin.php?invalid=1');     
+           // echo "<br><br><h2 style='text-align:center;'>Invalid email/password</h2>";
         }
     }
 
