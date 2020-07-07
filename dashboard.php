@@ -253,10 +253,12 @@ $utils = new Utils();
   </div>
 </div>
 <hr>
-
+    <div class="row" style="padding: 10px 40px;">
+        <input type="search" id="searchtitle" class="searchboox" placeholder="Search.." style="width:40%;margin-left:30%;border-radius:5%;"/>
+    </div>
 <div class="row">
+
   <div class="col-lg-6 col-md-12 col-12 mt-2">
-    
     <div class="card jobs-no-analytics">
       <div class="card-body">
         <h5 class="card-title job_title">Jobs</h5>
