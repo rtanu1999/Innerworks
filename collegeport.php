@@ -334,6 +334,7 @@ if(isset($_POST['submit'])) {
                         if ($_POST['website'] != null && !empty($_POST['website'])) {
                             if ($_POST['dept'] != null && !empty($_POST['dept'])) {
                                 if ($_POST['numofstudent'] != null && !empty($_POST['numofstudent'])) {
+                                  if ($_POST['aboutcollege'] != null && !empty($_POST['aboutcollege'])) {
                                      if ($_POST['writeuscollege'] != null && !empty($_POST['writeuscollege'])) {
 
 
@@ -377,7 +378,7 @@ if(isset($_POST['submit'])) {
                                     $mailSendToUserJobSeeker = $utils->userMailToJobSeeker($mail, $collegename, $email);
                                     if($mailSendToUserJobSeeker)
                                     {
-                                        $stmt = $conn->prepare('insert into collegeportal (collegename, university, city, email, looking, website, dept, numofstudent, aboutcollege, writeuscollege) VALUES(?,?,?,?,?,?,?,?,?)');
+                                        $stmt = $conn->prepare('insert into collegeportal (collegename, university, city, email, looking, website, dept, numofstudent, aboutcollege, writeuscollege) VALUES(?,?,?,?,?,?,?,?,?,?)');
                                         $stmt->bindParam(1, $collegename);
                                         $stmt->bindParam(2, $university);
                                         $stmt->bindParam(3, $city);
@@ -434,6 +435,10 @@ if(isset($_POST['submit'])) {
                 }
             } else {
                 $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Gender.</div>";
+            }
+        }
+        else {
+                $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter about college.</div>";
             }
         } else {
             $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Sweet Name.</div>";
@@ -556,7 +561,7 @@ if(isset($_POST['submit'])) {
                 </div>
                 <div id="oneD">
                     <?php echo $result; ?>
-                    <form action="/intern.php" method="post" id="internp" class="formJob" enctype="multipart/form-data" style="border: 2px solid #999;padding: 2%;width:90%;margin-left: 5%;">
+                    <form action=""/intern.php"" method="post" id="internp" class="formJob" enctype="multipart/form-data" style="border: 2px solid #999;padding: 2%;width:90%;margin-left: 5%;">
                    <div id="candidateFormResult"></div>
                               <p><b style="color:red;">*</b>Details</p>
 						      <hr>
