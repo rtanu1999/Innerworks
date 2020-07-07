@@ -49,7 +49,6 @@ $utils = new Utils();
 </head>
 
 <body>
-  
   <!-- Sidenav -->
   
     <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">

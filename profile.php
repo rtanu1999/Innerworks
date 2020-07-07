@@ -47,7 +47,6 @@ include_once 'DbConnection/DbConnectionHelper.php';
               </a>
             </li>
            
-           
             <li class="nav-item">
               <a class="nav-link" href="profile.php" >
                 <i class="ni ni-single-02 text-yellow"></i>
