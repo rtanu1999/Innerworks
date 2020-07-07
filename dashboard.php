@@ -49,7 +49,6 @@ $utils = new Utils();
 </head>
 
 <body>
-  
   <!-- Sidenav -->
   
     <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
@@ -76,6 +75,13 @@ $utils = new Utils();
               <a class="nav-link" href="profile.php">
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Profile</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="freelanceraction.php" >
+                <i class="ni ni-book-bookmark text-green"></i>
+                <span class="nav-link-text">Document</span>
               </a>
             </li>
                  </ul>

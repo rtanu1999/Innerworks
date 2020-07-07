@@ -31,7 +31,7 @@
                         <th style="width:10%;">College Name</th>
                         <th style="width:12%;">University</th>
                         <th style="width:7%;">City</th>
-                        <th style="width:10%;">Email</th>
+                        <th style="width:15%;">Email</th>
                         <th style="width:10%;">Looking for</th>
                         <th style="width:10%;">Website</th>
                         <th style="width:5%;">Department</th>

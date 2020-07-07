@@ -47,13 +47,20 @@ include_once 'DbConnection/DbConnectionHelper.php';
               </a>
             </li>
            
-           
             <li class="nav-item">
               <a class="nav-link" href="profile.php" >
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Profile</span>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="freelanceraction.php" >
+                <i class="ni ni-book-bookmark text-green"></i>
+                <span class="nav-link-text">Document</span>
+              </a>
+            </li>
+            
             
           </ul>
           
