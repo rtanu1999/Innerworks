@@ -2,7 +2,21 @@
 
 class Utils
 {
-
+  public function getTotalcollegeCnt($conn)
+  {
+      try{
+          $stmt = $conn->prepare("select count(*) from collegeportal");
+          $stmt->execute();
+          if($stmt->rowCount() > 0)
+          {
+              return $stmt->fetchColumn();
+          }
+      }
+      catch(PDOException $e)
+      {
+          echo '{"error":{"text":'. $e->getMessage() .'}}';
+      }
+  }
     public function getTotalJobseekerCnt($conn)
     {
         try{
