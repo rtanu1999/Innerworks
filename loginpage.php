@@ -17,7 +17,7 @@ if(isset($_POST['submit']))
     $no=$stmt->rowCount();
     if($no>0){
         echo "login success";
-        create_session($row,"a");
+        create_session($row,"Agency");
         header('location:dashboard.php');
     }
 
@@ -35,13 +35,13 @@ if(isset($_POST['submit']))
         $no=$stmt->rowCount();
         if($no>0){
             echo "login success";
-            create_session($row,"f");
+            create_session($row,"Freelancer");
             header('location:dashboard.php');
         }
             header('location:recruiterlogin.php?invalid=1');
            // echo "<br><br><h2 style='text-align:center;'>Invalid email/password</h2>";
 
-        
+
     }
 
 

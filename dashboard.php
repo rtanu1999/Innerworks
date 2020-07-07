@@ -19,7 +19,7 @@ $utils = new Utils();
   <title>Innerwork Dashboard</title>
   <!-- Favicon -->
   <link rel="icon" href="assets/img/brand/favicon.png" type="image/png">
-   
+
   <!-- Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <!-- Icons -->
@@ -50,16 +50,19 @@ $utils = new Utils();
 
 <body>
   <!-- Sidenav -->
-  
+
     <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
        <div class="scrollbar-inner">
             <!-- Brand -->
-            <div class="sidenav-header  align-items-center">
+            <div class="sidenav-header  align-items-center" style="height:auto !important;">
                <a class="navbar-brand" href="javascript:void(0)">
                  <img src="assets/img/brand/logo.jpg" class="navbar-brand-img" alt="...">
+
                </a>
+               <div >
+              <span style="font-size:20px;"><?php echo $_SESSION['type']; ?></span></div>
             </div>
-     
+
         <div class="navbar-inner">
             <!-- Collapse -->
             <div class="collapse navbar-collapse" id="sidenav-collapse-main">
@@ -107,7 +110,7 @@ $utils = new Utils();
                       </div>
                  </div>
               </li>
-            
+
             <li class="nav-item dropdown">
                <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                  <i class="ni ni-bell-55"></i>
@@ -124,15 +127,16 @@ $utils = new Utils();
                       <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View all</a>
                      </div>
             </li>
-              
+
           </ul>
           <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
             <li class="nav-item dropdown">
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
+
                   <span class="image-source">
              <img src="upload/<?php echo $_SESSION['image']; ?>" class="rounded-circle" width="50px">
-                        
+
          </span>
                   <div class="media-body  ml-2  d-none d-lg-block">
                     <span class="mb-0 text-sm  font-weight-bold"><?php echo $_SESSION['companyname']; ?></span>
@@ -154,20 +158,21 @@ $utils = new Utils();
             </a>
 
           </div>
-                
+
             </li>
           </ul>
         </div>
       </div>
     </nav>
     <!-- Header -->
-         <!-- Header -->  
+         <!-- Header -->
       <div class="header bg-primary pb-6">
            <div class="container-fluid">
                <div class="header-body">
-         
+
                   <!-- Card stats -->
                  <div class="row">
+
                     <div class="col-xl-3 col-md-6">
                         <div class="card card-stats">
                           <!-- Card body -->
@@ -180,11 +185,11 @@ $utils = new Utils();
                                 <div class="col-auto">
                                   <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
                         <i class="ni ni-chart-bar-32"></i>
- 
+
                                  </div>
                               </div>
                            </div>
-                  
+
                         </div>
                      </div>
                </div>
@@ -203,11 +208,11 @@ $utils = new Utils();
                        </div>
                     </div>
                   </div>
-                 
+
                 </div>
               </div>
             </div>
-            
+
             <div class="col-xl-3 col-md-6">
               <div class="card card-stats">
                 <!-- Card body -->
@@ -223,11 +228,11 @@ $utils = new Utils();
                       </div>
                     </div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
-                     
+
             <div class="col-xl-3 col-md-6">
               <div class="card card-stats">
                 <!-- Card body -->
@@ -243,7 +248,7 @@ $utils = new Utils();
                       </div>
                     </div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -262,7 +267,7 @@ $utils = new Utils();
 
 <div class="row">
   <div class="col-lg-6 col-md-12 col-12 mt-2">
-    
+
     <div class="card jobs-no-analytics">
       <div class="card-body">
         <h5 class="card-title job_title">Jobs</h5>
@@ -270,9 +275,9 @@ $utils = new Utils();
       </div>
     </div>
   </div>
-  
+
   <div class="col-lg-6 col-md-12 col-12 mt-2">
-    
+
     <div class="card resumes-no-analytics">
       <div class="card-body">
         <h5 class="card-title resume_title">Resumes</h5>
@@ -280,13 +285,13 @@ $utils = new Utils();
       </div>
     </div>
   </div>
- 
+
 </div>
 <br>
 <div class="row">
-   
+
    <div class="col-lg-6 col-md-12 col-12 mt-2">
-    
+
     <div class="card candidates-no-analytics">
       <div class="card-body">
         <h5 class="card-title candidate_title">Candidates</h5>
@@ -295,9 +300,9 @@ $utils = new Utils();
     </div>
   </div>
 
-  
+
   <div class="col-lg-6 col-md-12 col-12 mt-2">
-    
+
     <div class="card hires-no-analytics">
       <div class="card-body">
         <h5 class="card-title">Number of Hires</h5>
@@ -310,7 +315,7 @@ $utils = new Utils();
 
 
    <script>
- 
+
       var active_jobs = "0";
       var paused_jobs = "0";
       var rejected_jobs = "0";
@@ -330,16 +335,16 @@ $utils = new Utils();
                   data: [active_jobs, paused_jobs,rejected_jobs,closed_jobs],
                   backgroundColor: [ "#80effe", "#1be3fe", "#01c9e4","#019db2"]
               }],
-    
+
               // These labels appear in the legend and in the tooltips when hovering different arcs
               labels: [
-                  
+
                   'Active ('+active_jobs+')',
                   'Paused ('+paused_jobs+')',
                   'Rejected ('+rejected_jobs+')',
                   'Closed ('+closed_jobs+')'
               ]
-            
+
           };
            // For a pie chart
       var myPieChart = new Chart(ctx, {
@@ -347,18 +352,18 @@ $utils = new Utils();
           data: data
       });
       }
-      
-           
 
 
-      // for resumes 
+
+
+      // for resumes
       var pending_resumes = "0";
       var accepted_resumes = "0";
       var rejected_resumes = "0";
       var scheduled_resumes = "0";
       var total_resumes =parseInt(pending_resumes)+parseInt(accepted_resumes)+parseInt(rejected_resumes)+parseInt(scheduled_resumes);
       $('.resume_title').html('Resumes ('+total_resumes+')');
- 
+
       if(total_resumes == 0){
         $('.resumes-no-analytics').show();
         $('.resumes-analytics').hide();
@@ -378,7 +383,7 @@ $utils = new Utils();
               'Accepted ('+accepted_resumes+')',
               'Rejected ('+rejected_resumes+')',
               'Scheduled ('+scheduled_resumes+')'
-              
+
           ]
       };
       // For a pie chart
@@ -410,7 +415,7 @@ $utils = new Utils();
                 backgroundColor: [ "#80effe", "#1be3fe", "#01c9e4","#019db2"]
             }],
             labels: [
-                
+
                 'Hired  ('+hire_candidates+')',
                 'Hold  ('+hold_candidates+')',
                 'Offered  ('+offered_candidates+')',
@@ -439,7 +444,7 @@ $utils = new Utils();
             data[i] = hires[i][1];
           }
           let options = {
-              
+
               legend: {
                       display: true,
                       position : 'bottom',
@@ -448,7 +453,7 @@ $utils = new Utils();
                             }
                         }
           };
-        
+
           if(data.every(item => item === 0)){
             $('.hires-no-analytics').show();
             $('.hires-analytics').hide();
@@ -473,12 +478,12 @@ $utils = new Utils();
 
    </script>
 
-        
+
 
         <script>
           $('.interested').click(function(){
             $(this).append('<div class="mybtn_loader" style="display:flex;"><div class="spinner"></div></div>')
-            
+
             var j_id = $(this).attr('data-j_id');
             var r_id = $(this).attr('data-r_id');
              $.ajaxSetup({
@@ -503,7 +508,7 @@ $utils = new Utils();
                             closeTimeout: 3000
                         });
                         setTimeout(() => {
-                           
+
                             location.reload(true);
 
                         }, 1500);
@@ -515,13 +520,13 @@ $utils = new Utils();
 
           });
 
-          
+
         </script>
 
 
 
 
-   
+
                                 <!-- Footer -->
                               <footer class="footer pt-0">
                                 <div class="row align-items-center justify-content-lg-between">
@@ -530,9 +535,9 @@ $utils = new Utils();
                                           &copy; 2020 <a href="https://www.innerworkindia.com.com" class="font-weight-bold ml-1"                                           target="_blank">INNERWORK</a>
                                        </div>
                                    </div>
-                              
+
                                 </div>
-        
+
                               </footer>
     </div>
   </div>
@@ -543,7 +548,7 @@ $utils = new Utils();
   <script src="assets/vendor/js-cookie/js.cookie.js"></script>
   <script src="assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
   <script src="assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
-  
+
   <!-- Argon JS -->
   <script src="assets/js/argon.js?v=1.2.0"></script>
 <script src="https://incruiter.com/assets/datatable/dataTables.select.min.js"></script>
@@ -558,7 +563,7 @@ $utils = new Utils();
 
  <script src="https://incruiter.com/assets/js/argon2.js?v=1.0.0"></script>
 
- 
+
 </body>
 <script>
 $(document).on('click','.show_model',function(){
@@ -566,7 +571,7 @@ $(document).on('click','.show_model',function(){
   $('.quick-view').css('opacity','100');
   var id = $(this).attr('data-id');
   var j_id = $(this).attr('data-j_id');
- 
+
   console.log('upload_id = '+id+' , J_id = '+j_id);
 
 
@@ -584,9 +589,9 @@ $(document).on('click','.show_model',function(){
       },
       success: function(data) {
           $('.slider').css('display','none');
-    
+
     $('.contents').html(data);
-        
+
         $( ".quick-view" ).animate({
           opacity: 1,
           right:0
@@ -594,7 +599,7 @@ $(document).on('click','.show_model',function(){
           // Animation complete.
           });
 
-          
+
 
       }
 
@@ -626,18 +631,18 @@ $('.show_job').click(function(){
           j_id: id
       },
       success: function(data) {
-       
 
-          
+
+
           $( ".quick-view" ).animate({
 opacity: 1,
 right:0
 }, 1000, function() {
   $('.slider').css('display','none');
-    
+
     $('.contents').html(data);
 });
-          
+
 
       }
 
