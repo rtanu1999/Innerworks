@@ -1,8 +1,9 @@
 <?php
 
 $serverName = "localhost";
-$userName = "root";
-$password = "";
+
+$userName = "innerwor_innerwork";
+$password = "0703#InnerW@";
 
 try{
     $conn = new PDO("mysql:host=$serverName;dbname=innerwor_innerwork", $userName, $password);
