@@ -1,25 +1,20 @@
 <?php include "CommonFiles.php"?>
-<style>
-.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}</style>
     <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
-    <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
-    <!--javascpt-->
-    <link rel="stylesheet" href="css1/chat.css">
-    <!--fontawesome-->
-    <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="css/logo.png" type="image/icon type">
-    <link rel="icon" type="png" href="images/profile.png">
-    <!--google fonts-->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu&display=swap" rel="stylesheet">
-    <!--bootstrap cdn-->
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="icon" href="css/logo.png" type="image/icon type">
+  <link rel="icon" type="png" href="images/profile.png">
+  <!--google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu&display=swap" rel="stylesheet">
+  <!--bootstrap cdn-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!--styles.css-->
+  <link rel="stylesheet" href="css1/styles.css">
+  <!--fontawesome-->
+  <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
+  <!--javascpt-->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <section id="footer">
     <div class="container">
         <div class="row">
@@ -85,7 +80,6 @@
             </div>
         </div>
     </div>
-
 </section>
 
 
@@ -102,9 +96,6 @@
         var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
     })();
 </script>
-
-<!-- Tawk.to -->
-<!--Start of Tawk.to Script-->
 
 <button class="open-button btn btn-secondary" onclick="openForm()"><i class="fas fa-comment-dots"></i></button>
     <div class="container" id="containerr">
@@ -152,22 +143,9 @@
       </div>
       <div class="msg-bottom">
 
-            <div class="input-group" style="
-    position: relative;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: stretch;
-    align-items: stretch;
-    width: 100%;
-">
-              <input type="text" class="form-control" placeholder="write a message....." id="result" style="position: relative;
-    -ms-flex: 1 1 0%;
-    flex: 1 1 0%;
-    min-width: 0;
-    margin-bottom: 0;">
-              <div class="input-group-append" style="margin-left: -1px;display: flex;">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="write a message....." id="result">
+              <div class="input-group-append">
                 <span class="input-group-text"><button type="submit" name="button" onclick="results()"><i class="fas fa-paper-plane paper"></i></button> <button type="button" onclick="closeForm()"><i class="fas fa-power-off"></i></button></span>
               </div>
             </div>
@@ -193,13 +171,13 @@
     var txt=jQuery('.form-control').val();
     if( txt != ''){
     var html='<div style="overflow: hidden; margin: 0;"><div style="float: left; width: 46%; margin-left: 45%;"><p style = "background-color: #000000;  color: #fff; font-size: 14px; border-radius: 10px; padding: 5px 10px 5px 12px; margin: 0; width: 100%;">'+txt+'</p><span style = "color: #777; font-size: 12px; margin: 8px 0 0; display: block;">'+getCurrentTime()+'</span></div><div style = "width: 20px; float: right;"><img src="user.jpg" alt="" style = "border-radius: 50%;"></div></div>';
-   var html1 = '<div><div style = "display: inline-block; width: 20px; float: left;"><img src="css/logo.png" alt="" style = "border-radius: 50%;"></div><div style="display: inline-block; padding: 0 0 0 10px; vertical-align: top; width: 92%;"><div style= "width: 70%;"><form id="frm" name="myForm" method="post" action="save1.php"><p style = "background-color: #f0a500;  color: black; font-size: 14px; border-radius: 10px; padding: 5px 10px 5px 12px; margin: 0; width: 100%;"><a href="login.php" style = "color: black">Click here to chat Further</a><br><br></p></form><span style = "color: #777; font-size: 12px; margin: 8px 0 0; display:block;">'+getCurrentTime()+'</span></div></div></div>';
+    var html1 = '<div><div style = "display: inline-block; width: 20px; float: left;"><img src="css/logo.png" alt="" style = "border-radius: 50%;"></div><div style="display: inline-block; padding: 0 0 0 10px; vertical-align: top; width: 92%;"><div style= "width: 70%;"><form id="frm" name="myForm" method="post" action="save1.php"><p style = "background-color: #f0a500;  color: black; font-size: 14px; border-radius: 10px; padding: 5px 10px 5px 12px; margin: 0; width: 100%;"><a href="login.php" style = "color: black">Click here to chat Further</a><br><br></p></form><span style = "color: #777; font-size: 12px; margin: 8px 0 0; display:block;">'+getCurrentTime()+'</span></div></div></div>';
     	jQuery('.msg-page').append(html);
-     jQuery('.msg-page').append(html1);
+      jQuery('.msg-page').append(html1);
     document.getElementById('result').value = ''};
-    var btn = document.createElement("div");
-     btn.innerHTML = result;
-     document.getElementById("msgpage").appendChild(btn);
+    // var btn = document.createElement("div");
+    // btn.innerHTML = result;
+    // document.getElementById("msgpage").appendChild(btn);
   }
   document.addEventListener("keydown", function(event){if(event.keyCode == 13){ results(); }})
   function openForm() {
@@ -215,4 +193,17 @@ function closeForm() {
     </script>
 
 
+<!-- Tawk.to -->
+<!--Start of Tawk.to Script-->
+<!--<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5e7f141369e9320caabde55f/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>-->
 <!--End of Tawk.to Script-->
