@@ -26,6 +26,7 @@ $utils = new Utils();
                 <li><a href="dashboard" id="dashboardPage"><span>Dashboard</span></a></li>
                 <li><a href="newsletterSubscriptions" id="newsletterPage"> <span>Contact</span></a></li>
                 <li><a href="jobseeker" id="enquiriesPage"><span>JobSeeker</span></a></li>
+                  <li><a href="allinterns" id="enquiriesPage"><span>Interns</span></a></li>
                 <li><a href="allagency.php" id="agency"> <span>Agency</span></a></li>
                 <li><a href="allfreelancer.php" id="freelancer"> <span>Freelancer</span></a></li>
                 <li><a href="security" id="securityPage"> <span>Security</span></a></li>

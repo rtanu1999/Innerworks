@@ -18,7 +18,9 @@
     <ul>
         <li><a href="dashboard" id="dashboardPage"> <span>Dashboard</span></a></li>
         <li><a href="allJobSeeker" id="jobseekerPage"><span>Jobseeker</span></a></li>
+          <li><a href="allinterns" id="internpage"><span>Interns</span></a></li>
         <li><a href="allJobPost" id="employerPage"><span>Jobpost</span></a></li>
+        <li><a href="allcollege" id="college"><span>College</span></a></li>
         <li class="">
             <a href="#productsSubmenu" data-toggle="collapse" aria-expanded="false">Blogs</a>
             <ul class="collapse list-unstyled" id="productsSubmenu">

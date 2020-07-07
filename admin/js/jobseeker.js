@@ -18,7 +18,26 @@ function deleteJobseeker(e)
         xhttp.send();
     }
 }
-
+function deletecollege(e)
+{
+    if(e != "" && e != null)
+    {
+        var xhttp;
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if(xhttp.readyState == 4 && xhttp.status == 200)
+            {
+                //xhttp.responseText
+                if(xhttp.responseText == "111")
+                {
+                    $("#"+e).remove();
+                }
+            }
+        };
+        xhttp.open("POST", "ajax/deletecollege.php?college_info_id="+e, true);
+        xhttp.send();
+    }
+}
 
 function deleteJobpost(e)
 {
