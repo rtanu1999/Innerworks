@@ -78,6 +78,13 @@ $utils = new Utils();
                 <span class="nav-link-text">Profile</span>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="freelanceraction.php" >
+                <i class="ni ni-book-bookmark text-green"></i>
+                <span class="nav-link-text">Document</span>
+              </a>
+            </li>
                  </ul>
          </div>
        </div>
