@@ -53,7 +53,7 @@
 <section id="opening">
      <div class="row" style="padding: 10px 40px;">
 
-             <input type="search" id="searchtitle" class="searchboox" placeholder="Search Jobs|Internships.." style="width:70%;"/>
+             <input type="search" id="searchtitle" class="searchboox" placeholder="Search Jobs|Internships.." style="width:75%;"/>
 
 
 
