@@ -2,8 +2,6 @@
 
 $serverName = "localhost";
 
-//$userName = "root";
-//$password = "";
 $userName = "innerwor_innerwork";
 $password = "0703#InnerW@";
 
