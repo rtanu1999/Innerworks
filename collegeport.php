@@ -520,7 +520,7 @@ if(isset($_POST['submit'])) {
                                 <li><a href="openings" id="internPageLink">Openings</a></li>
                             </ul>
                         </li>
-                        <li><a href="recruiter" id="employerPageLink">Freelance Recruiter</a></li>
+                        <li><a href="recruiter" id="employerPageLink">Freelance</a></li>
                         <li><a href="blog" id="blogPageLink">Blog</a></li>
                         <li><a href="Login.php">Login</a></li>
                         <li><a href="contact">Contact Us</a></li>

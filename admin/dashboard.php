@@ -176,6 +176,27 @@ $utils = new Utils();
                         </div>
                     </a>
                 </div>
+                <div class="col-md-3 col-xs-12">
+                    <a href="allcollege">
+                        <div class="col-md-12 col-xs-12 dashBox bg4">
+                            <div class="col-md-3 col-xs-3">
+                                <img src="img/assistance.png" alt="">
+                            </div>
+                            <div class="col-md-9 col-xs-9">
+                                <h1><?php echo $utils->getTotalcollegeCnt($conn); ?></h1>
+                                <h3>College</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 view bor4">
+                            <div class="col-md-10 padNone">
+                                <p class="col4">College</p>
+                            </div>
+                            <div class="col-md-2 padNone">
+                                <span class="circle bor4"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </section>
     </div>

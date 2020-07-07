@@ -4,44 +4,44 @@ session_start();
 
 
 if(isset($_POST['submit']))
-{   
+{
   $email=$_POST['email'];
   $password=$_POST['password'];
 
     $sql="SELECT * FROM agency where email =:em and password =:pw";
     $stmt = $conn->prepare($sql);
     $stmt->execute(array(
-        ':em' => $email, 
+        ':em' => $email,
         ':pw' => $password));
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
     $no=$stmt->rowCount();
     if($no>0){
         echo "login success";
         create_session($row,"a");
-        header('location:dashboard.php');       
+        header('location:dashboard.php');
     }
-    
+
     if(($row != True)){
-        
+
         $email=$_POST['email'];
         $password=$_POST['password'];
 
     $sql="SELECT * FROM freelancer where email =:em and password =:pw";
     $stmt = $conn->prepare($sql);
     $stmt->execute(array(
-        ':em' => $email, 
+        ':em' => $email,
         ':pw' => $password));
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
         $no=$stmt->rowCount();
         if($no>0){
             echo "login success";
             create_session($row,"f");
-            header('location:dashboard.php');       
+            header('location:dashboard.php');
         }
-        else{
-            header('location:recruiterlogin.php?invalid=1');     
+            header('location:recruiterlogin.php?invalid=1');
            // echo "<br><br><h2 style='text-align:center;'>Invalid email/password</h2>";
-        }
+
+        
     }
 
 
