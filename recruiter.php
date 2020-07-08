@@ -677,7 +677,20 @@
 
 });
 
-    function checkunique(){
+
+
+
+    </script>
+<?php include_once 'Footer.php'; ?>
+    </body>
+
+</html>
+
+<script type="text/javascript" src="JQuery.js"></script>
+<script type="text/javascript">
+
+        function checkunique(){
+
         var email=$('#email').val();
         $.ajax({
 
@@ -689,7 +702,7 @@
                 "email":email
             },
             success:function(data){
-               alert(data);
+  
                 if(data=="1"){
 
                     $("#insert").click();
@@ -700,10 +713,4 @@
             }
         });
     }
-
-
-    </script>
-<?php include_once 'Footer.php'; ?>
-    </body>
-
-</html>
+</script>
