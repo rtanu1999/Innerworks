@@ -118,7 +118,7 @@ $utils = new Utils();
                     <a href="allinterns">
                         <div class="col-md-12 col-xs-12 dashBox bg4">
                             <div class="col-md-3 col-xs-3">
-                                <img src="img/assistance.png" alt="">
+                                <img src="img/reports.png" alt="">
                             </div>
                             <div class="col-md-9 col-xs-9">
                                 <h1><?php echo $utils->getTotalinternsCnt($conn); ?></h1>
@@ -181,7 +181,7 @@ $utils = new Utils();
                     <a href="allcollege">
                         <div class="col-md-12 col-xs-12 dashBox bg4">
                             <div class="col-md-3 col-xs-3">
-                                <img src="img/assistance.png" alt="">
+                                <img src="img/users.png" alt="">
                             </div>
                             <div class="col-md-9 col-xs-9">
                                 <h1><?php echo $utils->getTotalcollegeCnt($conn); ?></h1>

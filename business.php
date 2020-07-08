@@ -218,10 +218,10 @@ if(isset($_POST['submit'])) {
                       <div class="row">
                         <div class="col-md-12">
                           <label for="Messsage">Write Us!</label>
-                            <textarea name="name" rows="8" id="field" cols="95" name="msg"></textarea>
-                        </div>
+                            <textarea name="name" rows="3" id="field" style="width:100%;" name="msg"></textarea>
                       </div>
-                      <div class="row">
+                    </div>
+                    <div class="row">
                         <div class="col-md-12">
                           <label for="FindUs">How did You Find Us</label>
                           <select name="gender" class="form-control" required="required" id="field" >
@@ -233,7 +233,7 @@ if(isset($_POST['submit'])) {
                               </select>
                           </div>
                       </div>
-                       <input type="submit" name="submit" value="submit"  class="form-control" />
+                       <input type="submit" name="submit" value="submit"  class="form-control" style="margin-top :13px;"/>
                    </form>
                </div>
            </div>
