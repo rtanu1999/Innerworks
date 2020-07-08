@@ -21,7 +21,7 @@ if(isset($_POST['updt_submit']))
     $email=$_POST["email"];
     $pass=$_POST["pass"];
 
-    if($val=="a"){
+    if($val=="Agency"){
             if(!empty($_POST[image])){
         $sql="UPDATE agency SET contactperson=:cp,email=:em,companyname=:cn,website=:web,address=:add,city=:city,state=:coun,postcode= :code ,comment=:com,image=:im WHERE email=:em";
         $stmt = $conn->prepare($sql);
@@ -36,11 +36,11 @@ if(isset($_POST['updt_submit']))
             ':com' => $_POST[comment],
             ':em' => $_POST[email],
             ':im'=>$_POST[image]
-           
-            
+
+
         ));
         $count = $stmt->rowCount();
-        resetvalues("a");
+        resetvalues("Agency");
         echo "Updated Successfully!!!!";
         header('location:profile.php');
     }else{
@@ -56,16 +56,16 @@ if(isset($_POST['updt_submit']))
             ':code' => $_POST[postcode],
             ':com' => $_POST[comment],
             ':em' => $_POST[email]
-           
-            
+
+
         ));
         $count = $stmt->rowCount();
-        resetvalues("a");
+        resetvalues("Agency");
         echo "Updated Successfully!!!!";
         header('location:profile.php');
     }
     }
-    if($val=="f"){
+    if($val=="Freelancer"){
          if(!empty($_POST[image])){
          $sql="UPDATE freelancer SET contactperson=:cp,email=:em,companyname=:cn,website=:web,address=:add,city=:city,state=:coun,postcode= :code ,comment=:com,image=:im WHERE email=:em";
          $stmt = $conn->prepare($sql);
@@ -82,11 +82,11 @@ if(isset($_POST['updt_submit']))
             ':im'=>$_POST[image]
         ));
         $count = $stmt->rowCount();
-        resetvalues("f");
+        resetvalues("Freelancer");
         echo "Updated Successfully!!!!";
         header('location:profile.php');
 
-        
+
     }
     else{
         $sql="UPDATE freelancer SET contactperson=:cp,email=:em,companyname=:cn,website=:web,address=:add,city=:city,state=:coun,postcode= :code ,comment=:com WHERE email=:em";
@@ -103,7 +103,7 @@ if(isset($_POST['updt_submit']))
             ':em' => $_POST[email]
         ));
         $count = $stmt->rowCount();
-        resetvalues("f");
+        resetvalues("Freelancer");
         echo "Updated Successfully!!!!";
         header('location:profile.php');
     }
@@ -120,7 +120,7 @@ function resetvalues($value){
         $sql="SELECT * FROM agency where email =:em and password =:pw";
         $stmt = $conn->prepare($sql);
         $stmt->execute(array(
-        ':em' => $email, 
+        ':em' => $email,
         ':pw' => $pass));
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         create_session($row,$value);
@@ -131,7 +131,7 @@ function resetvalues($value){
         $sql="SELECT * FROM freelancer where email =:em and password =:pw";
         $stmt = $conn->prepare($sql);
         $stmt->execute(array(
-        ':em' => $email, 
+        ':em' => $email,
         ':pw' => $pass));
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         create_session($row,$value);

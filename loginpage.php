@@ -38,10 +38,8 @@ if(isset($_POST['submit']))
             create_session($row,"Freelancer");
             header('location:dashboard.php');
         }
-            header('location:recruiterlogin.php?invalid=1');
-           // echo "<br><br><h2 style='text-align:center;'>Invalid email/password</h2>";
-
-
+        else{   header('location:recruiterlogin.php?invalid=1');}
+         // echo "<br><br><h2 style='text-align:center;'>Invalid email/password</h2>";
     }
 
 
