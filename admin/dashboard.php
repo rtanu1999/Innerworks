@@ -16,6 +16,13 @@ $utils = new Utils();
 
 </head>
 <body>
+<style>
+@media (min-width: 1200px){
+.container {
+    width: 1160px;
+}
+}
+</style>
 <div id="main">
     <?php include 'Header.php'; ?>
 
