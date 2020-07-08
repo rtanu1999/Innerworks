@@ -165,28 +165,28 @@ if(isset($_POST['submit'])) {
                         <div class="row">
                            <div class="col-md-6">
                                <label for="Name"> Name</label>
-                               <input type="text" name="name"  class="form-control" required>
+                               <input type="text" name="name"id="field"  class="form-control" required>
                            </div>
                            <div class="col-md-6">
                                <label for="companyname">Company Name</label>
-                               <input type="text" name="companyName"  class="form-control" required>
+                               <input type="text" name="companyName" id="field" class="form-control" required>
                            </div>
                        </div>
                        <div class="row">
                            <div class="col-md-6">
                                <label for="contactPerson">Designation</label>
-                               <input type="text" name="Designation"  class="form-control" required>
+                               <input type="text" name="Designation" id="field" class="form-control" required>
                            </div>
                            <div class="col-md-6">
                                <label for="emailAddress">Email Address</label>
-                               <input type="email" name="email" id="emailAddress" class="form-control" required>
+                               <input type="email" name="email" id="field" class="form-control" required>
                            </div>
 
                        </div>
                        <div class="row">
                          <div class="col-md-6">
                              <label for="">Which Service You are Looking For</label>
-                             <select name="lookingService" id="lookingService" class="form-control" onchange="return getDetails(this.value)" required>
+                             <select name="lookingService" id="field" class="form-control" onchange="return getDetails(this.value)" required>
                                  <option selected disabled>Interested In</option>
                                  <option value="1">HR Services</option>
                                  <option value="2">IT Services</option>
@@ -195,7 +195,7 @@ if(isset($_POST['submit'])) {
                          </div>
                          <div class="col-md-6">
                              <label for="emailAddress">Phone Number</label>
-                             <input type="text" name="mobno" pattern="[0-9]{10}" maxlength="10" class="form-control" required>
+                             <input type="text" name="mobno" id="field" pattern="[0-9]{10}" maxlength="10" class="form-control" required>
                          </div>
 
 
@@ -203,7 +203,7 @@ if(isset($_POST['submit'])) {
                        <div class="row">
                          <div class="col-md-6">
                            <label for="emailAddress">Industry</label>
-                           <select name="Industry"  class="form-control" onchange="return getDetails(this.value)" required>
+                           <select name="Industry" id="field" class="form-control" onchange="return getDetails(this.value)" required>
                                <option selected disabled> Industry</option>
                                <option value="1">HR Services</option>
                                <option value="2">IT Services</option>
@@ -212,13 +212,13 @@ if(isset($_POST['submit'])) {
                          </div>
                          <div class="col-md-6">
                              <label for="emailAddress">Location</label>
-                             <input type="text" name="Location" id="emailAddress" class="form-control" required>
+                             <input type="text" id="field" name="Location" id="emailAddress" class="form-control" required>
                          </div>
                       </div>
                       <div class="row">
                         <div class="col-md-12">
                           <label for="Messsage">Write Us!</label>
-                            <textarea name="name" rows="8" cols="95" name="msg"></textarea>
+                            <textarea name="name" rows="8" id="field" cols="95" name="msg"></textarea>
                         </div>
                       </div>
                       <div class="row">
