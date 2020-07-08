@@ -144,8 +144,8 @@ if(isset($_POST['submit'])) {
     <div class="container">
         <div class="col-md-8"></div>
         <div class="col-md-4">
-            <h2>BUSINESS ENQUIRY </h2>
-            <p><a href="index">Home</a> <span>/</span> BUSINESS ENQUIRY</p>
+            <h2>Business Enquiry </h2>
+            <p><a href="index">Home</a> <span>/</span> Business Enquiry</p>
         </div>
     </div>
 </section>

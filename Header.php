@@ -41,7 +41,7 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" id="servicesPageLink">Resources<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="blog" id="blogPageLink">Blog</a></li>
-                                <li><a href="business">BUSINESS ENQUIRY</a></li>
+                                <li><a href="business">Business Enquiry</a></li>
                                 <li><a href="collegeport" id="collagePageLink">College</a></li>
                                 <li><a href="recruiter" id="employerPageLink">Freelancer</a></li>
                             </ul>
