@@ -41,8 +41,13 @@
                         <h3>We keep you forward in digital Era</h3>
                     </div>
                 </div>
-                <div class="item ">
+<!--                 <div class="item ">
                     <img src="img/banner1.png" alt="" style="width:100%;height:500px;">
+                    <div class="carousel-caption">
+                    </div>
+                </div> -->
+                <div class="item ">
+                    <img src="img/r.jpeg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                     </div>
                 </div>
