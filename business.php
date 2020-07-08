@@ -199,6 +199,12 @@ if(isset($_POST['submit'])) {
                                  <option value="1">HR Services</option>
                                  <option value="2">IT Services</option>
                                  <option value="3">Start Up Support</option>
+                                 <option value="4">Certifications</option>
+                                 <option value="5">Training</option>
+                                 <option value="6">Placement</option>
+                                 <option value="7">Internship</option>
+                                 <option value="8">Webinars</option>
+                                 <option value="9">Conference</option>
                              </select>
                          </div>
                          <div class="col-md-6">
@@ -213,9 +219,8 @@ if(isset($_POST['submit'])) {
                            <label for="emailAddress">Industry</label>
                            <select name="Industry" id="field" class="form-control" onchange="return getDetails(this.value)" required>
                                <option selected disabled> Industry</option>
-                               <option value="1">HR Services</option>
-                               <option value="2">IT Services</option>
-                               <option value="3">Start Up Support</option>
+                               <option value="1">Individual</option>
+                               <option value="2">Organization</option>
                            </select>
                          </div>
                          <div class="col-md-6">
