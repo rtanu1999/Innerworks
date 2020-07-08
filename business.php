@@ -135,6 +135,14 @@ if(isset($_POST['submit'])) {
     <?php include "CommonFiles.php"?>
     <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
+    <style>
+    @media (max-width: 768px){
+.formJob input[type="submit"] {
+
+    margin-left: 80px !important;
+}
+}
+</style>
 </head>
 <body>
 <?php include_once 'Header.php'; ?>
