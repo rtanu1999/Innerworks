@@ -18,7 +18,7 @@ $result=$user->user_detail($user_id);
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/mervick/emojionearea/master/dist/emojionearea.min.css">
@@ -147,7 +147,7 @@ img{
 
 	<div class="header">
 		<img  class="logo circular" src="image/logo.png"><h4>Innerwork Solutions Pvt Ltd</h4>
-		<a  class="logout" href="Logout.php">Logout</a>
+		<a  class="logout" href="logout.php">Logout</a>
 		<a  class="hi" href="">Hi <?php echo($result['username']); ?></a>
 	</div>
   <p style="margin-bottom:10px; text-align:center; margin-top: 100px;"><b>Please Select an Agent to chat with:</b></p>

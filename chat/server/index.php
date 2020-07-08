@@ -147,7 +147,7 @@ img{
 	<div class="header">
 		<img  class="logo circular" src="image/logo.png"><h4>Innerwork Solutions Pvt Ltd</h4>
 
-		<a  class="logout" href="Logout.php">Logout</a>
+		<a  class="logout" href="logout.php">Logout</a>
 		<a  class="hi" href="">Hi <?php echo($result['username']); ?></a>
 	</div>
   <p style="margin-bottom:10px; text-align:center; margin-top: 100px;"><b>Please Select a client to chat with:</b></p>
