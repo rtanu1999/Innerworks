@@ -51,7 +51,7 @@ if(isset($_POST['submit'])) {
                                 $Industry = $_POST['Industry'];
                                 $Location = $_POST['Location'];
                                 $msg = $_POST['msg'];
-                                
+
                                 // $adminEmail = 'info@innerworkindia.com';
                                 $adminEmail = 'hr@innerworkindia.com';
 
