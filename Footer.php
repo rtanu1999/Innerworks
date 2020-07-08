@@ -106,7 +106,7 @@
 <!-- Tawk.to -->
 <!--Start of Tawk.to Script-->
 
-<button class="open-button btn btn-secondary" onclick="openForm()"><i class="fas fa-comment-dots"></i></button>
+<!--<button class="open-button btn btn-secondary" onclick="openForm()"><i class="fas fa-comment-dots"></i></button>
     <div class="container" id="containerr">
       <div class="msg-header-img1">
         <img src="css1/logo.png" alt="">
@@ -131,7 +131,7 @@
                   <span class ="time" id="time"></span>
                   </div>
                 </div>
-                </div>
+              </div>-->
                 <!-- <div class="outgoing-chats">
                   <div class="outgoing-chats-msg">
                       <p>Hii!! This is message from</p>
@@ -146,7 +146,7 @@
 
 
 
-            </div>
+          <!--  </div>
           </div>
         </div>
       </div>
@@ -212,7 +212,17 @@ function closeForm() {
   document.getElementById("open-button").style.display = "block";
 }
 
-    </script>
+</script>-->
 
-
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/5e7f141369e9320caabde55f/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
 <!--End of Tawk.to Script-->
