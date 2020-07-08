@@ -32,7 +32,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="jobseeker" id="jobSeekerPageLink">Job Seeker</a></li>
                                 <li><a href="jobpost&intern" id="jobPostPageLink">Job Post|Internship</a></li>
-                                <li><a href="employer" id="employerPageLink">Employer</a></li>
+                                <li><a href="business" id="employerPageLink">Business Enquiry</a></li>
                                 <li><a href="collegeport" id="collagePageLink">College</a></li>
 
                                 <li><a href="intern" id="internPageLink">Internship</a></li>
