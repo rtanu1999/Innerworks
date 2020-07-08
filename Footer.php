@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/collage.css">
     <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
     <!--javascpt-->
-    <link rel="stylesheet" href="css1/chat.css">
+
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
     <link rel="icon" href="css/logo.png" type="image/icon type">

@@ -5,7 +5,7 @@
 }
 #h_inner
 {
-/* 	position: fixed ;  */
+ 	position: fixed ;  
 	top: -2em;
 }
 
@@ -19,11 +19,12 @@
 	#h_inner
 	{
 	margin-top: 18%;
-    font-size: 125%;
+	font-size: 125%;
+	position: fixed;
 	}	
 }
 
-@media only screen and (max-width: 1280px) 
+	@media only screen and (max-width: 1280px) 
 {
 	.navbar-header
 	{
@@ -32,7 +33,8 @@
 	}	
 	#h_inner
 	{
-    font-size: 120%;
+	font-size: 120%;
+
 	}	
 }
 
@@ -69,15 +71,9 @@
 		width: auto;
 		height: 5em;
 	}
-	#h_inner font
-	{
-		font-size: 180%;	
-	}
+	
 		
-	#h_inner
-	{
-    font-size: 160%;
-	}
+
 }
 
 
