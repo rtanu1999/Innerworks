@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
 	if(empty($username)){
 	echo"<script type='text/javascript'>alert('Please Enter Your Name!')</script>";
      	}
-	
+
         else  if(empty($contact)){
 	echo"<script type='text/javascript'>alert('Please Enter Your Contact!')</script>";
         }
@@ -28,8 +28,8 @@ if(isset($_POST['submit'])){
 	else if(!preg_match("/^[a-zA-Z .]+$/",$username)){
          echo"<script type='text/javascript'>alert('Please Enter Valid Name!')</script>";
 	}
-         
-        else 
+
+        else
 	{
 
 		$logincheck=$user->login_check($username,$contact);
@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
 		            header('location:index.php');
 
 	          }
-			   
+
 
 	}
 
@@ -57,7 +57,7 @@ if(isset($_POST['submit'])){
 	//	$user->insert_login_details($logincheck);
 	//	header('location:index.php');
 	//}
-	
+
 
 }
 
@@ -88,7 +88,7 @@ if(isset($_POST['submit'])){
 	<div style="position: absolute;top: 20%;left: 30%;border:2px solid grey;padding: 60px 60px;background: yellow;text-align: center">
 		<center><img src="image\logo.png" height="200px" width="250px"alt="Innerwork Solution Private limited"><br>
       <p>Please enter Your details here:</p>
-		<form method="post" action="">
+		<form method="post" action="#">
 			<input type="text" name="username" placeholder="Enter name">
 			<input type="text" name="contact" placeholder="Enter contact"> <br>
 

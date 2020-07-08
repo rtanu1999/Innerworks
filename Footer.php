@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu&display=swap" rel="stylesheet">
     <!--bootstrap cdn-->
 
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <section id="footer">
@@ -193,11 +193,11 @@
     var txt=jQuery('.form-control').val();
     if( txt != ''){
     var html='<div style="overflow: hidden; margin: 0;"><div style="float: left; width: 46%; margin-left: 45%;"><p style = "background-color: #000000;  color: #fff; font-size: 14px; border-radius: 10px; padding: 5px 10px 5px 12px; margin: 0; width: 100%;">'+txt+'</p><span style = "color: #777; font-size: 12px; margin: 8px 0 0; display: block;">'+getCurrentTime()+'</span></div><div style = "width: 20px; float: right;"><img src="user.jpg" alt="" style = "border-radius: 50%;"></div></div>';
-   var html1 = '<div><div style = "display: inline-block; width: 20px; float: left;"><img src="css/logo.png" alt="" style = "border-radius: 50%;"></div><div style="display: inline-block; padding: 0 0 0 10px; vertical-align: top; width: 92%;"><div style= "width: 70%;"><form id="frm" name="myForm" method="post" action="save1.php"><p style = "background-color: #f0a500;  color: black; font-size: 14px; border-radius: 10px; padding: 5px 10px 5px 12px; margin: 0; width: 100%;"><a href="login.php" style = "color: black">Click here to chat Further</a><br><br></p></form><span style = "color: #777; font-size: 12px; margin: 8px 0 0; display:block;">'+getCurrentTime()+'</span></div></div></div>';
+   var html1 = '<div><div style = "display: inline-block; width: 20px; float: left;"><img src="css/logo.png" alt="" style = "border-radius: 50%;"></div><div style="display: inline-block; padding: 0 0 0 10px; vertical-align: top; width: 92%;"><div style= "width: 70%;"><form id="frm" name="myForm" method="post" action="save1.php"><p style = "background-color: #f0a500;  color: black; font-size: 14px; border-radius: 10px; padding: 5px 10px 5px 12px; margin: 0; width: 100%;"><a href="chat/client/login.php" style = "color: black">Click here to chat Further</a><br><br></p></form><span style = "color: #777; font-size: 12px; margin: 8px 0 0; display:block;">'+getCurrentTime()+'</span></div></div></div>';
     	jQuery('.msg-page').append(html);
      jQuery('.msg-page').append(html1);
     document.getElementById('result').value = ''};
-    var btn = document.createElement("div");
+    var btn = document.createElement("div").style.display="none";
      btn.innerHTML = result;
      document.getElementById("msgpage").appendChild(btn);
   }

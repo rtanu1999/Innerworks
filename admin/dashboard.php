@@ -49,8 +49,8 @@ $utils = new Utils();
             </div>
         </section>
 
-        <section id="dash">
-            <div class="container">
+        <section id="dash" >
+            <div class="container" style="z-index:-1;">
                 <div class="col-md-3 col-xs-12">
                     <a href="allJobSeeker">
                         <div class="col-md-12 col-xs-12 dashBox bg3">

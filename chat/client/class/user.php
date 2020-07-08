@@ -8,7 +8,7 @@ class user{
 
 	function __construct(){
 		$conf = new config();
-		$db=$conf->db();	
+		$db=$conf->db();
 		$this->pdo=$db;
 	}
 
@@ -23,7 +23,7 @@ class user{
 		$query->execute();
 		$result=$query->fetch(PDO::FETCH_ASSOC);
 		return $result['username'];
-	}	
+	}
 
 	function user_detail($user_id){
 		$sql = "SELECT * FROM loginc where user_id=:user_id";
@@ -69,7 +69,7 @@ class user{
 		$query =$this->pdo->prepare($sql);
 		$query->bindParam(':user_id',$user_id,PDO::PARAM_STR);
 		$query->execute();
-		$result=$query->fetch(PDO::FETCH_ASSOC);	
+		$result=$query->fetch(PDO::FETCH_ASSOC);
 		return $result['last_activity'];
 		return $result;
 	}
@@ -80,7 +80,7 @@ class user{
 		$query->bindParam(':to_user_id',$to_user,PDO::PARAM_STR);
 		$query->bindParam(':from_user_id',$user,PDO::PARAM_STR);
 		$query->execute();
-		
+
 
 		$results = $query->fetchAll(PDO::FETCH_ASSOC);
 		$output = '<ul class="list-unstyled">';
@@ -128,7 +128,7 @@ class user{
 
 	function fetch_is_type_status($user_id)
 	{
-	 $sql = "SELECT is_type FROM login_details WHERE user_id=:user_id ORDER BY last_activity DESC LIMIT 1 "; 
+	 $sql = "SELECT is_type FROM login_details WHERE user_id=:user_id ORDER BY last_activity DESC LIMIT 1 ";
 	 $query = $this->pdo->prepare($sql);
 	 $query->bindParam(':user_id',$user_id,PDO::PARAM_STR);
 	 $query->execute();
