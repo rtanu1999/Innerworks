@@ -32,15 +32,20 @@
                             <ul class="dropdown-menu">
                                 <li><a href="jobseeker" id="jobSeekerPageLink">Job Seeker</a></li>
                                 <li><a href="jobpost&intern" id="jobPostPageLink">Job Post|Internship</a></li>
-                                <li><a href="business" id="employerPageLink">Business Enquiry</a></li>
                                 <li><a href="collegeport" id="collagePageLink">College</a></li>
-
                                 <li><a href="intern" id="internPageLink">Internship</a></li>
                                 <li><a href="openings" id="internPageLink">Openings</a></li>
                             </ul>
                         </li>
-                        <li><a href="recruiter" id="employerPageLink">Freelance</a></li>
-                        <li><a href="blog" id="blogPageLink">Blog</a></li>
+                          <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" id="servicesPageLink">Resources<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog" id="blogPageLink">Blog</a></li>
+                                <li><a href="business">BUSINESS ENQUIRY</a></li>
+                                <li><a href="collegeport" id="collagePageLink">College</a></li>
+                                <li><a href="recruiter" id="employerPageLink">Freelancer</a></li>
+                            </ul>
+                        </li>
                         <li><a href="Login.php">Login</a></li>
                         <li><a href="contact">Contact Us</a></li>
                         <li><div id='paynow' class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F3auqrmv27oE3J/view" data-text="Pay Now" data-color="#528FF0" data-size="small">
