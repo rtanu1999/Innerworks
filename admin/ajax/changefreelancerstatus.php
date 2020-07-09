@@ -14,9 +14,14 @@ if(isset($_GET['userid']))
                 $cnt = $_GET['cnt'];
 
                 
-                if($status == 0)
+                if($status)
                 {
-                    $dbStatus = true;
+                    $dbStatus = 0;
+                }
+                else if($status == false)
+
+                {
+                    $dbStatus = 1;
                 }
                 $stmt = $conn->prepare("update freelancer set status = ? where userid = ?");
                 $stmt->bindParam(1, $dbStatus);
