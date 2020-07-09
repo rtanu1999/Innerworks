@@ -7,8 +7,8 @@ $mail = new PHPMailer();
 include_once "WebUtils.php";
 $utils = new WebUtils();
 
-$result = $name = $gender = $companyName = $Designation = $email = $contactNumber = $Industry = $Location = $lookingService = "";
-$mailSendToAdminJobSeeker = $mailSendToUserJobSeeker = false;
+$result = $name = $gender = $companyName = $Designation = $email = $mobno = $Industry = $Location = $lookingService = $msg = "";
+
 
 if(isset($_POST['submit'])) {
     if ($_POST['name'] != null && !empty($_POST['name'])) {
@@ -16,7 +16,7 @@ if(isset($_POST['submit'])) {
             if ($_POST['companyName'] != null && !empty($_POST['companyName'])) {
                 if ($_POST['Designation'] != null && !empty($_POST['Designation'])) {
                     if ($_POST['email'] != null && !empty($_POST['email'])) {
-                        if ($_POST['mobno'] != null && !empty($_POST['mobno']) && (strlen(($_POST['mobno'])) == 10)) {
+                        if ($_POST['mobno'] != null && !empty($_POST['mobno'])) {
                             if ($_POST['Industry'] != null && !empty($_POST['Industry'])) {
                                 if ($_POST['Location'] != null && !empty($_POST['Location'])) {
                                      if ($_POST['lookingService'] != null && !empty($_POST['lookingService'])) {
@@ -46,39 +46,39 @@ if(isset($_POST['submit'])) {
                                 $gender = $_POST['gender'];
                                 $companyName = $_POST['companyName'];
                                 $Designation = $_POST['Designation'];
-                                $contactNumber = $_POST['mobno'];
-                                $email = $_POST['email'];
+                                  $email = $_POST['email'];
+                                $mobno = $_POST['mobno'];
                                 $Industry = $_POST['Industry'];
                                 $Location = $_POST['Location'];
+                                $lookingService = $_POST['lookingService'];
                                 $msg = $_POST['msg'];
 
                                 // $adminEmail = 'info@innerworkindia.com';
-                                $adminEmail = 'hr@innerworkindia.com';
+                               
 
                                 //Admin Email
-                                $mailSendToAdminJobSeeker = $utils->adminMailToJobSeeker1($mail, $name, $contactNumber, $email, $gender, $companyName,$Location,$Industry, $msg, $Designation);
-                                if($mailSendToAdminJobSeeker)
-                                {
-                                    $mailSendToUserJobSeeker = $utils->userMailToJobSeeker($mail, $name, $email);
-                                    if($mailSendToUserJobSeeker)
+                                
+                                
+                                    if(isset($_POST["submit"]))
                                     {
-                                        $stmt = $conn->prepare('insert into business (name, gender, companyName, Designation, email, mobno, lookingService, Industry, Location,msg) VALUES(?,?,?,?,?,?,?,?,?,?)');
+                                        $stmt = $conn->prepare('insert into bussiness (name, gender, companyName, Designation, email, mobno,Industry, Location, lookingService, msg) VALUES(?,?,?,?,?,?,?,?,?,?)');
                                         $stmt->bindParam(1, $name);
                                         $stmt->bindParam(2, $gender);
                                         $stmt->bindParam(3, $companyName);
                                         $stmt->bindParam(4, $Designation);
                                         $stmt->bindParam(5, $email);
                                         $stmt->bindParam(6, $mobno);
-                                        $stmt->bindParam(7, $lookingService);
-                                        $stmt->bindParam(8, $Industry);
-                                        $stmt->bindParam(9, $Location);
+                                        $stmt->bindParam(7, $Industry);
+                                        $stmt->bindParam(8, $Location);
+                                        $stmt->bindParam(9, $lookingService);
                                         $stmt->bindParam(10, $msg);
 
                                         $stmt->execute();
-
+                                         sendmail();
                                         $result = "<div class='alert alert-success alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Success!</strong> Thanks applying for Job, will get you back soon.</div>";
+
                                     }
-                                }
+                                
 
 
                            } catch (PDOException $e) {
@@ -87,45 +87,45 @@ if(isset($_POST['submit'])) {
 
                         }
                         else {
-            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please select your experience</div>";
+            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please enter your name</div>";
                                }
-                    }
-                         else
+                    } else
                         {
-                            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Interest</div>";
+                            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please select gender</div>";
                         }
                     } else
                         {
-                            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your skills</div>";
+                            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter company name</div>";
                         }
-                    }
-                    else
+                    }else
                         {
-                            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Mobile Number.</div>";
+                            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your designation.</div>";
                         }
-                    }
-                    else
+                    }else
                     {
                         $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Email Address.</div>";
                     }
 
-                }
-                else
+                }  else
                     {
-                        $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Education.</div>";
+                        $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your mobile.</div>";
                     }
                 } else {
-                    $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your City.</div>";
+                    $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your industry.</div>";
                 }
             } else {
-                $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Gender.</div>";
+                $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Location.</div>";
             }
         } else {
-            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Sweet Name.</div>";
+            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter lookingservice.</div>";
+        }
+
+    }else {
+            $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your msg.</div>";
         }
 
     }
-}
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -169,7 +169,7 @@ if(isset($_POST['submit'])) {
                  <?php echo $result; ?>
                    <form action="<?=($_SERVER['PHP_SELF'])?>" method="post" class="formJob" style="border: 2px solid #999;padding: 2%;width:90%;margin-left: 5%;" enctype="multipart/form-data" >
                        <p><b style="color:red;">*</b> BUSINESS Information</p>
-         						     <hr>
+                         <hr>
                         <div class="row">
                            <div class="col-md-6">
                                <label for="Name"> Name</label>
@@ -196,9 +196,16 @@ if(isset($_POST['submit'])) {
                              <label for="">Which Service You are Looking For</label>
                              <select name="lookingService" id="field" class="form-control" onchange="return getDetails(this.value)" required>
                                  <option selected disabled>Interested In</option>
-                                 <option value="1">HR Services</option>
-                                 <option value="2">IT Services</option>
-                                 <option value="3">Start Up Support</option>
+                                 <option value="HR Services">HR Services</option>
+                                 <option value="IT Services">IT Services</option>
+                                 <option value="StartUp Support">StartUp Support</option>
+                                  <option value="Digital Marketing">Digital Marketing</option>
+                                   <option value="Certifications">Certifications</option>
+                                    <option value="Training">Training</option>
+                                     <option value="Placement">Placement</option>
+                                      <option value="Internship">Internship</option>
+                                       <option value="Webinars">Webinars</option>
+                                        <option value="Conferences">Conferences</option>
                              </select>
                          </div>
                          <div class="col-md-6">
@@ -213,9 +220,10 @@ if(isset($_POST['submit'])) {
                            <label for="emailAddress">Industry</label>
                            <select name="Industry" id="field" class="form-control" onchange="return getDetails(this.value)" required>
                                <option selected disabled> Industry</option>
-                               <option value="1">HR Services</option>
-                               <option value="2">IT Services</option>
-                               <option value="3">Start Up Support</option>
+                               <option value="Individual">Individual</option>
+                               <option value="Organization">Organization</option>
+                               <option value="Consultant">Consultant</option>
+
                            </select>
                          </div>
                          <div class="col-md-6">
@@ -226,7 +234,7 @@ if(isset($_POST['submit'])) {
                       <div class="row">
                         <div class="col-md-12">
                           <label for="Messsage">Write Us!</label>
-                            <textarea name="name" rows="3" id="field" style="width:100%;" name="msg"></textarea>
+                            <textarea rows="3" id="field" style="width:100%;" name="msg"></textarea>
                       </div>
                     </div>
                     <div class="row">
@@ -251,3 +259,73 @@ if(isset($_POST['submit'])) {
 <?php include_once 'Footer.php'; ?>
 </body>
 </html>
+
+<?php
+
+function sendmail(){
+             $name = $_POST['name'];
+              $Designation = $_POST['Designation'];
+              $lookingService = $_POST['lookingService'];
+                 $Industry = $_POST['Industry'];
+                                $companyName = $_POST['companyName'];
+                                $Location = $_POST['Location'];
+                                
+                                
+                $email= $_POST['email'];
+             $mail = new PHPMailer();
+            $body = "<div style='background-color:#ffcc00;height:5%;margin-bottom:5px;'>". "<br/>". "<center><h2 style='color:black;'>Thanks for your Business Enquiry," .$name. "</h2></center>" ."<br/>"."</div>";
+
+            $body .="<table style='font-family:Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100%;'>
+                        <tr style='tr:nth-child(even){background-color: #f2f2f2;'>
+                          <th style='border: 1px solid #ddd;adding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color:  #999999;color: white;'>Name</th>
+                          <th style='border: 1px solid #ddd;adding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color:  #999999;color: white;'>Designation</th>
+                          <th style='border: 1px solid #ddd;adding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color:  #999999;color: white;'>Interested in</th>
+                          <th style='border: 1px solid #ddd;adding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color:  #999999;color: white;'>Industry</th>
+                          <th style='border: 1px solid #ddd;adding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color:  #999999;color: white;'>Company Name</th>
+                          <th style='border: 1px solid #ddd;adding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color:  #999999;color: white;'>Location</th>
+                        </tr>
+                        <tr style='tr:nth-child(even){background-color: #f2f2f2;''>
+                          <td style='border: 1px solid #ddd;adding: 8px;'>".$name."</td>
+                          <td style='border: 1px solid #ddd;adding: 8px;'>".$Designation."</td>
+                          <td style='border: 1px solid #ddd;adding: 8px;'>".$lookingService."</td>
+                          <td style='border: 1px solid #ddd;adding: 8px;'>".$Industry."</td>
+                          <td style='border: 1px solid #ddd;adding: 8px;'>".$companyName."</td>
+                          <td style='border: 1px solid #ddd;adding: 8px;'>".$Location."</td>
+                        </tr>
+                        
+
+                      </table>"."<br>";
+            $body .= "Kindly contact us for any further query at +91 9487980784 or info@innerworkindia.com Visit us: www.innerworkindia.com";
+
+            $mail->IsSMTP();
+            $mail->Host = "mail.innerworkindia.com";
+            $mail->Port = 465;
+            $mail->SMTPSecure = 'ssl';
+           //  $mail->SMTPDebug  = 1;
+            $mail->SMTPAuth = true;
+            $mail->Username = "response@innerworkindia.com";
+            $mail->Password = "Digital@inner#123";
+
+            $mail->From = "response@innerworkindia.com";
+            $mail->FromName = "Innerwork Solutions";
+            $mail->AddAddress($email);
+
+            $mail->IsHTML(true);                                  // set email format to HTML
+
+            $mail->Subject = "Thanks For submitting your details to Innerwork";
+            $mail->Body    = $body;
+            $mail->AltBody = "This is the body in plain text for non-HTML mail clients";
+
+            if(!$mail->Send()) {
+              echo "Error while sending Email.";
+              var_dump($mail);
+            } else {
+              echo "<center><br><h1>Registered Successfully</h1><br></center>";
+              
+            }
+
+
+
+
+}
+?>
