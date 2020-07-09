@@ -1,6 +1,7 @@
 
       <link rel="stylesheet" type="text/css" href="css/demo.css">
-<section id="headerBtm" style="box-shadow: 0 5px 8px #d3d3d3 !important;padding: 1%;">
+<!-- <section id="headerBtm" style="box-shadow: 0 5px 8px #d3d3d3 !important;padding: 1%;"> -->
+<section id="headerBtm">
     <div class="container-fluid">
         <nav class="navbar navbar-inverse" role="navigation"> <!-- navbar-fixed-top -->
             <div class="container-fluid-padNone">
