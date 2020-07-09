@@ -97,7 +97,15 @@ td {
 
     <div class="container-fluid">
     	<h2 style="margin-left: 25%;">Freelancer Documents Upload </h2>
+
     	<form action="uplod.php" method="post" enctype="multipart/form-data">
+				<?php
+				if(isset($_GET["uploaded"])){
+						echo "<div class='alert alert-primary'><p> Documents Uploaded Successfully!!Thank You!</p>
+						<p>We will verify your documents and contact you soon.</p>						</div>";
+				}
+
+				?>
     		<div class="row">
     			<div class="col-md-6 ">
     				<h2>AADHAR CARD</h2>
