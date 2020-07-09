@@ -193,7 +193,7 @@ function changeastatus(cnt, e, s)
                 }
             }
         };
-        xhttp.open("POST", "ajax/changefreelancerstatus.php?userid="+e+ "&status="+s+ "&cnt="+cnt, true);
+        xhttp.open("POST", "ajax/changeagencystatus.php?userid="+e+ "&status="+s+ "&cnt="+cnt, true);
         xhttp.send();
     }
     else
