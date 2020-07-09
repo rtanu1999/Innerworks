@@ -54,7 +54,7 @@
                     ?>
                     <tr id="<?php echo $row['userid']; ?>">
                         <td><?php echo $cnt; ?></td>
-                        <td><?php echo $row['companyname']; ?></td>
+                        <td><a href="details?id=<?php echo $row['userid']; ?>"><button style = "width:115%"><?php echo $row['companyname']; ?></button></a></td>
                         <td><?php echo $row['website']; ?></td>
                         <td><?php echo $row['mobile']; ?></td>
                         <td><?php echo $row['address']; ?></td>
