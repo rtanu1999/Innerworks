@@ -6,7 +6,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
 <style type="text/css">
 	form {
   width: 50%;
-  height:50%; 
+  height:50%;
   margin: 100px auto;
   padding: 30px;
 }
@@ -74,8 +74,8 @@ td {
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
-           
-           
+
+
             <li class="nav-item">
               <a class="nav-link" href="profile.php" >
                 <i class="ni ni-single-02 text-yellow"></i>
@@ -85,16 +85,16 @@ td {
             <li class="nav-item">
               <a class="nav-link" href="freelanceraction.php" >
                 <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">Freelance Action</span>
+                <span class="nav-link-text">Documents</span>
               </a>
             </li>
-            
+
           </ul>
         </div>
       </div>
     </div>
   </nav>
-  
+
     <div class="container-fluid">
     	<h2 style="margin-left: 25%;">Freelancer Documents Upload </h2>
     	<form action="uplod.php" method="post" enctype="multipart/form-data">
@@ -103,7 +103,7 @@ td {
     				<h2>AADHAR CARD</h2>
     			</div>
     			<div class="col-md-6 ">
-    			  	<input type="file" name="myfile1" required="required" accept=".pdf"></br> 
+    			  	<input type="file" name="myfile1" required="required" accept=".pdf"></br>
     			</div>
     		</div>
     		</br>
@@ -113,7 +113,7 @@ td {
     			</div>
     			<div class="col-md-6 col-offset-6">
     			  	<input type="file" name="myfile2" accept=".pdf" required="required" > </br>
-        		  	
+
     			</div>
     		</div>
     		</br>
@@ -123,14 +123,14 @@ td {
     			</div>
     			<div class="col-md-6">
     			  	<input type="file" name="myfile3" accept=".pdf" required="required">  </br>
-        		  	
+
     			</div>
     		</div>
     		<div class="row">
     			<button type="submit" name="save">upload</button></br>
-    			
+
     		</div>
-    	</form>			
+    	</form>
     	</div>
     </div>
   </body>

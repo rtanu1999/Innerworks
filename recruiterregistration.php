@@ -175,8 +175,8 @@ function sendmail(){
             }
              $mail = new PHPMailer();
             $body = "Hello, ". "<br/>". " Welcome to Innerwork and thanks for registering with us. Admin will contact you soon." .  "<br/>";
-            $body .= "Kindly contact us for any further query at +91 9487980784 or info@innerworkindia.com Visit us: www.innerworkindia.com";
-
+            $body .= "Kindly contact us for any further query at +91 9487980784 or info@innerworkindia.com Visit us: www.innerworkindia.com<br><br>";
+            $body.="<center><button style='background-color: #008CBA;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;'><a href='https://innerworkindia.com/recruiterlogin.php' style='color:white;text-decoration:none;'>Login</a></button></center>";
             $mail->IsSMTP();
             $mail->Host = "mail.innerworkindia.com";
             $mail->Port = 465;
@@ -200,7 +200,7 @@ function sendmail(){
               echo "Error while sending Email.";
               var_dump($mail);
             } else {
-              echo "<center><br><h1>Registered Successfully</h1><br><a href='recruiterlogin.php'>Login</a></center>";
+              echo "<center><br><h1>Account registered Successfully</h1><br><button style='background-color: #008CBA;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;'><a href='recruiterlogin.php' style='color:white;text-decoration:none;'>Login</a></button></center>";
 
             }
 

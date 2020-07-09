@@ -44,6 +44,7 @@ $utils = new Utils();
 .image-source {
     border-radius: 50%;
 }
+
 </style>
 
 </head>
