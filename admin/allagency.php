@@ -69,7 +69,7 @@
 
 
                         <td><button type="button" class="deleteBtn" onclick="return deleteagency(<?php echo $row['userid']; ?>)"><i class="fa fa-trash"></i></button></td>
-                        <td id="changeStausButton-<?php echo $cnt; ?>"><button type="button" class="deleteBtn" id="statusBtn" onclick="return changefstatus(<?php echo $cnt; ?>, <?php echo $row['userid']; ?>, <?php echo $dbStatus; ?>)"><?php if($dbStatus == true){echo "PENDING";}else{echo "ACTIVE";} ?></button></td>
+                        <td id="changeStausButton-<?php echo $cnt; ?>"><button type="button" class="deleteBtn" id="statusBtn" onclick="return changeastatus(<?php echo $cnt; ?>, <?php echo $row['userid']; ?>, <?php echo $dbStatus; ?>)"><?php if($dbStatus == true){echo "PENDING";}else{echo "ACTIVE";} ?></button></td>
                     </tr>
                     <?php
                     $cnt++;
