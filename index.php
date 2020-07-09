@@ -25,9 +25,7 @@
                 <li data-target="#apnaCarousel" data-slide-to="8" class=""></li>
                 <li data-target="#apnaCarousel" data-slide-to="9" class=""></li>
                 <li data-target="#apnaCarousel" data-slide-to="10" class=""></li>
-                <li data-target="#apnaCarousel" data-slide-to="11" class=""></li>
-                <li data-target="#apnaCarousel" data-slide-to="12" class=""></li>
-
+               
             </ul>
             <div class="carousel-inner">
                 <div class="item active">
