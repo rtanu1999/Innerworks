@@ -1,4 +1,7 @@
 <?php
+if(empty($_SESSION['type'])){
+    header('location:recruiterlogin.php');
+}
 include('loginpage.php');
 include('update.php');
 
