@@ -1,10 +1,11 @@
 <?php
-if(empty($_SESSION['type'])){
-    header('location:recruiterlogin.php');
-}
+
 include('loginpage.php');
 include('update.php');
 
+if(!isset($_SESSION['type'])){
+    header('location:recruiterlogin.php');  
+}
 include_once 'DbConnection/DbConnectionHelper.php';
 include_once 'admin/Utils.php';
 $utils = new Utils();
