@@ -52,13 +52,13 @@
                     </div>
                 </div>
                 <div class="item ">
-                    <img src="img/bannner3.jpg" alt="" style="width:100%;">
+                    <img src="img/banner3.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                     </div>
                 </div>
                 
                 <div class="item ">
-                    <img src="img/bannner4.jpg" alt="" style="width:100%;">
+                    <img src="img/Banner4.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                     </div>
                 </div>
@@ -68,22 +68,22 @@
                     </div>
                 </div>
                 <div class="item ">
-                    <img src="img/bannner6.jpg" alt="" style="width:100%;">
+                    <img src="img/BANNER6.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item ">
-                    <img src="img/bannner7.jpg" alt="" style="width:100%;">
+                    <img src="img/BANNER7.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item ">
-                    <img src="img/bannner8.jpg" alt="" style="width:100%;">
+                    <img src="img/banner8.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item ">
-                    <img src="img/bannner9.jpg" alt="" style="width:100%;">
+                    <img src="img/banner9.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                     </div>
                 </div>
