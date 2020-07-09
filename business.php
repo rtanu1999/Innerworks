@@ -293,6 +293,7 @@ function sendmail(){
             $body = "<div style='background-color:#ffcc00;height:5%;margin-bottom:5px;'>". "<br/>". "<center><h2 style='color:black;'>Thanks for your Business Enquiry," .$name. "</h2></center>" ."<br/>"."</div>";
 
             $body .="<table style='font-family:Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100%;'>
+                    <caption style='color:black;'><h2>Business Enquiry</h2></caption>
                         <tr style='tr:nth-child(even){background-color: #f2f2f2;'>
                           <th style='border: 1px solid #ddd;adding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color:  #999999;color: white;'>Name</th>
                           <th style='border: 1px solid #ddd;adding: 8px; padding-top: 12px;padding-bottom: 12px;text-align: left;background-color:  #999999;color: white;'>Designation</th>
@@ -337,7 +338,7 @@ function sendmail(){
               echo "Error while sending Email.";
               var_dump($mail);
             } else {
-              echo "<center><br><h1 style='color:white;'>Registered Successfully</h1><br></center>";
+              echo "";
               
             }
 
