@@ -54,11 +54,11 @@ if(isset($_POST['submit'])) {
                                 $msg = $_POST['msg'];
 
                                 // $adminEmail = 'info@innerworkindia.com';
-                               
+
 
                                 //Admin Email
-                                
-                                
+
+
                                     if(isset($_POST["submit"]))
                                     {
                                         $stmt = $conn->prepare('insert into bussiness (name, gender, companyName, Designation, email, mobno,Industry, Location, lookingService, msg) VALUES(?,?,?,?,?,?,?,?,?,?)');
@@ -78,7 +78,7 @@ if(isset($_POST['submit'])) {
                                         $result = "<div class='alert alert-success alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Success!</strong> Thanks applying for Job, will get you back soon.</div>";
 
                                     }
-                                
+
 
 
                            } catch (PDOException $e) {
@@ -196,7 +196,7 @@ if(isset($_POST['submit'])) {
                              <label for="">Which Service You are Looking For</label>
                              <select name="lookingService" id="field" class="form-control" onchange="return getDetails(this.value)" required>
                                  <option selected disabled>Interested In</option>
-<<<<<<< HEAD
+
                                  <option value="HR Services">HR Services</option>
                                  <option value="IT Services">IT Services</option>
                                  <option value="StartUp Support">StartUp Support</option>
@@ -207,17 +207,7 @@ if(isset($_POST['submit'])) {
                                       <option value="Internship">Internship</option>
                                        <option value="Webinars">Webinars</option>
                                         <option value="Conferences">Conferences</option>
-=======
-                                 <option value="1">HR Services</option>
-                                 <option value="2">IT Services</option>
-                                 <option value="3">Start Up Support</option>
-                                 <option value="4">Certifications</option>
-                                 <option value="5">Training</option>
-                                 <option value="6">Placement</option>
-                                 <option value="7">Internship</option>
-                                 <option value="8">Webinars</option>
-                                 <option value="9">Conference</option>
->>>>>>> 19d540e559a24dda39027952c69b2c52913498b6
+
                              </select>
                          </div>
                          <div class="col-md-6">
@@ -232,15 +222,14 @@ if(isset($_POST['submit'])) {
                            <label for="emailAddress">Industry</label>
                            <select name="Industry" id="field" class="form-control" onchange="return getDetails(this.value)" required>
                                <option selected disabled> Industry</option>
-<<<<<<< HEAD
+
                                <option value="Individual">Individual</option>
                                <option value="Organization">Organization</option>
                                <option value="Consultant">Consultant</option>
 
-=======
-                               <option value="1">Individual</option>
-                               <option value="2">Organization</option>
->>>>>>> 19d540e559a24dda39027952c69b2c52913498b6
+
+
+
                            </select>
                          </div>
                          <div class="col-md-6">
@@ -286,8 +275,8 @@ function sendmail(){
                  $Industry = $_POST['Industry'];
                                 $companyName = $_POST['companyName'];
                                 $Location = $_POST['Location'];
-                                
-                                
+
+
                 $email= $_POST['email'];
              $mail = new PHPMailer();
             $body = "<div style='background-color:#ffcc00;height:5%;margin-bottom:5px;'>". "<br/>". "<center><h2 style='color:black;'>Thanks for your Business Enquiry," .$name. "</h2></center>" ."<br/>"."</div>";
@@ -310,7 +299,7 @@ function sendmail(){
                           <td style='border: 1px solid #ddd;adding: 8px;'>".$companyName."</td>
                           <td style='border: 1px solid #ddd;adding: 8px;'>".$Location."</td>
                         </tr>
-                        
+
 
                       </table>"."<br>";
             $body .= "Kindly contact us for any further query at +91 9487980784 or info@innerworkindia.com Visit us: www.innerworkindia.com";
@@ -321,10 +310,10 @@ function sendmail(){
             $mail->SMTPSecure = 'ssl';
            //  $mail->SMTPDebug  = 1;
             $mail->SMTPAuth = true;
-            $mail->Username = "response@innerworkindia.com";
+            $mail->Username = "sales@innerworkindia.com";
             $mail->Password = "Digital@inner#123";
 
-            $mail->From = "response@innerworkindia.com";
+            $mail->From = "sales@innerworkindia.com";
             $mail->FromName = "Innerwork Solutions";
             $mail->AddAddress($email);
 
@@ -339,7 +328,7 @@ function sendmail(){
               var_dump($mail);
             } else {
               echo "";
-              
+
             }
 
 
