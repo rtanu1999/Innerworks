@@ -50,7 +50,7 @@
                         $Resume_file_raw = $row['file'];
                         $Resume_file = str_replace(" ","%20",$Resume_file_raw); // 12-05-2020
                         ?>
-                        
+
                         <tr id="<?php echo $row['id']; ?>">
                             <td><?php echo $cnt; ?></td>
                             <td><?php echo $row['name']; ?></td>
@@ -63,13 +63,13 @@
                             <td><?php echo $row['interest']; ?></td>
                             <td><?php echo $row['exp']; ?></td>
                             <td>
-                                <?php echo "<a href=\"https://innerworkindia.com/Resume/{$Resume_file}\">"; // 12-05-2020?> 
+                                <?php echo "<a href=\"https://innerworkindia.com/Resume/{$Resume_file}\">"; // 12-05-2020?>
                                 <?php echo $row['file']; ?>;
                                 </a>
                             </td>
-                          <td><button type="button" class="deleteBtn" onclick="return deleteJobseeker(<?php echo $row['id']; ?>)">Delete</button></td>
-                            
-                       
+                        <td><button type="button" class="deleteBtn" onclick="return deleteJobseeker(<?php echo $row['id']; ?>)">Delete</button></td>
+
+
                         </tr>
                         <?php
                         $cnt++;

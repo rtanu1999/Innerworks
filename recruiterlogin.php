@@ -39,7 +39,7 @@
              <i class="fa fa-lock"></i></span>
         </div>
         <button class="choice" type="submit" name="submit">Login</button>
-        <p style="font-family: 'Raleway';font-weight: bold">Don't have an account? <a href="recuiterregistration.html" style="font-family: 'Raleway';font-weight: bold;color: #F5AF00">Register here!</a></p>
+        <p style="font-family: 'Raleway';font-weight: bold">Don't have an account? <a href="recruiter.php" style="font-family: 'Raleway';font-weight: bold;color: #F5AF00">Register here!</a></p>
         </form></center>
 <?php include_once 'Footer.php'; ?>
     </body>
