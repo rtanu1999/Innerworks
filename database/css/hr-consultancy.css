@@ -1,0 +1,43 @@
+#ourSer{padding: 4%;}
+#ourSer img{width: 100%;}
+#ourSer h2{font-size: 33px;}
+#ourSer h4{font-size: 18px;font-weight: bold;}
+#ourSer p {font-size: 16px;line-height: 30px;text-align: justify;}
+.makesSpecial{margin-top: 4%; border: 1px solid #ecf5f7;background:#ecf5f7; box-shadow: 2px 3px 4px 4px #dcf2f7;padding: 30px 33px;}
+.makesSpecial h5{font-size: 24px;text-align: left;margin-left: 3.4%;}
+ul.greaSer{list-style: circle;}
+ul.greaSer li{}
+
+#hrService{padding: 3%;}
+#hrService img{width: 100%;}
+.num{}
+.num span{bottom: -105px;color:#262c31;font-size: 180px;font-weight: 700;left: 286px;opacity: 0.7;position: absolute;overflow: hidden;}
+#hrService a{padding: 2%;display: block;width: 24%;text-align: center;background:#f9b805;color:#fff;text-shadow: none;border-radius: 9px;margin-top: 2%;transition: ease all 1s}
+#hrService a:hover{background-color: #000;}
+#hrService{}
+#hrService h2{font-size: 33px;}
+#hrService p{font-size: 16px;line-height: 31px;text-align: justify;}
+.serviceList{margin:3% 0;}
+
+ul.startupList{list-style-type: circle;}
+ul.startupList li{line-height: 39px;margin-left: -25px;font-size: 16px;font-family:GraphikRegular;}
+
+/************* Responsive ******************/
+@media (max-width: 480px) {
+    #hrService a {padding: 2%;display: block;width:50%;}
+    .num{display:none;}
+    .serviceList{box-shadow:0 5px 8px #ededed;padding:4%;border:1px solid #d3d3d3;}
+    #hrService h2{font-size: 20px;}
+}
+@media (max-width: 768px) {
+    #hrService a {padding: 2%;display: block;width:50%;}
+    .num{display:none;}
+    .serviceList{box-shadow:0 5px 8px #ededed;padding:4%;border:1px solid #d3d3d3;}
+    #hrService h2{font-size: 20px;}
+}
+@media (max-width: 900px) {
+
+}
+@media (max-width: 1200px) {
+
+}

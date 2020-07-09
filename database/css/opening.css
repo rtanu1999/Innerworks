@@ -1,0 +1,24 @@
+.row { 
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+#le{
+  flex: 15%;
+  max-width: 15%;
+  padding: 0 4px;
+}
+ 
+#mi{
+  flex: 50%;
+ overflow:scroll;
+  padding: 0 4px;
+}
+.ri{
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
