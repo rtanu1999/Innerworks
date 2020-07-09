@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="item ">
-                    <img src="img/bannner5.jpg" alt="" style="width:100%;">
+                    <img src="img/banner5.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                     </div>
                 </div>
