@@ -54,7 +54,7 @@
                     ?>
                     <tr id="<?php echo $row['userid']; ?>">
                         <td><?php echo $cnt; ?></td>
-                        <td><a href="details?id=<?php echo $row['userid']; ?>"><button style = "width:115%"><?php echo $row['companyname']; ?></button></a></td>
+                        <td><a href="freelance_docs?id=<?php echo $row['userid']; ?>"><button style = "width:115%"><?php echo $row['companyname']; ?></button></a></td>
                         <td><?php echo $row['website']; ?></td>
                         <td><?php echo $row['mobile']; ?></td>
                         <td><?php echo $row['address']; ?></td>
@@ -66,8 +66,8 @@
                         <td><?php echo $row['sector']; ?></td>
                         <td><?php echo $row['experience']; ?></td>
                         <td><?php echo $row['keyword']; ?></td>
-                        
-                        
+
+
                         <td><button type="button" class="deleteBtn" onclick="return deletefreelancer(<?php echo $row['userid']; ?>)"><i class="fa fa-trash"></i></button></td>
                         <td id="changeStausButton-<?php echo $cnt; ?>"><button type="button" class="deleteBtn" id="statusBtn" onclick="return changefstatus(<?php echo $cnt; ?>, <?php echo $row['userid']; ?>, <?php echo $dbStatus; ?>)"><?php if($dbStatus == true){echo "PENDING";}else{echo "ACTIVE";} ?></button></td>
                     </tr>
