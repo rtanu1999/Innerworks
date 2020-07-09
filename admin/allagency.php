@@ -11,6 +11,36 @@
 
 </head>
 <body>
+<script>
+    function changeastatus(cnt, e, s)
+{
+    if(e != "" && e != null)
+    {
+        var xhttp;
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if(xhttp.readyState == 4 && xhttp.status == 200)
+            {
+                if(xhttp.responseText != "")
+                {
+                    document.getElementById("changeStausButton-"+cnt).innerHTML = xhttp.responseText;
+                }
+                else
+                {
+                    alert("1- Something went wrong, please refresh page & try again.");
+                }
+            }
+        };
+        xhttp.open("POST", "ajax/changeagencystatus.php?userid="+e+ "&status="+s+ "&cnt="+cnt, true);
+        xhttp.send();
+    }
+    else
+    {
+        alert("Something went wrong, please refresh page & try again.");
+    }
+}
+
+</script>
 <div id="main">
     <?php include 'Header.php'; ?>
 
