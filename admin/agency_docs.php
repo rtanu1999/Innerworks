@@ -61,17 +61,17 @@
                         <tr id="<?php echo $row['userid']; ?>">
                             <td><?php echo $cnt; ?></td>
                             <td>
-                                <?php echo "<a href=\"https://innerworkindia.com/agencydocuments/aadhar/{$adhar_file}\">"; // 12-05-2020?>
+                                <?php echo "<a href=\"https://innerworkindia.com/recruiterdocuments/aadhar/{$adhar_file}\">"; // 12-05-2020?>
                                 <?php echo $row['adhar']; ?>;
                                 </a>
                             </td>
                             <td>
-                                <?php echo "<a href=\"https://innerworkindia.com/agencydocuments/PAN/{$pan_file}\">"; // 12-05-2020?>
+                                <?php echo "<a href=\"https://innerworkindia.com/recruiterdocuments/PAN/{$pan_file}\">"; // 12-05-2020?>
                                 <?php echo $row['pan']; ?>;
                                 </a>
                             </td>
                             <td>
-                                <?php echo "<a href=\"https://innerworkindia.com/agencydocuments/CV/{$cv_file}\">"; // 12-05-2020?>
+                                <?php echo "<a href=\"https://innerworkindia.com/recruiterdocuments/CV/{$cv_file}\">"; // 12-05-2020?>
                                 <?php echo $row['cv']; ?>;
                                 </a>
                             </td>
