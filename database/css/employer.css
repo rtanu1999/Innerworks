@@ -1,0 +1,19 @@
+a#employerPageLink{color: #ffc114;font-weight:bold;}
+
+
+#employer{padding-bottom:4%;}
+
+.pBx{display: block;width: 100%;background: #018fc9;color:#fff;text-align: center;padding: 2%;border-radius: 0 93px 93px 0;}
+.pBx h2{font-size: 24px;letter-spacing: 2px;text-transform: uppercase;}
+
+.frmBx{border:1px dotted #d3d3d3;padding:2%;margin-top:3%;}
+.frmBx label{font-family: GraphikRegular;font-size: 17px;font-weight: 100;letter-spacing: 1px;}
+.frmBx input[type=text]{height: 46px;font-size: 17px;font-weight: 100;font-family: GraphikRegular;margin-bottom: 3%;}
+.frmBx input[type=text]:focus{box-shadow:none;}
+.frmBx input[type=email]{height: 46px;font-size: 17px;font-weight: 100;font-family: GraphikRegular;margin-bottom: 3%;}
+.frmBx input[type=email]:focus{box-shadow:none;}
+.frmBx textarea{height:200px;font-size: 17px;font-weight: 100;font-family: GraphikRegular;margin-bottom: 3%;}
+.frmBx textarea:focus{box-shadow:none;}
+.frmBx input[type=submit]{background:#018fc9;border:1px solid #018fc9;font-family: GraphikRegular;font-size: 16px;line-height: 1;text-transform: uppercase;letter-spacing: 1px;color:#fff;width: 22%;}
+.frmBx input[type=submit]:hover{background:none;color:#018fc9;}
+.frmBx input[type=submit]:focus{box-shadow:none;}
