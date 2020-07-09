@@ -1,7 +1,11 @@
 <?php
+
 include('loginpage.php');
 include('update.php');
 
+if(!isset($_SESSION['type'])){
+    header('location:recruiterlogin.php');  
+}
 include_once 'DbConnection/DbConnectionHelper.php';
 include_once 'admin/Utils.php';
 $utils = new Utils();
@@ -181,7 +185,7 @@ $utils = new Utils();
                              <div class="row">
                                <div class="col">
                                  <h5 class="card-title text-uppercase text-muted mb-0">FREELANCERS</h5>
-                                 <span class="h2 font-weight-bold mb-0"><?php echo $utils->getTotalfreelancerCnt($conn); ?></span>
+                                 <span class="h2 font-weight-bold mb-0"><?php if($_SESSION['status']=="1"){echo $utils->getTotalfreelancerCnt($conn);}else{echo "---";}  ?></span>
                                </div>
                                 <div class="col-auto">
                                   <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
@@ -201,7 +205,7 @@ $utils = new Utils();
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">ACTIVE EMPLOYERS|AGENCYS</h5>
-                      <span class="h2 font-weight-bold mb-0"><?php echo $utils->getTotalagencyCnt($conn); ?></span>
+                      <span class="h2 font-weight-bold mb-0"><?php if($_SESSION['status']=="1"){ echo $utils->getTotalagencyCnt($conn);}else{echo "---";} ?></span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
@@ -221,7 +225,7 @@ $utils = new Utils();
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">open jobs</h5>
-                      <span class="h2 font-weight-bold mb-0"><?php echo $utils->getTotalJobpostCnt($conn); ?></span>
+                      <span class="h2 font-weight-bold mb-0"><?php if($_SESSION['status']=="1"){ echo $utils->getTotalJobpostCnt($conn);}else{echo "---";} ?></span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
@@ -241,7 +245,7 @@ $utils = new Utils();
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">Active Candidates</h5>
-                      <span class="h2 font-weight-bold mb-0"><?php echo $utils->getTotalJobseekerCnt($conn); ?></span>
+                      <span class="h2 font-weight-bold mb-0"><?php if($_SESSION['status']=="1"){ echo $utils->getTotalJobseekerCnt($conn);}else{echo "---";} ?></span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">

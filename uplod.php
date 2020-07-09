@@ -42,10 +42,10 @@ include_once 'DbConnection/DbConnectionHelper.php';
 							':em' => $email
 								));
 				}
-    		header('Location: dashboard.php');
+    		header('Location: freelanceraction.php?uploaded=1');
     	}
     	else{
-    	    header('Location: freelanceraction.php');
+    	    header('Location: freelanceraction.php?uploaded=0');
     	}
 
 	}

@@ -212,13 +212,23 @@ td {
                   <h3 class="mb-0">Freelancer Documents Upload </h3>
                 </div>
 
+
               </div>
             </div>
             <div class="card-body">
             <form action="uplod.php" method="post" enctype="multipart/form-data" style="width:100%">
+            <?php
+				if(isset($_GET["uploaded"])){
+						echo "<div class='alert alert-primary'><p> Documents Uploaded Successfully!!Thank You!</p>
+						<p>We will verify your documents and contact you soon.</p>						</div>";
+				}
+
+				?>
     		<div class="row" >
     			<div class="col-md-4 ">
     				<h2>AADHAR</h2>
+
+   
     			</div>
     			<div class="col-md-8">
     			  	<input type="file" name="myfile1" required="required" accept=".pdf"></br>

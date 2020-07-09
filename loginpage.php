@@ -63,6 +63,7 @@ function create_session($row,$type){
         $_SESSION['postcode']=$row["postcode"];
         $_SESSION['pass']=$row["password"];
         $_SESSION['type']=$type;
+        $_SESSION['status']=$row["status"];
 }
 
 ?>

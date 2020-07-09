@@ -12,7 +12,9 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="index" title="Innererwork"><img src="img/logo.png" alt="Innerer Work" class="logo"></a>
+
                 <h6 id='h_inner' class="inner" style="text-transform: none !important;font-family:Monotype Corsiva !important;font-weight: normal !important;font-size:45px;padding-top:10%; "> Innerwork </h6></div>
+
 
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav navbar-right">
