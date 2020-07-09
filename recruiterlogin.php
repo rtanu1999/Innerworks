@@ -3,6 +3,12 @@
     <head>
     <title>Recruiter login</title>
         <link rel="stylesheet" type="text/css" href="css/recuiterchoicestyle.css">
+        <style>
+           @media only screen and (max-width: 521px){
+             input[type="email"],input[type="password"] {width:150%;}
+             .wrap-input100{margin-left:-50px;}
+           }
+        </style>
     </head>
     <body>
     <?php include_once 'Header.php'; ?>
@@ -33,7 +39,7 @@
              <i class="fa fa-user"></i></span>
         </div>
         <div class="wrap-input100 validate-input">
-             <input class="enterinfo" type="password" name="password" placeholder="Password" required="">
+             <input  class="enterinfo" type="password" name="password" placeholder="Password" required="">
              <span class="focus-input100"></span>
              <span class="symbol-input100">
              <i class="fa fa-lock"></i></span>

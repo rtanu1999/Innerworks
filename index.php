@@ -18,27 +18,71 @@
                 <li data-target="#apnaCarousel" data-slide-to="1" class=""></li>
                 <li data-target="#apnaCarousel" data-slide-to="2" class=""></li>
                 <li data-target="#apnaCarousel" data-slide-to="3" class=""></li>
+                <li data-target="#apnaCarousel" data-slide-to="4" class=""></li>
+                <li data-target="#apnaCarousel" data-slide-to="5" class=""></li>
+                <li data-target="#apnaCarousel" data-slide-to="6" class=""></li>
+                <li data-target="#apnaCarousel" data-slide-to="7" class=""></li>
+                <li data-target="#apnaCarousel" data-slide-to="8" class=""></li>
+                <li data-target="#apnaCarousel" data-slide-to="9" class=""></li>
+                <li data-target="#apnaCarousel" data-slide-to="10" class=""></li>
+               
             </ul>
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="img/slider2.jpg" alt="" style="width:100%;">
+                    <img src="img/banner.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                         <p style="margin-bottom:1%;font-size:17pt;">Welcome to Innerwork HR Services</p>
                         <h3>Leading The Next Way of Recruitment & Staffing</h3>
                     </div>
                 </div>
                 <div class="item ">
-                    <img src="img/slider1.jpg" alt="" style="width:100%;">
+                    <img src="img/banner1.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                         <p style="margin-bottom:1%;font-size:17pt;">Welcome to Innerwork IT Services</p>
                         <h3>One stop IT services</h3>
                     </div>
                 </div>
                 <div class="item ">
-                    <img src="img/slider3.jpg" alt="" style="width:100%;">
+                    <img src="img/banner2.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
                         <p style="margin-bottom:1%; font-size:17pt;">Welcome to Innerwork Digital Marketing</p>
                         <h3>We keep you forward in digital Era</h3>
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="img/banner3.jpg" alt="" style="width:100%;">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                
+                <div class="item ">
+                    <img src="img/Banner4.jpg" alt="" style="width:100%;">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="img/banner5.jpg" alt="" style="width:100%;">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="img/BANNER6.jpg" alt="" style="width:100%;">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="img/BANNER7.jpg" alt="" style="width:100%;">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="img/banner8.jpg" alt="" style="width:100%;">
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="img/banner9.jpg" alt="" style="width:100%;">
+                    <div class="carousel-caption">
                     </div>
                 </div>
 <!--                 <div class="item ">
