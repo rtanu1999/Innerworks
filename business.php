@@ -337,7 +337,7 @@ function sendmail(){
               echo "Error while sending Email.";
               var_dump($mail);
             } else {
-              echo "<center><br><h1>Registered Successfully</h1><br></center>";
+              echo "<center><br><h1 style='color:white;'>Registered Successfully</h1><br></center>";
               
             }
 
