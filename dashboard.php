@@ -275,15 +275,7 @@ $utils = new Utils();
     </div>
 
 
-  <div class="col-lg-6 col-md-12 col-12 mt-2">
 
-    <div class="card resumes-no-analytics">
-      <div class="card-body">
-        <h5 class="card-title resume_title">Resumes</h5>
-        <h3 class="text-center font-weight-bold">No Analytics Available</h3>
-      </div>
-    </div>
-  </div>
 
 
 </div>
