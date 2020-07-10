@@ -128,7 +128,7 @@ if(isset($_POST['submit']))
                 <li><a href="https://instagram.com/innerwork__solutions?igshid=nyewgunv5ra1" target="_blank"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="https://twitter.com/innverwork " target="_blank"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="https://in.pinterest.com/innerwork123/ " target="_blank"><i class="fa fa-pinterest"></i></a></li>
-                <li><a href="https://youtu.be/LRL5GkFQTpA" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCuwkBl5yeSlnxSYarnIlZsA" target="_blank"><i class="fa fa-youtube"></i></a></li>
             </ul>
         </div>
     </div>
