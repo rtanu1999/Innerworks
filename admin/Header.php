@@ -1,3 +1,4 @@
+
 <section id="topBar">
     <div class="container-fluid">
         <div class="col-md-6">
@@ -22,7 +23,7 @@
         <li><a href="allJobPost" id="employerPage"><span>Jobpost</span></a></li>
         <li><a href="allcollege" id="college"><span>College</span></a></li>
         <li class="">
-            <a href="#productsSubmenu" data-toggle="collapse" aria-expanded="false">Blogs</a>
+            <a href="#productsSubmenu" data-toggle="collapse" aria-expanded="false"><span>Blogs</span></a>
             <ul class="collapse list-unstyled" id="productsSubmenu">
                 <li><a href="viewAllBlogs">View All Blogs</a></li>
                 <li><a href="addBlog">Add New Blog</a></li>
@@ -30,6 +31,7 @@
         </li>
         <li><a href="allagency.php" id="agency"> <span>Agency</span></a></li>
         <li><a href="allfreelancer.php" id="freelancer"> <span>Freelancer</span></a></li>
+        <li><a href="allbusiness.php" id="freelancer"> <span>Business Enquiry</span></a></li>
         <li><a href="security" id="securityPage"><span>Security</span></a></li>
         <li><a href="secret"><span>Log Out</span></a></li>
     </ul>
