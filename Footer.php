@@ -1,19 +1,23 @@
 <?php include "CommonFiles.php"?>
-
+	<style>
+.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}</style>
     <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
-
     <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
-
+    <!--javascpt-->
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
     <link rel="icon" href="css/logo.png" type="image/icon type">
     <link rel="icon" type="png" href="images/profile.png">
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu&display=swap" rel="stylesheet">
     <!--bootstrap cdn-->
+    	  	
 
-   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <section id="footer">
     <div class="container">
         <div class="row">
@@ -79,28 +83,8 @@
             </div>
         </div>
     </div>
-
 </section>
-
-
-<script type="text/javascript">
-    (function () {
-        var options = {
-             whatsapp: "+91 9887888469", // WhatsApp number
-            call_to_action: "Message Us", // Call to action
-            position: "left", // Position may be 'right' or 'left'
-        };
-        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script>
-
-<!-- Tawk.to -->
-<!--Start of Tawk.to Script-->
-
-<!--<button class="open-button btn btn-secondary" onclick="openForm()"><i class="fas fa-comment-dots"></i></button>
+	<!--<button class="open-button btn btn-secondary" onclick="openForm()"><i class="fas fa-comment-dots"></i></button>
     <div class="container" id="containerr">
       <div class="msg-header-img1">
         <img src="css1/logo.png" alt="">
@@ -109,7 +93,6 @@
         <div class="active">
           <h4>Welcome to Innerchat</h4>
         </div>
-
       </div>
       <div class="chat-page" id="chatpage">
         <div class="msg-inbox" id="msginbox">
@@ -135,17 +118,11 @@
                   <img src="user.jpg" alt="">
                   </div>
               </div> -->
-
-
-
-
-
           <!--  </div>
           </div>
         </div>
       </div>
       <div class="msg-bottom">
-
             <div class="input-group" style="
     position: relative;
     display: -ms-flexbox;
@@ -165,7 +142,6 @@
                 <span class="input-group-text"><button type="submit" name="button" onclick="results()"><i class="fas fa-paper-plane paper"></i></button> <button type="button" onclick="closeForm()"><i class="fas fa-power-off"></i></button></span>
               </div>
             </div>
-
       </div>
     </div>
     <script type="text/javascript">
@@ -200,14 +176,28 @@
   document.getElementById("containerr").style.display = "block";
   document.getElementById("open-button").style.display = "none";
 }
-
 function closeForm() {
   document.getElementById("containerr").style.display = "none";
   document.getElementById("open-button").style.display = "block";
 }
-
 </script>-->
 
+<script type="text/javascript">
+    (function () {
+        var options = {
+             whatsapp: "+91 9887888469", // WhatsApp number
+            call_to_action: "Message Us", // Call to action
+            position: "left", // Position may be 'right' or 'left'
+        };
+        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+</script>
+
+<!-- Tawk.to -->
+<!--Start of Tawk.to Script-->
 <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
@@ -219,4 +209,3 @@ function closeForm() {
         s0.parentNode.insertBefore(s1,s0);
     })();
 </script>
-<!--End of Tawk.to Script-->

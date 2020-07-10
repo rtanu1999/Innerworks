@@ -144,7 +144,6 @@ $utils = new WebUtils();
 													<div class="job-share">
 													    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#ffc114;"><i class="fa fa-share-alt fa-lg"></i></a>
                                                           <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="margin:0;
-
     padding: .25rem 1.5rem;
     clear: both;
     font-weight: 400;
@@ -154,10 +153,10 @@ $utils = new WebUtils();
     border: 0;">
 
 
-         <a class="dropdown-item" style = "background-color: #fff;border-color:#fff;" href="https://twitter.com/intent/tweet?text=<?php echo $jtitle .' - ' .$jcompany; ?> https://innerworkindia.com/job_details.php?id=<?php echo $jid;?>" target= "_blank"><img src="img/we.jpg" style="height :30px"><p style="display: inline;color:black;font-size: 14px;">  Twitter</p></a>
-          <a class="dropdown-item"style = "background-color: #fff;border-color:#fff;" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Finnerworkindia.com%2Fjob_details.php%3Fid=<?php echo $jid; ?>&amp;src=sdkpreparse" target= "_blank"><img src="img/fb.jpg" style="height :30px"><p style="display: inline;color:black;font-size: 14px;">  Facebook</p></a>
+         <a class="dropdown-item" style = "background-color: #fff;border-color:#fff;" href="https://twitter.com/intent/tweet?text=<?php echo $jtitle .' - ' .$jcompany; ?> https://innerworkindia.com/job_details.php?id=<?php echo $jid;?>" target= "_blank"><img src="img/we.jpg" style="height :30px;"/><p style="display:inline;color:black;font-size: 14px;">  Twitter</p></a>
+          <a class="dropdown-item" style = "background-color: #fff;border-color:#fff;" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Finnerworkindia.com%2Fjob_details.php%3Fid=<?php echo $jid; ?>&amp;src=sdkpreparse" target= "_blank"><img src="img/fb.jpg" style="height :30px"><p style="display: inline;color:black;font-size: 14px;">  Facebook</p></a>
         <a class="dropdown-item" style = "background-color: #fff;border-color:#fff;" href=" https://wa.me/919887888469" target= "_blank"><img src="img/wp.jpg" style="height :30px"><p style="display: inline;color:black;font-size: 14px;">  Whatsapp</p></a>
-        <a class="dropdown-item" style = "background-color: #fff;border-color:#fff;"href="https://www.linkedin.com/shareArticle?mini=true&url=https://innerworkindia.com/Dev_Site/job_details.php?id=23&title=&summary=&source=" target= "_blank"><img src="img/link.png" style="height :30px"><p style="display: inline;color:black;font-size: 14px;">  Linkedin</p></a>
+        <a class="dropdown-item" style = "background-color: #fff;border-color:#fff;" href="https://www.linkedin.com/shareArticle?mini=true&url=https://innerworkindia.com/Dev_Site/job_details.php?id=23&title=&summary=&source=" target= "_blank"><img src="img/link.png" style="height :30px"><p style="display: inline;color:black;font-size: 14px;">  Linkedin</p></a>
         </div>
 													</div>
 
