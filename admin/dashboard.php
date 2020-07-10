@@ -22,7 +22,7 @@ $utils = new Utils();
     width: 1160px;
 }
 }
-@media (min-width: 768px){
+@media (max-width: 990px){
   .dashBox{
     width:50%;
   }
