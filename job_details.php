@@ -144,7 +144,6 @@ $utils = new WebUtils();
 													<div class="job-share">
 													    <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:#ffc114;"><i class="fa fa-share-alt fa-lg"></i></a>
                                                           <div class="dropdown-menu " aria-labelledby="navbarDropdown" style="margin:0;
-
     padding: .25rem 1.5rem;
     clear: both;
     font-weight: 400;
