@@ -36,6 +36,14 @@ $utils = new Utils();
 
 }
 
+.bg5{background-color:#0073e6;}
+.bg6{background-color:#00cc99;}
+.bg7{background-color: #ff00bf;}
+.bg8{background-color:#ff4d4d;}
+.col5{color:#0073e6;}
+.col6{color:#00cc99;}
+.col7{color: #ff00bf;}
+.col8{color:#ff4d4d;}
 
 
 </style>
@@ -160,7 +168,7 @@ $utils = new Utils();
                 </div>
                 <div class="col-md-3 col-xs-12">
                     <a href="allfreelancer">
-                        <div class="col-md-12 col-xs-12 dashBox bg4">
+                        <div class="col-md-12 col-xs-12 dashBox bg5">
                             <div class="col-md-3 col-xs-3">
                                 <img src="img/assistance.png" alt="">
                             </div>
@@ -169,19 +177,19 @@ $utils = new Utils();
                                 <h3>Freelancer</h3>
                             </div>
                         </div>
-                        <div class="col-md-12 col-xs-12 view bor4">
+                        <div class="col-md-12 col-xs-12 view bor1">
                             <div class="col-md-10 padNone">
-                                <p class="col4">Freelancer</p>
+                                <p class="col5">Freelancer</p>
                             </div>
                             <div class="col-md-2 padNone">
-                                <span class="circle bor4"></span>
+                                <span class="circle bor1"></span>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-xs-12">
                     <a href="allagency">
-                        <div class="col-md-12 col-xs-12 dashBox bg4">
+                        <div class="col-md-12 col-xs-12 dashBox bg6">
                             <div class="col-md-3 col-xs-3">
                                 <img src="img/assistance.png" alt="">
                             </div>
@@ -190,19 +198,19 @@ $utils = new Utils();
                                 <h3>Agency</h3>
                             </div>
                         </div>
-                        <div class="col-md-12 col-xs-12 view bor4">
+                        <div class="col-md-12 col-xs-12 view bor2">
                             <div class="col-md-10 padNone">
-                                <p class="col4">Agency</p>
+                                <p class="col6">Agency</p>
                             </div>
                             <div class="col-md-2 padNone">
-                                <span class="circle bor4"></span>
+                                <span class="circle bor2"></span>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-xs-12">
                     <a href="allcollege">
-                        <div class="col-md-12 col-xs-12 dashBox bg4">
+                        <div class="col-md-12 col-xs-12 dashBox bg7">
                             <div class="col-md-3 col-xs-3">
                                 <img src="img/users.png" alt="">
                             </div>
@@ -211,19 +219,19 @@ $utils = new Utils();
                                 <h3>College</h3>
                             </div>
                         </div>
-                        <div class="col-md-12 col-xs-12 view bor4">
+                        <div class="col-md-12 col-xs-12 view bor3">
                             <div class="col-md-10 padNone">
-                                <p class="col4">College</p>
+                                <p class="col7">College</p>
                             </div>
                             <div class="col-md-2 padNone">
-                                <span class="circle bor4"></span>
+                                <span class="circle bor3"></span>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-md-3 col-xs-12">
                     <a href="allbusiness">
-                        <div class="col-md-12 col-xs-12 dashBox bg4">
+                        <div class="col-md-12 col-xs-12 dashBox bg8">
                             <div class="col-md-3 col-xs-3">
                                 <img src="img/orders.png" alt="">
                             </div>
@@ -234,7 +242,7 @@ $utils = new Utils();
                         </div>
                         <div class="col-md-12 col-xs-12 view bor4">
                             <div class="col-md-10 padNone">
-                                <p class="col4">Business Enquiry</p>
+                                <p class="col8">Business Enquiry</p>
                             </div>
                             <div class="col-md-2 padNone">
                                 <span class="circle bor4"></span>
