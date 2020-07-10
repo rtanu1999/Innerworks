@@ -26,7 +26,7 @@
                 <p>Innerwork is emerging as a leader in the next phase of HR Services</p>
                 <a href="about" class="btton">Read More <i class="fa fa-angle-double-right"></i></a>
                   <ul class="contactSocial">
-                    <li><a href="https://www.facebook.com/Innerworkolution/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://www.facebook.com/InnerworkSolution/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://www.youtube.com/channel/UCuwkBl5yeSlnxSYarnIlZsA" target="_blank"><i class="fa fa-youtube"></i></a></li>
                     <li><a href="https://www.linkedin.com/company/innerworksolutions/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                     <li><a href="https://www.facebook.com/InnerworkSolution" target="_blank"><i class="fa fa-instagram"></i></a></li>
