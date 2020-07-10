@@ -2,6 +2,21 @@
 
 class Utils
 {
+  public function getTotalbusinessCnt($conn)
+  {
+      try{
+          $stmt = $conn->prepare("select count(*) from bussiness");
+          $stmt->execute();
+          if($stmt->rowCount() > 0)
+          {
+              return $stmt->fetchColumn();
+          }
+      }
+      catch(PDOException $e)
+      {
+          echo '{"error":{"text":'. $e->getMessage() .'}}';
+      }
+  }
   public function getTotalcollegeCnt($conn)
   {
       try{

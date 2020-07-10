@@ -82,7 +82,7 @@ $utils = new Utils();
                 <div class="col-md-3 col-xs-12">
                     <a href="allJobPost">
                         <div class="col-md-12 col-xs-12 dashBox bg1">
-                            <div class="col-md-3 col-xs-3 ">heade
+                            <div class="col-md-3 col-xs-3 ">
                                 <img src="img/reports.png" alt="">
                             </div>
                             <div class="col-md-9 col-xs-9">
@@ -205,6 +205,28 @@ $utils = new Utils();
                         </div>
                     </a>
                 </div>
+                <div class="col-md-3 col-xs-12">
+                    <a href="allbusiness">
+                        <div class="col-md-12 col-xs-12 dashBox bg4">
+                            <div class="col-md-3 col-xs-3">
+                                <img src="img/orders.png" alt="">
+                            </div>
+                            <div class="col-md-9 col-xs-9">
+                                <h1><?php echo $utils->getTotalbusinessCnt($conn); ?></h1>
+                                <h3>Business Enquiry</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-xs-12 view bor4">
+                            <div class="col-md-10 padNone">
+                                <p class="col4">Business Enquiry</p>
+                            </div>
+                            <div class="col-md-2 padNone">
+                                <span class="circle bor4"></span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
         </section>
     </div>
