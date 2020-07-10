@@ -3,6 +3,7 @@
     <head>
      <meta charset="UTF-8">
     <title> Innerwork Freelancer Login | Innerwork Employer Login</title>
+<link rel="stylesheet" href="css/demo.css">
      <link rel="stylesheet" type="text/css" href="css/registrationstyle.css">
     <?php include "CommonFiles.php"?>
 
@@ -15,6 +16,11 @@
       <link rel="stylesheet" type="text/css" href="css/recuiterchoicestyle.css">
           <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
+    <style>
+    #h_inner font{
+      font-family: Monotype Corsiva !important;
+    }
+    </style>
       <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
       <script>
           window.dataLayer = window.dataLayer || [];
@@ -38,6 +44,7 @@
         gtag('js', new Date());
         gtag('config', 'UA-154697763-1');
       </script>
+
 </head>
 <body>
 <?php include_once 'Header.php'; ?>
@@ -702,7 +709,7 @@
                 "email":email
             },
             success:function(data){
-  
+
                 if(data=="1"){
 
                     $("#insert").click();

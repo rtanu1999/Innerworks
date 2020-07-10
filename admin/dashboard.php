@@ -22,6 +22,17 @@ $utils = new Utils();
     width: 1160px;
 }
 }
+@media (min-width: 768px){
+  .dashBox{
+    width:50%;
+  }
+  .view{
+    width:50%;
+    float:none;
+  }
+
+}
+
 </style>
 <div id="main">
     <?php include 'Header.php'; ?>
@@ -58,7 +69,7 @@ $utils = new Utils();
 
         <section id="dash" >
             <div class="container" style="z-index:-1;">
-                <div class="col-md-3 col-xs-12">
+                <div class="col-md-3 col-xs-12 ">
                     <a href="allJobSeeker">
                         <div class="col-md-12 col-xs-12 dashBox bg3">
                             <div class="col-md-3 col-xs-3 padNone">
@@ -79,7 +90,7 @@ $utils = new Utils();
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3 col-xs-12">
+                <div class="col-md-3 col-xs-12 ">
                     <a href="allJobPost">
                         <div class="col-md-12 col-xs-12 dashBox bg1">
                             <div class="col-md-3 col-xs-3 ">
@@ -100,7 +111,7 @@ $utils = new Utils();
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3 col-xs-12">
+                <div class="col-md-3 col-xs-12 ">
                     <a href="viewAllBlogs">
                         <div class="col-md-12 col-xs-12 dashBox bg2">
                             <div class="col-md-3 col-xs-3">

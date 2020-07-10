@@ -5,8 +5,8 @@
      color: black;
 }
 .btn-primary.active{
-     transform: translateY(-.2rem); 
-     box-shadow:0 2px 0 1px darkslategray;  
+     transform: translateY(-.2rem);
+     box-shadow:0 2px 0 1px darkslategray;
      color: white !important;
 }
 .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
@@ -47,13 +47,13 @@
 }
 
 @keyframes  sk-rotateplane {
-  0% { 
+  0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
-  } 50% { 
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
     transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
-  } 100% { 
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
@@ -94,14 +94,7 @@
 .login100-form-btn-custom:hover:before{
       opacity:1;
 }
-@import  url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-         *{
-         font-family: 'Montserrat', sans-serif;
-         }
-.limiter{
-    width: 100%;
-    margin: 0 auto;
-}
+
 .container-login100 {
     width: 100%;
     min-height: 100vh;
