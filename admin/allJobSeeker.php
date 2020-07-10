@@ -27,7 +27,7 @@
                 <table class="tbl">
                     <thead>
                     <tr>
-                        <th style="width:7%;">Sr. No.</th>
+                        <th style="width:9%;">Sr. No.</th>
                         <th style="width:10%;">Name</th>
                         <th style="width:12%;">Gender</th>
                         <th style="width:7%;">City</th>
