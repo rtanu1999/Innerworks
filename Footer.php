@@ -29,7 +29,7 @@
                     <li><a href="https://www.facebook.com/InnerworkSolution/" target="_blank"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://www.youtube.com/channel/UCuwkBl5yeSlnxSYarnIlZsA" target="_blank"><i class="fa fa-youtube"></i></a></li>
                     <li><a href="https://www.linkedin.com/company/innerworksolutions/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://www.facebook.com/InnerworkSolution" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="https://instagram.com/innerwork__solutions?igshid=nyewgunv5ra1" target="_blank"><i class="fa fa-instagram"></i></a></li>
                     <li><a href="https://twitter.com/innverwork" target="_blank"><i class="fa fa-twitter"></i></a></li>
                     <li><a href="https://in.pinterest.com/innerwork123/" target="_blank"><i class="fa fa-pinterest"></i></a></li>
                     <li><a href="https://www.quora.com/profile/Innerwork-India" target="_blank"><i class="fa fa-quora"></i></a></li>
