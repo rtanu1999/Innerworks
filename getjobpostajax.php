@@ -97,13 +97,13 @@ if(isset($_POST["edu"]))
                 <div class="row job-info no-margin-left no-margin-right" style="margin-left:1%;">
 
         <ul class="list-group" style="paddding-left:6% !important;">
-          <li class="list-group-item"><i class="fa fa-briefcase"></i>&nbsp;' .$row['type'] .'
+          <li class="list-group-item" title="' .$row['type'] .'" data-etracking="true"><i class="fa fa-briefcase"></i>&nbsp;' .$row['type'] .'
            </li>
-          <li class="list-group-item">
-        <i class="fa fa-inr" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation"></i>' .$row['maxSalary'] .'
+          <li class="list-group-item" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation">
+        <i class="fa fa-inr" ></i>' .$row['maxSalary'] .'
           </li>
-          <li class="list-group-item">
-            <i class="fa fa-user" title="Start Date" data-etracking="true" data-ecategory="job_card_start_date"></i>' .$row['education'] .'
+          <li class="list-group-item" title="Start Date" data-etracking="true" data-ecategory="job_card_start_date">
+            <i class="fa fa-user" ></i>' .$row['education'] .'
           </li>
           </ul></div>
          <div class="row no-margin-left no-margin-right job-lowest-section">
