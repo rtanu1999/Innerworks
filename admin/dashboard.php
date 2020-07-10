@@ -30,8 +30,13 @@ $utils = new Utils();
     width:50%;
     float:none;
   }
+  span.circle{
+    float:none;
+  }
 
 }
+
+
 
 </style>
 <div id="main">
