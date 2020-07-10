@@ -15,7 +15,7 @@
 
             <ul class="carousel-indicators">
                 <li data-target="#apnaCarousel" data-slide-to="0" class="active"></li>
-<!--                 <li data-target="#apnaCarousel" data-slide-to="1" class=""></li> -->
+     <li data-target="#apnaCarousel" data-slide-to="1" class=""></li>
                 <li data-target="#apnaCarousel" data-slide-to="2" class=""></li>
                 <li data-target="#apnaCarousel" data-slide-to="3" class=""></li>
                 <li data-target="#apnaCarousel" data-slide-to="4" class=""></li>
@@ -23,9 +23,8 @@
                 <li data-target="#apnaCarousel" data-slide-to="6" class=""></li>
                 <li data-target="#apnaCarousel" data-slide-to="7" class=""></li>
 <!--                 <li data-target="#apnaCarousel" data-slide-to="8" class=""></li> -->
-                <li data-target="#apnaCarousel" data-slide-to="9" class=""></li>
-                <li data-target="#apnaCarousel" data-slide-to="10" class=""></li>
-               
+              
+
             </ul>
             <div class="carousel-inner">
                 <div class="item active">
@@ -54,7 +53,7 @@
                     <div class="carousel-caption">
                     </div>
                 </div>
-                
+
                 <div class="item ">
                     <img src="img/Banner4.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
@@ -75,11 +74,7 @@
                     <div class="carousel-caption">
                     </div>
                 </div>
-                <div class="item ">
-                    <img src="img/banner8.jpg" alt="" style="width:100%;height:500px;">
-                    <div class="carousel-caption">
-                    </div>
-                </div>
+
                 <div class="item ">
                     <img src="img/banner9.jpg" alt="" style="width:100%;">
                     <div class="carousel-caption">
