@@ -102,7 +102,7 @@ if(isset($_POST["edu"]))
           <li class="list-group-item" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation">
         <i class="fa fa-inr" ></i>' .$row['maxSalary'] .'
           </li>
-          <li class="list-group-item" title="Start Date" data-etracking="true" data-ecategory="job_card_start_date">
+          <li class="list-group-item" title="Qualification" data-etracking="true" data-ecategory="job_card_start_date">
             <i class="fa fa-user" ></i>' .$row['education'] .'
           </li>
           </ul></div>
