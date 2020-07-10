@@ -176,7 +176,7 @@ if(isset($_POST['submit'])) {
                                <input type="text" name="name"id="field"  class="form-control" required>
                            </div>
                            <div class="col-md-6">
-                               <label for="companyname">Company Name</label>
+                               <label for="companyname">Organization/Company / Indiviual Name</label>
                                <input type="text" name="companyName" id="field" class="form-control" required>
                            </div>
                        </div>
