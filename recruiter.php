@@ -145,7 +145,7 @@
                     <span class="symbol-input100"><i class="fas fa-map-marked-alt"></i></span>
                </div>
                <div class="col-md-12 validate-input m-b-10">
-                   <select id="state" name="city" style="height:50px;font-family: 'Raleway';font-weight: bold;border-radius:50px;" class="form-control input100" required=""></select>
+                   <select id="state" name="city" style="height:50px;font-family: 'Raleway';font-weight: bold;border-radius:50px;padding-left:6%;" class="form-control input100" required=""></select>
                    <span class="focus-input100"></span>
                    <span class="symbol-input100"><i class="fas fa-map-marked-alt"></i></span>
                </div>

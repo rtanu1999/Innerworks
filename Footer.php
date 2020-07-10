@@ -9,7 +9,7 @@
     <!--<script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>-->
     <!--javascpt-->
     <!--fontawesome-->
-  <!--  <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>-->
+   <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
     <link rel="icon" href="css/logo.png" type="image/icon type">
     <link rel="icon" type="png" href="images/profile.png">
     <!--google fonts-->
