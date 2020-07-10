@@ -25,7 +25,7 @@
 
         <center>
 
-        <p style="font-size: 30px"><b>Recruiter Login!</b></p><br>
+        <p style="font-size: 30px"><b>Recruiter / Agency Login!</b></p><br>
         <?php
         if(isset($_GET["invalid"])){
             echo "<p style='color:red'>Invalid username/password</p>";
