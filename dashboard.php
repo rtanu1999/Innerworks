@@ -245,7 +245,7 @@ $utils = new Utils();
                   <div class="row">
                     <div class="col">
                       <h5 class="card-title text-uppercase text-muted mb-0">Active Candidates</h5>
-                      <span class="h2 font-weight-bold mb-0"><?php if($_SESSION['status']=="1"){ echo $utils->getTotalJobseekerCnt($conn);}else{echo "---";} ?></span>
+                      <span class="h2 font-weight-bold mb-0"><?php if($_SESSION['status']=="1"){ echo (($utils->getTotalinternsCnt($conn))+$utils->getTotalJobseekerCnt($conn));}else{echo "---";} ?></span>
                     </div>
                     <div class="col-auto">
                       <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
