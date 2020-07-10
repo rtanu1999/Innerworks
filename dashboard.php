@@ -275,6 +275,234 @@ $utils = new Utils();
     </div>
 
 
+  <div class="col-lg-6 col-md-12 col-12 mt-2">
+
+    <div class="card resumes-no-analytics">
+      <div class="card-body">
+        <h5 class="card-title resume_title">Resumes</h5>
+        <h3 class="text-center font-weight-bold">No Analytics Available</h3>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+   <script>
+
+      var active_jobs = "0";
+      var paused_jobs = "0";
+      var rejected_jobs = "0";
+      var closed_jobs = "0";
+      var total_jobs = parseInt(active_jobs)+parseInt(paused_jobs)+parseInt(rejected_jobs)+parseInt(closed_jobs);
+      $('.job_title').html('Jobs ('+total_jobs+')');
+
+      if(total_jobs == 0){
+        $('.jobs-analytics').hide();
+        $('.jobs-no-analytics').show();
+      }else{
+            $('.jobs-analytics').show();
+            $('.jobs-no-analytics').hide();
+          var ctx = document.getElementById('jobsChart').getContext('2d');
+          var data = {
+              datasets: [{
+                  data: [active_jobs, paused_jobs,rejected_jobs,closed_jobs],
+                  backgroundColor: [ "#80effe", "#1be3fe", "#01c9e4","#019db2"]
+              }],
+
+              // These labels appear in the legend and in the tooltips when hovering different arcs
+              labels: [
+
+                  'Active ('+active_jobs+')',
+                  'Paused ('+paused_jobs+')',
+                  'Rejected ('+rejected_jobs+')',
+                  'Closed ('+closed_jobs+')'
+              ]
+
+          };
+           // For a pie chart
+      var myPieChart = new Chart(ctx, {
+          type: 'pie',
+          data: data
+      });
+      }
+
+
+
+
+      // for resumes
+      var pending_resumes = "0";
+      var accepted_resumes = "0";
+      var rejected_resumes = "0";
+      var scheduled_resumes = "0";
+      var total_resumes =parseInt(pending_resumes)+parseInt(accepted_resumes)+parseInt(rejected_resumes)+parseInt(scheduled_resumes);
+      $('.resume_title').html('Resumes ('+total_resumes+')');
+
+      if(total_resumes == 0){
+        $('.resumes-no-analytics').show();
+        $('.resumes-analytics').hide();
+      }else{
+        $('.resumes-no-analytics').hide();
+        $('.resumes-analytics').show();
+        var resumeChart = document.getElementById('resumeChart').getContext('2d');
+      var resume_date = {
+          datasets: [{
+              data: [pending_resumes, accepted_resumes, rejected_resumes ,scheduled_resumes],
+              backgroundColor: [ "#80effe", "#1be3fe", "#01c9e4","#019db2"]
+          }],
+
+          // These labels appear in the legend and in the tooltips when hovering different arcs
+          labels: [
+              'Pending ('+pending_resumes+')',
+              'Accepted ('+accepted_resumes+')',
+              'Rejected ('+rejected_resumes+')',
+              'Scheduled ('+scheduled_resumes+')'
+
+          ]
+      };
+      // For a pie chart
+       var myPieChart = new Chart(resumeChart, {
+          type: 'pie',
+          data: resume_date
+      });
+      }
+
+
+      // for candidates
+      var hire_candidates = "0";
+      var hold_candidates = "0";
+      var offered_candidates = "0";
+      var rejected_candidates = "0";
+      var total_candidates = parseInt(hire_candidates)+parseInt(hold_candidates)+parseInt(offered_candidates)+parseInt(rejected_candidates);
+      $('.candidate_title').html('Candidates ('+total_candidates+')');
+
+      if(total_candidates==0){
+        $('.candidates-analytics').hide();
+        $('.candidates-no-analytics').show();
+      }else{
+        $('.candidates-analytics').show();
+        $('.candidates-no-analytics').hide();
+        var candidateChart = document.getElementById('candidatesChart').getContext('2d');
+        var data = {
+            datasets: [{
+                data: [hire_candidates, hold_candidates,offered_candidates,rejected_candidates],
+                backgroundColor: [ "#80effe", "#1be3fe", "#01c9e4","#019db2"]
+            }],
+            labels: [
+
+                'Hired  ('+hire_candidates+')',
+                'Hold  ('+hold_candidates+')',
+                'Offered  ('+offered_candidates+')',
+                'Rejected  ('+rejected_candidates+')'
+            ]
+        };
+        // For a pie chart
+        var ChartCandidate = new Chart(candidateChart, {
+            type: 'pie',
+            data: data
+        });
+      }
+
+      // number of hires
+      var hireChart = document.getElementById('hiresChart').getContext('2d');
+          var hires =  [["05",0],["04",0],["03",0]];
+          var labels = [];
+          var data = [];
+          var months = [ "January", "February", "March", "April", "May", "June",
+              "July", "August", "September", "October", "November", "December" ];
+          for(var i = 0; i < 3;i++){
+            var month_index =  parseInt(hires[i][0],10) - 1;
+            labels[i] = months[month_index];
+          }
+          for(var i = 0; i < 3;i++){
+            data[i] = hires[i][1];
+          }
+          let options = {
+
+              legend: {
+                      display: true,
+                      position : 'bottom',
+                      labels: {
+                                fontColor: 'rgb(0,0,0)'
+                            }
+                        }
+          };
+
+          if(data.every(item => item === 0)){
+            $('.hires-no-analytics').show();
+            $('.hires-analytics').hide();
+          }else{
+            $('.hires-no-analytics').hide();
+            $('.hires-analytics').show();
+            var myChart = new Chart(hireChart, {
+              type: 'bar',
+              data: {
+                  labels: labels,
+                  datasets: [{
+                      label: 'No. of Hires',
+                      data:data,
+                      backgroundColor: [ "#80effe", "#1be3fe", "#01c9e4","#019db2"],
+                      borderWidth: 1
+                  }]
+              },
+              options: options
+          });
+          }
+
+
+   </script>
+
+
+
+        <script>
+          $('.interested').click(function(){
+            $(this).append('<div class="mybtn_loader" style="display:flex;"><div class="spinner"></div></div>')
+
+            var j_id = $(this).attr('data-j_id');
+            var r_id = $(this).attr('data-r_id');
+             $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+                }
+            });
+            $.ajax({
+                url: "https://incruiter.com/account/recruiter/interest-to-job",
+                method: 'post',
+                data: {
+                    j_id: j_id,
+                    r_id:r_id
+                      },
+                success: function(data) {
+                    if (data == 'Done') {
+                        GrowlNotification.notify({
+                            title: 'Successfully Marks as Interested!',
+                            image: "https://incruiter.com/dist/img/success.png",
+                            type: 'success',
+                            position: 'top-right',
+                            closeTimeout: 3000
+                        });
+                        setTimeout(() => {
+
+                            location.reload(true);
+
+                        }, 1500);
+                    }
+
+                }
+
+            });
+
+          });
+
+
+        </script>
+
+
+
+
+
                                 <!-- Footer -->
                               <footer class="footer pt-0">
                                 <div class="row align-items-center justify-content-lg-between">
