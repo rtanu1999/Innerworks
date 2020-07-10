@@ -103,7 +103,7 @@
                     <span class="symbol-input100"><i class="fas fa-map-marker-alt"></i></span>
                </div>
                <div class="col-md-12 validate-input m-b-10">
-                    <select onchange="print_city('state', this.selectedIndex);" id="sts" name="state" class="form-control input100" style="height:50px;font-family: 'Raleway';font-weight: bold;border-radius:50px;" required="">
+                    <select onchange="print_city('state', this.selectedIndex);" id="sts" name="state" class="form-control input100" style="height:50px;font-family: 'Raleway';font-weight: bold;border-radius:50px;padding-left:6%;" required="">
                         <option value="">Select State</option>
                         <option value="Andaman &amp; Nicobar">Andaman Nicobar</option>
                         <option value="Andhra Pradesh">Andhra Pradesh</option>
@@ -155,7 +155,7 @@
                    <span class="symbol-input100"><i class="fas fa-paper-plane"></i></span>
                </div>
                 <div class="col-md-12 validate-input m-b-10">
-                    <select  id="sts" name="experience" class="form-control input100" style="height:50px;font-family: 'Raleway';font-weight: bold;border-radius:50px;" required="">
+                    <select  id="sts" name="experience" class="form-control input100" style="height:50px;font-family: 'Raleway';font-weight: bold;border-radius:50px;padding-left:6%;" required="">
                         <option value="">Experience</option>
                         <option value="1">2</option>
                         <option value="2">3</option>

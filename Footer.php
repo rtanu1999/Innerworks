@@ -6,16 +6,16 @@
 }</style>
     <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
-    <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
+    <!--<script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>-->
     <!--javascpt-->
     <!--fontawesome-->
-    <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
+  <!--  <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>-->
     <link rel="icon" href="css/logo.png" type="image/icon type">
     <link rel="icon" type="png" href="images/profile.png">
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu&display=swap" rel="stylesheet">
     <!--bootstrap cdn-->
-    	  	
+
 
     	    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <section id="footer">
