@@ -287,7 +287,7 @@ if(isset($_POST['submit'])) {
                                    </div> </div>
                                     <div class="col-md-6">
                                         <label for="cpname" style="color:#000;">Job Description</label>
-                                        <textarea name="j_desc" id="field" class="form-control" required="required" rows="6" cols="50"></textarea>
+                                        <textarea name="j_desc" id="field" placeholder=" 1 &#10; 2 &#10; 3 &#10; 4" class="form-control" required="required" rows="6" cols="50"></textarea>
                                         </div>
                                      
                                 </div>
