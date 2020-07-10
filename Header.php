@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="css/demo.css">
-<section id="headerBtm">
+<section id="headerBtm" style="padding-bottom:2%;">
     <div class="container-fluid">
         <nav class="navbar navbar-inverse" role="navigation"> <!-- navbar-fixed-top -->
             <div class="container-fluid-padNone">
