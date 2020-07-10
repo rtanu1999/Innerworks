@@ -1,9 +1,9 @@
 <style>
 
 #drop_file_zone {
-    background-color: #EEE; 
+    background-color: #EEE;
     border: #999 5px dashed;
-    width: 100%; 
+    width: 100%;
     height: auto;
     padding: 8px;
     font-size: 14px;
@@ -83,10 +83,10 @@ ul li {
   cursor: pointer;
   position: relative;
  /* padding: 12px 8px 12px 40px; */
-  
+
   font-size: 14px;
   transition: 0.2s;
-  
+
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -95,12 +95,12 @@ ul li {
   user-select: none;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) 
+/* Set all odd list items to a different color (zebra-stripes)
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }*/
 
-/* Darker background-color on hover 
+/* Darker background-color on hover
 ul li:hover {
   background: #ddd;
 }*/
@@ -135,7 +135,7 @@ ul li.checked::before {
     fileobj = e.dataTransfer.files[0];
     ajax_file_upload(fileobj);
   }
- 
+
   function file_explorer() {
     document.getElementById('selectfile').click();
     document.getElementById('selectfile').onchange = function() {
@@ -143,10 +143,10 @@ ul li.checked::before {
       ajax_file_upload(fileobj);
     };
   }
- 
+
   function ajax_file_upload(file_obj) {
     if(file_obj != undefined) {
-        var form_data = new FormData();                  
+        var form_data = new FormData();
         form_data.append('file', file_obj);
       $.ajax({
         type: 'POST',
@@ -163,7 +163,7 @@ ul li.checked::before {
       });
     }
   }
-  
+
   // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -199,7 +199,7 @@ function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
-  li.appendChild(t); 
+  li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
@@ -209,8 +209,8 @@ function newElement() {
   document.getElementById("livesearch").style.display = "none";
     var elem = document.getElementById('hskill');
     var old  = elem.value;
-    old = old + ',' + inputValue; 
-   
+    old = old + ',' + inputValue;
+
    document.getElementById("hskill").value = old;
 
   var span = document.createElement("SPAN");
@@ -240,8 +240,8 @@ function newElement1() {
   document.getElementById("liveisearch").style.display = "none";
 var elemm = document.getElementById('hinterest');
     var oldd  = elemm.value;
-    oldd = oldd + ',' + inputValue; 
-   
+    oldd = oldd + ',' + inputValue;
+
    document.getElementById("hinterest").value = oldd;
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -299,13 +299,13 @@ function fill(Value) {
    //Assigning value to "search" div in "search.php" file.
    $('#myInput').val(Value);
    //Hiding "display" div in "search.php" file.
-   
+
 }
 function fillinterst(Value) {
    //Assigning value to "search" div in "search.php" file.
    $('#uInput').val(Value);
    //Hiding "display" div in "search.php" file.
-   
+
 }
 </script>
 
@@ -350,7 +350,7 @@ function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
-  li.appendChild(t); 
+  li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
@@ -360,8 +360,8 @@ function newElement() {
   document.getElementById("livesearch").style.display = "none";
     var elem = document.getElementById('hskill');
     var old  = elem.value;
-    old = old + ',' + inputValue; 
-   
+    old = old + ',' + inputValue;
+
    document.getElementById("hskill").value = old;
 
   var span = document.createElement("SPAN");
@@ -391,8 +391,8 @@ function newElement1() {
   document.getElementById("liveisearch").style.display = "none";
 var elemm = document.getElementById('hinterest');
     var oldd  = elemm.value;
-    oldd = oldd + ',' + inputValue; 
-   
+    oldd = oldd + ',' + inputValue;
+
    document.getElementById("hinterest").value = oldd;
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -415,7 +415,7 @@ var elemm = document.getElementById('hinterest');
     fileobj = e.dataTransfer.files[0];
     ajax_file_upload(fileobj);
   }
- 
+
   function file_explorer() {
     document.getElementById('selectfile').click();
     document.getElementById('selectfile').onchange = function() {
@@ -423,10 +423,10 @@ var elemm = document.getElementById('hinterest');
       ajax_file_upload(fileobj);
     };
   }
- 
+
   function ajax_file_upload(file_obj) {
     if(file_obj != undefined) {
-        var form_data = new FormData();                  
+        var form_data = new FormData();
         form_data.append('file', file_obj);
       $.ajax({
         type: 'POST',
@@ -470,8 +470,8 @@ if(isset($_POST['submit'])) {
                             if ($_POST['skill'] != null && !empty($_POST['skill'])) {
                                 if ($_POST['interest'] != null && !empty($_POST['interest'])) {
                                      if ($_POST['exp'] != null && !empty($_POST['exp'])) {
-                                        
-                            
+
+
                             try {
 //                                 $uploadFolder = "InternshipApplicants";
 
@@ -481,33 +481,33 @@ if(isset($_POST['submit'])) {
 //         $final_path = $folder_name."/".$imageName;
 //         $result = move_uploaded_file($imageTmpName,$final_path);
 // }
-    
-                                
+
+
                                $uploadFolder = "InternshipApplicants";
-                               
+
                                     //$folder_name = $uploadFolder."/".$name;
-                                    
-                                    
+
+
                                     //$photopath = mkdir($folder_name);
                                     // foreach ($_FILES['attach1']['tmp_name'] as $key => $image) {
                                     //         $imageTmpName = $_FILES['fnamee']['tmp_name'][$key];
                                     //         $imageName = $_FILES['attach1']['name'][$key];
                                     //         $final_path = $uploadFolder."/".$imageName;
                                     //         $result = move_uploaded_file($imageTmpName,$final_path);
-                                            
+
                                     // }
-                                    
+
                              //   $file = "InternshipApplicants/".$_FILE['fnamee']['name'];
-                              
+
                                // move_uploaded_file($_FILE['fnamee']['tmp_name'],"../InternshipApplicants/".$_FILE['fnamee']['name']);$_FILES['attach1']['tmp_name']
-                               
+
 		                   $fm =  $_FILES['attach1']['name'];
 		                   $fo =  $_FILES['attach1']['tmp_name'];
 		                   $final_path = $uploadFolder."/".$fm;
-                                          
+
 		                     $result =	move_uploaded_file($_FILES['attach1']['tmp_name'],$final_path);
-		                    	
-		                    		
+
+
                                 $name = $_POST['name'];
                                 $gender = $_POST['gender'];
                                 $city = $_POST['city'];
@@ -518,7 +518,7 @@ if(isset($_POST['submit'])) {
                                 $interest = $_POST['interest'];
                                 $exp = $_POST['exp'];
                                 $imageName = $_POST[$fo];
-								
+
                                 $adminEmail = 'internship@innerworkindia.com';
 
                                 //Admin Email
@@ -539,7 +539,7 @@ if(isset($_POST['submit'])) {
                                         $stmt->bindParam(8, $interest);
                                         $stmt->bindParam(9, $exp);
                                         $stmt->bindParam(10, $fm);
-                                
+
                                         $stmt->execute();
 
                                         $result = "<div class='alert alert-success alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Success!</strong> Thanks applying for Job, will get you back soon.</div>";
@@ -551,7 +551,7 @@ if(isset($_POST['submit'])) {
                                 echo '{"error":{"text":' . $e->getMessage() . '}}';
                             }
 
-                        } 
+                        }
                         else {
                              $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please select your experience</div>";
                          }
@@ -588,9 +588,9 @@ if(isset($_POST['submit'])) {
             }
         } else {
             $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Sweet Name.</div>";
-        }  
-        
-    } 
+        }
+
+    }
 
 ?>
 <!doctype html>
@@ -682,10 +682,10 @@ if(isset($_POST['submit'])) {
                             <div class="col-md-6">
                                 <label for="candidateName" style="color:#000;">Name of the Candidate</label>
                                 <input type="text" name="name" class="form-control" required="required" id="field"> <!-- pattern="[0-9]{10}" -->
-                            </div> 
+                            </div>
                             <div class="col-md-6">
                                 <label for="email" style="color:#000;">Enter Your Email Address</label>
-                                <input type="email" name="email" class="form-control" required="required" id="field" > 
+                                <input type="email" name="email" class="form-control" required="required" id="field" >
                             </div>
                         </div>
                         <div class="row form-group">
@@ -697,8 +697,8 @@ if(isset($_POST['submit'])) {
                                     <option value="Female">Female</option>
                                 </select>
                             </div>
-                        
-                         
+
+
                             <div class="col-md-6">
                                 <label for="city" style="color:#000;">College Name</label>
                                 <input type="text" name="city" class="form-control" required="required" id="field" >
@@ -755,7 +755,7 @@ if(isset($_POST['submit'])) {
                                 <label for="mobno" style="color:#000;">Mobile Number</label>
                            <!--     <input type="text" name="mobno" class="form-control" required="required" id="field" >-->
                                     <input type="text" name="mobno" class="form-control" pattern="{0-9}[10]" maxlength="10" required="required" id="field" >
-                       
+
                             </div></div>
                              <div class="row form-group">
                             <div class="col-md-6">
@@ -770,7 +770,7 @@ if(isset($_POST['submit'])) {
                 <option>6 months</option>
                 </select>
                 </div></div>
- 
+
 
 						 <div class="row form-group">
                             <div id="myDIV" class="col-md-12">
@@ -778,7 +778,7 @@ if(isset($_POST['submit'])) {
                                 <input type="text" name="skill" class="form-control" id="myInput" onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
                                  <span onclick="newElement()" class="addBtn">Add</span>
                                  <div id="livesearch"></div>
-                                 
+
                                  <input type="hidden" name="hiskill" class="form-control" id="hskill" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
                             </div>
                         </div>
@@ -788,29 +788,29 @@ if(isset($_POST['submit'])) {
                             <div class="col-md-12">
                                 <label for="mobno" style="color:#000;">Interest</label>
                                             <input type="text" name="interest" class="form-control" id="uInput" onkeyup="showinterestResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
-                                 <span onclick="newElement1()" class="uBtn">Add</span> 
+                                 <span onclick="newElement1()" class="uBtn">Add</span>
                                  <div id="liveisearch"></div>
                                   <input type="hidden" name="hinterest" class="form-control" id="hinterest" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
                             </div>
                         </div>
                         <ul id="uUL" style="padding: 12px 8px 12px 40px;">
                         </ul>
-            
-						 
+
+
         <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
   <div id="drag_upload_file">
     <p>Drop file here</p>
     <p>or</p>
-    <p><input type="button" value="Select File" onclick="file_explorer();" style="width: 100%;" ></p>
+    <p><input type="button" value="Select File" onclick="file_explorer();" style="width:fit-content !important;" ></p>
     <input type="file" id="selectfile">
 	<input type="hidden" id="filename" name="fnamee">
   </div>
-</div>	
+</div>
 <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-                
-                    
-							 
-                        <input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;"/>
+
+
+
+                        <input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;width:fit-content !important;"/>
                     </form>
                 </div>
             </div>
