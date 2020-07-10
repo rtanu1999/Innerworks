@@ -70,7 +70,7 @@
             </a>
         </div>
         <div class="col-md-3">
-            <a href="recruiter.php">
+            <a href="recruiterlogin.php">
                 <div class="Box" style="background: #f9b805;">
                     <h2 style="color:#fff;"><img src="img/icons/freelancer.jpg" alt="freelancer- Inner Work"> <span style="color:#fff;">Agency/Freelancer</span></h2>
                     <p style="color:#fff;">Login for Agency/Freelancer! Hire candidates/post jobs as freelancer!</p>

@@ -20,6 +20,12 @@ include_once 'DbConnection/DbConnectionHelper.php';
     <title>Inner Work</title>
     <?php include "CommonFiles.php"?>
     <link rel="stylesheet" href="css/careerHouse.css">
+    <style>
+    @media only screen and (max-width: 521px){
+      iframe{width: min-content;height: min-content;}
+      .readBx img {width:100% !important;height:100% !important;}
+    }
+    </style>
 </head>
 <body>
 <?php include_once 'Header.php'; ?>
