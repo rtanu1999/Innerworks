@@ -4,7 +4,7 @@ include('loginpage.php');
 include('update.php');
 
 if(!isset($_SESSION['type'])){
-    header('location:recruiterlogin.php');  
+    header('location:recruiterlogin.php');
 }
 include_once 'DbConnection/DbConnectionHelper.php';
 include_once 'admin/Utils.php';
@@ -204,7 +204,8 @@ $utils = new Utils();
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">ACTIVE EMPLOYERS|AGENCYS</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Employers</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Agencys</h5>
                       <span class="h2 font-weight-bold mb-0"><?php if($_SESSION['status']=="1"){ echo $utils->getTotalagencyCnt($conn);}else{echo "---";} ?></span>
                     </div>
                     <div class="col-auto">
@@ -224,7 +225,7 @@ $utils = new Utils();
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">open jobs</h5>
+                      <h5 class="card-title text-uppercase text-muted mb-0">Open jobs</h5>
                       <span class="h2 font-weight-bold mb-0"><?php if($_SESSION['status']=="1"){ echo $utils->getTotalJobpostCnt($conn);}else{echo "---";} ?></span>
                     </div>
                     <div class="col-auto">
@@ -272,51 +273,11 @@ $utils = new Utils();
     <div class="row" style="padding: 10px 40px;">
         <input type="search" id="searchtitle" class="searchboox" placeholder="Search.." style="width:40%;margin-left:30%;border-radius:5%;"/>
     </div>
-<div class="row">
-
-  <div class="col-lg-6 col-md-12 col-12 mt-2">
-    <div class="card jobs-no-analytics">
-      <div class="card-body">
-        <h5 class="card-title job_title">Jobs</h5>
-        <h3 class="text-center font-weight-bold">No Analytics Available</h3>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-6 col-md-12 col-12 mt-2">
-
-    <div class="card resumes-no-analytics">
-      <div class="card-body">
-        <h5 class="card-title resume_title">Resumes</h5>
-        <h3 class="text-center font-weight-bold">No Analytics Available</h3>
-      </div>
-    </div>
-  </div>
-
-</div>
-<br>
-<div class="row">
-
-   <div class="col-lg-6 col-md-12 col-12 mt-2">
-
-    <div class="card candidates-no-analytics">
-      <div class="card-body">
-        <h5 class="card-title candidate_title">Candidates</h5>
-        <h3 class="text-center font-weight-bold">No Analytics Available</h3>
-      </div>
-    </div>
-  </div>
 
 
-  <div class="col-lg-6 col-md-12 col-12 mt-2">
 
-    <div class="card hires-no-analytics">
-      <div class="card-body">
-        <h5 class="card-title">Number of Hires</h5>
-        <h3 class="text-center font-weight-bold">No Analytics Available</h3>
-      </div>
-    </div>
-  </div>
+
+
 </div>
 
 
