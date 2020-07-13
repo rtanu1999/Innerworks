@@ -117,7 +117,7 @@ td {
     				<h2>GST</h2>
     			</div>
     			<div class="col-md-6 col-sm-6">
-            <input type=file  name="myfile2" accept="pdf,docx" required> </br>
+            <input type=file  name="myfile3" accept="pdf,docx" required> </br>
     			</div>
     		</div>
     		</br>
@@ -126,7 +126,7 @@ td {
     				<h2>PAN </h2>
     			</div>
     			<div class="col-md-6">
-    			  	<input type="file" name="myfile3" accept="pdf,docx" required="required">  </br>
+    			  	<input type="file" name="myfile2" accept="pdf,docx" required="required">  </br>
     			</div>
     		</div>
         <div class="row">
