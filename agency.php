@@ -157,51 +157,6 @@ td {
 	        </div>
 	      </div>
 	    </nav>
-			<div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url(assets/img/theme/Theme.jpg); background-size: cover; background-position: center top;">
-	      <!-- Mask -->
-	      <span class="mask bg-gradient-default opacity-8"></span>
-	      <!-- Header container -->
-	      <div class="container-fluid d-flex align-items-center">
-	        <div class="row">
-	          <div class="col-lg-7 col-md-10">
-	            <h1 class="display-2 text-white">Hello <?php echo $_SESSION['contactperson']; ?></h1>
-	          </div>
-	        </div>
-	    </div>
-	    </div>
-	    <!-- Page content -->
-	    <div class="container-fluid mt--6">
-	      <div class="row">
-	        <div class="col-xl-4 order-xl-2">
-	          <div class="card card-profile">
-	            <img src="assets/img/theme/img-1-1000x600.jpg" alt="Image placeholder" class="card-img-top">
-	            <div class="row justify-content-center">
-	              <div class="col-lg-3 order-lg-2">
-	                <div class="card-profile-image">
-	                  <a href="#">
-	                     <img src="upload/<?php echo $_SESSION['image']; ?>" class="rounded-circle">
-	                  </a>
-	                </div>
-	              </div>
-	            </div>
-
-	            <div class="card-body pt-0">
-	              <div class="row">
-	                <div class="col">
-	                  <div class="card-profile-stats d-flex justify-content-center">
-
-	                  </div>
-	                </div>
-	              </div>
-	              <div class="text-center">
-	                <h5 class="h3">
-	                  <span class="font-weight-light"></span>
-	                </h5>
-
-	              </div>
-	            </div>
-	          </div>
-	        </div>
 					<div class="header pb-6 d-flex align-items-center" style="min-height: 500px; background-image: url(assets/img/theme/Theme.jpg); background-size: cover; background-position: center top;">
 		      <!-- Mask -->
 		      <span class="mask bg-gradient-default opacity-8"></span>
