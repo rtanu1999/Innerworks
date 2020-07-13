@@ -745,7 +745,7 @@ function fillinterst(Value) {
                                        <div class="row form-group">
                                     <div class="col-md-6">
                                         <label for="cpname" style="color:#000;">Job Description</label>
-                                        <textarea name="j_desc" id="field" class="form-control" required="required" rows="6" cols="50"></textarea>
+                                        <textarea name="j_desc" id="field" class="form-control" required="required" rows="6" cols="50"> 1) &#10; 2) &#10; 3) &#10; 4)</textarea>
                                         </div>
 
                                 <div class="col-md-6">
@@ -877,7 +877,7 @@ function fillinterst(Value) {
                                         </div>
                                     <div class="col-md-6">
                                         <label for="idesc" style="color:#000;">Internship Description</label>
-                                        <textarea name="j_desc" id="field" class="form-control" required="required" rows="6" cols="50"></textarea>
+                                        <textarea name="j_desc" id="field" class="form-control" required="required" rows="6" cols="50"> 1) &#10; 2) &#10; 3) &#10; 4)</textarea>
                                     </div>
 
                                     </div>

@@ -620,19 +620,19 @@
 
 
 </script>
-
+<section id="about">
  <div  class="container" style="background: #ecf5f7;">
-        <div class="row">
+        <div class="row aboutContent">
             <div class="col-md-6">
                 <img src="img/freelancerHr.jpg" alt="">
             </div>
-            <div style = "line-height: 26px;text-align: justify;" class="col-md-6">
+            <div style = "line-height: 26px;text-align: justify;" class="row aboutContent">
                 <h5 style = "color: #fec21b;font-size: 19px;">Earn More Money</h5>
                 <h2 style = "text-align: left;font-size: 22px;colour:black;">Be a Strong HR Bridge as Freelance Recruiter</h2>
                 <p style = "line-height: 26px;text-align: justify;color:black;">The seamless digitalization aided by simple communication tools has revolutionized the way people work and execute tasks. How could recruitment, hiring or talent acquisition professionals miss the dynamism of digital revolution? Freelance recruiters are smartly leveraging the potential of digital assets, especially social networks and making a meaningful contribution in terms of helping companies hire suitable talents smoothly at a very competitive cost. If you want to be a strong bridge between companies and aspirants then Innerwork, a renowned HR Service provider in India, could help you explore opportunities as a freelance recruiter and shine like a bright star in the HR space.</p>
 
             </div>
-        </div>
+
         <div  class="row aboutContent" id="testID">
                 <p style = "line-height: 26px;text-align: justify; color:black;">If you are passionate about human resource management and have requisite skills to identify, filter, engage and attract suitable talents for companies, then you can make good money working as a freelance recruiter. If you love freedom, flexibility and want to experiment with some new recruitment ideas, then freelance recruitment is the best possible option for you. The recruitment scene is changing fast as companies are looking for specialized and customized recruitment solutions to find the best talent quickly and smoothly. The process is simple; companies engage you as a freelance recruiter to hire quality talent leveraging your internal and external network potential and pay you some percentage of the package. </p>
                 <br/>
@@ -664,8 +664,10 @@
                 <p style = "line-height: 26px;text-align: justify;color:black;text-align: left;font-size: 22px;">Global Reach </p>
                 <p style = "line-height: 26px;text-align: justify;color:black;">As a freelance recruiter, your market is global, so you need to be ready to meet the expectation of global clients. Innerwork experts will train you to handle some of the biggest job markets of the world and equip you with requisite skills to execute recruitments smoothly. In simple terms, better packages mean better earning.</p>
                 <br/>
+              </div>
         </div>
     </div>
+  </section>
     <script>
         $(document).ready(function() {
 
