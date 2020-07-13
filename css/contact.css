@@ -31,7 +31,7 @@ ul.socialContact li a i{transition: ease all 1s;color: #3b3c3c;width: 30px;heigh
 ul.socialContact li a:hover i{transform: rotate(360deg);color: #018fc9;border: 1px solid #018fc9;}
 
 
-iframe{width: 100%;}
+/* iframe{width: 100%;} */
 /************* Responsive ******************/
 @media (max-width: 480px) {
     .form input[type="submit"] {display: block;width: 36%;}
