@@ -85,7 +85,7 @@ if(isset($_POST["edu"]))
 			<div class="nav nav-pills" style="width:100%;height:100%;background-color:#ffc114;padding-left: 1%">
 			<div class="job-title">
 
-                <b><h4 class="truncate-normal" title="'. $row['jobTitle'] .'" data-etracking="true" ><a href="#" target="_blank" >'. $row['jobTitle'] .'</a></h4></b>
+                <b><h4 class="truncate-normal" title="'. $row['jobTitle'] .'" data-etracking="true" ><a href="pp.php" target="_blank" >'. $row['jobTitle'] .'</a></h4></b>
                 </div></div>
                 <div class="company-name"><p class="truncate-normal"style = "padding-left: 1%;" title="' .$row['company'] .'" data-etracking="true"><a href="#" target="_blank" >' .$row['company'] .'</a></p></div>
                 <div class="job-locations"><p class="truncate-normal" style = "padding-left: 1%;" title="Location(s)" data-etracking="true"><a href="#" target="_blank" > '. $row['location'] .'</a></p></div>

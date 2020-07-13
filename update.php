@@ -111,6 +111,7 @@ if(isset($_POST['updt_submit']))
 }
 
 
+
 function resetvalues($value){
     global $conn;
     $email=$_POST["email"];
