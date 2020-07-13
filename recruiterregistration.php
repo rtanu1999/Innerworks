@@ -179,8 +179,7 @@ function sendmail(){
             $body = "Hello, ". "<br/>". " Welcome to Innerwork and thanks for registering with us. Admin will contact you soon." .  "<br/>";
             $body .= "Kindly contact us for any further query at +91 9487980784 or info@innerworkindia.com Visit us: www.innerworkindia.com<br><br>";
             $body.="<div style='height:40px;width:auto;background-color:#e6e6e6;'></div><center><h1>Account Registered Successfully</h1><br><br><button style='background-color: #008CBA;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;'><a href='https://innerworkindia.com/recruiterlogin.php' style='color:white;text-decoration:none;'>Login</a></button></center><br><div style='height:120px;width:auto;background-color:#008CBA;'><br><center><p style='color:white;'>2019 	&#xa9; Innerwork. All Rights Reserved</p></center><br><span></span>
-            <center><a href='https://www.facebook.com/InnerworkSolution/'><img src='fb.png' style='margin-right:1%;'></a><a href='https://twitter.com/innverwork'><img src='insta.png' style='margin-right:1%;'></a><a href='https://www.linkedin.com/company/innerworksolutions/'><img src='linkedn.png' style='margin-right:1%;'></a></center>
-            </div><div style='height:30px;width:auto;background-color:#e6e6e6;'>
+            <center><a href='https://www.facebook.com/InnerworkSolution/'><img src='fb.png' style='margin-right:1%;'></a><a href='https://twitter.com/innverwork'><img src='insta.png' style='margin-right:1%;'></a><a href='https://www.linkedin.com/company/innerworksolutions/'><img src='linkedn.png' style='margin-right:1%;'></a></center></div><div style='height:30px;width:auto;background-color:#e6e6e6;'>
             </div>";
               
             $mail->IsSMTP();
