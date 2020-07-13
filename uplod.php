@@ -25,7 +25,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
 				if(isset($_SESSION['type'])=="Agency")
 				{
 					$com_type=$_POST['com_type'];
-				$sql="UPDATE agency SET regis_certi=:f1,gst=:f2,pan=:f3,com_type=:c1  WHERE email=:em";
+				$sql="UPDATE agency SET regis_certi=:f1,pan=:f2,gst=:f3,com_type=:c1  WHERE email=:em";
 				$stmt = $conn->prepare($sql);
         $stmt->execute(array(
             ':f1' => $filename1,
