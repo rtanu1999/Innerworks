@@ -27,6 +27,7 @@ $utils = new WebUtils();
 
         $data = $stmt->fetchAll();
         foreach($data as $row) {
+					$id1=$row['id'];
 			$jtitle=$row['jobTitle'];
 			$jcompany=$row['company'];
 			$jtype=$row['jobType'];
@@ -184,7 +185,7 @@ $utils = new WebUtils();
 
 									</div>
 								</div>
-							</div></div><br><hr>
+
 
 <div class="row">
 								<div class="col-sm-12 col-xs-12">
@@ -262,25 +263,71 @@ $utils = new WebUtils();
 
 							</div>
 
-						</div>
+
+
+
+													<?php
+													try{
+
+$status1 = true;
+													$stmt1 = $conn->prepare("select * from jobpost where (jobTitle='$jtitle' or company='$jcompany' or location='$jlocattion' or maxSalary='$jmaxsal' or education='$jedu') and (id != '$id1' and status = ?) ");
+												$stmt1->bindParam(1, $status1);
+													$stmt1->execute();
+													if($stmt1->rowCount() > 0)
+													{
+
+
+													$data1 = $stmt1->fetchAll();
+													foreach($data1 as $row1) {
+														$id2=$row1['id'];
+												$jtitle1=$row1['jobTitle'];
+												$jcompany1=$row1['company'];
+
+											}
+
+													}
+
+
+													}
+													catch(PDOException $e)
+													{
+															echo '{"error":{"text":'. $e->getMessage() .'}}';
+													}
+													?>
+													<div class="col-sm-3 col-xs-12">
+
+																			<div class="other-jobs-section">
+																				<div class="row">
+																					<div class="col-sm-12">
+																						<div class="similar-jobs-section">
+																							<h3>Similar <?php echo $type; ?></h3>
+
+																							<div class="jobs-list">
+																								<ul class="list-group">
+																									<li class="list-group-item">
+																																				  					<div class="row">
+
+																																											<div class="col-sm-9 col-xs-9">
+																																									  							<p class="truncate-normal" title="<?php echo $jtitle1 ?>"><?php echo $jtitle1 ?></p>
+																																									  							<p class="truncate-normal" title="<?php echo $jcompany1 ?>"><?php echo $jcompany1 ?></a></p>
+																																									  							<a href="job_details?id=<?php echo $id2; ?>" target="_blank" style="text-decoration:underline;"> Know more </a>
+																																									  						</div>
+
+																																									  					</div>
+
+																																									  				</li>
+																																													</ul>
+																																												</div>
+																																											</div>
+																																										</div>
+
+																																									</div>
+																																								</div>
 
 
 
 
 
-
-
-
-
-				<!--<div class="fb-share-button" data-href="https://innerworkindia.com/openings" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Finnerworkindia.com%2Fopenings&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>-->
-               <!-- <div class="details" id="acco1Details">
-                    <p><b>Company : </b><?php //echo $row['company']; ?></p>
-                    <p><b>Job Type : </b><?php //echo $row['jobType']; ?></p>
-                    <p><b>Salary : </b><?php //echo $row['maxSalary']; ?></p>
-                    <p><b>Job Location : </b><?php //echo $row['location']; ?></p>
-                    <p><b>Salary : </b><?php //echo $row['maxSalary']; ?></p>
-                    <p>Submit your cv to <strong>info@innerworkindia.com</strong> </p>
-                </div>-->
 
 </div>
         </div>
