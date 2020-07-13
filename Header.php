@@ -45,7 +45,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="business" id="jobSeekerPageLink">Business Enquiry</a></li>
                                 <li><a href="blog" id="blogPageLink">BLOG</a></li>
-                                <li><a href="college" id="collagePageLink">College</a></li>
+                                <li><a href="collegeport" id="collagePageLink">College</a></li>
                                 <li><a href="recruiter" id="employerPageLink">Freelance</a></li>
 
                             </ul>

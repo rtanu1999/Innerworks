@@ -115,7 +115,7 @@ function resetvalues($value){
     global $conn;
     $email=$_POST["email"];
     $pass=$_POST["pass"];
-    if($value=="a"){
+    if($value=="Agency"){
 
         $sql="SELECT * FROM agency where email =:em and password =:pw";
         $stmt = $conn->prepare($sql);
