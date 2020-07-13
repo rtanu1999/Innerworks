@@ -202,7 +202,7 @@ $utils = new WebUtils();
 														<?php echo $about_comp; ?>
 														<p><?php echo $name ?> :</p>
 													    <p><b><?php echo $cno ?></b></p>
-													    <a style="color:blue" href="mailto:someone@example.com"><b><?php echo $email ?></b></a>
+													    <a style="color:blue" href="mailto:<?php echo $email ?>"><b><?php echo $email ?></b></a>
 											</div>
 										</div>
 
