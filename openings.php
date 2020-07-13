@@ -541,6 +541,28 @@ $('#clearfilter').click(function() {
 	filter_data();
 });
 });
+    
+    
+    
+
+
+        function fillIn(title){
+      //      alert(title);
+            $.ajax({
+			
+                url:"getjobpostajax.php",
+                type:"POST",
+                async:false,
+                data:{
+                    "fill":1,
+                    "title":title
+                },
+                success:function(data){
+                    $('.filter_data').html(data);
+                }
+            });
+        }
+
 </script>
 </body>
 </html>
