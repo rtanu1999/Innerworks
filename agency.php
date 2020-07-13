@@ -58,11 +58,13 @@ td {
   	<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
       <!-- Brand -->
-      <div class="sidenav-header  align-items-center">
+      <div class="sidenav-header  align-items-center" style="height:auto !important;">
         <a class="navbar-brand" href="javascript:void(0)">
           <img src="assets/img/brand/logo.jpg" class="navbar-brand-img" alt="...">
         </a>
-      </div>
+				<div >
+			 <span style="font-size:20px;"></span><?php if($_SESSION['type']=="Agency"){echo "Employer Portal";}else{echo "Freelancer Portal";}  ?></div>
+	      </div>
       <div class="navbar-inner">
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
