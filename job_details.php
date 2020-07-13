@@ -265,7 +265,16 @@ $utils = new WebUtils();
 
 
 
+							<div class="col-sm-3 col-xs-12">
 
+													<div class="other-jobs-section">
+														<div class="row">
+															<div class="col-sm-12">
+																<div class="similar-jobs-section">
+																	<h3>Similar <?php echo $type; ?></h3>
+
+																	<div class="jobs-list">
+																		<ul class="list-group">
 													<?php
 													try{
 
@@ -282,28 +291,8 @@ $status1 = true;
 														$id2=$row1['id'];
 												$jtitle1=$row1['jobTitle'];
 												$jcompany1=$row1['company'];
+                          ?>
 
-											}
-
-													}
-
-
-													}
-													catch(PDOException $e)
-													{
-															echo '{"error":{"text":'. $e->getMessage() .'}}';
-													}
-													?>
-													<div class="col-sm-3 col-xs-12">
-
-																			<div class="other-jobs-section">
-																				<div class="row">
-																					<div class="col-sm-12">
-																						<div class="similar-jobs-section">
-																							<h3>Similar <?php echo $type; ?></h3>
-
-																							<div class="jobs-list">
-																								<ul class="list-group">
 																									<li class="list-group-item">
 																																				  					<div class="row">
 
@@ -316,6 +305,19 @@ $status1 = true;
 																																									  					</div>
 
 																																									  				</li>
+																																														<hr>
+																																														<?php
+																																																									}
+
+																																																											}
+
+
+																																																											}
+																																																											catch(PDOException $e)
+																																																											{
+																																																													echo '{"error":{"text":'. $e->getMessage() .'}}';
+																																																											}
+																																																											?>
 																																													</ul>
 																																												</div>
 																																											</div>
