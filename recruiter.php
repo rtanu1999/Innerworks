@@ -20,6 +20,9 @@
     #h_inner font{
       font-family: Monotype Corsiva !important;
     }
+    @media only screen and (max-width: 521px){
+      select{padding-left: 13% !important;}
+    }
     </style>
       <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
       <script>
