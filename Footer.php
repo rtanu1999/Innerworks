@@ -1,9 +1,5 @@
 <?php include "CommonFiles.php"?>
-	<style>
-.input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}</style>
+
     <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
     <!--<script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>-->

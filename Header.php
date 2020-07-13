@@ -34,9 +34,8 @@
                             <a class="dropdown-toggle" data-toggle="dropdown" id="servicesPageLink">Job<b class="caret"></b></a>
                             <ul class="dropdown-menu">
                                 <li><a href="jobseeker" id="jobSeekerPageLink">Job Seeker</a></li>
-                                <li><a href="jobPost" id="jobPostPageLink">Job Post</a></li>
-                                <li><a href="referalJob" id="referralPageLink">Referral Job</a></li>
-                                <li><a href="intern" id="internPageLink">Intern</a></li>
+                                <li><a href="jobpost&intern" id="jobPostPageLink">Job | Internship Posting</a></li>
+                                <li><a href="intern" id="internPageLink">Internship</a></li>
                                 <li><a href="openings" id="internPageLink">Openings</a></li>
                             </ul>
                         </li>
@@ -47,11 +46,11 @@
                                 <li><a href="business" id="jobSeekerPageLink">Business Enquiry</a></li>
                                 <li><a href="blog" id="blogPageLink">BLOG</a></li>
                                 <li><a href="college" id="collagePageLink">College</a></li>
-                                <li><a href="recruiter" id="employerPageLink">Freelance Recruiter</a></li>
+                                <li><a href="recruiter" id="employerPageLink">Freelance</a></li>
 
                             </ul>
                         </li>
-                        <li><a href="Login">Login</a></li>
+                        <li><a href="Login.php">Login</a></li>
                         <li><a href="contact">Contact Us</a></li>
                                                 <li><div id='paynow' class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_F3auqrmv27oE3J/view" data-text="Pay Now" data-color="#528FF0" data-size="small">
   <script>

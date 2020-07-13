@@ -107,6 +107,7 @@ if(isset($_POST["edu"]))
           </li>
           </ul></div>
          <div class="row no-margin-left no-margin-right job-lowest-section">
+
           <div class="col-sm-3 col-xs-3 text-right visible-xs">
 
         </div>
@@ -114,7 +115,12 @@ if(isset($_POST["edu"]))
         <div class="col-sm-12 col-xs-9">
 
             <div class="text-right" style="padding-right:6%;">
+            <div class="col-sm-4 col-xs-12">
+                        <div class="job-application-deadline text-left">
+                            <p title="Email" ><a style="color:#ffc114" href="mailto:' .$row['email'] .'">' .$row['email'] .'</a></p>
+                        </div>
 
+                    </div>
 
 
 

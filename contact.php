@@ -66,14 +66,15 @@ if(isset($_POST['submit']))
 ?>
 <!doctype html>
 <html lang="en">
+<?php include_once 'Header.php'; ?>
 <head>
     <meta charset="UTF-8">
     <title>Contact Us- Innerwork | Innerwork address | Innerwork Location</title>
     <?php include "CommonFiles.php"?>
-    <link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" type="text/css" href="css/contact.css">
 </head>
 <body>
-<?php include_once 'Header.php'; ?>
+
 
 <section id="banner">
     <div class="container">
@@ -102,9 +103,9 @@ if(isset($_POST['submit']))
                         <form action="<?=($_SERVER['PHP_SELF'])?>" method="post">
                             <input type="text" name="name" placeholder="Your Name" class="form-control" required>
                             <!--<input type="text" name="phone" pattern="[0-9]{10}" placeholder="Your Phone Number" class="form-control" required>-->
-                            
+
                             <input type="text" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="Your Phone Number" class="form-control" required>
-                            
+
                             <input type="email" name="email" placeholder="Your Email Address" class="form-control" required>
                             <textarea name="msg" placeholder="Your Message" class="form-control" required></textarea>
                             <input type="submit" value="Submit Now" name="submit" class="form-control" />
@@ -123,7 +124,7 @@ if(isset($_POST['submit']))
             <h4>Follow Us</h4>
             <ul class="socialContact">
                 <li><a href="https://www.facebook.com/InnerworkSolution/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-               
+
                 <li> <a href="https://www.linkedin.com/company/innerworksolutions/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
                 <li><a href="https://instagram.com/innerwork__solutions?igshid=nyewgunv5ra1" target="_blank"><i class="fa fa-instagram"></i></a></li>
                 <li><a href="https://twitter.com/innverwork " target="_blank"><i class="fa fa-twitter"></i></a></li>
