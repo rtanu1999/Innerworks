@@ -84,8 +84,8 @@ td {
             </li>
             <li class="nav-item">
               <a class="nav-link" href="agency.php">
-                <i class="ni ni-single-02 text-yellow"></i>
-                <span class="nav-link-text">AGENCY REGISTRATION DETAILS</span>
+                <i class="ni ni-book-bookmark text-green"></i>
+                <span class="nav-link-text">Documents</span>
               </a>
             </li>
           </ul>
@@ -95,6 +95,13 @@ td {
   </nav>
     <div class="container-fluid">
     	<h2 style="margin-left: 25%;">AGENCY REGISTRATION DETAILS </h2>
+			<?php
+	if(isset($_GET["uploaded"])){
+			echo "<div class='alert alert-primary'><p> Documents Uploaded Successfully!!Thank You!</p>
+			<p>We will verify your documents and contact you soon.</p>						</div>";
+	}
+
+	?>
     	<form action="uplod.php" method="post" enctype="multipart/form-data">
     		<div class="row">
     			<div class="col-md-6 col-sm-12 col-xs-12">
@@ -127,14 +134,14 @@ td {
             <h2>COMPANY TYPE</h2>
           </div>
           <div class="col-md-6">
-              <select class="" name="">
-                <option value="">PVT LTD</option>
-                <option value="">PUBLIC LIMITED COMPANY</option>
-                <option value="">PARTNERSHIP</option>
-                <option value="">ONE PERSON COMPANY</option>
-                <option value="">SOLE PROPRIETORSHIP</option>
-                <option value="">LIMITED LIABILITY PARTNERSHIP</option>
-                <option value="">SECTION 8 COMPANY</option>
+              <select class="" name="com_type">
+                <option value="PVT LTD">PVT LTD</option>
+                <option value="PUBLIC LIMITED COMPANY">PUBLIC LIMITED COMPANY</option>
+                <option value="PARTNERSHIP">PARTNERSHIP</option>
+                <option value="ONE PERSON COMPANY">ONE PERSON COMPANY</option>
+                <option value="SOLE PROPRIETORSHIP">SOLE PROPRIETORSHIP</option>
+                <option value="LIMITED LIABILITY PARTNERSHIP">LIMITED LIABILITY PARTNERSHIP</option>
+                <option value="SECTION 8 COMPANY">SECTION 8 COMPANY</option>
         </select>
           </div>
         </div>

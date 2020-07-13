@@ -88,7 +88,7 @@ td {
             </li>
             <li class="nav-item">
               <a class="nav-link" href="freelanceraction.php" >
-                <i class="ni ni-single-02 text-yellow"></i>
+                <i class="ni ni-book-bookmark text-green"></i>
                 <span class="nav-link-text">Documents</span>
               </a>
             </li>
@@ -213,7 +213,7 @@ td {
             <div class="card-header">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h3 class="mb-0">Freelancer Documents Upload </h3>
+                  <h3 class="mb-0">Documents</h3>
                 </div>
 
 
