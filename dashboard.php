@@ -278,7 +278,7 @@ $utils = new Utils();
   </div>
 </div>
 <hr>
-   
+
 <section id="opening">
      <div class="row" style="padding: 10px 40px;">
 
@@ -297,7 +297,7 @@ $utils = new Utils();
     margin: 20px 0px;
     font-weight:normal !important;">
      	    <h3>Search by</h3><hr>
-     	    
+
 	<div class="list-group">
 					<h5 style="font-weight:bold;">Location</h5>
                     <div class = "col-12"style="padding-left: 0;padding-right: 0;">
@@ -340,7 +340,7 @@ $utils = new Utils();
                 </div>
                 </div>
 
-                
+
                               <div class="list-group">
                                       <h5 style="font-weight:bold;">Skills</h5>
                                                 <div class = "col-12"style="padding-left: 0;padding-right: 0;">
@@ -680,15 +680,15 @@ $(document).ready(function(){
         var sectitle = $('#searchtitle').val();
        // var maximum_price = $('#hidden_maximum_price').val();
         var loc = get_filter('loc');
-        var type = get_filter('type');
+
         var exp = get_filter('exp');
-        var sal = get_filter('sal');
+
         var skills = get_filter('skills');
         var edu = get_filter('edu');
         $.ajax({
-            url:"getjobpostajax.php",
+            url:"getcandidateajax.php",
             method:"POST",
-            data:{action:action, sectitle:sectitle, loc:loc, type:type, exp:exp, sal:sal, skills:skills, edu:edu},
+            data:{action:action, sectitle:sectitle, loc:loc, exp:exp, skills:skills, edu:edu},
             success:function(data){
 
                 $('.filter_data').html(data);
@@ -716,10 +716,10 @@ $('#filtersectionbtn').click(function() {
     $('#filtersection').toggle();
 });
 $('#clearfilter').click(function() {
-    $(".type").prop("checked", false);
+
 	$(".loc").prop("checked", false);
 	$(".exp").prop("checked", false);
-  $(".sal").prop("checked", false);
+
   $(".skills").prop("checked", false);
   $(".edu").prop("checked", false);
 	 $('#clearfilter').html('');
