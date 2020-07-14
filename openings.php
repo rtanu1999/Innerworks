@@ -563,6 +563,23 @@ $('#clearfilter').click(function() {
             });
         }
 
+    
+        function fillInComp(title){
+          // alert(title);
+            $.ajax({
+			
+                url:"getjobpostajax.php",
+                type:"POST",
+                async:false,
+                data:{
+                    "fillcomp":1,
+                    "comp":title
+                },
+                success:function(data){
+                    $('.filter_data').html(data);
+                }
+            });
+        }
 </script>
 </body>
 </html>

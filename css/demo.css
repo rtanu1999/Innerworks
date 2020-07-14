@@ -230,6 +230,66 @@
 	}
 	
 }
+@media only screen and (max-width: 270px) 
+{
+	.navbar-header
+	{
+		width: auto;
+		height: 4em;
+		
+	}	
+	#h_inner
+	{
+    font-size: 110%;
+		margin-left: 28px;
+		top: -40px;
+	}
+	#h_inner font
+	{
+		font-size: 2em;
+	}
+	
+}
+@media only screen and (max-width: 250px) 
+{
+	.navbar-header
+	{
+		width: auto;
+		height: 4em;
+		
+	}	
+	#h_inner
+	{
+    font-size: 100%;
+		margin-left: 25px;
+		top: -40px;
+	}
+	#h_inner font
+	{
+		font-size: 2em;
+	}
+	
+}
+@media only screen and (min-width: 240px) 
+{
+	.navbar-header
+	{
+		width: auto;
+		height: 4em;
+		
+	}	
+	#h_inner
+	{
+    font-size: 100%;
+		margin-left: 25px;
+		top: -40px;
+	}
+	#h_inner font
+	{
+		font-size: 2em;
+	}
+	
+}
 #paynow
 {
 	margin-top: -25px;
