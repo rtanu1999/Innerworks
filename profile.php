@@ -1,6 +1,9 @@
 <?php
 include('loginpage.php');
 include('update.php');
+if(!isset($_SESSION['type'])){
+    header('location:recruiterlogin.php');
+}
 include_once 'DbConnection/DbConnectionHelper.php';
 ?>
 

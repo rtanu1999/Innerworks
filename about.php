@@ -13,7 +13,7 @@
 
   gtag('js', new Date());
 
- 
+
 
   gtag('config', 'UA-165945868-1');
 
@@ -137,7 +137,7 @@
                         <h2>Training & Learning Support</h2>
                         <p>Just like an individual, only those companies rise and shine which shows passion for learning. In this hyper-competitive landscape, the health of your bottom-line depends on the effectiveness of your training process. Highly qualified HR professionals of Innerwork could help you design and develop a dynamic training module aligned with the performance matrix.</p>
                     </div>
-                    
+
                 </div>
 
             </div>
