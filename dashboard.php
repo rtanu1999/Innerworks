@@ -49,6 +49,9 @@ $utils = new Utils();
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
 
 <style>
+.small{
+  height: 450px;overflow-y: scroll;
+}
 .image-source {
     border-radius: 50%;
 }
@@ -282,7 +285,7 @@ $utils = new Utils();
 <section id="opening">
      <div class="row" style="padding: 10px 40px;">
 
-             <input type="search" id="searchtitle" class="searchboox" placeholder="Search Jobs|Internships.." style="width:75%;"/>
+             <input type="search" id="searchtitle" class="searchboox" placeholder="Search Candidates..." style="width:75%;"/>
 
 
 
@@ -298,7 +301,7 @@ $utils = new Utils();
     font-weight:normal !important;">
      	    <h3>Search by</h3><hr>
 
-	<div class="list-group">
+	<div class="list-group small">
 					<h5 style="font-weight:bold;">Location</h5>
                     <div class = "col-12"style="padding-left: 0;padding-right: 0;">
 					<?php
@@ -320,11 +323,11 @@ $utils = new Utils();
                     </div>
                 </div>
 
-				<div class="list-group">
+				<div class="list-group small">
 					<h5 style="font-weight:bold;">Experience</h5>
 						<div class = "col-12"style="padding-left: 0;padding-right: 0;">
 					<?php
-                   $query2 = "SELECT DISTINCT(exp) FROM jobseeker WHERE exp IS NOT NULL";
+                   $query2 = "(SELECT DISTINCT(exp) FROM jobseeker WHERE exp IS NOT NULL) UNION (SELECT DISTINCT(exp) FROM internship WHERE exp IS NOT NULL)";
                     $statement = $conn->prepare($query2);
                     $statement->execute();
                     $result2 = $statement->fetchAll();
@@ -341,17 +344,18 @@ $utils = new Utils();
                 </div>
 
 
-                              <div class="list-group">
+                              <div class="list-group small">
                                       <h5 style="font-weight:bold;">Skills</h5>
                                                 <div class = "col-12"style="padding-left: 0;padding-right: 0;">
                                       <?php
 
-                                                $query = "SELECT DISTINCT skill FROM jobseeker where skill IS NOT NULL";
+                                                $query = "(SELECT DISTINCT skill FROM jobseeker where skill IS NOT NULL) UNION (SELECT DISTINCT skill FROM internship where skill IS NOT NULL)";
                                                 $statement = $conn->prepare($query);
                                                 $statement->execute();
                                                 $result = $statement->fetchAll();
                                                 foreach($result as $row)
                                                 {
+
                                                 ?>
                                                 <div class="list-group-item ">
                                                     <label><input type="checkbox" class="common_selector skills" value="<?php echo $row['skill']; ?>"  > <?php echo $row['skill']; ?></label>
@@ -362,12 +366,12 @@ $utils = new Utils();
                                                 ?>
                                                 </div>
                                             </div>
-                                            <div class="list-group">
+                                            <div class="list-group small">
                                           					<h5 style="font-weight:bold;">Education</h5>
                                                               <div class = "col-12"style="padding-left: 0;padding-right: 0;">
                                           					<?php
 
-                                                              $query = "SELECT DISTINCT education FROM jobseeker where education IS NOT NULL";
+                                                              $query = "(SELECT DISTINCT education FROM jobseeker where education IS NOT NULL) UNION (SELECT DISTINCT education FROM internship where education IS NOT NULL)";
                                                               $statement = $conn->prepare($query);
                                                               $statement->execute();
                                                               $result = $statement->fetchAll();

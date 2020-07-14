@@ -5,12 +5,12 @@
 
 if(isset($_POST["action"]))
 {
-       $qry="select * from jobseeker";
+       $qry="(select name,email,mobileNum,city,exp,education,skill,file from jobseeker) UNION (select name,email,mobno,city,exp,education,skill,fnamee from internship)";
 	  // if(isset($_POST["loc"]) && !empty($_POST["loc"]) )
 		  if(isset($_POST["sectitle"]) && !empty($_POST["sectitle"]))
 	{
 		$qry .= "
-		 AND jobTitle like '%".$_POST["sectitle"]."%'
+		 AND name like '%".$_POST["sectitle"]."%'
 		";
 	}
 		   if(isset($_POST["loc"]))
@@ -57,8 +57,10 @@ if(isset($_POST["edu"]))
 		 $output ='';
 
         foreach($data as $row) {
-          $Resume_file_raw = $row['file'];
-          $Resume_file = str_replace(" ","%20",$Resume_file_raw); // 12-05-2020
+
+         $Resume_file_raw = $row['file'];
+            $Resume_file = str_replace(" ","%20",$Resume_file_raw);
+
 
 			$output .= '
 			<div class="jobs" id="main-jobs" >
