@@ -160,9 +160,9 @@
                 <div class="col-md-12 validate-input m-b-10">
                     <select  id="sts" name="experience" class="form-control input100" style="height:50px;font-family: 'Raleway';font-weight: bold;border-radius:50px;padding-left:6%;" required="">
                         <option value="">Experience</option>
-                        <option value="1">2</option>
-                        <option value="2">3</option>
-                        <option value="3">4</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
                         <option value="6">6</option>
