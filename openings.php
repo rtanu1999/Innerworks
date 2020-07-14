@@ -580,6 +580,45 @@ $('#clearfilter').click(function() {
                 }
             });
         }
+    
+    
+    
+            function fillInLoc(title){
+          // alert(title);
+            $.ajax({
+			
+                url:"getjobpostajax.php",
+                type:"POST",
+                async:false,
+                data:{
+                    "fillloc":1,
+                    "loc":title
+                },
+                success:function(data){
+                    $('.filter_data').html(data);
+                }
+            });
+        }
+    
+    
+        
+            function fillInsalary(title){
+                var title2 = title.replace(' <i class="fa fa-inr" aria-hidden="true"></i>', "");
+         //  alert(title2);
+            $.ajax({
+			
+                url:"getjobpostajax.php",
+                type:"POST",
+                async:false,
+                data:{
+                    "fillsal":1,
+                    "sal":title2
+                },
+                success:function(data){
+                    $('.filter_data').html(data);
+                }
+            });
+        }
 </script>
 </body>
 </html>
