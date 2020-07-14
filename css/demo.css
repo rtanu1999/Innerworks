@@ -270,6 +270,26 @@
 	}
 	
 }
+@media only screen and (min-width: 240px) 
+{
+	.navbar-header
+	{
+		width: auto;
+		height: 4em;
+		
+	}	
+	#h_inner
+	{
+    font-size: 100%;
+		margin-left: 25px;
+		top: -40px;
+	}
+	#h_inner font
+	{
+		font-size: 2em;
+	}
+	
+}
 #paynow
 {
 	margin-top: -25px;
