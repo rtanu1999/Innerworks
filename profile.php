@@ -3,7 +3,7 @@ include('loginpage.php');
 include('update.php');
 include_once 'DbConnection/DbConnectionHelper.php';
 ?>
-        
+
 <!DOCTYPE html>
 <html>
 
@@ -30,11 +30,14 @@ include_once 'DbConnection/DbConnectionHelper.php';
   <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
       <!-- Brand -->
-      <div class="sidenav-header  align-items-center">
+      <div class="sidenav-header  align-items-center" style="height:auto !important;">
         <a class="navbar-brand" href="javascript:void(0)">
           <img src="assets/img/brand/logo.jpg" class="navbar-brand-img" alt="...">
         </a>
-      </div>
+
+<div>
+      <span style="font-size:20px;"></span><?php if($_SESSION['type']=="Agency"){echo "Employer Portal";}else{echo "Freelancer Portal";}  ?></div>
+    </div>
       <div class="navbar-inner">
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
@@ -46,7 +49,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
                 <span class="nav-link-text">Dashboard</span>
               </a>
             </li>
-           
+
             <li class="nav-item">
               <a class="nav-link" href="profile.php" >
                 <i class="ni ni-single-02 text-yellow"></i>
@@ -60,12 +63,12 @@ include_once 'DbConnection/DbConnectionHelper.php';
                 <span class="nav-link-text">Document</span>
               </a>
             </li>
-            
-            
+
+
           </ul>
-          
+
           <!-- Navigation -->
-          
+
         </div>
       </div>
     </div>
@@ -77,7 +80,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
-         
+
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
             <li class="nav-item d-xl-none">
@@ -106,7 +109,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
                 </div>
                 <!-- List group -->
                 <div class="list-group list-group-flush">
-                  
+
           <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
             <li class="nav-item dropdown">
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -127,7 +130,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
                   <i class="ni ni-single-02"></i>
                   <span>My profile</span>
                 </a>
-                
+
               </div>
             </li>
           </ul>
@@ -163,12 +166,12 @@ include_once 'DbConnection/DbConnectionHelper.php';
                 </div>
               </div>
             </div>
-            
+
             <div class="card-body pt-0">
               <div class="row">
                 <div class="col">
                   <div class="card-profile-stats d-flex justify-content-center">
-                   
+
                   </div>
                 </div>
               </div>
@@ -176,7 +179,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
                 <h5 class="h3">
                   <span class="font-weight-light"></span>
                 </h5>
-                
+
               </div>
             </div>
           </div>
@@ -197,7 +200,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
                 <div class="pl-lg-4">
                   <div class="row">
 <!------------------------------->
-                    <input type="file" name="image" id="image" value="upload/<?php echo $_SESSION['image']; ?>" >  
+                    <input type="file" name="image" id="image" value="upload/<?php echo $_SESSION['image']; ?>" >
                    <!------------------------------->
                     <div class="col-lg-6">
                       <div class="form-group">
@@ -277,7 +280,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
           </div>
         </div>
       </div>
-     
+
     </div>
   </div>
   <!-- Argon Scripts -->
@@ -290,26 +293,26 @@ include_once 'DbConnection/DbConnectionHelper.php';
   <!-- Argon JS -->
   <script src="assets/js/argon.js?v=1.2.0"></script>
 </body>
-<script>  
- $(document).ready(function(){  
-      $('#insert').click(function(){  
-           var image_name = $('#image').val();  
-           if(image_name == '')  
-           {  
-                alert("Please Select Image");  
-                return false;  
-           }  
-           else  
-           {  
-                var extension = $('#image').val().split('.').pop().toLowerCase();  
-                if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)  
-                {  
-                     alert('Invalid Image File');  
-                     $('#image').val('');  
-                     return false;  
-                }  
-           }  
-      });  
- });  
- </script>  
+<script>
+ $(document).ready(function(){
+      $('#insert').click(function(){
+           var image_name = $('#image').val();
+           if(image_name == '')
+           {
+                alert("Please Select Image");
+                return false;
+           }
+           else
+           {
+                var extension = $('#image').val().split('.').pop().toLowerCase();
+                if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)
+                {
+                     alert('Invalid Image File');
+                     $('#image').val('');
+                     return false;
+                }
+           }
+      });
+ });
+ </script>
 </html>

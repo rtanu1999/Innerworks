@@ -37,10 +37,10 @@
                     <thead>
                     <tr>
                         <th style="width:3%;">Sr. No.</th>
-                        <th style="width:6%;">Adhar</th>
+                        <th style="width:6%;">Registration Certificate</th>
                         <th style="width:6%;">Pan</th>
-                        <th style="width:6%;">CV</th>
-
+                        <th style="width:6%;">GST</th>
+                       <th style="width:6%;">Company Type</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -49,11 +49,11 @@
                     $data = $stmt->fetchAll();
                     foreach($data as $row)
                     {
-                        $adhar_file_raw = $row['adhar'];
+                        $adhar_file_raw = $row['regis_certi'];
                         $adhar_file = str_replace(" ","%20",$adhar_file_raw); // 12-05-2020
                         $pan_file_raw = $row['pan'];
                         $pan_file = str_replace(" ","%20",$pan_file_raw); // 12-05-2020
-                        $cv_file_raw = $row['cv'];
+                        $cv_file_raw = $row['gst'];
                         $cv_file = str_replace(" ","%20",$cv_file_raw); // 12-05-2020
 
                         ?>
@@ -62,7 +62,7 @@
                             <td><?php echo $cnt; ?></td>
                             <td>
                                 <?php echo "<a href=\"https://innerworkindia.com/recruiterdocuments/aadhar/{$adhar_file}\" target=\"_blank\">"; // 12-05-2020?>
-                                <?php echo $row['adhar']; ?>;
+                                <?php echo $row['regis_certi']; ?>;
                                 </a>
                             </td>
                             <td>
@@ -72,10 +72,10 @@
                             </td>
                             <td>
                                 <?php echo "<a href=\"https://innerworkindia.com/recruiterdocuments/CV/{$cv_file}\" target=\"_blank\">"; // 12-05-2020?>
-                                <?php echo $row['cv']; ?>;
+                                <?php echo $row['gst']; ?>;
                                 </a>
                             </td>
-
+                             <td><?php echo $row['com_type']; ?></td>
 
                                                     </tr>
                                                     <?php

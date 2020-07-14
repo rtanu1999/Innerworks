@@ -1,4 +1,5 @@
 <style>
+
 #drop_file_zone {
     background-color: #EEE;
     border: #999 5px dashed;
@@ -128,6 +129,8 @@ ul li.checked::before {
 .uBtn:hover {
   background-color: #bbb;
 }
+
+
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script type="text/javascript">
@@ -634,7 +637,7 @@ if(isset($_POST['submit'])) {
          <p style="text-align:center;">Find right solutions at Innerwork Customer Portal. We would be glad to assist you!</p>
          </div>
 
-        <div class="row">
+        <div class="row aboutContent">
             <div class="col-md-6">
                 <img src="img/freelancerHr.jpg" alt="">
             </div>
@@ -651,11 +654,11 @@ if(isset($_POST['submit'])) {
                 <p>We pay special attention to transforming campus talents into perfect aspirants by training them for all types of college placements. Fresh brains need hand-holding so that they could enter the corporate world with a passion to make a difference for self and organization. Our college placement solution is appreciated by all and the reasons are many. </p>
             </div>
         </div>
-        <div class="row">
+        <div class="row aboutContent">
             <div class="col-md-12">
                 <h2>Bridging 3C Gap Effectively</h2>
                 <p>The dynamism of College, Company, and Candidate (3Cs) makes placement a challenging task. It requires a special approach to hiring as one has to deal with aspiring fresh minds and companies in need of futuristic talents. Innerwork offers comprehensive college placement solutions beneficial for all three Cs. </p>
-                <div class="row">
+
                     <h3>Quality Talent</h3>
                     <p>Our HR and recruitment experts are fully aligned with current and future job market dynamics. So, they walk with you to understand your requirements and accordingly offer customized placement solutions to help you build a pool of highly qualified suitable talents. We look beyond vacancy filling and try to build a system of talent channeling from campus to companies. </p>
                     <h3>Diversified Approach  </h3>
@@ -668,7 +671,7 @@ if(isset($_POST['submit'])) {
                     <p>The right job for the right talent is our mantra. We work to bridge the gap between campus and company with a focus on finding the perfect aspiration-to-requirement match. Our professionals manage a vast network of companies and colleges so that all candidates could get the right job and all companies could get suitable talents. </p>
                     <h3>Train Talents</h3>
                     <p>Our experts transform raw talents into a world-class highly productive manpower suitable for the right profile. You might be the best on campus, but you have to learn some skills to remain the best in the corporate world as well. We provide the most advanced training to make talents suitable for contemporary corporate requirements. </p>
-                </div>
+              
             </div>
 
         </div>

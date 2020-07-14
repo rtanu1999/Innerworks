@@ -1,3 +1,98 @@
+/*.navbar-header*/
+/*{*/
+/*	width: auto;*/
+/*	height: 10em;*/
+/*}*/
+/*#h_inner*/
+/*{*/
+/* 	position: fixed ;  */
+/*	top: -2em;*/
+	
+/*}*/
+/*@media only screen and (max-width: 1200px) */
+/*{*/
+/*	.navbar-header*/
+/*	{*/
+/*		width: auto;*/
+/*		height: 10%;*/
+/*	}	*/
+/*}*/
+/*@media only screen and (max-width: 2448px) */
+/*{*/
+/*	.navbar-header*/
+/*	{*/
+/*		width: auto;*/
+/*		height: 10em;*/
+/*	}	*/
+/*}*/
+
+/*@media only screen and (max-width: 650px) */
+/*{*/
+/*	.navbar-header*/
+/*	{*/
+/*		width: auto;*/
+/*		height: 9em;*/
+/*	}	*/
+/*}*/
+/*@media only screen and (max-width: 600px) */
+/*{*/
+/*	.navbar-header*/
+/*	{*/
+/*		width: auto;*/
+/*		height: 7.5em;*/
+/*	}	*/
+/*}*/
+/*@media only screen and (max-width: 600px) */
+/*{*/
+/*	.navbar-header*/
+/*	{*/
+/*		width: auto;*/
+/*		height: 7.9em;*/
+/*	}	*/
+/*}*/
+
+/*@media only screen and (max-width: 414px) */
+/*{*/
+/*	.navbar-header*/
+/*	{*/
+/*		width: auto;*/
+/*		height: 6em;*/
+/*	}	*/
+/*	#h_inner*/
+/*	{*/
+/*    font-size: 150%;*/
+/*	}*/
+	
+/*}*/
+
+/*@media only screen and (max-width: 384px) */
+/*{*/
+/*	.navbar-header*/
+/*	{*/
+/*		width: auto;*/
+/*		height: 6em;*/
+/*	}	*/
+/*	#h_inner*/
+/*	{*/
+/*    font-size: 150%;*/
+/*	}*/
+	
+/*}*/
+/*@media only screen and (max-width: 375px) */
+/*{*/
+/*	.navbar-header*/
+/*	{*/
+/*		width: auto;*/
+/*		height: 6em;*/
+/*	}	*/
+/*	#h_inner*/
+/*	{*/
+/*    font-size: 150%;*/
+/*	}*/
+	
+/*}*/
+
+
 .navbar-header
 {
 	width: auto;
@@ -6,7 +101,7 @@
 #h_inner
 {
 /* 	position: fixed ;  */
-	top: -2em;
+	top: -1.4em;
 	
 }
 @media only screen and (max-width: 1200px) 
@@ -14,7 +109,7 @@
 	.navbar-header
 	{
 		width: auto;
-		height: 10%;
+		height: 10px;
 	}	
 }
 @media only screen and (max-width: 2448px) 
@@ -22,7 +117,7 @@
 	.navbar-header
 	{
 		width: auto;
-		height: 10em;
+		height: 1em;
 	}	
 }
 
@@ -90,4 +185,52 @@
     font-size: 150%;
 	}
 	
+}
+
+@media only screen and (max-width: 360px) 
+{
+	.navbar-header
+	{
+		width: auto;
+		height: 6em;
+	}	
+	#h_inner
+	{
+    font-size: 150%;
+	}
+	
+}
+@media only screen and (max-width: 340px) 
+{
+	.navbar-header
+	{
+		width: auto;
+		height: 6em;
+	}	
+	#h_inner
+	{
+    font-size: 150%;
+	}
+	
+}
+@media only screen and (max-width: 320px) 
+{
+	.navbar-header
+	{
+		width: auto;
+		height: 4em;
+	}	
+	#h_inner
+	{
+    font-size: 140%;
+	}
+	#h_inner font
+	{
+		font-size: 2em;
+	}
+	
+}
+#paynow
+{
+	margin-top: -25px;
 }

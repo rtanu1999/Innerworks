@@ -1,3 +1,8 @@
+       
+<script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
 <?php
 
 include_once 'DbConnection/DbConnectionHelper.php';
@@ -7,11 +12,8 @@ require_once('PHPMailer/class.phpmailer.php');
 require_once('PHPMailer/class.smtp.php');
 session_start();
 
-
-
-
-
-
+                   
+                
 if(isset($_POST["submit"])){
     $_SESSION["val_flag"]=1;
     $_SESSION["fnvalue"]=0;
@@ -176,7 +178,12 @@ function sendmail(){
              $mail = new PHPMailer();
             $body = "Hello, ". "<br/>". " Welcome to Innerwork and thanks for registering with us. Admin will contact you soon." .  "<br/>";
             $body .= "Kindly contact us for any further query at +91 9487980784 or info@innerworkindia.com Visit us: www.innerworkindia.com<br><br>";
-            $body.="<center><h2>Account Registered Successfully</h2><br><br><button style='background-color: #008CBA;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;'><a href='https://innerworkindia.com/recruiterlogin.php' style='color:white;text-decoration:none;'>Login</a></button></center>";
+            $body.="<div style='height:40px;width:auto;background-color:#e6e6e6;'></div><center><h1>Account Registered Successfully</h1><br><br><button style='background-color: #008CBA;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;'><a href='https://innerworkindia.com/recruiterlogin.php' style='color:white;text-decoration:none;'>Login</a></button></center><br><div style='height:120px;width:auto;background-color:#008CBA;'><br><center><p style='color:white;'>2019 	&#xa9; Innerwork. All Rights Reserved</p></center><br><span></span>
+                <center><a href='https://www.facebook.com/InnerworkSolution/' target='_blank'><i class='fa fa-facebook' style='margin-right:1%;'></i></a>
+                  <a href='https://www.linkedin.com/company/innerworksolutions/' target='_blank'><i class='fa fa-linkedin' style='margin-right:1%;'></i></a>
+                <a href='https://twitter.com/innverwork' target='_blank'><i class='fa fa-twitter'></i></a></center></div><div style='height:30px;width:auto;background-color:#e6e6e6;'>
+            </div>";
+              
             $mail->IsSMTP();
             $mail->Host = "mail.innerworkindia.com";
             $mail->Port = 465;
@@ -200,7 +207,7 @@ function sendmail(){
               echo "Error while sending Email.";
               var_dump($mail);
             } else {
-              echo "<center><br><h1>Account registered Successfully</h1><br><button style='background-color: #008CBA;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;'><a href='recruiterlogin.php' style='color:white;text-decoration:none;'>Login</a></button></center>";
+              echo "<center><br><h1>Account Successfully Registered</h1><br><button style='background-color: #008CBA;border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;'><a href='recruiterlogin.php' style='color:white;text-decoration:none;'>Login</a></button></center>";
 
             }
 
@@ -230,6 +237,7 @@ function sendotp(){
             $otp=generateotp();
              $mail = new PHPMailer();
             $body = "Hello, your opt is ".$otp;
+
             if($_SESSION["fnvalue"]==1){
                 $email= $_SESSION["em"];
             }

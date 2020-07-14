@@ -617,9 +617,9 @@ if(isset($_POST['submit'])) {
                                 <label for="experience" style="color:#000;">Total Experience</label>
                             <select class="form-control"  name="exp" required="required" id="field">
                 <option value="">Select</option>
-				<option>0-1 year</option>
-				<option>1-2 years</option>
-				<option>2-3 years</option>
+        				<option>0-1 year</option>
+        				<option>1-2 years</option>
+        				<option>2-3 years</option>
                 <option>3-4 years</option>
                 <option>4-5 years</option>
                 <option>Others</option>
@@ -664,9 +664,7 @@ if(isset($_POST['submit'])) {
   </div>
 </div>	 
 <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-                
-                    
-							 
+   
                         <input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;"/>
                     </form>
 					

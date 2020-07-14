@@ -10,7 +10,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
   margin: auto;
   padding: 30px;
 }
-input { 
+input {
   width: 100%;
   border: 1px solid #f1e1e1;
   display: block;
@@ -58,11 +58,15 @@ td {
   	<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
       <!-- Brand -->
-      <div class="sidenav-header  align-items-center">
+      <div class="sidenav-header  align-items-center" style="height:auto !important;">
         <a class="navbar-brand" href="javascript:void(0)">
           <img src="assets/img/brand/logo.jpg" class="navbar-brand-img" alt="...">
         </a>
+			</a>
+			<div >
+		 <span style="font-size:20px;"></span><?php if($_SESSION['type']=="Agency"){echo "Employer Portal";}else{echo "Freelancer Portal";}  ?></div>
       </div>
+
       <div class="navbar-inner">
         <!-- Collapse -->
         <div class="collapse navbar-collapse" id="sidenav-collapse-main">
@@ -84,7 +88,7 @@ td {
             </li>
             <li class="nav-item">
               <a class="nav-link" href="freelanceraction.php" >
-                <i class="ni ni-single-02 text-yellow"></i>
+                <i class="ni ni-book-bookmark text-green"></i>
                 <span class="nav-link-text">Documents</span>
               </a>
             </li>
@@ -100,7 +104,7 @@ td {
       <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Search form -->
-         
+
           <!-- Navbar links -->
           <ul class="navbar-nav align-items-center  ml-md-auto ">
             <li class="nav-item d-xl-none">
@@ -129,7 +133,7 @@ td {
                 </div>
                 <!-- List group -->
                 <div class="list-group list-group-flush">
-                  
+
           <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
             <li class="nav-item dropdown">
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -150,7 +154,7 @@ td {
                   <i class="ni ni-single-02"></i>
                   <span>My profile</span>
                 </a>
-                
+
               </div>
             </li>
           </ul>
@@ -186,12 +190,12 @@ td {
                 </div>
               </div>
             </div>
-            
+
             <div class="card-body pt-0">
               <div class="row">
                 <div class="col">
                   <div class="card-profile-stats d-flex justify-content-center">
-                   
+
                   </div>
                 </div>
               </div>
@@ -199,7 +203,7 @@ td {
                 <h5 class="h3">
                   <span class="font-weight-light"></span>
                 </h5>
-                
+
               </div>
             </div>
           </div>
@@ -209,7 +213,7 @@ td {
             <div class="card-header">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h3 class="mb-0">Freelancer Documents Upload </h3>
+                  <h3 class="mb-0">Documents</h3>
                 </div>
 
 
@@ -228,7 +232,7 @@ td {
     			<div class="col-md-4 ">
     				<h2>AADHAR</h2>
 
-   
+
     			</div>
     			<div class="col-md-8">
     			  	<input type="file" name="myfile1" required="required" accept=".pdf"></br>
@@ -263,42 +267,41 @@ td {
           </div>
         </div>
       </div>
-     
+
     </div>
   </div>
-   
-  </body>
-    <!-- Argon Scripts -->	
-  <!-- Core -->	
-  <script src="assets/vendor/jquery/dist/jquery.min.js"></script>	
-  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>	
-  <script src="assets/vendor/js-cookie/js.cookie.js"></script>	
-  <script src="assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>	
-  <script src="assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>	
-  <!-- Argon JS -->	
-  <script src="assets/js/argon.js?v=1.2.0"></script>	
-</body>	
-<script>  	
- $(document).ready(function(){  	
-      $('#insert').click(function(){  	
-           var image_name = $('#image').val();  	
-           if(image_name == '')  	
-           {  	
-                alert("Please Select Image");  	
-                return false;  	
-           }  	
-           else  	
-           {  	
-                var extension = $('#image').val().split('.').pop().toLowerCase();  	
-                if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)  	
-                {  	
-                     alert('Invalid Image File');  	
-                     $('#image').val('');  	
-                     return false;  	
-                }  	
-           }  	
-      });  	
- });  	
- </script>  	
-</html>
 
+  </body>
+    <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <!-- Argon JS -->
+  <script src="assets/js/argon.js?v=1.2.0"></script>
+</body>
+<script>
+ $(document).ready(function(){
+      $('#insert').click(function(){
+           var image_name = $('#image').val();
+           if(image_name == '')
+           {
+                alert("Please Select Image");
+                return false;
+           }
+           else
+           {
+                var extension = $('#image').val().split('.').pop().toLowerCase();
+                if(jQuery.inArray(extension, ['gif','png','jpg','jpeg']) == -1)
+                {
+                     alert('Invalid Image File');
+                     $('#image').val('');
+                     return false;
+                }
+           }
+      });
+ });
+ </script>
+</html>

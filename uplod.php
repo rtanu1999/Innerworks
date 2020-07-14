@@ -24,19 +24,21 @@ include_once 'DbConnection/DbConnectionHelper.php';
 				echo $_SESSION['type'];
 				if(isset($_SESSION['type'])=="Agency")
 				{
-				$sql="UPDATE agency SET adhar=:f1,pan=:f2,cv=:f3  WHERE email=:em";
+					$com_type=$_POST['com_type'];
+				$sql="UPDATE agency SET regis_certi=:f1,pan=:f2,gst=:f3,com_type=:c1  WHERE email=:em";
 				$stmt = $conn->prepare($sql);
         $stmt->execute(array(
             ':f1' => $filename1,
             ':f2' => $filename2,
             ':f3' => $filename3,
+						':c1' => $com_type,
 						':em' => $email
 						  ));
-		
+
 						 $no=$stmt->rowCount();
 						 if($no>0){
 							 echo "Updated Successfully!!!!";
-							 header('Location: freelanceraction.php?uploaded=1');}
+							 header('Location: agency.php?uploaded=1');}
 				else{
 					$email=$_SESSION['email'];
 

@@ -69,7 +69,7 @@ $utils = new Utils();
 
                </a>
                <div >
-              <span style="font-size:20px;"><?php echo $_SESSION['type']; ?></span></div>
+              <span style="font-size:20px;"></span><?php if($_SESSION['type']=="Agency"){echo "Employer Portal";}else{echo "Freelancer Portal";}  ?></div>
             </div>
 
         <div class="navbar-inner">
@@ -91,7 +91,11 @@ $utils = new Utils();
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="freelanceraction.php" >
+              <?php if($_SESSION['type']=="Agency"){?>
+              <a class="nav-link" href="agency.php" >
+              <?php }
+              else{ ?>
+                  <a class="nav-link" href="freelanceraction.php" ><?php } ?>
                 <i class="ni ni-book-bookmark text-green"></i>
                 <span class="nav-link-text">Document</span>
               </a>
