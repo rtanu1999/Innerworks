@@ -5,18 +5,23 @@
 
 if(isset($_POST["action"]))
 {
-       $qry1="select name,email,mobileNum,city,exp,education,skill,file from jobseeker";
-	   $qry2="select name,email,mobno,city,exp,education,skill,fnamee from internship";
-	   $qry = "(select name,email,mobileNum,city,exp,education,skill,file from jobseeker) UNION (select name,email,mobno,city,exp,education,skill,fnamee from internship)";
+       $qry1="select name,email,mobileNum,city,exp,education,skill,file,type from jobseeker";
+	   $qry2="select name,email,mobno,city,exp,education,skill,fnamee,type from internship";
+	   $qry = "(select name,email,mobileNum,city,exp,education,skill,file,type from jobseeker) UNION (select name,email,mobno,city,exp,education,skill,fnamee,type from internship)";
 	  // if(isset($_POST["loc"]) && !empty($_POST["loc"]) )
 		  if(isset($_POST["sectitle"]) && !empty($_POST["sectitle"]))
 	{$name=$_POST['sectitle'];
-		$qry = "(".$qry1." WHERE name like '%$name%' or city like '%$name%' or skill like '%$name%' or exp like '%$name%' or education like '%$name%' ) "."UNION" . " (".$qry2." WHERE name like '%$name%' or city like '%$name%' or skill like '%$name%' or exp like '%$name%' or education like '%$name%' ) ";
-
-
+		$qry = "(".$qry1." WHERE name like '%$name%' or type like '%$name%' or  city like '%$name%' or skill like '%$name%' or exp like '%$name%' or education like '%$name%' ) "."UNION"." (".$qry2." WHERE name like '%$name%' or type like '%$name%' or  city like '%$name%' or skill like '%$name%' or exp like '%$name%' or education like '%$name%' ) ";
 
 
 	}
+  if(isset($_POST["type"]))
+{
+$type_filter = implode("','", $_POST["type"]);
+
+ $qry = "(".$qry1." WHERE type IN('".$type_filter."')) "."UNION" . " (".$qry2." WHERE type IN('".$type_filter."'))";
+
+}
 		   if(isset($_POST["loc"]))
 	{
 		$loc_filter = implode("','", $_POST["loc"]);
@@ -76,7 +81,7 @@ if(isset($_POST["edu"]))
 			<div class="nav nav-pills" style="width:100%;height:100%;background-color:#ffc114;padding-left: 1%">
 			<div class="job-title">
 
-                <b><h4 class="truncate-normal" title="'. $row['name'] .'" data-etracking="true" >'. $row['name'] .'</h4>
+                <b><h4 class="truncate-normal" title="'. $row['name'] .'" data-etracking="true" >'. $row['name'] .'-'. $row['type'] .'</h4>
                 </b>
                 </div></div>
                 <div class="company-name"><p class="truncate-normal" style = "padding-left: 1%;margin-bottom:-15px;" title="' .$row['mobileNum'] .'" data-etracking="true">' .$row['mobileNum'] .'</p>
