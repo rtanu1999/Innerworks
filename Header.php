@@ -21,19 +21,19 @@ function clear()
 
 </script>
 <div class="row">
-            
+
             <div class="col-md-3 col-md-offset-6">
-                    <button type="button" class="btn btn-success" onclick="start()">Allow</button> 
-                 
-                    <button type="button" class="btn btn-danger" onclick="clear()">Disallow</button> 
-                     
+                    <button type="button" class="btn btn-success" onclick="start()">Allow</button>
+
+                    <button type="button" class="btn btn-danger" onclick="clear()">Disallow</button>
+
           </div>
-            
+
         </div>
 
  -->
 <!--  <script type="text/javascript">
-        
+
 window.addEventListener('load', function () {
   // At first, let's check if we have permission for notification
   // If not, let's ask for it
@@ -54,7 +54,7 @@ window.addEventListener('load', function () {
       var i = 0;
       // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
       var interval = window.setInterval(function () {
-        // Thanks to the tag, we should only see the "Hi! 9" notification 
+        // Thanks to the tag, we should only see the "Hi! 9" notification
         var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
         if (i++ == 9) {
           window.clearInterval(interval);
@@ -72,7 +72,7 @@ window.addEventListener('load', function () {
           var i = 0;
           // Using an interval cause some browsers (including Firefox) are blocking notifications if there are too much in a certain time.
           var interval = window.setInterval(function () {
-            // Thanks to the tag, we should only see the "Hi! 9" notification 
+            // Thanks to the tag, we should only see the "Hi! 9" notification
             var n = new Notification("Hi! " + i, {tag: 'soManyNotification'});
             if (i++ == 9) {
               window.clearInterval(interval);
@@ -106,7 +106,7 @@ window.addEventListener('load', function () {
   // Let's check whether notification permissions have already been granted
   else if (Notification.permission === "granted") {
     // If it's okay let's create a notification
-    var notification = new Notification("Hi there!");
+    var notification = new Notification("Hi there!Welcome to Innerwork :)");
   }
 
   // Otherwise, we need to ask the user for permission
@@ -114,12 +114,12 @@ window.addEventListener('load', function () {
     Notification.requestPermission().then(function (permission) {
       // If the user accepts, let's create a notification
       if (permission === "granted") {
-        var notification = new Notification("Hi there!");
+        var notification = new Notification("Hi there!Welcome to Innerwork :)");
       }
     });
   }
 
-  // At last, if the user has denied notifications, and you 
+  // At last, if the user has denied notifications, and you
   // want to be respectful there is no need to bother them any more.
 }
 	</script>
