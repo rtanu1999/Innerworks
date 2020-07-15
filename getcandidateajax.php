@@ -6,7 +6,8 @@
 if(isset($_POST["action"]))
 {
        $qry1="select * from jobseeker";
-       $qry2="select * from internship";
+	   $qry2="select * from internship";
+	   $qry = "(select * from jobseeker) UNION (select * from internship)"; 
 	  // if(isset($_POST["loc"]) && !empty($_POST["loc"]) )
 		  if(isset($_POST["sectitle"]) && !empty($_POST["sectitle"]))
 	{$name=$_POST['sectitle'];

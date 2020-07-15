@@ -331,8 +331,13 @@ $utils = new Utils();
 					<h5 style="font-weight:bold;">Experience</h5>
 						<div class = "col-12"style="padding-left: 0;padding-right: 0;">
 					<?php
+<<<<<<< HEAD
                    $query2 = "(SELECT DISTINCT(exp) FROM jobseeker WHERE exp IS NOT NULL) UNION (SELECT DISTINCT(exp) FROM internship WHERE exp IS NOT NULL)";
                    $statement = $conn->prepare($query2);
+=======
+                   $query2 = "SELECT DISTINCT(exp) FROM jobseeker WHERE exp IS NOT NULL";
+                    $statement = $conn->prepare($query2);
+>>>>>>> b424fbc82052e225b639659eb593785308bd45c0
                     $statement->execute();
                     $result2 = $statement->fetchAll();
                     foreach($result2 as $row2)
@@ -353,8 +358,12 @@ $utils = new Utils();
                                                 <div class = "col-12"style="padding-left: 0;padding-right: 0;">
                                       <?php
 
+<<<<<<< HEAD
                                                 $query = "(SELECT DISTINCT(skill) FROM jobseeker WHERE skill IS NOT NULL) UNION (SELECT DISTINCT(skill) FROM internship WHERE skill IS NOT NULL)";
                                                 
+=======
+                                                $query = "SELECT DISTINCT skill FROM jobseeker where skill IS NOT NULL";
+>>>>>>> b424fbc82052e225b639659eb593785308bd45c0
                                                 $statement = $conn->prepare($query);
                                                 $statement->execute();
                                                 $result = $statement->fetchAll();
@@ -376,8 +385,12 @@ $utils = new Utils();
                                                               <div class = "col-12"style="padding-left: 0;padding-right: 0;">
                                           					<?php
 
+<<<<<<< HEAD
                                                               $query = " (SELECT DISTINCT(education) FROM jobseeker WHERE education IS NOT NULL) UNION (SELECT DISTINCT(education) FROM internship WHERE education IS NOT NULL)";
                                                              
+=======
+                                                              $query = "SELECT DISTINCT education FROM jobseeker where education IS NOT NULL";
+>>>>>>> b424fbc82052e225b639659eb593785308bd45c0
                                                               $statement = $conn->prepare($query);
                                                               $statement->execute();
                                                               $result = $statement->fetchAll();
