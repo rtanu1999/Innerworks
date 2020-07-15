@@ -5,6 +5,7 @@ if(!isset($_SESSION['type'])){
     header('location:recruiterlogin.php');
 }
 include_once 'DbConnection/DbConnectionHelper.php';
+
 ?>
 <style type="text/css">
 	form {
@@ -226,8 +227,9 @@ td {
             <form action="uplod.php" method="post" enctype="multipart/form-data" style="width:100%">
             <?php
 				if(isset($_GET["uploaded"])){
+            
 						echo "<div class='alert alert-primary'><p> Documents Uploaded Successfully!!Thank You!</p>
-						<p>We will verify your documents and contact you soon.</p>						</div>";
+						</div>";
 				}
 
 				?>
