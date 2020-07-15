@@ -1,3 +1,37 @@
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="assets/js/push.min.js"></script>
+<script type="text/javascript" src="assets/js/serviceWorker.min.js"></script>
+<script type="text/javascript">
+function start()
+{
+  Push.create("Hello world!", {
+    body: "How's it hangin'?",
+    icon: '/icon.png',
+    timeout: 4000,
+    onClick: function () {
+        window.focus();
+        this.close();
+    }
+});
+}
+function clear()
+{
+  Push.clear();
+}
+
+</script>
+<div class="row">
+            
+            <div class="col-md-3 col-md-offset-6">
+                    <button type="button" class="btn btn-success" onclick="start()">Allow</button> 
+                 
+                    <button type="button" class="btn btn-danger" onclick="clear()">Disallow</button> 
+                     
+          </div>
+            
+        </div>
+
+
 <link rel="stylesheet" type="text/css" href="css/demo.css">
 <section id="headerBtm" style="padding-bottom:2%;">
     <div class="container-fluid">
