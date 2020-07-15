@@ -97,9 +97,9 @@ if(isset($_POST["edu"]))
                 <div class="row job-info no-margin-left no-margin-right" style="margin-left:1%;">
 
         <ul class="list-group" style="paddding-left:6% !important;">
-          <li class="list-group-item" title="' .$row['type'] .'" data-etracking="true"><i class="fa fa-briefcase"></i>&nbsp;' .$row['type'] .'
+          <li class="list-group-item" title="' .$row['type'] .'" data-etracking="true" onclick="javascript:fillIntype(this.innerHTML);" style="cursor:pointer;"><i class="fa fa-briefcase"></i>&nbsp;' .$row['type'] .'
            </li>
-          <li class="list-group-item" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation" onclick="javascript:fillInsalary(this.innerHTML);">
+          <li class="list-group-item" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation" onclick="javascript:fillInsalary(this.innerHTML);" style="cursor:pointer;">
         <i class="fa fa-inr" ></i>' .$row['maxSalary'] .'
           </li>
           <li class="list-group-item" title="Qualification" data-etracking="true" data-ecategory="job_card_start_date">
@@ -464,6 +464,108 @@ if(isset($_POST["fillsal"])){
  //  echo $sal;
     $sal = preg_replace('/\s+/','',$sal);
     $qry="select * from jobpost where status=1 and maxSalary='$sal'";
+
+
+    
+       $query = $conn->prepare($qry);
+		 $query->execute();
+        if($query->rowCount() > 0)
+        {
+
+
+        $data = $query->fetchAll();
+		 $output ='';
+
+        foreach($data as $row) {
+
+
+			$output .= '
+			<div class="jobs" id="main-jobs" >
+			<div class="single-job-card">
+			<div class="row">
+			<div class="col-sm-12 col-xs-9">
+			<div class="col-12">
+			<div class="job-card-description">
+			<div class="internships-tabs">
+
+			<div class="nav nav-pills" style="width:100%;height:100%;background-color:#ffc114;padding-left: 1%">
+			<div class="job-title">
+
+                <b><h4 class="truncate-normal" title="'. $row['jobTitle'] .'" data-etracking="true"><a href="#" target="_blank"  id="j_title" >'. $row['jobTitle'] .'</a></h4></b>
+                </div></div>
+                <div class="company-name"><p class="truncate-normal"style = "padding-left: 1%;" title="' .$row['company'] .'" data-etracking="true"><a href="#" target="_blank" >' .$row['company'] .'</a></p></div>
+                <div class="job-locations"><p class="truncate-normal" style = "padding-left: 1%;" title="Location(s)" data-etracking="true"><a href="#" target="_blank" > '. $row['location'] .'</a></p></div>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                <div class="row job-info no-margin-left no-margin-right" style="margin-left:1%;">
+
+        <ul class="list-group" style="paddding-left:6% !important;">
+          <li class="list-group-item" title="' .$row['type'] .'" data-etracking="true"><i class="fa fa-briefcase"></i>&nbsp;' .$row['type'] .'
+           </li>
+          <li class="list-group-item" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation" >
+        <i class="fa fa-inr" ></i>' .$row['maxSalary'] .'
+          </li>
+          <li class="list-group-item" title="Qualification" data-etracking="true" data-ecategory="job_card_start_date">
+            <i class="fa fa-user" ></i>' .$row['education'] .'
+          </li>
+          </ul></div>
+         <div class="row no-margin-left no-margin-right job-lowest-section">
+          <div class="col-sm-3 col-xs-3 text-right visible-xs">
+
+        </div>
+
+        <div class="col-sm-12 col-xs-9">
+
+            <div class="text-right" style="padding-right:6%;">
+
+
+
+
+                 <div class="job-apply-button" >
+                    <a href="job_details.php?id='. $row['id'] .'"  class="btn btn-primary" title="Apply Now" style="font-size:18px;width:100%;height:100%;background-color:#ffc114;border: 0px;">Apply Now</a>
+
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+        </div>
+        </div>
+
+
+			';
+		}
+	}
+	else
+	{
+		$output = '<h4>No Job Found</h4>';
+	}
+	//echo '<pre>'; print_r($_POST["loc"]); echo '</pre>';
+	echo $output;
+}
+
+
+
+
+if(isset($_POST["filltype"])){
+    $type=$_POST["type"];
+ //  echo $sal;
+    $type = preg_replace('/\s+/','',$type);
+    $qry="select * from jobpost where status=1 and type='$type'";
 
 
     
