@@ -52,6 +52,8 @@ $utils = new Utils();
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
 
 <style>
+.col{padding-right: unset !important;}
+.card-body{padding: 0.8rem !important;}
 .small{
   height: 450px;overflow-y: scroll;
 }
@@ -218,8 +220,8 @@ $utils = new Utils();
                 <div class="card-body">
                   <div class="row">
                     <div class="col">
-                      <h5 class="card-title text-uppercase text-muted mb-0">Employers</h5>
-                      <h5 class="card-title text-uppercase text-muted mb-0">Agencys</h5>
+                      <h6 class="card-title text-uppercase text-muted mb-0">Employers|Agency</h6>
+
                       <span class="h2 font-weight-bold mb-0"><?php if($_SESSION['status']=="1"){ echo $utils->getTotalagencyCnt($conn);}else{echo "---";} ?></span>
                     </div>
                     <div class="col-auto">
