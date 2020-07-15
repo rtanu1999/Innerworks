@@ -5,28 +5,34 @@
 
 if(isset($_POST["action"]))
 {
-       $qry="(select name,email,mobileNum,city,exp,education,skill,file from jobseeker) UNION (select name,email,mobno,city,exp,education,skill,fnamee from internship)";
+       $qry="select * from jobseeker";
 	  // if(isset($_POST["loc"]) && !empty($_POST["loc"]) )
 		  if(isset($_POST["sectitle"]) && !empty($_POST["sectitle"]))
-	{
+	{$name=$_POST['sectitle'];
 		$qry .= "
-		 AND name like '%".$_POST["sectitle"]."%'
-		";
+		 WHERE name like '%$name%' or city like '%$name%' or skill like '%$name%' or exp like '%$name%' or education like '%$name%'		";
+
+
+
+
 	}
 		   if(isset($_POST["loc"]))
 	{
 		$loc_filter = implode("','", $_POST["loc"]);
 		$qry .= "
-		  AND city IN('".$loc_filter."')
+		  WHERE city IN('".$loc_filter."')
 		";
-
+    $skills_filter = implode("','", $_POST["skills"]);
+    $qry .= "
+      WHERE skill IN('".$skills_filter."')
+    ";
 	}
 
 	 if(isset($_POST["exp"]))
 	{
 		$exp_filter = implode("','", $_POST["exp"]);
 		$qry .= "
-		  AND exp IN('".$exp_filter."')
+		  WHERE exp IN('".$exp_filter."')
 		";
 
 	}
@@ -35,7 +41,7 @@ if(isset($_POST["action"]))
 {
   $skills_filter = implode("','", $_POST["skills"]);
   $qry .= "
-    AND skill IN('".$skills_filter."')
+    WHERE skill IN('".$skills_filter."')
   ";
 
 }
@@ -43,7 +49,7 @@ if(isset($_POST["edu"]))
 {
  $edu_filter = implode("','", $_POST["edu"]);
  $qry .= "
-   AND education IN('".$edu_filter."')
+   WHERE education IN('".$edu_filter."')
  ";
 
 }

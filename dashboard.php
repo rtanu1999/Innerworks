@@ -35,7 +35,10 @@ $utils = new Utils();
    <link href="css/opening.css"  rel="stylesheet">
 	 <link href="css/common.css"  rel="stylesheet">
    <link href="css/demo.css"  rel="stylesheet">
-
+   <script src="js/jquery-1.10.2.min.js"></script>
+     <script src="js/jquery-ui.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 
 <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -327,7 +330,7 @@ $utils = new Utils();
 					<h5 style="font-weight:bold;">Experience</h5>
 						<div class = "col-12"style="padding-left: 0;padding-right: 0;">
 					<?php
-                   $query2 = "(SELECT DISTINCT(exp) FROM jobseeker WHERE exp IS NOT NULL) UNION (SELECT DISTINCT(exp) FROM internship WHERE exp IS NOT NULL)";
+                   $query2 = "SELECT DISTINCT(exp) FROM jobseeker WHERE exp IS NOT NULL";
                     $statement = $conn->prepare($query2);
                     $statement->execute();
                     $result2 = $statement->fetchAll();
@@ -349,7 +352,7 @@ $utils = new Utils();
                                                 <div class = "col-12"style="padding-left: 0;padding-right: 0;">
                                       <?php
 
-                                                $query = "(SELECT DISTINCT skill FROM jobseeker where skill IS NOT NULL) UNION (SELECT DISTINCT skill FROM internship where skill IS NOT NULL)";
+                                                $query = "SELECT DISTINCT skill FROM jobseeker where skill IS NOT NULL";
                                                 $statement = $conn->prepare($query);
                                                 $statement->execute();
                                                 $result = $statement->fetchAll();
@@ -371,7 +374,7 @@ $utils = new Utils();
                                                               <div class = "col-12"style="padding-left: 0;padding-right: 0;">
                                           					<?php
 
-                                                              $query = "(SELECT DISTINCT education FROM jobseeker where education IS NOT NULL) UNION (SELECT DISTINCT education FROM internship where education IS NOT NULL)";
+                                                              $query = "SELECT DISTINCT education FROM jobseeker where education IS NOT NULL";
                                                               $statement = $conn->prepare($query);
                                                               $statement->execute();
                                                               $result = $statement->fetchAll();
@@ -420,19 +423,19 @@ $utils = new Utils();
 }</style>
     <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
-    <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
+
     <!--javascpt-->
     <link rel="stylesheet" href="css1/chat.css">
     <!--fontawesome-->
-    <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
+
     <link rel="icon" href="css/logo.png" type="image/icon type">
     <link rel="icon" type="png" href="images/profile.png">
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu&display=swap" rel="stylesheet">
     <!--bootstrap cdn-->
 
-   <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!--   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <section id="footer">
     <div class="container">
