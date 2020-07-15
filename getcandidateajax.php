@@ -123,7 +123,7 @@ if(isset($_POST["edu"]))
 	}
 	else
 	{
-		$output = '<h4>No Job Found</h4>';
+		$output = '<h2>No Candidates Found!</h2>';
 	}
 	//echo '<pre>'; print_r($_POST["loc"]); echo '</pre>';
 	echo $output;
