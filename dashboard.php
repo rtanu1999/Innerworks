@@ -288,7 +288,7 @@ $utils = new Utils();
 <section id="opening">
      <div class="row" style="padding: 10px 40px;">
 
-             <input type="search" id="searchtitle" class="searchboox" placeholder="Search Candidates..." style="width:75%;"/>
+             <input type="search" id="searchtitle" class="searchboox" placeholder="Search Candidates..." style="width:100%;"/>
 
 
 
@@ -303,14 +303,35 @@ $utils = new Utils();
     margin: 20px 0px;
     font-weight:normal !important;">
      	    <h3>Search by</h3><hr>
+          <div class="list-group">
+                  <h5 style="font-weight:bold;">Type</h5>
+                            <div class = "col-12"style="padding-left: 0;padding-right: 0;">
+                  <?php
 
+                            $query = "(SELECT DISTINCT(type) FROM jobseeker WHERE type IS NOT NULL) UNION (SELECT DISTINCT(type) FROM internship WHERE type IS NOT NULL) ";
+
+                            $statement = $conn->prepare($query);
+                            $statement->execute();
+                            $result = $statement->fetchAll();
+                            foreach($result as $row)
+                            {
+                            ?>
+                            <div class="list-group-item ">
+                                <label><input type="checkbox" class="common_selector type" value="<?php echo $row['type']; ?>"  > <?php echo $row['type']; ?></label>
+                            </div>
+                            <?php
+                            }
+
+                            ?>
+                            </div>
+                        </div>
 	<div class="list-group small">
 					<h5 style="font-weight:bold;">Location</h5>
                     <div class = "col-12"style="padding-left: 0;padding-right: 0;">
 					<?php
 
                     $query = "(SELECT DISTINCT(city) FROM jobseeker WHERE city IS NOT NULL) UNION (SELECT DISTINCT(city) FROM internship WHERE city IS NOT NULL) ";
-                    
+
                     $statement = $conn->prepare($query);
                     $statement->execute();
                     $result = $statement->fetchAll();
@@ -354,7 +375,7 @@ $utils = new Utils();
                                       <?php
 
                                                 $query = "(SELECT DISTINCT(skill) FROM jobseeker WHERE skill IS NOT NULL) UNION (SELECT DISTINCT(skill) FROM internship WHERE skill IS NOT NULL)";
-                                                
+
                                                 $statement = $conn->prepare($query);
                                                 $statement->execute();
                                                 $result = $statement->fetchAll();
@@ -377,7 +398,7 @@ $utils = new Utils();
                                           					<?php
 
                                                               $query = " (SELECT DISTINCT(education) FROM jobseeker WHERE education IS NOT NULL) UNION (SELECT DISTINCT(education) FROM internship WHERE education IS NOT NULL)";
-                                                             
+
                                                               $statement = $conn->prepare($query);
                                                               $statement->execute();
                                                               $result = $statement->fetchAll();
@@ -692,13 +713,13 @@ $(document).ready(function(){
         var loc = get_filter('loc');
 
         var exp = get_filter('exp');
-
-        var skills = get_filter('skills');
+        var type= get_filter('type');
+         var skills = get_filter('skills');
         var edu = get_filter('edu');
         $.ajax({
             url:"getcandidateajax.php",
             method:"POST",
-            data:{action:action, sectitle:sectitle, loc:loc, exp:exp, skills:skills, edu:edu},
+            data:{action:action, sectitle:sectitle, type:type, loc:loc, exp:exp, skills:skills, edu:edu},
             success:function(data){
 
                 $('.filter_data').html(data);
@@ -729,7 +750,7 @@ $('#clearfilter').click(function() {
 
 	$(".loc").prop("checked", false);
 	$(".exp").prop("checked", false);
-
+	$(".type").prop("checked", false);
   $(".skills").prop("checked", false);
   $(".edu").prop("checked", false);
 	 $('#clearfilter').html('');
