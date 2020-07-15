@@ -50,7 +50,21 @@ $utils = new Utils();
 <link rel="stylesheet"
     href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+<style>
+label {
 
+  font-weight: normal !important;
+}
+@media only screen and (max-width: 521px){
+#le {display: none;}
+#mi{display:block;
+flex: 100% !important; width:150% !important;}
+#ch{padding:10px !important;}
+.internships-tabs{width:inherit;}
+.btn{width:50%;}
+.col-12{width:138%;}
+}
+</style>
 <style>
 .col{padding-right: unset !important;}
 .card-body{padding: 0.8rem !important;}
