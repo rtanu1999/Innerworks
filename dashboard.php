@@ -514,7 +514,8 @@ $(document).ready(function(){
     filter_data();
 
     function filter_data()
-    {
+    {<?php if($_SESSION['status']=="1"){ ?>
+
         $('.filter_data').html('<div id="loading" style="" ></div>');
 
         var action = 'fetch_data';
@@ -535,6 +536,9 @@ $(document).ready(function(){
                 $('.filter_data').html(data);
             }
         });
+    <?php  }
+  else{?>
+     $('.filter_data').html('<div class="alert alert-danger alert-dismissable"><strong>Your dashboard is locked!</strong>Please upload your documents and wait for admin to activate your account.</div>');  <?php }  ?>
     }
 
     function get_filter(class_name)
