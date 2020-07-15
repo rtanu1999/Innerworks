@@ -22,10 +22,7 @@ if(isset($_POST["action"]))
 		$qry .= "
 		  WHERE city IN('".$loc_filter."')
 		";
-    $skills_filter = implode("','", $_POST["skills"]);
-    $qry .= "
-      WHERE skill IN('".$skills_filter."')
-    ";
+   
 	}
 
 	 if(isset($_POST["exp"]))
