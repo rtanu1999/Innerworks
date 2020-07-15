@@ -68,8 +68,7 @@
     <div class="limiter">
        <div class="container-login100">
           <div class="wrap-login100 p-t-0 p-b-30" style="width: 800px">
-            <span class="text-dark login100-form-title p-t-20 p-b-45" style="font-family: 'Raleway';font-weight: bold;">Recruiter Registration
-             <h5>Agency</h5>
+               <span class="text-dark login100-form-title p-t-20 p-b-45" style="font-family: 'Raleway';font-weight: bold;"><h2>Employer | Agency Registration</h2>
             </span>
             <form action="recruiterregistration.php" method="post" class="login100-form" enctype="multipart/form-data" onsubmit="return myfun()" id="detailsform">
                <input type="hidden" name="_token" value="qMzG0IFi1lTA9IAvzHBlXS2OtPaL3bb1pPsj2qil">
@@ -395,7 +394,7 @@
 
                     if($(this).attr('data-id')=='2'){
 
-                       $(".login100-form-title h5").text("Freelancer");
+                       $(".login100-form-title h2").text("Freelancer Registration");
                     $(".website_div").css('display','none');
                     $(".website_div input").removeAttr('required');
 
@@ -426,7 +425,7 @@
                     }
                     else if($(this).attr('data-id')=='1'){
 
-                       $(".login100-form-title h5").text("Agency");
+                       $(".login100-form-title h2").text("Agency Registration");
                     $(".fullname_div").css('display','none');
                     $(".fullname_div input").removeAttr('required');
 

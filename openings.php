@@ -536,8 +536,9 @@ $('#clearfilter').click(function() {
   $(".skills").prop("checked", false);
   $(".edu").prop("checked", false);
 	 $('#clearfilter').html('');
+    
 	 $('#searchtitle').val('');
-
+    
 	filter_data();
 });
 });
@@ -619,6 +620,25 @@ $('#clearfilter').click(function() {
                 }
             });
         }
+    
+                function fillIntype(title){
+                var title2 = title.replace('<i class="fa fa-briefcase" aria-hidden="true"></i>&nbsp;', "");
+        //   alert(title2);
+            $.ajax({
+			
+                url:"getjobpostajax.php",
+                type:"POST",
+                async:false,
+                data:{
+                    "filltype":1,
+                    "type":title2
+                },
+                success:function(data){
+                    $('.filter_data').html(data);
+                }
+            });
+        }
 </script>
 </body>
 </html>
+
