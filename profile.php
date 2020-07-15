@@ -205,6 +205,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
 <!------------------------------->
                     <input type="file" name="image" id="image" value="upload/<?php echo $_SESSION['image']; ?>" >
                    <!------------------------------->
+                 </div><div class="row">
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-username">Username</label>
@@ -221,18 +222,21 @@ include_once 'DbConnection/DbConnectionHelper.php';
                     </div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="form-control-label" for="input-first-name">Company name</label>
-                        <input type="text" id="input-first-name" name="companyname" class="form-control" placeholder="First name" value="<?php echo $_SESSION['companyname']; ?>">
-                      </div>
-                    </div>
+
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-last-name">Website</label>
                         <input type="text" id="input-last-name" name="website" class="form-control" placeholder="Last name" value=" <?php echo $_SESSION['website']; ?>">
                       </div>
                     </div>
+                      <?php if($_SESSION['type']=="Agency"){?>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-first-name">Company name</label>
+                        <input type="text" id="input-first-name" name="companyname" class="form-control" placeholder="First name" value="<?php echo $_SESSION['companyname']; ?>">
+                      </div>
+                    </div><?php }
+                     ?>
                   </div>
                 </div>
                 <hr class="my-4" />

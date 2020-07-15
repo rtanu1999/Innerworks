@@ -67,19 +67,19 @@ require_once('PHPMailer/class.smtp.php');
 
 	}
 ?>
-<?php 
+<?php
 function sendmails(){
-          
+
                 $email=$_SESSION['email'];
              $mail = new PHPMailer();
-            
+
 			$body="<div style='height:40px;width:auto;background-color:#e6e6e6;'></div><div style='height:120px;width:auto;background-color:#008CBA;'><br><center>
             	<center><h1>Thank You!</h1><p style='color:white;'> Documents Uploaded Successfully!!</p>
-            <p style='color:white;'>We will verify your documents and contact you soon.</p></center><br><span></span>
+            <p style='color:white;'>We will verify your documents and activate your account soon.</p></center><br><span></span>
                 </div><div style='height:30px;width:auto;background-color:#e6e6e6;'>
             </div><br>";
             $body .= "Kindly contact us for any further query at +91 9487980784 or info@innerworkindia.com Visit us: www.innerworkindia.com<br><br>";
-              
+
             $mail->IsSMTP();
             $mail->Host = "mail.innerworkindia.com";
             $mail->Port = 465;
