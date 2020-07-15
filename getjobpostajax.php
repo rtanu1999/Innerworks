@@ -375,8 +375,7 @@ if(isset($_POST["fillloc"])){
 		 $output ='';
 
         foreach($data as $row) {
-
-
+            
 			$output .= '
 			<div class="jobs" id="main-jobs" >
 			<div class="single-job-card">
