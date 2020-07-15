@@ -35,7 +35,10 @@ $utils = new Utils();
    <link href="css/opening.css"  rel="stylesheet">
 	 <link href="css/common.css"  rel="stylesheet">
    <link href="css/demo.css"  rel="stylesheet">
-
+   <script src="js/jquery-1.10.2.min.js"></script>
+     <script src="js/jquery-ui.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 
 <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
@@ -49,6 +52,9 @@ $utils = new Utils();
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
 
 <style>
+.small{
+  height: 450px;overflow-y: scroll;
+}
 .image-source {
     border-radius: 50%;
 }
@@ -278,11 +284,11 @@ $utils = new Utils();
   </div>
 </div>
 <hr>
-   
+
 <section id="opening">
      <div class="row" style="padding: 10px 40px;">
 
-             <input type="search" id="searchtitle" class="searchboox" placeholder="Search Jobs|Internships.." style="width:75%;"/>
+             <input type="search" id="searchtitle" class="searchboox" placeholder="Search Candidates..." style="width:75%;"/>
 
 
 
@@ -297,13 +303,14 @@ $utils = new Utils();
     margin: 20px 0px;
     font-weight:normal !important;">
      	    <h3>Search by</h3><hr>
-     	    
-	<div class="list-group">
+
+	<div class="list-group small">
 					<h5 style="font-weight:bold;">Location</h5>
                     <div class = "col-12"style="padding-left: 0;padding-right: 0;">
 					<?php
 
-                    $query = "SELECT DISTINCT city FROM jobseeker where city IS NOT NULL";
+                    $query = "(SELECT DISTINCT(city) FROM jobseeker WHERE city IS NOT NULL) UNION (SELECT DISTINCT(city) FROM internship WHERE city IS NOT NULL) ";
+                    
                     $statement = $conn->prepare($query);
                     $statement->execute();
                     $result = $statement->fetchAll();
@@ -320,12 +327,12 @@ $utils = new Utils();
                     </div>
                 </div>
 
-				<div class="list-group">
+				<div class="list-group small">
 					<h5 style="font-weight:bold;">Experience</h5>
 						<div class = "col-12"style="padding-left: 0;padding-right: 0;">
 					<?php
-                   $query2 = "SELECT DISTINCT(exp) FROM jobseeker WHERE exp IS NOT NULL";
-                    $statement = $conn->prepare($query2);
+                   $query2 = "(SELECT DISTINCT(exp) FROM jobseeker WHERE exp IS NOT NULL) UNION (SELECT DISTINCT(exp) FROM internship WHERE exp IS NOT NULL)";
+                   $statement = $conn->prepare($query2);
                     $statement->execute();
                     $result2 = $statement->fetchAll();
                     foreach($result2 as $row2)
@@ -340,18 +347,20 @@ $utils = new Utils();
                 </div>
                 </div>
 
-                
-                              <div class="list-group">
+
+                              <div class="list-group small">
                                       <h5 style="font-weight:bold;">Skills</h5>
                                                 <div class = "col-12"style="padding-left: 0;padding-right: 0;">
                                       <?php
 
-                                                $query = "SELECT DISTINCT skill FROM jobseeker where skill IS NOT NULL";
+                                                $query = "(SELECT DISTINCT(skill) FROM jobseeker WHERE skill IS NOT NULL) UNION (SELECT DISTINCT(skill) FROM internship WHERE skill IS NOT NULL)";
+                                                
                                                 $statement = $conn->prepare($query);
                                                 $statement->execute();
                                                 $result = $statement->fetchAll();
                                                 foreach($result as $row)
                                                 {
+
                                                 ?>
                                                 <div class="list-group-item ">
                                                     <label><input type="checkbox" class="common_selector skills" value="<?php echo $row['skill']; ?>"  > <?php echo $row['skill']; ?></label>
@@ -362,12 +371,13 @@ $utils = new Utils();
                                                 ?>
                                                 </div>
                                             </div>
-                                            <div class="list-group">
+                                            <div class="list-group small">
                                           					<h5 style="font-weight:bold;">Education</h5>
                                                               <div class = "col-12"style="padding-left: 0;padding-right: 0;">
                                           					<?php
 
-                                                              $query = "SELECT DISTINCT education FROM jobseeker where education IS NOT NULL";
+                                                              $query = " (SELECT DISTINCT(education) FROM jobseeker WHERE education IS NOT NULL) UNION (SELECT DISTINCT(education) FROM internship WHERE education IS NOT NULL)";
+                                                             
                                                               $statement = $conn->prepare($query);
                                                               $statement->execute();
                                                               $result = $statement->fetchAll();
@@ -416,19 +426,19 @@ $utils = new Utils();
 }</style>
     <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
-    <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
+
     <!--javascpt-->
     <link rel="stylesheet" href="css1/chat.css">
     <!--fontawesome-->
-    <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
+
     <link rel="icon" href="css/logo.png" type="image/icon type">
     <link rel="icon" type="png" href="images/profile.png">
     <!--google fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Ubuntu&display=swap" rel="stylesheet">
     <!--bootstrap cdn-->
 
-   <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<!--   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <section id="footer">
     <div class="container">
@@ -680,15 +690,15 @@ $(document).ready(function(){
         var sectitle = $('#searchtitle').val();
        // var maximum_price = $('#hidden_maximum_price').val();
         var loc = get_filter('loc');
-        var type = get_filter('type');
+
         var exp = get_filter('exp');
-        var sal = get_filter('sal');
+
         var skills = get_filter('skills');
         var edu = get_filter('edu');
         $.ajax({
-            url:"getjobpostajax.php",
+            url:"getcandidateajax.php",
             method:"POST",
-            data:{action:action, sectitle:sectitle, loc:loc, type:type, exp:exp, sal:sal, skills:skills, edu:edu},
+            data:{action:action, sectitle:sectitle, loc:loc, exp:exp, skills:skills, edu:edu},
             success:function(data){
 
                 $('.filter_data').html(data);
@@ -716,10 +726,10 @@ $('#filtersectionbtn').click(function() {
     $('#filtersection').toggle();
 });
 $('#clearfilter').click(function() {
-    $(".type").prop("checked", false);
+
 	$(".loc").prop("checked", false);
 	$(".exp").prop("checked", false);
-  $(".sal").prop("checked", false);
+
   $(".skills").prop("checked", false);
   $(".edu").prop("checked", false);
 	 $('#clearfilter').html('');
