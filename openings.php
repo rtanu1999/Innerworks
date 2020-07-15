@@ -536,8 +536,9 @@ $('#clearfilter').click(function() {
   $(".skills").prop("checked", false);
   $(".edu").prop("checked", false);
 	 $('#clearfilter').html('');
+    
 	 $('#searchtitle').val('');
-
+    
 	filter_data();
 });
 });
@@ -640,3 +641,4 @@ $('#clearfilter').click(function() {
 </script>
 </body>
 </html>
+
