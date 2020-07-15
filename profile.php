@@ -260,7 +260,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
                     </div>
                     <div class="col-lg-4">
                       <div class="form-group">
-                        <label class="form-control-label" for="input-country">Country</label>
+                        <label class="form-control-label" for="input-country">State</label>
                         <input type="text" id="input-country" name="country" class="form-control" placeholder="Country" value=" <?php echo $_SESSION['state']; ?>">
                       </div>
                     </div>
