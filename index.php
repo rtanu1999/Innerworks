@@ -6,7 +6,7 @@
     <?php include "CommonFiles.php"?>
     <link rel="stylesheet" href="css/home.css">
 </head>
-<body>
+<body onload="notifyMe()">
 <?php include_once 'Header.php'; ?>
 
 <section id="slider">
