@@ -1,5 +1,5 @@
 
-<script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
@@ -57,14 +57,12 @@ function registerUser(){
         $_FILES['file']['tmp_name']=$_SESSION["tmpnm"];
 
 
-
-
-           $name=$_FILES['file']['name'];
+            $name=$_FILES['file']['name'];
             $target_dir="upload/";
             $target_file=$target_dir . basename($_FILES["file"]["name"]);
-            $imagefiletype=strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+            $imageFileType=strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
             $extensions_arr=array("jpg","jpeg","png","gif");
-            if(in_array($imagefiletype,$extensions_arr)){
+            if(in_array($imageFileType,$extensions_arr)){
 
 
                   if($type == "agency"){
@@ -155,9 +153,6 @@ function registerUser(){
         $d="";
         $sector=$_POST["ssector"];
         $d=implode($sector);
-
-
-
 
     }
 

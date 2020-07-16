@@ -383,7 +383,7 @@
               <div class="image_div col-md-12 validate-input m-b-10">
                    <div style="font-family: 'Raleway';font-weight: bold;">Upload Image:
 
-                 <input type="file" id="img" name="file"/ style="font-family: 'Raleway';font-weight: bold;display:inline-block;">
+                 <input type="file" id="img" name="file" / style="font-family: 'Raleway';font-weight: bold;display:inline-block;">
                     </div>
 
                </div>
