@@ -1,5 +1,5 @@
 
-<script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/62c6b753c2.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
 
@@ -52,19 +52,18 @@ function registerUser(){
         $keyword=$_SESSION["key"];
         $comment=$_SESSION["com"];
         $sector=$_SESSION["sec"];
-        $_FILES['file']['name']=$_SESSION["imgname"];
+        $imageName = $_SESSION["fnamee"];
+        //$_FILES['file']['name']=$_SESSION["imgname"];
         $d=$_SESSION["d"];
-        $_FILES['file']['tmp_name']=$_SESSION["tmpnm"];
+        //$_FILES['file']['tmp_name']=$_SESSION["tmpnm"];
 
 
-
-
-           $name=$_FILES['file']['name'];
-            $target_dir="upload/";
-            $target_file=$target_dir . basename($_FILES["file"]["name"]);
-            $imagefiletype=strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-            $extensions_arr=array("jpg","jpeg","png","gif");
-            if(in_array($imagefiletype,$extensions_arr)){
+           // $name=$_FILES['file']['name'];
+            //$target_dir="upload/";
+            //$target_file=$target_dir . basename($_FILES["file"]["name"]);
+            //$imageFileType=strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+            //$extensions_arr=array("jpg","jpeg","png","gif");
+            //if(in_array($imageFileType,$extensions_arr)){
 
 
                   if($type == "agency"){
@@ -88,10 +87,10 @@ function registerUser(){
                                                     $stmt->bindParam(17, $d);
                                                     $stmt->bindParam(18, $experience);
                                                     $stmt->bindParam(19, $keyword);
-                                                    $stmt->bindParam(20, $name);
+                                                    $stmt->bindParam(20, $imageName);
 
                        $stmt->execute();
-                    move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name);
+                    //move_uploaded_file($_FILES['file']['tmp_name'],$target_dir.$name);
                       sendmail();
                //    header ('location:recruiterlogin.php');
 
@@ -119,17 +118,17 @@ function registerUser(){
                                                     $stmt->bindParam(17, $d);
                                                     $stmt->bindParam(18, $experience);
                                                     $stmt->bindParam(19, $keyword);
-                                                    $stmt->bindParam(20, $name);
+                                                    $stmt->bindParam(20, $imageName);
 
                     $stmt->execute();
-                    move_uploaded_file($FILES['file']['tmp_name'],$target_dir.$name);
+                    //move_uploaded_file($FILES['file']['tmp_name'],$target_dir.$name);
                     sendmail();
 
              //       header ('location:recruiterlogin.php');
 
                     }
     }
-    }
+   // }
     else{
         $companyname= $_POST['companyname'];
         $website= $_POST['website'];
@@ -155,9 +154,7 @@ function registerUser(){
         $d="";
         $sector=$_POST["ssector"];
         $d=implode($sector);
-
-
-
+        $imageName=$_POST['fnamee'];
 
     }
 
@@ -302,10 +299,11 @@ function setsession(){
     $_SESSION["key"]=$_POST['keyword'];
     $_SESSION["com"]=$_POST['comment'];
     $_SESSION["sec"]=$_POST["ssector"];
-    $_SESSION["imgname"]=$_FILES['file']['name'];
+    //$_SESSION["imgname"]=$_FILES['file']['name'];
     $d=implode($_SESSION["sec"]);
     $_SESSION["d"]=$d;
-    $_SESSION["tmpnm"]=$_FILES['file']['tmp_name'];
+   // $_SESSION["tmpnm"]=$_FILES['file']['tmp_name'];
+    $_SESSION["fnamee"]=$_POST['fnamee'];
 }
 
 
