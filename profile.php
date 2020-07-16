@@ -58,7 +58,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
           data: form_data,
           success:function(response) {
             //alert(response);
-  		  $('#showresult').append('file Uploaded Successfully');
+  		  $('#showresult').append('Image Uploaded Successfully!');
             $('#selectfile').val('');
   		  $('#filename').val(response);
           }
@@ -246,7 +246,7 @@ include_once 'DbConnection/DbConnectionHelper.php';
 <!------------------------------->
 <div class="col-lg-6">
   <div class="form-group">
-<input type="button" value="Select File" onclick="file_explorer();" style="width: fit-content !important;">
+<input type="button" class="btn btn-success" value="Select Image" onclick="file_explorer();" style="width: fit-content !important;">
 
                     <input type="file" id="selectfile">
                 	<input type="hidden" id="filename" name="fnamee" >
