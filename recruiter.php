@@ -425,7 +425,7 @@
                     }
                     else if($(this).attr('data-id')=='1'){
 
-                       $(".login100-form-title h2").text("Agency Registration");
+                       $(".login100-form-title h2").text("Employer | Agency Registration");
                     $(".fullname_div").css('display','none');
                     $(".fullname_div input").removeAttr('required');
 
