@@ -3,7 +3,7 @@
     <head>
     <title>Recruiter login</title>
         <link rel="stylesheet" type="text/css" href="css/recuiterchoicestyle.css">
-        <style>
+<!--         <style>
            @media only screen and (max-width: 521px){
              input[type="email"],input[type="password"] {width: 230%;
     margin-left: -70px;
@@ -11,7 +11,7 @@
   .fa{margin-left:-75px;}
              .wrap-input100{margin-left:-50px;}
            }
-        </style>
+        </style> -->
     </head>
     <body>
     <?php include_once 'Header.php'; ?>
