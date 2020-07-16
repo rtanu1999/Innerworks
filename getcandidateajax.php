@@ -65,8 +65,8 @@ if(isset($_POST["edu"]))
 
         foreach($data as $row) {
 
-         $Resume_file_raw = $row['file'];
-            $Resume_file = str_replace(" ","%20",$Resume_file_raw);
+        
+            $row['file1'] = str_replace(" ","%20",$row['file']);
 
 
 			$output .= '
@@ -95,7 +95,7 @@ if(isset($_POST["edu"]))
                 <div class="row job-info no-margin-left no-margin-right">
 
         <ul class="list-group" style="paddding-left:6% !important;">
-        
+
           <li class="list-group-item" title="Experience" data-etracking="true"><i class="fa fa-hourglass-2"></i>' .$row['exp'] .'
            </li>
           <li class="list-group-item" title="Skills" data-etracking="true" data-ecategory="job_card_skill">
@@ -105,7 +105,7 @@ if(isset($_POST["edu"]))
           <i class="fa fa-book" ></i>' .$row['education'] .'
           </li>
           <li class="list-group-item" title="Resume" data-etracking="true" data-ecategory="job_card_start_date">
-          <i class="fa fa-file-word-o" ></i><a href=\"https://innerworkindia.com/Resume/{$Resume_file}\"> ' .$row['file'] .'</a>
+          <i class="fa fa-file-word-o" ></i><a href="https://innerworkindia.com/Resume/'.$row['file1'].'" target=\"_blank\"> ' .$row['file'] .'</a>
           </li>
           </ul></div>
 

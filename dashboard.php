@@ -346,7 +346,7 @@ flex: 100% !important; width:150% !important;}
                     <div class = "col-12"style="padding-left: 0;padding-right: 0;">
 					<?php
 
-                    $query = "(SELECT DISTINCT(city) FROM jobseeker WHERE city IS NOT NULL) UNION (SELECT DISTINCT(city) FROM internship WHERE city IS NOT NULL) ";
+                    $query = "SELECT DISTINCT(city) FROM jobseeker WHERE city IS NOT NULL ";
 
                     $statement = $conn->prepare($query);
                     $statement->execute();
