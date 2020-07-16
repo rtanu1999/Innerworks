@@ -51,6 +51,8 @@ $utils = new Utils();
     href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
 <style>
+.list-group-item {
+      padding: 0.5rem 0.5rem;}
 label {
 
   font-weight: normal !important;
@@ -69,7 +71,7 @@ flex: 100% !important; width:150% !important;}
 .col{padding-right: unset !important;}
 .card-body{padding: 0.8rem !important;}
 .small{
-  height: 450px;overflow-y: scroll;
+  overflow-y: scroll;
 }
 .image-source {
     border-radius: 50%;
@@ -318,10 +320,10 @@ flex: 100% !important; width:150% !important;}
     border-radius: 4px;
     margin: 20px 0px;
     font-weight:normal !important;">
-     	    <h3>Search by</h3><hr>
+     	    <h3 >Search by</h3><hr style="margin-top:0px;margin-bottom:0px;">
           <div class="list-group">
                   <h5 style="font-weight:bold;">Type</h5>
-                            <div class = "col-12"style="padding-left: 0;padding-right: 0;">
+                            <div class = "col-12"style="padding-left: 0;padding-right: 0;font-size: 80%;">
                   <?php
 
                             $query = "(SELECT DISTINCT(type) FROM jobseeker WHERE type IS NOT NULL) UNION (SELECT DISTINCT(type) FROM internship WHERE type IS NOT NULL) ";
@@ -341,9 +343,9 @@ flex: 100% !important; width:150% !important;}
                             ?>
                             </div>
                         </div>
-	<div class="list-group small">
+	<div class="list-group" style="height: 450px;margin-bottom:40px;">
 					<h5 style="font-weight:bold;">Location</h5>
-                    <div class = "col-12"style="padding-left: 0;padding-right: 0;">
+                    <div class = "col-12 small"style="padding-left: 0;padding-right: 0;">
 					<?php
 
                     $query = "SELECT DISTINCT(city) FROM jobseeker WHERE city IS NOT NULL ";
@@ -364,9 +366,9 @@ flex: 100% !important; width:150% !important;}
                     </div>
                 </div>
 
-				<div class="list-group small">
+				<div class="list-group" style="height: 450px;margin-bottom:40px;">
 					<h5 style="font-weight:bold;">Experience</h5>
-						<div class = "col-12"style="padding-left: 0;padding-right: 0;">
+						<div class = "col-12 small"style="padding-left: 0;padding-right: 0;">
 					<?php
                    $query2 = "(SELECT DISTINCT(exp) FROM jobseeker WHERE exp IS NOT NULL) UNION (SELECT DISTINCT(exp) FROM internship WHERE exp IS NOT NULL)";
                    $statement = $conn->prepare($query2);
@@ -385,9 +387,9 @@ flex: 100% !important; width:150% !important;}
                 </div>
 
 
-                              <div class="list-group small">
+                              <div class="list-group " style="height: 450px;margin-bottom:40px;">
                                       <h5 style="font-weight:bold;">Skills</h5>
-                                                <div class = "col-12"style="padding-left: 0;padding-right: 0;">
+                                                <div class = "col-12 small"style="padding-left: 0;padding-right: 0;">
                                       <?php
 
                                                 $query = "(SELECT DISTINCT(skill) FROM jobseeker WHERE skill IS NOT NULL) UNION (SELECT DISTINCT(skill) FROM internship WHERE skill IS NOT NULL)";
@@ -408,9 +410,9 @@ flex: 100% !important; width:150% !important;}
                                                 ?>
                                                 </div>
                                             </div>
-                                            <div class="list-group small">
+                                            <div class="list-group" style="height: 450px;margin-bottom:40px;">
                                           					<h5 style="font-weight:bold;">Education</h5>
-                                                              <div class = "col-12"style="padding-left: 0;padding-right: 0;">
+                                                              <div class = "col-12 small"style="padding-left: 0;padding-right: 0;">
                                           					<?php
 
                                                               $query = " (SELECT DISTINCT(education) FROM jobseeker WHERE education IS NOT NULL) UNION (SELECT DISTINCT(education) FROM internship WHERE education IS NOT NULL)";
