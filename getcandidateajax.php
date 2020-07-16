@@ -65,8 +65,8 @@ if(isset($_POST["edu"]))
 
         foreach($data as $row) {
 
-         $Resume_file_raw = $row['file'];
-            $Resume_file = str_replace(" ","%20",$Resume_file_raw);
+        
+            $row['file1'] = str_replace(" ","%20",$row['file']);
 
 
 			$output .= '
@@ -75,7 +75,7 @@ if(isset($_POST["edu"]))
 			<div class="row">
 			<div class="col-sm-12 col-xs-9">
 			<div class="col-12">
-			<div class="job-card-description">
+			<div class="job-card-description" style="padding:10px 0 0">
 			<div class="internships-tabs">
 
 			<div class="nav nav-pills" style="width:100%;height:100%;background-color:#ffc114;padding-left: 1%;">
@@ -86,7 +86,7 @@ if(isset($_POST["edu"]))
                 </div></div>
                 <div class="company-name"><p class="truncate-normal" style = "padding-left: 1%;margin-bottom:-15px;" title="' .$row['mobileNum'] .'" data-etracking="true">' .$row['mobileNum'] .'</p>
                 <p class="truncate-normal" style = "padding-left: 1%;margin-bottom:-10px;" title="email" data-etracking="true"><a href="mailto:' .$row['email'] .'">' .$row['email'] .'</a></p></div>
-                <div class="job-locations"><p class="truncate-normal" style = "padding-left: 1%;" title="Location(s)" data-etracking="true">'. $row['city'] .'</p></div>
+                <div class="job-locations"><p class="truncate-normal" style = "padding-left: 1%; margin-bottom : 0;" title="Location(s)" data-etracking="true">'. $row['city'] .'</p></div>
                 </div>
                 </div>
                 </div>
@@ -95,7 +95,7 @@ if(isset($_POST["edu"]))
                 <div class="row job-info no-margin-left no-margin-right">
 
         <ul class="list-group" style="paddding-left:6% !important;">
-        
+
           <li class="list-group-item" title="Experience" data-etracking="true"><i class="fa fa-hourglass-2"></i>' .$row['exp'] .'
            </li>
           <li class="list-group-item" title="Skills" data-etracking="true" data-ecategory="job_card_skill">
@@ -105,7 +105,7 @@ if(isset($_POST["edu"]))
           <i class="fa fa-book" ></i>' .$row['education'] .'
           </li>
           <li class="list-group-item" title="Resume" data-etracking="true" data-ecategory="job_card_start_date">
-          <i class="fa fa-file-word-o" ></i><a href=\"https://innerworkindia.com/Resume/{$Resume_file}\"> ' .$row['file'] .'</a>
+          <i class="fa fa-file-word-o" ></i><a href="https://innerworkindia.com/Resume/'.$row['file1'].'" target=\"_blank\"> ' .$row['file'] .'</a>
           </li>
           </ul></div>
 
@@ -129,10 +129,6 @@ if(isset($_POST["edu"]))
 	//echo '<pre>'; print_r($_POST["loc"]); echo '</pre>';
 	echo $output;
 }
-
-
-
-
 
 
 ?>
