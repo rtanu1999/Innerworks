@@ -35,7 +35,7 @@ $utils = new Utils();
    <link href="css/opening.css"  rel="stylesheet">
 	 <link href="css/common.css"  rel="stylesheet">
    <link href="css/demo.css"  rel="stylesheet">
-   <script src="js/jquery-1.10.2.min.js"></script>
+  <!-- <script src="js/jquery-1.10.2.min.js"></script>-->
      <script src="js/jquery-ui.js"></script>
      <script src="js/bootstrap.min.js"></script>
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -454,6 +454,21 @@ flex: 100% !important; width:150% !important;}
 
     </div>
 </section>
+<!-- Argon Scripts -->
+  <!-- Core -->
+<!--  <script src="assets/vendor/jquery/dist/jquery.min.js"></script>-->
+  <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+
+  <!-- Argon JS -->
+  <script src="assets/js/argon.js?v=1.2.0"></script>
+
+
+    <script src="https://incruiter.com/assets/js/argon.js?v=1.0.0"></script>
+
+ <script src="https://incruiter.com/assets/js/argon2.js?v=1.0.0"></script>
 <style>
 .input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
     border-top-right-radius: 0;
@@ -468,30 +483,7 @@ flex: 100% !important; width:150% !important;}
 
 
 
-<script type="text/javascript">
-    (function () {
-        var options = {
-             whatsapp: "+91 9887888469", // WhatsApp number
-            call_to_action: "Message Us", // Call to action
-            position: "left", // Position may be 'right' or 'left'
-        };
-        var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
-        var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
-        s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
-        var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-    })();
-</script>
-    <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/5e7f141369e9320caabde55f/default';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-        })();
-    </script>
+
 <style>
 #loading
 {
