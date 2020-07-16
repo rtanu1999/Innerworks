@@ -638,6 +638,26 @@ $('#clearfilter').click(function() {
                 }
             });
         }
+    
+    
+    
+                    function fillInedu(title){
+                var title2 = title.replace('<i class="fa fa-user" aria-hidden="true"></i>', "");
+       //    alert(title2);
+            $.ajax({
+			
+                url:"getjobpostajax.php",
+                type:"POST",
+                async:false,
+                data:{
+                    "filledu":1,
+                    "edu":title2
+                },
+                success:function(data){
+                    $('.filter_data').html(data);
+                }
+            });
+        }
 </script>
 </body>
 </html>

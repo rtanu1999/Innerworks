@@ -17,12 +17,49 @@
           <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
     <style>
+    input[type=button]:hover {
+
+    font-size: 20px;
+    font-family: 'Raleway';
+    font-weight: bold;
+    line-height: 0.8;
+    color:black;
+
+
+
+}
     #h_inner font{
       font-family: Monotype Corsiva !important;
     }
     @media only screen and (max-width: 521px){
       select{padding-left: 13% !important;}
     }
+    </style>
+    <style type="text/css">
+      <style>
+
+#drop_file_zone {
+    background-color: #EEE;
+    border: #999 5px dashed;
+    width: 100%;
+    height: auto;
+    padding: 8px;
+    font-size: 14px;
+}
+#drag_upload_file {
+  width:100%;
+  margin:0 auto;
+  border: 1px solid #999;
+  border-radius: 50px;
+  margin-top: 1%;
+}
+
+#drag_upload_file #selectfile {
+  display: none;
+
+}
+
+
     </style>
       <script src="https://www.google.com/recaptcha/api.js" async="" defer=""></script>
       <script>
@@ -41,6 +78,42 @@
       </script>
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script src="https://www.googletagmanager.com/gtag/js?id=UA-154697763-1"></script>
+      <script type="text/javascript">
+  var fileobj;
+  function upload_file(e) {
+    e.preventDefault();
+    fileobj = e.dataTransfer.files[0];
+    ajax_file_upload(fileobj);
+  }
+
+  function file_explorer() {
+    document.getElementById('selectfile').click();
+    document.getElementById('selectfile').onchange = function() {
+        fileobj = document.getElementById('selectfile').files[0];
+      ajax_file_upload(fileobj);
+    };
+  }
+
+  function ajax_file_upload(file_obj) {
+    if(file_obj != undefined) {
+        var form_data = new FormData();
+        form_data.append('file', file_obj);
+      $.ajax({
+        type: 'POST',
+        url: 'upload_image_freelance.php',
+        contentType: false,
+        processData: false,
+        data: form_data,
+        success:function(response) {
+          //alert(response);
+      $('#showresult').append('File Uploaded Successfully');
+          $('#selectfile').val('');
+      $('#filename').val(response);
+        }
+      });
+    }
+  }
+</script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -381,10 +454,24 @@
                      <span class="symbol-input100"><i class="fas fa-briefcase"></i></span>
                </div>
               <div class="image_div col-md-12 validate-input m-b-10">
-                   <div style="font-family: 'Raleway';font-weight: bold;">Upload Image:
+                   <div style="font-family: 'Raleway';font-weight: bold;font-size: 15px;">
 
-                 <input type="file" id="img" name="file"/ style="font-family: 'Raleway';font-weight: bold;display:inline-block;">
+                 <!--<input type="file" id="img" name="file" / style="font-family: 'Raleway';font-weight: bold;display:inline-block;">-->
+               <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
+                    <div id="drag_upload_file">
+                      <p><abbr title="Click here to choose image" style="border: none;"><input type="button" name="tooltip" value="Select Image" onclick="file_explorer();" style="width: 100%;border-radius: 50%;height: 5%;padding-bottom: 5px;font-weight: bold;" required=""></abbr></p>
+
+                      <input type="file" / id="selectfile">
+                       <input type="hidden" id="filename" name="fnamee">
+
+
                     </div>
+
+                </div>
+
+                  <div id="showresult" class="row form-group" style="margin-bottom:3%;color: #f9b805"></div>
+
+                 </div>
 
                </div>
 
@@ -425,7 +512,7 @@
                     }
                     else if($(this).attr('data-id')=='1'){
 
-                       $(".login100-form-title h2").text("Agency Registration");
+                       $(".login100-form-title h2").text("Employer | Agency Registration");
                     $(".fullname_div").css('display','none');
                     $(".fullname_div input").removeAttr('required');
 

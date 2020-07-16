@@ -2,6 +2,9 @@
 $serverName = "localhost";
 $userName = "innerwor_innerwork";
 $password = "0703#InnerW@";
+//$userName = "root";
+//$password = "";
+
 try{
     $conn = new PDO("mysql:host=$serverName;dbname=innerwor_innerwork", $userName, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -22,20 +25,20 @@ if(isset($_POST['updt_submit']))
     $pass=$_POST["pass"];
 
     if($val=="Agency"){
-            if(!empty($_POST[image])){
+            if(!empty($_POST['fnamee'])){
         $sql="UPDATE agency SET contactperson=:cp,email=:em,companyname=:cn,website=:web,address=:add,city=:city,state=:coun,postcode= :code ,comment=:com,image=:im WHERE email=:em";
         $stmt = $conn->prepare($sql);
         $stmt->execute(array(
-            ':cp' => $_POST[username],
-            ':cn' => $_POST[companyname],
-            ':web' => $_POST[website],
-            ':add' => $_POST[address],
-            ':city' => $_POST[city],
-            ':coun' => $_POST[country],
-            ':code' => $_POST[postcode],
-            ':com' => $_POST[comment],
-            ':em' => $_POST[email],
-            ':im'=>$_POST[image]
+            ':cp' => $_POST['username'],
+            ':cn' => $_POST['companyname'],
+            ':web' => $_POST['website'],
+            ':add' => $_POST['address'],
+            ':city' => $_POST['city'],
+            ':coun' => $_POST['country'],
+            ':code' => $_POST['postcode'],
+            ':com' => $_POST['comment'],
+            ':em' => $_POST['email'],
+            ':im'=>$_POST['fnamee']
 
 
         ));
@@ -47,15 +50,15 @@ if(isset($_POST['updt_submit']))
          $sql="UPDATE agency SET contactperson=:cp,email=:em,companyname=:cn,website=:web,address=:add,city=:city,state=:coun,postcode= :code ,comment=:com WHERE email=:em";
         $stmt = $conn->prepare($sql);
         $stmt->execute(array(
-            ':cp' => $_POST[username],
-            ':cn' => $_POST[companyname],
-            ':web' => $_POST[website],
-            ':add' => $_POST[address],
-            ':city' => $_POST[city],
-            ':coun' => $_POST[country],
-            ':code' => $_POST[postcode],
-            ':com' => $_POST[comment],
-            ':em' => $_POST[email]
+            ':cp' => $_POST['username'],
+            ':cn' => $_POST['companyname'],
+            ':web' => $_POST['website'],
+            ':add' => $_POST['address'],
+            ':city' => $_POST['city'],
+            ':coun' => $_POST['country'],
+            ':code' => $_POST['postcode'],
+            ':com' => $_POST['comment'],
+            ':em' => $_POST['email']
 
 
         ));
@@ -66,20 +69,20 @@ if(isset($_POST['updt_submit']))
     }
     }
     if($val=="Freelancer"){
-         if(!empty($_POST[image])){
-         $sql="UPDATE freelancer SET contactperson=:cp,email=:em,companyname=:cn,website=:web,address=:add,city=:city,state=:coun,postcode= :code ,comment=:com,image=:im WHERE email=:em";
+         if(!empty($_POST['fnamee'])){
+         $sql="UPDATE freelancer SET contactperson=:cp,email=:em,website=:web,address=:add,city=:city,state=:coun,postcode=:code ,comment=:com,image=:im WHERE email=:em";
          $stmt = $conn->prepare($sql);
         $stmt->execute(array(
-            ':cp' => $_POST[username],
-            ':cn' => $_POST[companyname],
-            ':web' => $_POST[website],
-            ':add' => $_POST[address],
-            ':city' => $_POST[city],
-            ':coun' => $_POST[country],
-            ':code' => $_POST[postcode],
-            ':com' => $_POST[comment],
-            ':em' => $_POST[email],
-            ':im'=>$_POST[image]
+            ':cp' => $_POST['username'],
+
+            ':web' => $_POST['website'],
+            ':add' => $_POST['address'],
+            ':city' => $_POST['city'],
+            ':coun' => $_POST['country'],
+            ':code' => $_POST['postcode'],
+            ':com' => $_POST['comment'],
+            ':em' => $_POST['email'],
+            ':im'=>$_POST['fnamee']
         ));
         $count = $stmt->rowCount();
         resetvalues("Freelancer");
@@ -89,18 +92,18 @@ if(isset($_POST['updt_submit']))
 
     }
     else{
-        $sql="UPDATE freelancer SET contactperson=:cp,email=:em,companyname=:cn,website=:web,address=:add,city=:city,state=:coun,postcode= :code ,comment=:com WHERE email=:em";
+        $sql="UPDATE freelancer SET contactperson=:cp,email=:em,website=:web,address=:add,city=:city,state=:coun,postcode=:code ,comment=:com WHERE email=:em";
          $stmt = $conn->prepare($sql);
         $stmt->execute(array(
-            ':cp' => $_POST[username],
-            ':cn' => $_POST[companyname],
-            ':web' => $_POST[website],
-            ':add' => $_POST[address],
-            ':city' => $_POST[city],
-            ':coun' => $_POST[country],
-            ':code' => $_POST[postcode],
-            ':com' => $_POST[comment],
-            ':em' => $_POST[email]
+            ':cp' => $_POST['username'],
+
+            ':web' => $_POST['website'],
+            ':add' => $_POST['address'],
+            ':city' => $_POST['city'],
+            ':coun' => $_POST['country'],
+            ':code' => $_POST['postcode'],
+            ':com' => $_POST['comment'],
+            ':em' => $_POST['email']
         ));
         $count = $stmt->rowCount();
         resetvalues("Freelancer");
