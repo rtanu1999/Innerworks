@@ -17,6 +17,17 @@
           <link rel="stylesheet" href="css/job.css">
     <link rel="stylesheet" href="css/collage.css">
     <style>
+    input[type=button]:hover {
+
+    font-size: 20px;
+    font-family: 'Raleway';
+    font-weight: bold;
+    line-height: 0.8;
+    color:black;
+
+
+
+}
     #h_inner font{
       font-family: Monotype Corsiva !important;
     }
@@ -443,13 +454,13 @@
                      <span class="symbol-input100"><i class="fas fa-briefcase"></i></span>
                </div>
               <div class="image_div col-md-12 validate-input m-b-10">
-                   <div style="font-family: 'Raleway';font-weight: bold;font-size: 15px;">Upload Image:
+                   <div style="font-family: 'Raleway';font-weight: bold;font-size: 15px;">
 
                  <!--<input type="file" id="img" name="file" / style="font-family: 'Raleway';font-weight: bold;display:inline-block;">-->
                <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
                     <div id="drag_upload_file">
-                      <p><abbr title="Click here to choose image" style="border: none;"><input type="button" name="tooltip" value="Select Image" onclick="file_explorer();" style="width: 100%;border-radius: 50%;height: 5%;padding-bottom: 5px;  color: gray; background: white; font-weight: bold;" required=""></abbr></p>
-                      
+                      <p><abbr title="Click here to choose image" style="border: none;"><input type="button" name="tooltip" value="Select Image" onclick="file_explorer();" style="width: 100%;border-radius: 50%;height: 5%;padding-bottom: 5px;font-weight: bold;" required=""></abbr></p>
+
                       <input type="file" / id="selectfile">
                        <input type="hidden" id="filename" name="fnamee">
 
