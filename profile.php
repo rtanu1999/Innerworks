@@ -25,6 +25,47 @@ include_once 'DbConnection/DbConnectionHelper.php';
   <link rel="stylesheet" href="assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="assets/css/argon.css" type="text/css">
+  <style>
+  #selectfile {
+    display: none;
+}
+  </style>
+  <script type="text/javascript">
+    var fileobj;
+    function upload_file(e) {
+      e.preventDefault();
+      fileobj = e.dataTransfer.files[0];
+      ajax_file_upload(fileobj);
+    }
+
+    function file_explorer() {
+      document.getElementById('selectfile').click();
+      document.getElementById('selectfile').onchange = function() {
+          fileobj = document.getElementById('selectfile').files[0];
+        ajax_file_upload(fileobj);
+      };
+    }
+
+    function ajax_file_upload(file_obj) {
+      if(file_obj != undefined) {
+          var form_data = new FormData();
+          form_data.append('file', file_obj);
+        $.ajax({
+          type: 'POST',
+          url: 'upload_image_freelance.php',
+          contentType: false,
+          processData: false,
+          data: form_data,
+          success:function(response) {
+            //alert(response);
+  		  $('#showresult').append('file Uploaded Successfully');
+            $('#selectfile').val('');
+  		  $('#filename').val(response);
+          }
+        });
+      }
+    }
+</script>
 </head>
 
 <body>
@@ -203,7 +244,19 @@ include_once 'DbConnection/DbConnectionHelper.php';
                 <div class="pl-lg-4">
                   <div class="row">
 <!------------------------------->
-                    <input type="file" name="image" id="image" value="upload/<?php echo $_SESSION['image']; ?>" >
+<div class="col-lg-6">
+  <div class="form-group">
+<input type="button" value="Select File" onclick="file_explorer();" style="width: fit-content !important;">
+
+                    <input type="file" id="selectfile">
+                	<input type="hidden" id="filename" name="fnamee" >
+                </div></div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
+                  </div>
+                </div>
+              </div>
                    <!------------------------------->
                  </div><div class="row">
                     <div class="col-lg-6">
