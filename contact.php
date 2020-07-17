@@ -72,6 +72,38 @@ if(isset($_POST['submit']))
     <?php include "CommonFiles.php"?>
       <!-- <link rel="stylesheet" href="contact.css"> -->
       <style>
+      .location-block .contentarea p {
+      font-size: 13px;
+      padding: 0 10px;
+      min-height: auto;
+      color:black !important;
+  }
+      .location-block .contentarea h5 a {
+    color: #fff;
+    padding: 10px 0;
+    display: block;
+    position: relative;
+    transition-property: color;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+      .location-block .contentarea {
+    min-height: 150px;
+    border: solid 2px #eaeaea;
+    padding: 0 0 15px 0;
+}
+.location-block .contentarea h5 {
+    background: #ffc114;
+    color: #fff;
+    margin: 0 0 10px;
+    text-align: center;
+    font-size: 18px;
+}
+.line-break {
+    display:block;
+}
       .padWala{}
       #contact h2{color: #fff;}
       #contact p{color: #fff;}
@@ -160,6 +192,39 @@ if(isset($_POST['submit']))
     <div class="container">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2070743715453!2d77.69972801482191!3d12.958597390864403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1232fbfd3173%3A0xcf98b558f607ed3b!2sInnerwork%20Solutions%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1589224813152!5m2!1sen!2sin" width="1143" height="450" frameborder="1" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
+  <div class="container">
+    <div style="margin-top: 30px !important;">
+        <h2 style="color:black;"><b>Other Locations</b></h2></div>
+        <div class="location-block clearfix">
+        <div class="col-md-4 col-xs-12" style="padding-bottom:10px;">
+        <div class="contentarea" style="height:auto !important;">
+        <h5><a href=#>Kolkata</a></h5>
+        <p><span class="line-break">229/3 Vivekananda Pally, Kolkata - 700065 (India)</span>
+        <span class="line-break"><i class="fa fa-phone" aria-hidden="true">&nbsp;</i>  (080)-4209-2269)</span>
+        <span class="line-break"><i class="fa fa-envelope-o" aria-hidden="true">&nbsp;</i> <a href="mailto:info@innerworkindia.com">info@innerworkindia.com</a></span></p>
+                </div>
+        </div>
+
+        <div class="col-md-4 col-xs-12" style="padding-bottom:10px;">
+        <div class="contentarea" style="height:auto !important;">
+        <h5><a href=#>Delhi</a></h5>
+        <p><span class="line-break">B-171/172, first fllor, Nehru Vihar, Delhi - 110054 (India)</span>
+        <span class="line-break"> <i class="fa fa-phone" aria-hidden="true">&nbsp;</i>  (080)-4209-2269)</span>
+        <span class="line-break"><i class="fa fa-envelope-o" aria-hidden="true">&nbsp;</i> <a href="mailto:info@innerworkindia.com">info@innerworkindia.com</a></span></p>
+              </div>
+        </div>
+</div>
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
 </section>
 
 <?php include_once 'Footer.php'; ?>
