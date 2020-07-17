@@ -45,8 +45,10 @@ if(isset($_POST['submit1'])) {
                                             $skill = $_POST['hiskill'];
                                             $type="Job";
                                             $status = false;
+                                            $recruiterid=$_SESSION['recruiterid'];
+                                            $recruitertype=$_SESSION['type'];
 
-                                          $stmt = $conn->prepare('insert into jobpost (jobTitle, company, email, jobType, location, minSalary, maxSalary, cpname, cpnum, j_desc, status, exp, education,about_comp,type,skills) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
+                                          $stmt = $conn->prepare('insert into jobpost (jobTitle, company, email, jobType, location, minSalary, maxSalary, cpname, cpnum, j_desc, status, exp, education,about_comp,type,skills,recruiterid,recruitertype) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
                                                     $stmt->bindParam(1, $jobTitle);
                                                     $stmt->bindParam(2, $company);
                                                     $stmt->bindParam(3, $email);
@@ -63,6 +65,8 @@ if(isset($_POST['submit1'])) {
                                                     $stmt->bindParam(14, $about_comp);
                                                     $stmt->bindParam(15, $type);
                                                     $stmt->bindParam(16, $skill);
+                                                    $stmt->bindParam(17, $recruiterid);
+                                                    $stmt->bindParam(18, $recruitertype);
 
                                                     $stmt->execute();
 
@@ -126,8 +130,10 @@ if(isset($_POST['submit2'])) {
 
                                             $status = false;
                                             $type= "Internship";
+                                            $recruiterid=$_SESSION['recruiterid'];
+                                            $recruitertype=$_SESSION['type'];
 
-                                                    $stmt = $conn->prepare('insert into jobpost (jobTitle, company, email,maxSalary, cpname, cpnum, j_desc, status, exp, education,about_comp,type) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)');
+                                                    $stmt = $conn->prepare('insert into jobpost (jobTitle, company, email,maxSalary, cpname, cpnum, j_desc, status, exp, education,about_comp,type,recruiterid,recruitertype) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)');
                                                     $stmt->bindParam(1, $intTitle);
                                                     $stmt->bindParam(2, $company);
                                                     $stmt->bindParam(3, $email);
@@ -140,6 +146,8 @@ if(isset($_POST['submit2'])) {
                                                     $stmt->bindParam(10, $education);
                                                     $stmt->bindParam(11,$about_comp);
                                                     $stmt->bindParam(12,$type);
+                                                    $stmt->bindParam(13,$recruiterid);
+                                                    $stmt->bindParam(14,$recruitertype);
 
                                                     $stmt->execute();
 
@@ -674,7 +682,7 @@ function fillinterst(Value) {
                     <form action="<?=($_SERVER['PHP_SELF'])?>" method="post" id="jobp" enctype="multipart/form-data">
                        <div id="employerFormSubmitResult"></div>
                            <p><b style="color:red;">*</b>Details</p>
-						      <hr>
+						                <hr>
                                  <div class="row">
                                     <div class="col-lg-6">
                                       <div class="form-group">
@@ -685,7 +693,7 @@ function fillinterst(Value) {
                                     <div class="col-lg-6">
                                       <div class="form-group">
                                         <label class="form-control-label" for="jobTitle">Job Title</label>
-                                        <input type="text" name="jobTitle" id="input-title" class="form-control" required="required">
+                                        <input type="text" name="jobTitle" id="input-title" class="form-control" required="required" >
                                     </div>
                                 </div>
                               </div>
