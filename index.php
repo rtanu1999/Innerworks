@@ -5,6 +5,14 @@
     <title>Innerwork Portal | IT Services | Hr Services | Digital Marketing | Startup Support</title>
     <?php include "CommonFiles.php"?>
     <link rel="stylesheet" href="css/home.css">
+    <style type="text/css">
+        @media (max-width: 480px) {
+            .imgc{
+                width: 50%;
+            }
+        }
+
+    </style>
 </head>
 <body onload="notifyMe()">
 <?php include_once 'Header.php'; ?>
@@ -212,6 +220,109 @@
         <a href="contact" class="hireBtn hireUsBtn">Hire Us</a>
     </div>
 </section>
+<br>
+
+<section id="hrService">
+    <div class="container padNone">
+        <div class="row"><h2 style="margin-left: 4%;color: #f9b805;">Clients</h2></div>
+        <div class="row serviceList">
+            <div class="col-md-2">
+
+                <img src="img/jklu.png" alt="" class="imgc">
+                <div class="num">
+                    <span></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2><strong>JK Lakshmipat University </strong></h2>
+                <p>Contact Person: Devendra Bhavsar</p>
+                <p>Contact:8824011851</p>
+                <p>Email: <a href="devendrabhavsar@jklu.edu.in">devendrabhavsar@jklu.edu.in</a></p>
+            </div>
+            <div class="col-md-2">
+
+                       <img src="img/jklu.png" alt="" class="imgc">
+                <div class="num">
+                    <span></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                    <h2><strong>JK Lakshmipat University </strong></h2>
+                <p>Contact Person: Gireesh Choudhary</p>
+                <p>Contact:9664271347</p>
+                <p>Email: <a href="gireeshkaushik@jklu.edu.in">gireeshkaushik@jklu.edu.in,</a></p>
+                <p><a href="#" style="padding-right: 10px;">gireesh8@gmail.com</a></p>
+            </div>
+
+        </div>
+        <div class="row serviceList">
+               <div class="col-md-2">
+
+                <img src="img/jgi.png" alt=""  class="imgc" style="width: 60%;">
+                <div class="num">
+                    <span></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <h2><strong>CMS Jain University </strong></h2>
+                <p>Contact Person: Manjunath A</p>
+                <p>Contact:9071228608</p>
+                <p>Email: <a href="a.manjunath@jainuniversity.ac.in">a.manjunath@jainuniversity.ac.in</a></p>
+
+            </div>
+
+            <div class="col-md-2">
+
+                       <img src="img/bseindia.png" alt="" style="margin-top: 7%;" class="imgc">
+                <div class="num">
+                    <span></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                    <h2><strong>BSE India </strong></h2>
+                <p>Contact Person:Rajeshree Gowda</p>
+                <p>Contact:</p>
+                <p>Email: <a href="#">gireesh8@gmail.com </a></p>
+                
+            </div>
+        </div><br>
+        
+
+<div class="row serviceList">
+               <div class="col-md-2">
+
+                <img src="img/qspiders.png" alt="" class="imgc">
+                <div class="num">
+                    <span></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                 <h2><strong>Q Spider & J Spider</strong></h2>
+                <p>Contact Person: Anjali A</p>
+                <p>Contact:9901940258</p>
+                <p>Email: <a href="ANJALI.A@QSPIDERS.COM">ANJALI.A@QSPIDERS.COM</a></p>
+
+            </div>
+            <div class="col-md-2">
+
+                       <img src="img/upes.png" alt="" class="imgc">
+                <div class="num">
+                    <span></span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                     <h2><strong>UPES College</strong></h2>
+                <p>Contact Person:Chandra Shekhar</p>
+                <p>Contact:7669599978</p>
+                <p>Email: <a href="chandrashekhar@ddn.upes.ac.in">chandrashekhar@ddn.upes.ac.in </a></p>
+                
+            </div>
+        </div><br>
+        </div>
+    </section><br>
+
+
+
 
 <?php include_once 'Footer.php'; ?>
 </body>
