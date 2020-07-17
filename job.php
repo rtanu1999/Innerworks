@@ -75,7 +75,7 @@ if(isset($_POST['submit1'])) {
 
 
                                         } catch (PDOException $e) {
-                                            echo '{"error":{"text":' . $e->getMessage() . '}}';
+                                          echo '{"error":{"text":' . $e->getMessage() . '}}';
                                         }
                                     }else {
                                         $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter the education required</div>";
@@ -155,7 +155,7 @@ if(isset($_POST['submit2'])) {
 
 
                                         } catch (PDOException $e) {
-                                            echo '{"error":{"text":' . $e->getMessage() . '}}';
+                                           echo '{"error":{"text":' . $e->getMessage() . '}}';
                                         }
                                     }
 
@@ -648,15 +648,101 @@ function fillinterst(Value) {
               <span class="nav-link-text">Job | Internship Posting</span>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="posts.php">
+              <i class="ni ni-single-02 text-yellow"></i>
+              <span class="nav-link-text">Your Job Posts</span>
+            </a>
+          </li>
                </ul>
        </div>
      </div>
   </div>
 </nav>
 <div class="main-content" id="panel">
-  <div class="container-fluid mt--6">
+  <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Search form -->
 
-<section id="jobApplication">
+        <!-- Navbar links -->
+        <ul class="navbar-nav align-items-center  ml-md-auto ">
+          <li class="nav-item d-xl-none">
+            <!-- Sidenav toggler -->
+            <div class="pr-3 sidenav-toggler sidenav-toggler-dark" data-action="sidenav-pin" data-target="#sidenav-main">
+              <div class="sidenav-toggler-inner">
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+                <i class="sidenav-toggler-line"></i>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item d-sm-none">
+            <a class="nav-link" href="#" data-action="search-show" data-target="#navbar-search-main">
+              <i class="ni ni-zoom-split-in"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="ni ni-bell-55"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-xl  dropdown-menu-right  py-0 overflow-hidden">
+              <!-- Dropdown header -->
+              <div class="px-3 py-3">
+                <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong> notifications.</h6>
+              </div>
+              <!-- List group -->
+              <div class="list-group list-group-flush">
+
+        <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
+          <li class="nav-item dropdown">
+            <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <div class="media align-items-center">
+                <span class="avatar avatar-sm rounded-circle">
+                  <img alt="Image placeholder" src="upload/<?php echo $_SESSION['image']; ?>">
+                </span>
+                <div class="media-body  ml-2  d-none d-lg-block">
+                  <span class="mb-0 text-sm  font-weight-bold">xxx</span>
+                </div>
+              </div>
+            </a>
+            <div class="dropdown-menu  dropdown-menu-right ">
+              <div class="dropdown-header noti-title">
+                <h6 class="text-overflow m-0">Welcome!</h6>
+              </div>
+              <a href="#!" class="dropdown-item">
+                <i class="ni ni-single-02"></i>
+                <span>Job | Internship Postings</span>
+              </a>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid mt--6">
+    <div class="row">
+    		            <div class="card-body pt-0">
+    		              <div class="row">
+    		                <div class="col">
+    		                  <div class="card-profile-stats d-flex justify-content-center">
+
+    		                  </div>
+    		                </div>
+    		              </div>
+    		              <div class="text-center">
+    		                <h5 class="h3">
+    		                  <span class="font-weight-light"></span>
+    		                </h5>
+
+    		              </div>
+    		            </div>
+    		          </div>
+    		        </div>
+    						<div class="col-xl-8 order-xl-1" style="max-width:100% !important;">
+
+<!--<section id="jobApplication">-->
 
     <div class="card">
       <div class="card-header">
@@ -998,6 +1084,32 @@ function fillinterst(Value) {
                         <input type="submit" value="Submit" name="submit2" class="btn btn-info" style="margin-top:3%;">
                   </center>  </form>
                         </div>
+                        <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+                        <script src="assets/vendor/js-cookie/js.cookie.js"></script>
+                        <script src="assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+                        <script src="assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+
+                        <!-- Argon JS -->
+                        <script src="assets/js/argon.js?v=1.2.0"></script>
+
+
+                          <script src="https://incruiter.com/assets/js/argon.js?v=1.0.0"></script>
+
+                       <script src="https://incruiter.com/assets/js/argon2.js?v=1.0.0"></script>
+                      <style>
+                      .input-group>.custom-select:not(:last-child), .input-group>.form-control:not(:last-child) {
+                          border-top-right-radius: 0;
+                          border-bottom-right-radius: 0;
+                      }</style>
+                        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+                      <!--   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
+                         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+                          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+
              <script>
                 $(document).ready(function() {
                       $("#job").click(function() {

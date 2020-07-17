@@ -117,6 +117,12 @@ include_once 'DbConnection/DbConnectionHelper.php';
                 <span class="nav-link-text">Job | Internship Posting</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="posts.php">
+                <i class="ni ni-single-02 text-yellow"></i>
+                <span class="nav-link-text">Your Job Posts</span>
+              </a>
+            </li>
 
           </ul>
 
