@@ -91,12 +91,17 @@ td {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="freelanceraction.php" >
+              <a class="nav-link active" href="freelanceraction.php" >
                 <i class="ni ni-book-bookmark text-green"></i>
                 <span class="nav-link-text">Documents</span>
               </a>
             </li>
-
+            <li class="nav-item">
+              <a class="nav-link" href="job.php">
+                <i class="ni ni-single-02 text-yellow"></i>
+                <span class="nav-link-text">Job | Internship Posting</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -227,7 +232,7 @@ td {
             <form action="uplod.php" method="post" enctype="multipart/form-data" style="width:100%">
             <?php
 				if(isset($_GET["uploaded"])){
-            
+
 						echo "<div class='alert alert-primary'><p> Documents Uploaded Successfully!!Thank You!</p>
 						</div>";
 				}

@@ -86,9 +86,15 @@ td {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="agency.php">
+              <a class="nav-link active" href="agency.php">
                 <i class="ni ni-book-bookmark text-green"></i>
                 <span class="nav-link-text">Documents</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="job.php">
+                <i class="ni ni-single-02 text-yellow"></i>
+                <span class="nav-link-text">Job | Internship Posting</span>
               </a>
             </li>
           </ul>

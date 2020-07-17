@@ -95,19 +95,28 @@ include_once 'DbConnection/DbConnectionHelper.php';
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="profile.php" >
+              <a class="nav-link active" href="profile.php" >
                 <i class="ni ni-single-02 text-yellow"></i>
                 <span class="nav-link-text">Profile</span>
               </a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="freelanceraction.php" >
+              <?php if($_SESSION['type']=="Agency"){?>
+              <a class="nav-link " href="agency.php" >
+              <?php }
+              else{ ?>
+                  <a class="nav-link " href="freelanceraction.php" ><?php } ?>
                 <i class="ni ni-book-bookmark text-green"></i>
                 <span class="nav-link-text">Document</span>
               </a>
             </li>
-
+            <li class="nav-item">
+              <a class="nav-link" href="job.php">
+                <i class="ni ni-single-02 text-yellow"></i>
+                <span class="nav-link-text">Job | Internship Posting</span>
+              </a>
+            </li>
 
           </ul>
 

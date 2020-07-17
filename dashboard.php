@@ -124,6 +124,12 @@ flex: 100% !important; width:150% !important;}
                 <span class="nav-link-text">Document</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="job.php">
+                <i class="ni ni-single-02 text-yellow"></i>
+                <span class="nav-link-text">Job | Internship Posting</span>
+              </a>
+            </li>
                  </ul>
          </div>
        </div>
