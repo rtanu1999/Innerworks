@@ -64,6 +64,7 @@ function create_session($row,$type){
         $_SESSION['pass']=$row["password"];
         $_SESSION['type']=$type;
         $_SESSION['status']=$row["status"];
+        $_SESSION['recruiterid']=$row["userid"];
 }
 
 ?>
