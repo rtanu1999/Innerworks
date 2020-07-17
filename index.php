@@ -268,7 +268,6 @@
                 <p>Contact Person: Manjunath A</p>
                 <p>Contact:9071228608</p>
                 <p>Email: <a href="a.manjunath@jainuniversity.ac.in">a.manjunath@jainuniversity.ac.in</a></p>
-
             </div>
 
             <div class="col-md-2">
