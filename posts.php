@@ -132,7 +132,7 @@ table.tbl tr th {
      </div>
   </div>
 </nav>
-<div class="main-content" id="panel">
+<div class="main-content" id="panel" style="width:fit-content;">
   <nav class="navbar navbar-top navbar-expand navbar-dark bg-default border-bottom">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -194,7 +194,7 @@ table.tbl tr th {
       </div>
     </div>
   </nav>
-  <div class="container-fluid mt--6">
+  <div class="container-fluid mt--6" style="padding-bottom:10px;">
     <div class="row">
     		            <div class="card-body pt-0">
     		              <div class="row">
@@ -217,16 +217,7 @@ table.tbl tr th {
 
 <!--<section id="jobApplication">-->
 
-    <div class="card">
-      <div class="card-header">
-        <div class="row align-items-center">
-          <div class="col-8">
 
-          </div>
-
-        </div>
-      </div>
-      <div class="card-body">
         <?php
 
         $stmt = $conn->prepare('select * from jobpost where recruiterid=?');
