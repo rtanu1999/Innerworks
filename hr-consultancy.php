@@ -238,13 +238,13 @@ position:fixed;
     </div>
 </section>
 <!---sidebarr--->
-<div class="sidebarr">
+<!--<div class="sidebarr">
  <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_9Y2slA57b7zMZTTBCSBzqIvvqLqOKGCt_xPzEACv5nPoVg/viewform?usp=sf_link" target="_blank"><b><i>I'm a Job Seeker</i></b></a>
  </div>
  <br>
 <div class="sideb">
  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdmIPyPDy79YjKYATifZmGstpNAmGom2nVoPv0N1HVar3BFfg/viewform?usp=sf_link" target="_blank"><b><i>I'm a Employee</i></b></a>
-</div>
+</div>-->
 <!------*****-->
 
 <?php include_once 'Footer.php'; ?>
