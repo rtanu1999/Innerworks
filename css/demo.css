@@ -92,7 +92,6 @@
 	
 /*}*/
 
-
 .navbar-header
 {
 	width: auto;
@@ -110,7 +109,11 @@
 	{
 		width: auto;
 		height: 10px;
-	}	
+	}
+	#h_inner
+	{
+		margin-top: 45px;
+	}
 }
 @media only screen and (max-width: 2448px) 
 {
@@ -128,6 +131,10 @@
 		width: auto;
 		height: 9em;
 	}	
+	#h_inner
+	{
+		margin-top: -15px;
+	}
 }
 @media only screen and (max-width: 600px) 
 {
@@ -135,7 +142,11 @@
 	{
 		width: auto;
 		height: 7.5em;
-	}	
+	}
+	#h_inner
+	{
+		margin-top: -15px;
+	}
 }
 @media only screen and (max-width: 600px) 
 {
@@ -153,11 +164,10 @@
 		width: auto;
 		height: 6em;
 	}	
-	#h_inner
+  #h_inner
 	{
-    font-size: 150%;
-	}
-	
+		margin-top: -5px;
+	}	
 }
 
 @media only screen and (max-width: 384px) 
@@ -219,10 +229,13 @@
 	{
 		width: auto;
 		height: 4em;
+		
 	}	
 	#h_inner
 	{
-    font-size: 140%;
+    font-size: 120%;
+		margin-left: 40px;
+		top: -40px;
 	}
 	#h_inner font
 	{
