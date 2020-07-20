@@ -248,7 +248,6 @@ var elemm = document.getElementById('hinterest');
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
-
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
@@ -273,7 +272,7 @@ function showResult(str) {
       document.getElementById("livesearch").style.border="1px solid #A5ACB2";
     }
   }
-  xmlhttp.open("GET","getSearch.php?q="+str,true);
+  xmlhttp.open("GET","getSearch.php?val=1&q="+str,true);
   xmlhttp.send();
 }
 function showinterestResult(str) {
@@ -290,19 +289,21 @@ function showinterestResult(str) {
       document.getElementById("liveisearch").style.border="1px solid #A5ACB2";
     }
   }
-  xmlhttp.open("GET","getsearch.php?q="+str,true);
+  xmlhttp.open("GET","getsearch.php?val=2&q="+str,true);
   xmlhttp.send();
 }
 </script>
 <script>
 function fill(Value) {
    //Assigning value to "search" div in "search.php" file.
+    
    $('#myInput').val(Value);
    //Hiding "display" div in "search.php" file.
 
 }
 function fillinterst(Value) {
    //Assigning value to "search" div in "search.php" file.
+    
    $('#uInput').val(Value);
    //Hiding "display" div in "search.php" file.
 
@@ -467,8 +468,8 @@ if(isset($_POST['submit'])) {
                 if ($_POST['education'] != null && !empty($_POST['education'])) {
                     if ($_POST['email'] != null && !empty($_POST['email'])) {
                         if ($_POST['mobno'] != null && !empty($_POST['mobno']) && (strlen(($_POST['mobno'])) == 10)) {
-                            if ($_POST['skill'] != null && !empty($_POST['skill'])) {
-                                if ($_POST['interest'] != null && !empty($_POST['interest'])) {
+                            if ($_POST['hiskill'] != null && !empty($_POST['hiskill'])) {
+                                if ($_POST['hinterest'] != null && !empty($_POST['hinterest'])) {
                                      if ($_POST['exp'] != null && !empty($_POST['exp'])) {
 
 
@@ -501,11 +502,11 @@ if(isset($_POST['submit'])) {
 
                                // move_uploaded_file($_FILE['fnamee']['tmp_name'],"../InternshipApplicants/".$_FILE['fnamee']['name']);$_FILES['attach1']['tmp_name']
 
-		                   $fm =  $_FILES['attach1']['name'];
-		                   $fo =  $_FILES['attach1']['tmp_name'];
+		                   $fm =  $_POST['fnamee'];
+		                   $fo =  $_FILES['file']['tmp_name'];
 		                   $final_path = $uploadFolder."/".$fm;
 
-		                     $result =	move_uploaded_file($_FILES['attach1']['tmp_name'],$final_path);
+		                //     $result =	move_uploaded_file($_FILES['file']['tmp_name'],$final_path);
 
 
                                 $name = $_POST['name'];
@@ -514,8 +515,8 @@ if(isset($_POST['submit'])) {
                                 $education = $_POST['education'];
                                 $contactNumber = $_POST['mobno'];
                                 $email = $_POST['email'];
-                                $skill = $_POST['skill'];
-                                $interest = $_POST['interest'];
+                                $skill = $_POST['hiskill'];
+                                $interest = $_POST['hinterest'];
                                 $exp = $_POST['exp'];
                                 $imageName = $_POST[$fo];
 
@@ -801,7 +802,7 @@ if(isset($_POST['submit'])) {
   <div id="drag_upload_file">
     <p>Drop file here</p>
     <p>or</p>
-    <p><input type="button" value="Select File" onclick="file_explorer();" style="width:fit-content !important;" ></p>
+    <p><input type="button" value="Select File" onclick="file_explorer();" style="width:fit-content !important;" name="attach1"></p>
     <input type="file" id="selectfile">
 	<input type="hidden" id="filename" name="fnamee">
   </div>

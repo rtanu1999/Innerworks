@@ -97,8 +97,8 @@ if(isset($_POST["edu"]))
                 <div class="row job-info no-margin-left no-margin-right" style="margin-left:1%;">
 
         <ul class="list-group" style="paddding-left:6% !important;">
-          <li class="list-group-item" title="' .$row['type'] .'" data-etracking="true" onclick="javascript:fillIntype(this.innerHTML);" style="cursor:pointer;"><i class="fa fa-briefcase"></i>&nbsp;' .$row['type'] .'
-           </li>
+          <a href="#" id="tp"><li class="list-group-item" title="' .$row['type'] .'" data-etracking="true" onclick="javascript:fillIntype(this.innerHTML);" style="cursor:pointer;"><i class="fa fa-briefcase"></i>&nbsp;' .$row['type'] .'
+           </li></a>
           <li class="list-group-item" title="Compensation" data-etracking="true" data-ecategory="job_card_compensation" onclick="javascript:fillInsalary(this.innerHTML);" style="cursor:pointer;">
         <i class="fa fa-inr" ></i>' .$row['maxSalary'] .'
           </li>
