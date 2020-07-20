@@ -136,7 +136,7 @@ window.addEventListener('load', function () {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand " href="index" title="Innerer Work"><img src="img/logo2.jpg" alt="Innerer Work" class="logo" style="margin-top: -2px;">
+                    <a class="navbar-brand " href="index" title="Innerer Work" id='h_inner' class="inner"><img src="img/logo2.jpg" alt="Innerer Work" class="logo" style="margin-top: -2px;">
                     </a>
                     <h6 id='h_inner' class="inner"><font face = "Monotype Corsiva" size = "10" >  </font></h6>
 
