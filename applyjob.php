@@ -1,8 +1,10 @@
-<style>
+<?php
+$jid=$_GET['id'];
+?><style>
 #drop_file_zone {
-    background-color: #EEE; 
+    background-color: #EEE;
     border: #999 5px dashed;
-    width: 100%; 
+    width: 100%;
     height: auto;
     padding: 8px;
     font-size: 14px;
@@ -33,10 +35,10 @@ ul li {
   cursor: pointer;
   position: relative;
  /* padding: 12px 8px 12px 40px; *?
-  
+
   font-size: 14px;
   transition: 0.2s;
-  
+
 
   /* make the list items unselectable */
   -webkit-user-select: none;
@@ -45,12 +47,12 @@ ul li {
   user-select: none;
 }
 
-/* Set all odd list items to a different color (zebra-stripes) 
+/* Set all odd list items to a different color (zebra-stripes)
 ul li:nth-child(odd) {
   background: #f9f9f9;
 }*/
 
-/* Darker background-color on hover 
+/* Darker background-color on hover
 ul li:hover {
   background: #ddd;
 }*/
@@ -141,7 +143,7 @@ ul li.checked::before {
     fileobj = e.dataTransfer.files[0];
     ajax_file_upload(fileobj);
   }
- 
+
   function file_explorer() {
     document.getElementById('selectfile').click();
     document.getElementById('selectfile').onchange = function() {
@@ -149,10 +151,10 @@ ul li.checked::before {
       ajax_file_upload(fileobj);
     };
   }
- 
+
   function ajax_file_upload(file_obj) {
     if(file_obj != undefined) {
-        var form_data = new FormData();                  
+        var form_data = new FormData();
         form_data.append('file', file_obj);
       $.ajax({
         type: 'POST',
@@ -169,7 +171,7 @@ ul li.checked::before {
       });
     }
   }
-  
+
   // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -205,7 +207,7 @@ function newElement() {
   var li = document.createElement("li");
   var inputValue = document.getElementById("myInput").value;
   var t = document.createTextNode(inputValue);
-  li.appendChild(t); 
+  li.appendChild(t);
   if (inputValue === '') {
     alert("You must write something!");
   } else {
@@ -215,8 +217,8 @@ function newElement() {
   document.getElementById("livesearch").style.display = "none";
     var elem = document.getElementById('hskill');
     var old  = elem.value;
-    old = old + ',' + inputValue; 
-   
+    old = old + ',' + inputValue;
+
    document.getElementById("hskill").value = old;
 
   var span = document.createElement("SPAN");
@@ -246,8 +248,8 @@ function newElement1() {
   document.getElementById("liveisearch").style.display = "none";
 var elemm = document.getElementById('hinterest');
     var oldd  = elemm.value;
-    oldd = oldd + ',' + inputValue; 
-   
+    oldd = oldd + ',' + inputValue;
+
    document.getElementById("hinterest").value = oldd;
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -304,18 +306,19 @@ function fill(Value) {
    //Assigning value to "search" div in "search.php" file.
    $('#myInput').val(Value);
    //Hiding "display" div in "search.php" file.
-   
+
 }
 function fillinterst(Value) {
    //Assigning value to "search" div in "search.php" file.
    $('#uInput').val(Value);
    //Hiding "display" div in "search.php" file.
-   
+
 }
 </script>
 <?php
- $jid=$_GET['id'];
- 
+
+
+
 
 include "DbConnection/DbConnectionHelper.php";
 
@@ -326,7 +329,7 @@ $mail = new PHPMailer();
 
 include_once "WebUtils.php";
 $utils = new WebUtils();
-try{
+
 
         $status = true;
         $stmt = $conn->prepare("select * from jobpost where id='$jid' and status = ?");
@@ -341,25 +344,16 @@ try{
 			$jtitle=$row['jobTitle'];
 			$jcompany=$row['company'];
 			$jtype=$row['jobType'];
-			$jmaxsal=$row['maxSalary']; 
+			$jmaxsal=$row['maxSalary'];
 			$jlocattion=$row['location'];
-			$jdegree=$row['job_educationdegree_required']; 
-			$jedu=$row['job_min_experience_required'];
-			$jdtime=$row['dateTime'];
-			$jdesccc=$row['j_desc'];
-			$jrefamt=$row['job_referalamt'];
-			$type=['type'];
-	
+				$type=$row['type'];
+
 		}
-        
+
         }
-        
-               
-        }
-        catch(PDOException $e)
-        {
-            echo '{"error":{"text":'. $e->getMessage() .'}}';
-        }
+
+
+
 
 $result = $name = $gender = $city = $education = $email = $contactNumber = $skill = $interest = $exp = "";
 $mailSendToAdminJobSeeker = $mailSendToUserJobSeeker = false;
@@ -374,13 +368,13 @@ if(isset($_POST['submit'])) {
                             if ($_POST['hiskill'] != null && !empty($_POST['hiskill'])) {
                                 if ($_POST['hinterest'] != null && !empty($_POST['hinterest'])) {
                                      if ($_POST['exp'] != null && !empty($_POST['exp'])) {
-        
-                                
-                            
+
+
+
                             try {
-                             
-		                    		
-                            
+
+
+
                                 $name = $_POST['name'];
                                 $gender = $_POST['gender'];
                                 $city = $_POST['city'];
@@ -395,13 +389,14 @@ if(isset($_POST['submit'])) {
 								$typee=$_POST['typee'];
                                 $adminEmail = 'info@innerworkindia.com';
 
-                                //Admin Email
+                                Admin Email
                                 $mailSendToAdminJobSeeker = $utils->adminMailToJobSeeker($mail, $name, $contactNumber, $email, $city, $education,$skill,$interest, $exp, $file);
                                 if($mailSendToAdminJobSeeker)
-                                {
+                               {
                                     $mailSendToUserJobSeeker = $utils->userMailToJobSeeker($mail, $name, $email);
                                     if($mailSendToUserJobSeeker)
-                                    {if($typee=="Job"){
+                                    {
+                                      if($typee=="Job"){
                                         $stmt = $conn->prepare('insert into jobseeker (name, gender, city, education, email, mobileNum, skill, interest, exp, file, jobpost_id) VALUES(?,?,?,?,?,?,?,?,?,?,?)');
                                         $stmt->bindParam(1, $name);
                                         $stmt->bindParam(2, $gender);
@@ -430,18 +425,18 @@ if(isset($_POST['submit'])) {
                                         $stmt->bindParam(11, $jppid);
                                         $stmt->execute();
                                     }
-	
+
 
                                         $result = "<div class='alert alert-success alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Success!</strong> Thanks applying for Job, will get you back soon.</div>";
                                     }
-                                }
+                               }
 
 
                            } catch (PDOException $e) {
                                 echo '{"error":{"text":' . $e->getMessage() . '}}';
                             }
 
-                        } 
+                        }
                          else
                         {
                             $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Interest</div>";
@@ -474,14 +469,14 @@ if(isset($_POST['submit'])) {
             }
         } else {
             $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please Enter Your Sweet Name.</div>";
-        }  
-        
+        }
+
     } else {
             $result = "<div class='alert alert-danger alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Alert!</strong> Please select your experience</div>";
         }
 }
 
-  
+
         ?>
 
 <!doctype html>
@@ -566,7 +561,7 @@ if(isset($_POST['submit'])) {
                 </div>
                 <div id="oneD">
                     <?php echo $result; ?>
-                    <form action="<?=($_SERVER['PHP_SELF'])?>" method="post" class="formJob" style="border: 2px solid #999;padding: 2%;width:90%;margin-left: 5%;" enctype="multipart/form-data">
+                    <form action="applyjob.php?id=<?php echo $jid;?>" method="post" class="formJob" style="border: 2px solid #999;padding: 2%;width:90%;margin-left: 5%;" enctype="multipart/form-data">
                         <div id="candidateFormResult"></div>
 						<p><b style="color:red;">*</b> Personal Information</p>
 						<hr>
@@ -577,9 +572,9 @@ if(isset($_POST['submit'])) {
                             </div>
                             <div class="col-md-6">
                                 <label for="email" style="color:#000;">Enter Your Email Address</label>
-                                <input type="email" name="email" class="form-control" required="required" id="field" > 
+                                <input type="email" name="email" class="form-control" required="required" id="field" >
                             </div>
-                          
+
                         </div>
                         <div class="row form-group">
                               <div class="col-md-6">
@@ -590,8 +585,8 @@ if(isset($_POST['submit'])) {
                                     <option value="Female">Female</option>
                                 </select>
                             </div>
-                        
-                          
+
+
                             <div class="col-md-6">
                                 <label for="city" style="color:#000;">City</label>
                                 <input type="text" name="city" class="form-control" required="required" id="field" >
@@ -608,10 +603,10 @@ if(isset($_POST['submit'])) {
                             </div>
                         </div>
                        <hr>
-					   
+
 					   <p><b style="color:red;">*</b> Career Information</p>
-					   <hr> 
-                     
+					   <hr>
+
 						 <div class="row form-group">
 						  <div class="col-md-12">
                                 <label for="experience" style="color:#000;">Total Experience</label>
@@ -632,10 +627,10 @@ if(isset($_POST['submit'])) {
                                 <input type="text" name="skill" class="form-control" id="myInput" onkeyup="showResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
 								 <span onclick="newElement()" class="addBtn">Add</span>
 								 <div id="livesearch"></div>
-								 
+
 								 <input type="hidden" name="hiskill" class="form-control" id="hskill" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
 								  <input type="hidden" name="jpid" value="<?php echo $jid;?>" class="form-control" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
-                                   <input type="hidden" name="typee" value="<?php echo $type;?>" class="form-control" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
+                                   <input type="hidden" name="typee" value="<?php echo $type;?>">
 
                             </div>
 				        </div>
@@ -645,15 +640,15 @@ if(isset($_POST['submit'])) {
                             <div id="uDIV" class="col-md-12">
                                 <label for="skill" style="color:#000;">Interest</label>
                                 <input type="text" name="interest" class="form-control" id="uInput" onkeyup="showinterestResult(this.value)" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
-								 <span onclick="newElement1()" class="uBtn">Add</span> 
+								 <span onclick="newElement1()" class="uBtn">Add</span>
 								 <div id="liveisearch"></div>
 								  <input type="hidden" name="hinterest" class="form-control" id="hinterest" style="margin:0;border:none;border-radius:0;width:75%;  padding: 10px;float: left;font-size: 16px;">
                             </div>
 				        </div>
 						<ul id="uUL">
 						</ul>
-                         
-						 
+
+
         <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
   <div id="drag_upload_file">
     <p>Drop file here</p>
@@ -662,12 +657,12 @@ if(isset($_POST['submit'])) {
     <input type="file" id="selectfile">
 	<input type="hidden" id="filename" name="fnamee">
   </div>
-</div>	 
+</div>
 <div id="showresult" class="row form-group" style="margin-bottom:3%;"></div>
-   
+
                         <input type="submit" value="Submit" name="submit" class="form-control" style="margin-top:3%;"/>
                     </form>
-					
+
                 </div>
             </div>
         </div>

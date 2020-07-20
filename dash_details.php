@@ -6,19 +6,49 @@
     <?php include 'CommonFiles.php'; ?>
 
     <link rel="stylesheet" href="css/jobseeker.css">
-    <script src="js/menu.js"></script>
-    <script type="text/javascript" src="js/jobseeker.js"></script>
+    <style>
+    table.tbl {
+        width: 100%;
+    }
+    table{
+      border: 2px;
+        background-color: transparent;
+        border-spacing: 0;
+        border-collapse: collapse;
+        display: table;
+
+        box-sizing: border-box;
+    border:1px solid lightgrey;
+
+    }
+    table,th,td{border:1px solid lightgrey;}
+    thead {
+        display: table-header-group;
+        vertical-align: middle;
+        border-color: inherit;
+    }
+    table.tbl tr th {
+        font-family: GraphikRegular;
+        border: 1px solid #d3d3d3;
+        background: #f9b805;
+        color: #fff;
+        text-align: center;
+        padding: .5%;
+        font-size: 13px;
+    }
+
+    </style>
 
 </head>
 <body>
 <div id="main">
-    <?php include 'Header.php'; ?>
+
 
     <section id="enquiries">
         <div class="container-fluid">
             <div id="enquiryDataResult"></div>
             <?php
-            include_once '../DbConnection/DbConnectionHelper.php';
+            include_once 'DbConnection/DbConnectionHelper.php';
             if(isset($_GET['id']))
 {
     $id = $_GET['id'];
@@ -62,7 +92,7 @@ if($type=="Job"){
                         <th style="width:10%;">Interest</th>
                         <th style="width:4%;">Exp</th>
                         <th style="width:6%;">File</th>
-                        <th style="width:7%;">Delete</th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -91,7 +121,6 @@ if($type=="Job"){
                                 <?php echo $row['file']; ?>;
                                 </a>
                             </td>
-                          <td><button type="button" class="deleteBtn" style ="width:100%" onclick="return deleteJobseeker(<?php echo $row['id']; ?>)">Delete</button></td>
 
 
                         </tr>
@@ -102,6 +131,10 @@ if($type=="Job"){
                     </tbody>
                 </table>
                 <?php
+            }
+            else{
+                echo "<div class='alert alert-info alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Info!</strong> There is no Enquiries available yet.</div>";
+
             }
 }
             else
@@ -127,7 +160,7 @@ if($type=="Job"){
                         <th style="width:10%;">Interest</th>
                         <th style="width:4%;">Exp</th>
                         <th style="width:6%;">File</th>
-                        <th style="width:7%;">Delete</th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -156,7 +189,7 @@ if($type=="Job"){
                                 <?php echo $row['fnamee']; ?>;
                                 </a>
                             </td>
-                          <td><button type="button" class="deleteBtn" style ="width:100%" onclick="return deleteintern(<?php echo $row['id']; ?>)">Delete</button></td>
+
 
 
                         </tr>
@@ -167,6 +200,10 @@ if($type=="Job"){
                     </tbody>
                 </table>
                 <?php
+            }
+            else{
+                echo "<div class='alert alert-info alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Info!</strong> There is no Enquiries available yet.</div>";
+                echo $type;
             }
             }else{
                 echo "<div class='alert alert-info alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Info!</strong> There is no Enquiries available yet.</div>";

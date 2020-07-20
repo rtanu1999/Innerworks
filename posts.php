@@ -253,7 +253,7 @@ table.tbl tr th {
                 ?>
                 <tr id="<?php echo $row['id']; ?>">
                     <td><?php echo $cnt; ?></td>
-                    <td><a href="details?id=<?php echo $row['id']; ?>"><button  class="btn btn-info" style = "width:100%"><?php echo $row['jobTitle']; ?></button></a></td>
+                    <td><a href="dash_details?id=<?php echo $row['id']; ?>" target="_blank"><button  class="btn btn-info" style = "width:100%"><?php echo $row['jobTitle']; ?></button></a></td>
                     <td><?php echo $row['company']; ?></td>
                     <td><?php echo $row['type']; ?></td>
                     <td><?php echo $row['email']; ?></td>
