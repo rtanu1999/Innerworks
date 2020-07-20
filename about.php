@@ -40,7 +40,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="img/about.jpg" alt="">
+                <img src="img/aboutinnerwork.jpg" alt="">
             </div>
             <div class="col-md-6">
                 <h5>About Us</h5>
