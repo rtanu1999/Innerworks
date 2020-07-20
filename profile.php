@@ -289,14 +289,14 @@ include_once 'DbConnection/DbConnectionHelper.php';
                     </div>
                   </div>
                   <div class="row">
-
+<?php if($_SESSION['type']=="Agency"){?>
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-last-name">Website</label>
                         <input type="text" id="input-last-name" name="website" class="form-control" placeholder="Last name" value=" <?php echo $_SESSION['website']; ?>">
                       </div>
                     </div>
-                      <?php if($_SESSION['type']=="Agency"){?>
+
                     <div class="col-lg-6">
                       <div class="form-group">
                         <label class="form-control-label" for="input-first-name">Company name</label>

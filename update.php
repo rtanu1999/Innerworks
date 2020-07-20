@@ -70,12 +70,12 @@ if(isset($_POST['updt_submit']))
     }
     if($val=="Freelancer"){
          if(!empty($_POST['fnamee'])){
-         $sql="UPDATE freelancer SET contactperson=:cp,email=:em,website=:web,address=:add,city=:city,state=:coun,postcode=:code ,comment=:com,image=:im WHERE email=:em";
+         $sql="UPDATE freelancer SET contactperson=:cp,email=:em,address=:add,city=:city,state=:coun,postcode=:code ,comment=:com,image=:im WHERE email=:em";
          $stmt = $conn->prepare($sql);
         $stmt->execute(array(
             ':cp' => $_POST['username'],
 
-            ':web' => $_POST['website'],
+
             ':add' => $_POST['address'],
             ':city' => $_POST['city'],
             ':coun' => $_POST['country'],
@@ -92,12 +92,12 @@ if(isset($_POST['updt_submit']))
 
     }
     else{
-        $sql="UPDATE freelancer SET contactperson=:cp,email=:em,website=:web,address=:add,city=:city,state=:coun,postcode=:code ,comment=:com WHERE email=:em";
+        $sql="UPDATE freelancer SET contactperson=:cp,email=:em,address=:add,city=:city,state=:coun,postcode=:code ,comment=:com WHERE email=:em";
          $stmt = $conn->prepare($sql);
         $stmt->execute(array(
             ':cp' => $_POST['username'],
 
-            ':web' => $_POST['website'],
+          
             ':add' => $_POST['address'],
             ':city' => $_POST['city'],
             ':coun' => $_POST['country'],
