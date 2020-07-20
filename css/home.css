@@ -88,6 +88,7 @@ a.hireUsBtn::before{content: "";background-color: #e0e0e0;height: 150px;top: -15
     .findd h4 {font-size: 16px;}
     .findd input[type="text"] {font-size: 15px;}
     .findd input[type="submit"]{width: 45%;}
+    #jgi .imgjgi{width: 90px;}
 }
 @media (max-width: 768px) {
     #slider .carousel-caption p {display: none;}

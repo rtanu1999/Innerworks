@@ -228,98 +228,98 @@
         <div class="row serviceList">
             <div class="col-md-2">
 
-                <img src="img/jklu.png" alt="" class="imgc">
+                <a href="https://www.jklu.edu.in/faculty/devendra-bhavsar/"><img src="img/jklu.png" alt="" class="imgc"></a>
                 <div class="num">
                     <span></span>
                 </div>
             </div>
             <div class="col-md-4">
-                <h2><strong>JK Lakshmipat University </strong></h2>
-                <p>Contact Person: Devendra Bhavsar</p>
-                <p>Contact:8824011851</p>
-                <p>Email: <a href="devendrabhavsar@jklu.edu.in">devendrabhavsar@jklu.edu.in</a></p>
+                <h2 ><strong>JK Lakshmipat University </strong></h2>
+                <p><strong>Contact Person: Devendra Bhavsar</strong></p>
+                <p><strong>Contact:8824011851</strong></p>
+                <p><strong>Email: <a href="devendrabhavsar@jklu.edu.in">devendrabhavsar@jklu.edu.in</a></strong></p>
             </div>
             <div class="col-md-2">
 
-                       <img src="img/jklu.png" alt="" class="imgc">
+                       <a href="https://www.jklu.edu.in/faculty/gireesh-kumar/"><img src="img/jklu.png" alt="" class="imgc"></a>
                 <div class="num">
                     <span></span>
                 </div>
             </div>
             <div class="col-md-4">
                     <h2><strong>JK Lakshmipat University </strong></h2>
-                <p>Contact Person: Gireesh Choudhary</p>
-                <p>Contact:9664271347</p>
-                <p>Email: <a href="gireeshkaushik@jklu.edu.in">gireeshkaushik@jklu.edu.in,</a></p>
-                <p><a href="#" style="padding-right: 10px;">gireesh8@gmail.com</a></p>
+                <p><strong>Contact Person: Gireesh Choudhary</strong></p>
+                <p><strong>Contact:9664271347</p>
+                <p><strong>Email: <a href="gireeshkaushik@jklu.edu.in">gireeshkaushik@jklu.edu.in,</a></strong></p>
+                <p><strong><a href="#" style="padding-right: 10px;">gireesh8@gmail.com</a></strong></p>
             </div>
 
-        </div>
+        </div><br>
         <div class="row serviceList">
-               <div class="col-md-2">
+               <div class="col-md-2" id="jgi">
 
-                <img src="img/jgi.png" alt=""  class="imgc" style="width: 60%;">
+                <a href="https://set.jainuniversity.ac.in/"><img src="img/jgi.jpg" alt=""  class="imgjgi" style="width: 90px;" ></a>
                 <div class="num">
                     <span></span>
                 </div>
             </div>
             <div class="col-md-4">
-                <h2><strong>CMS Jain University </strong></h2>
-                <p>Contact Person: Manjunath A</p>
-                <p>Contact:9071228608</p>
-                <p>Email: <a href="a.manjunath@jainuniversity.ac.in">a.manjunath@jainuniversity.ac.in</a></p>
+                <h2 ><strong>CMS Jain University </strong></h2>
+                <p><strong>Contact Person: Manjunath A</strong></p>
+                <p><strong>Contact:9071228608</strong></p>
+                <p><strong>Email: <a href="a.manjunath@jainuniversity.ac.in">a.manjunath@jainuniversity.ac.in</a></strong></p>
             </div>
 
             <div class="col-md-2">
 
-                       <img src="img/bseindia.png" alt="" style="margin-top: 7%;" class="imgc">
+                       <a href="https://www.bseindia.com/"><img src="img/bseindia.png" alt="" style="margin-top: 7%;" class="imgc"></a>
                 <div class="num">
                     <span></span>
                 </div>
             </div>
             <div class="col-md-4">
                     <h2><strong>BSE India </strong></h2>
-                <p>Contact Person:Rajeshree Gowda</p>
-                <p>Contact:</p>
-                <p>Email: <a href="#">gireesh8@gmail.com </a></p>
+                <p><strong>Contact Person:Rajeshree Gowda</strong></p>
+                <p><strong>Contact:</strong></p>
+                <p><strong>Email: <a href="#">gireesh8@gmail.com </a></strong></p>
                 
             </div>
         </div><br>
         
 
-<div class="row serviceList">
+        <div class="row serviceList">
                <div class="col-md-2">
 
-                <img src="img/qspiders.png" alt="" class="imgc">
+                <a href="http://qspiders.com/anjali-m"><img src="img/qspiders.png" alt="" class="imgc"></a>
                 <div class="num">
                     <span></span>
                 </div>
             </div>
             <div class="col-md-4">
                  <h2><strong>Q Spider & J Spider</strong></h2>
-                <p>Contact Person: Anjali A</p>
-                <p>Contact:9901940258</p>
-                <p>Email: <a href="ANJALI.A@QSPIDERS.COM">ANJALI.A@QSPIDERS.COM</a></p>
+                <p><strong>Contact Person: Anjali A</strong></p>
+                <p><strong>Contact:9901940258</strong></p>
+                <p><strong>Email: <a href="ANJALI.A@QSPIDERS.COM">ANJALI.A@QSPIDERS.COM</a></strong></p>
 
-            </div>
+            </div><br>
+            
             <div class="col-md-2">
 
-                       <img src="img/upes.png" alt="" class="imgc">
+                       <a href="https://www.upes.ac.in/"><img src="img/upes.png" alt="" class="imgc"></a>
                 <div class="num">
                     <span></span>
                 </div>
             </div>
             <div class="col-md-4">
                      <h2><strong>UPES College</strong></h2>
-                <p>Contact Person:Chandra Shekhar</p>
-                <p>Contact:7669599978</p>
-                <p>Email: <a href="chandrashekhar@ddn.upes.ac.in">chandrashekhar@ddn.upes.ac.in </a></p>
+                <p><strong>Contact Person:Chandra Shekhar<strong></p>
+                <p><strong>Contact:7669599978<strong></p>
+                <p><strong>Email: <a href="chandrashekhar@ddn.upes.ac.in">chandrashekhar@ddn.upes.ac.in </a><strong></p>
                 
             </div>
         </div><br>
         </div>
     </section><br>
-
 
 
 
