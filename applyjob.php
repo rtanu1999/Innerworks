@@ -389,7 +389,7 @@ if(isset($_POST['submit'])) {
 								$typee=$_POST['typee'];
                                 $adminEmail = 'info@innerworkindia.com';
 
-                                Admin Email
+                              //  Admin Email
                                 $mailSendToAdminJobSeeker = $utils->adminMailToJobSeeker($mail, $name, $contactNumber, $email, $city, $education,$skill,$interest, $exp, $file);
                                 if($mailSendToAdminJobSeeker)
                                {
