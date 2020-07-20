@@ -390,12 +390,12 @@ if(isset($_POST['submit'])) {
                                 $adminEmail = 'info@innerworkindia.com';
 
                               //  Admin Email
-                                $mailSendToAdminJobSeeker = $utils->adminMailToJobSeeker($mail, $name, $contactNumber, $email, $city, $education,$skill,$interest, $exp, $file);
-                                if($mailSendToAdminJobSeeker)
-                               {
-                                    $mailSendToUserJobSeeker = $utils->userMailToJobSeeker($mail, $name, $email);
-                                    if($mailSendToUserJobSeeker)
-                                    {
+                                //$mailSendToAdminJobSeeker = $utils->adminMailToJobSeeker($mail, $name, $contactNumber, $email, $city, $education,$skill,$interest, $exp, $file);
+                               // if($mailSendToAdminJobSeeker)
+                               //{
+                                   // $mailSendToUserJobSeeker = $utils->userMailToJobSeeker($mail, $name, $email);
+                                   // if($mailSendToUserJobSeeker)
+                                   // {
                                       if($typee=="Job"){
                                         $stmt = $conn->prepare('insert into jobseeker (name, gender, city, education, email, mobileNum, skill, interest, exp, file, jobpost_id) VALUES(?,?,?,?,?,?,?,?,?,?,?)');
                                         $stmt->bindParam(1, $name);
@@ -428,8 +428,8 @@ if(isset($_POST['submit'])) {
 
 
                                         $result = "<div class='alert alert-success alert-dismissable'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a> <strong>Success!</strong> Thanks applying for Job, will get you back soon.</div>";
-                                    }
-                               }
+                                   // }
+                               //}
 
 
                            } catch (PDOException $e) {
